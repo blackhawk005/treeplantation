@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'lem_plumb.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'login-regis-styles.css' %}">
+	<title>PLUMBAGO | INFO </title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg ">
+      <a class="navbar-brand" href="/">Trial 1</a>
+      <button
+        class="navbar-toggler btn-outline-light"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+      </button>
+      
+      <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/functionality/">Plant Information</a>
+          </li>
+
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/register/">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/login/">Login</a>
+          </li>
+          {% endif %}
+          
+          <!-- <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/about/">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
+          </li> -->
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+
+    <div class="box">
+        <div class="row">
+            <div class="col-md-6 reg register-left">
+                <div class="register-form">
+                    <p>
+                    	<h2>TOOL – HAND TROWEL</h2>
+                    	<br>
+                    	<h3>
+                    		<h2 class="text-left">INTRODUCTION</h2>A trowel is a small hand tool used for digging, applying, smoothing, or moving small amounts of viscous or particulate material. Common varieties include the masonry trowel, garden trowel, and float trowel.<br>
+A power trowel is a much larger gasoline or electrically powered walk-behind device with rotating paddles used to finish concrete floors.
+
+                    	</h3>
+                    	<h3>
+                    		<h2 class="text-left">GARDEN TROWEL </h2>A hand tool with a pointed, scoop-shaped metal blade and wooden, metal, or plastic handle. It is comparable to a spade or shovel, but is generally much smaller, being designed for use with one hand. It is used for breaking up earth, digging small holes, especially for planting and weeding, mixing in fertilizer or other additives, and transferring plants to pots.
+                    	</h3>
+                    	<h3>
+                    		<h2 class="text-left">WHEN TO USE  </h2>When to use a gardening trowel depends on the job at hand. Garden trowels are used for digging small holes, such for planting bulbs, annuals or perennials. It would take a lot of time and effort to dig a hole for a tree or shrub with a garden trowel. Garden trowels are also used to dig up weeds. In small, tight areas, a narrow width blade will work better to dig out weeds or to install small plants or bulbs. Flat trowel blades work better on weeds with long taproots. Wider trowel blades and scoop-shaped blades work best for digging up small plants, digging holes for perennials, or scooping up soil when potting plants.
+                    	</h3>
+<br><br><br>
+
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 register-right">
+                <div>
+                    <img src="{% static 'gardening-trowel.png' %}" width="300" height="300">
+                </div>
+            </div>
+        </div>
+</div>
+
+</body>
+</html>
