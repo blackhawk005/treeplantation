@@ -7,3 +7,5 @@ from django.http import HttpResponse
 def index(request):
     return render(request, 'info/index.html')
 
+def page_open_lemon(request):
+    return render(request, 'info/lemon.html')
