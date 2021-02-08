@@ -1,0 +1,243 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+img{
+    align-content: center;
+    margin-top: 0px;
+    /* padding-left: 9.375rem; */
+}
+
+
+.regis-page
+{
+    background-image: linear-gradient(to right,#01201d,#5e804d);
+    margin-top: 60px;
+    margin-left: 70px;
+}
+
+.container
+{
+    box-sizing: border-box;
+}
+
+.register-right
+{
+    text-align: center;
+    color: #ffffff;
+    padding: 60px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+
+.register-right p
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px 20px 0;
+    
+}
+
+.register-right h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.register-right .btn-primary
+{
+    width: 15rem;
+    font-weight: 400;
+    color: #555;
+    margin-top: 20px;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.register-right .btn-primary:hover
+{
+    background: #000;
+}
+
+.register-left
+{
+    border: black;
+    align-self: center;
+    text-align: center;
+    background: #f8f8f8;
+    border-radius: 5%;
+    padding-top: 50px; 
+}
+/* @media(max-width: 1028px){
+    .register-right{
+        border-top-left-radius: 0%;
+        border-bottom-left-radius: 0%;
+    }
+} */
+
+
+.register-left h2
+{
+    text-align: center;
+    margin-bottom: 10px;
+    color: #555;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.register-left p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.register-form
+{
+    padding: 32px;
+    padding-right: 64px;
+    padding-left: 64px;
+    padding-bottom: 11px;
+    text-align: center;
+}
+
+
+
+.register-left .reg-btn
+{
+    float: center;
+    text-align: center;
+    border: none;
+    width: 150px;
+    background: #000;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 10px;
+    padding: 10px;
+    font-style: inherit;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.register-left .btn-primary:hover
+{
+    background: green;
+    color: white
+}
+
+.below-writeup{
+    text-align: center;
+
+}
+h3{
+    padding-top: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*Login Form*/
+
+.login-page
+{
+    background-image: linear-gradient(to left,#01201d,#5e804d);
+    margin-top: 120px;
+    margin-left: 70px;
+}
+.login-left
+{
+    border: none;
+    text-align: center;
+    background: #f8f8f8;
+    border-radius: 5%;
+}
+@media(max-width: 1028px){
+    .login-left{
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 0%;
+    }
+}
+
+
+.login-left h1
+{
+    text-align: center;
+    padding-top: 32px;
+    color: #555;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.login-left p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.login-form
+{
+    padding: 80px;
+    padding-right: 64px;
+    padding-left: 64px;
+    padding-bottom: 11px;
+    text-align: center;
+}
+
+
+.login-left .login-btn
+{
+    float: center;
+    text-align: center;
+    border: none;
+    width: 120px;
+    background: #000;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 40px;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.login-left .btn-primary:hover
+{
+    background: green;
+}
+
+.login-below-writeup{
+    text-align: center;
+    padding: 32px;
+
+}
+h3{
+    padding-top: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.login-right
+{
+    text-align: center;
+    color: #ffffff;
+}
+
+.login-right h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+
+.login-right p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.login-right .btn-primary
+{
+    border-radius: 24px;
+    border: none;
+    width: 240px;
+    background: rgb(195, 210, 203);
+    font-weight: 400;
+    color: #555;
+    margin-top: 20px;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.login-right .btn-primary:hover
+{
+    background: #000;
+}
