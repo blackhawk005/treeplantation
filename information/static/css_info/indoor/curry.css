@@ -54,38 +54,38 @@ body, html{
 }
 
 .pimg1{
-    background-image: url(images/curry6.jpg);
+    background-image: url(/static/images/images/curry6.jpg);
     min-height: 100%;
 
 }
 
 .pimg2{
-    background-image: url(images/curry5.jpg);
+    background-image: url(/static/images/images/curry5.jpg);
     min-height: 100%;
    
     
 }
 
 .pimg3{
-    background-image: url(images/climate1.jpg);
+    background-image: url(/static/images/images/climate1.jpg);
     min-height: 100%;
     
 }
 
 .pimg4{
-    background-image: url(images/soil1.jpg);
+    background-image: url(/static/images/images/soil1.jpg);
     min-height: 100%;
     
 }
 
 .pimg5{
-    background-image: url(images/watering2.jpg);
+    background-image: url(/static/images/images/watering2.jpg);
     min-height: 100%;
     
 }
 
 .pimg6{
-    background-image: url(images/harvesting3.jpg);
+    background-image: url(/static/images/images/harvesting3.jpg);
     min-height: 100%;
 }
 

@@ -14,7 +14,7 @@ img{
 
 .regis-page
 {
-    background-image: linear-gradient(to right,#01201d,#5e804d);
+    /* background-image: linear-gradient(to right,#01201d,#5e804d); */
     margin-top: 60px;
     margin-left: 70px;
 }

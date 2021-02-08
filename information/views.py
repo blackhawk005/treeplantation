@@ -7,5 +7,11 @@ from django.http import HttpResponse
 def index(request):
     return render(request, 'info/index.html')
 
+def indoor(request):
+    return render(request, 'info/indoor.html')
+
 def page_open_lemon(request):
-    return render(request, 'info/lemon.html')
+    return render(request, 'indoor_plants/lemon.html')
+
+def page_open_curry(request):
+    return render(request, 'indoor_plants/curry.html')
