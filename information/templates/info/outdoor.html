@@ -17,6 +17,7 @@
         />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -25,13 +26,65 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="{% static 'css_info/index.css' %}">
+        <link rel="stylesheet" href="{% static 'css_info/indoor.css' %}">
         <script src="https://kit.fontawesome.com/1d9b3c3ba8.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        
-        <h3 style="text-align: center;">Outdoor Plants</h3>
-        
+
+        <!-- Navbar section -->
+        <div>
+            <nav class="navbar navbar-expand-lg ">
+                <a class="navbar-brand" href="">Outdoor Plants</a>
+                <button
+                class="navbar-toggler btn-outline-light"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                >
+                <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+                </button>
+                
+                <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/register/">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/login/">Login</a>
+                        </li>
+                        {% endif %}
+                        
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+                
        
 
        
@@ -45,7 +98,7 @@
                         <h5>Plumbago</h5>
                         
                     </div>
-                    <a href="" style="text-decoration: none;" style="text-decoration: none;">
+                    <a href="/information/plumbago" style="text-decoration: none;" style="text-decoration: none;">
                     <div class=" content right">
                         <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
                     </div>

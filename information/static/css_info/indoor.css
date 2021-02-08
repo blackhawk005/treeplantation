@@ -83,6 +83,7 @@
     background-color: #e6e0e04f;
     transition: top 0.5s ease;
     background: #fff;
+    border-radius: 5%;
     
   }
   
@@ -144,6 +145,21 @@
     
   }
   
+  h2
+  {
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+
+  }
+
+  img{
+    border-radius: 7%;
+    padding: 10px;
+  }
+
   @media screen and (min-width:1101px) and (max-width:1200px){
     /*Navbar*/
     /*#navbar{
@@ -157,3 +173,32 @@
     
   }
   
+  .navbar {
+    padding: 32px 32px 32px;
+    padding-right: 32px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .navbar-brand:hover {
+    color:#F2A929;
+  }
+  .navbar-brand {
+    color:#fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 48px;
+  }
+  /* .home-nav-collapse {
+    color: white;
+  } */
+
+  
+  .nav-item{
+      margin: 16px;
+      
+  }
+  .nav-link{
+    color: #fff;
+  }
+  
+  .nav-link:hover {
+    color:#F2A929;
+  }

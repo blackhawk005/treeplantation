@@ -17,6 +17,7 @@
         />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -25,212 +26,253 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="{% static 'css_info/index.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css_info/indoor.css' %}">
+        <!-- <link rel="stylesheet" type="text/css" href="{% static 'css_info/index.css' %}"> -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css_info/login-regis-styles.css' %}">
         <script src="https://kit.fontawesome.com/1d9b3c3ba8.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        
-        <h3 style="text-align: center;">Indoor Plants</h3>
-        
-       
-
-       
-
-            <!--Course Cards ROW1-->
-            <div class="row" >
-                <div class="column">
-                <div class="card">
-                    <img  src="https://www.almanac.com/sites/default/files/image_nodes/tomatoes_helios4eos_gettyimages-edit.jpeg" alt="" style="height: 300px; object-fit: cover;"> 
-                    <div class=" content left">
-                        <h5>Tomato</h5>
-                        
-                    </div>
-                    <a href="" style="text-decoration: none;" style="text-decoration: none;">
-                    <div class=" content right">
-                        <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
-                    </div>
-                    </a>
-                </div>
-                </div>
-            
-                <div class="column">
-                    <div class="card">
-                    <img  src="https://images-na.ssl-images-amazon.com/images/I/71fTY-UkJfL._SL1000_.jpg" alt="" style="height: 300px; object-fit: cover;"> 
-                    <div class=" content left">
-                        <h5>Lemon</h5>
-                        
-                    </div>
-                    <a href="" style="text-decoration: none;" style="text-decoration: none;">
-                    <div class=" content right">
-                        <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
-                    </div>
-                    </a>
-                    </div>
-                </div>
+        <!-- Navbar section -->
+        <div>
+            <nav class="navbar navbar-expand-lg ">
+                <a class="navbar-brand" href="">Indoor Plants</a>
+                <button
+                class="navbar-toggler btn-outline-light"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                >
+                <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+                </button>
                 
-                <div class="column">
-                    <div class="card">
-                    <img src="https://indiagardening.com/wp-content/uploads/2020/01/1Green-Chillis-1.jpg" alt="" style="height: 300px; object-fit: cover;"> 
-                    <div class=" content left">
-                        <h5>Chilly</h5>
+                <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/register/">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/login/">Login</a>
+                        </li>
+                        {% endif %}
                         
-                    </div>
-                    <a href="" style="text-decoration: none;">
-                    <div class=" content right">
-                        <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
-                    </div>
-                    </a>
-                    </div>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+                        </li>
+                        {% endif %}
+                    </ul>
                 </div>
-                <!--Row 2-->
-                <div class="column">
-                <div class="card">
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/61AJO2rDCAL._SX466_.jpg" alt="" style="height: 300px; object-fit: cover;"> 
-                    <div class=" content left">
-                        <h5>Curry</h5>
-                        
-                    </div>
-                    <a href="" style="text-decoration: none;">
-                    <div class=" content right">
-                        <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
-                    </div>
-                    </a>
-                </div>
-                </div>
-            
-                <div class="column">
-                    <div class="card">
-                    <img src="https://advicefromtheherblady.com/wp-content/uploads/2016/09/Turmeric-Plant.jpg" alt="" style="height: 300px; object-fit: cover;"> 
-                    <div class=" content left">
-                        <h5>Turmeric</h5>
-                        
-                    </div>
-                    <a href="" style="text-decoration: none;">
-                    <div class=" content right">
-                        <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
-                    </div>
-                    </a>
-                    </div>
-                </div>
-                
-                <div class="column">
-                    <div class="card">
-                    <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-plants-lemon-grass-plant-16968998944908_600x.jpg?v=1601348156" alt="" style="height: 300px; object-fit: cover;"> 
-                    <div class=" content left">
-                        <h5>Lemongrass</h5>
-                        
-                    </div>
-                    <a href="" style="text-decoration: none;">
-                    <div class=" content right">
-                        <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
-                    </div>
-                    </a>
-                    </div>
-                </div>
-
-                <!--Row 3-->
-                <div class="column">
-                    <div class="card">
-                    <img src="https://i.pinimg.com/originals/4e/80/77/4e807709dfa11719844e9550943dd14a.jpg" alt="" style="height: 300px; object-fit: cover;"> 
-                    <div class=" content left">
-                        <h5>Baby Sun Rose</h5>
-                        
-                    </div>
-                    <a href="" style="text-decoration: none;">
-                    <div class=" content right">
-                        <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
-                    </div>
-                    </a>
-                    </div>
-                </div>
-                
-                <div class="column">
-                    <div class="card">
-                        <img src="https://i.pinimg.com/originals/cb/49/2a/cb492a378446bbcb4785ba0407d65a1f.jpg" alt="" style="height: 300px; object-fit: cover;"> 
-                        <div class=" content left">
-                            <h5>Cycas Palm</h5>
-                            
-                        </div>
-                        <a href="" style="text-decoration: none;">
-                        <div class=" content right">
-                            <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
-                        </div>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="column">
-                    <div class="card">
-                        <img src="https://www.plantsguru.com/image/cache/catalog/Calathea/pg-golden-money-plant-800x800.jpg" alt="" style="height: 300px; object-fit: cover;"> 
-                        <div class=" content left">
-                            <h5>Money Plant</h5>
-                            
-                        </div>
-                        <a href="" style="text-decoration: none;">
-                        <div class="content right">
-                            <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
-                        </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!--Row 4-->
-                <div class="column">
-                    <div class="card">
-                        <img src="https://www.thespruce.com/thmb/fvd3nAf-YKZShK4buGBeHedGXks=/1333x1000/smart/filters:no_upscale()/_DSC58741-476b7f7ef66d44ba8ce33cbc0d7b8dd4.jpg" alt="" style="height: 300px; object-fit: cover;"> 
-                        <div class=" content left">
-                            <h5>Aloe Vera</h5>
-                            
-                        </div>
-                        <a href="" style="text-decoration: none;">
-                        <div class=" content right">
-                            <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
-                        </div>
-                        </a>
-                    </div>
-                    </div>
-                
-                    <div class="column">
-                        <div class="card">
-                        <img src="https://www.thegardenstore.sg/image/cache/catalog/products/Plant/Tolasi-910x1155.png" alt="" style="height: 300px; object-fit: cover;"> 
-                        <div class=" content left">
-                            <h5>Indian Basil</h5>
-                            
-                        </div>
-                        <a href="" style="text-decoration: none;">
-                        <div class=" content right">
-                            <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
-                        </div>
-                        </a>
-                        </div>
-                    </div>
-    
-            </div>
+            </nav>
         </div>
-        <br>
-        
+
+
+
+
+
+
+    <!--Course Cards ROW1-->
+<div class="row" >
+    <div class="column">
+        <div class="card">
+        <img  src="{% static 'images/indoor/tomato.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
+        <div class=" content left">
+            <h5>Tomato</h5> 
+        </div>
+            <a href="" style="text-decoration: none;" style="text-decoration: none;">
+            <div class=" content right">
+                <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+            </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img  src="{% static 'images/indoor/lemon.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
+            <div class=" content left">
+                <h5>Lemon</h5> 
+            </div>
+            <a href="/information/lemon" style="text-decoration: none;" style="text-decoration: none;">
+                <div class=" content right">
+                    <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="{% static 'images/indoor/chilly.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
+            <div class=" content left">
+                <h5>Chilly</h5>   
+            </div>
+            <a href="/information/chilly" style="text-decoration: none;">
+                <div class=" content right">
+                    <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                </div>
+            </a>
+        </div>
+    </div>
+<!--Row 2-->
+    <div class="column">
+        <div class="card">
+            <img src="{% static 'images/indoor/curry.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
+            <div class=" content left">
+                <h5>Curry</h5>
+             </div>
+            <a href="/information/curry" style="text-decoration: none;">
+                <div class=" content right">
+                    <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="{% static 'images/indoor/turmeric.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
+            <div class=" content left">
+                <h5>Turmeric</h5>
+            </div>
+            <a href="/information/turmeric" style="text-decoration: none;">
+                <div class=" content right">
+                    <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="{% static 'images/indoor/lemon_grass.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
+            <div class=" content left">
+                <h5>Lemongrass</h5>          
+            </div>
+            <a href="/information/lemongrass" style="text-decoration: none;">
+                <div class=" content right">
+                    <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                </div>
+            </a>
+        </div>
+    </div>
+
+<!--Row 3-->
+    <div class="column">
+        <div class="card">
+            <img src="{% static 'images/indoor/baby_sun_rose.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
+            <div class=" content left">
+                <h5>Baby Sun Rose</h5> 
+            </div>
+            <a href="/information/babysunrose" style="text-decoration: none;">
+                <div class=" content right">
+                    <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="{% static 'images/indoor/cycas_palm.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
+            <div class=" content left">
+                <h5>Cycas Palm</h5>
+            </div>
+            <a href="/information/cycaspalm" style="text-decoration: none;">
+                <div class=" content right">
+                    <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="{% static 'images/indoor/turmeric.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
+            <div class=" content left">
+                <h5>Money Plant</h5>
+            </div>
+            <a href="/information/moneyplant" style="text-decoration: none;">
+                <div class="content right">
+                    <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                </div>
+            </a>
+        </div>
+    </div>
+
+<!--Row 4-->
+    <div class="column">
+        <div class="card">
+            <img src="{% static 'images/indoor/aloevera.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
+            <div class=" content left">
+                <h5>Aloe Vera</h5>
+            </div>
+            <a href="/information/aloevera" style="text-decoration: none;">
+                <div class=" content right">
+                    <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="{% static 'images/indoor/indian_basil.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
+            <div class=" content left">
+                <h5>Indian Basil</h5>
+            </div>
+            <a href="/information/indianbasil" style="text-decoration: none;">
+                <div class=" content right">
+                    <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>
+<br>
+
+
 
 
         
-                
-            
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script
-            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-            crossorigin="anonymous"
-        ></script>
+    
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+></script>
+<script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+></script>
+<script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"
+></script>
         
     </body>
     </html>

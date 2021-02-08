@@ -10,8 +10,14 @@ def index(request):
 def indoor(request):
     return render(request, 'info/indoor.html')
 
+def outdoor(request):
+    return render(request, 'info/outdoor.html')
+
 def page_open_lemon(request):
     return render(request, 'indoor_plants/lemon.html')
 
 def page_open_curry(request):
     return render(request, 'indoor_plants/curry.html')
+
+def page_open_plumbago(request):
+    return render(request, 'outdoor_plants/plumbago.html')
