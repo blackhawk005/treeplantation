@@ -1,0 +1,185 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curry Plants &#127793;</title>
+
+    <link rel="stylesheet" href="{% static 'css_info/indoor/curry.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css_info/login-regis-styles.css' %}"> -->
+   
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="new.js"></script>
+
+     <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"> </script> <!--chart.js-->
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+     
+</head>
+<body>
+    <!-- <a href="register">register</a><br>
+    <a href="login">login</a><br> -->
+
+    
+    
+    <!-- Navbar section -->
+
+    <!-- Navbar section -->
+
+    <div>
+      <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="/">Trial 1</a>
+        <button
+          class="navbar-toggler btn-outline-light"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+        </button>
+        
+        <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+            </li>
+  
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/register/">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/login/">Login</a>
+            </li>
+            {% endif %}
+            
+            <!-- <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/about/">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
+            </li> -->
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
+    </div>
+ 
+    <div class="pimg1">
+
+        <div class="ptext">
+            <span class="border">
+                CURRY PLANTS 
+            </span>
+        </div>
+    </div>
+
+    <section class="section section-dark">
+
+      <h1>SIZE</h1>
+
+     <p>  It is a small tree, growing 4–6 m (13–20 feet) tall, with a trunk up to 40 cm (16 in) diameter. 
+      The aromatic leaves are pinnate, with 11–21 leaflets,each leaflet 2–4 cm (0.79–1.57 in) long and 1–2 cm (0.39–0.79 in) broad.
+       </p>
+    </section>
+
+    <div class="pimg2">
+
+        <section class="section section-dark">
+          <h1>LIFE-CYCLE</h1>
+          <p >
+            Curry Plants are known to last upto a life-cycle of 30 Years.
+          </p>
+        </section>
+    </div>
+    
+    <div class="pimg3">
+
+    <section class="section section-dark">
+      <h1>CLIMATE</h1>
+      <p>
+        It generally requires Tropical and Sub-Tropical Climate.
+      </p>
+    </section>
+
+   </div>
+    
+
+    <div class="pimg4">
+
+        <section class="section section-dark">
+            <h1>SOIL REQUIREMENTS</h1>
+            <p>
+              When it comes to the curry leaf plant,
+              it will do best in well-drained soil that is mildly acidic.This plant will not typically do well with adapting to other types of soil, so if you need to create a quality mixture, 
+              you can add sand or manure to the soil.
+            </p>
+        </section>
+    </div>
+    
+        
+
+        <div class="pimg5">
+
+          <section class="section section-dark">
+              <h1>WATER TABLE</h1>
+              <p>
+                During the spring and the less hot months of the year, this is a plant that will grow well with a once a week watering. However, during the hot summer months, 
+                it may require water each and every day to make sure that the soil does not become too dry in the heat.
+              </p>
+          </section>
+        </div>
+      
+          
+
+          <div class="pimg6">
+
+            <section class="section section-dark">
+                <h1>HARVESTING</h1>
+                <p>
+                  ONCE THE PLANT IS 2-3 YEARS OLD IT IS READY TO BE HARVESTED FROM.
+                </p>
+            </section>
+          </div>
+        
+            
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

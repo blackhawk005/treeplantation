@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css_info\indoor\lem_plumb.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css_info\login-regis-styles.css' %}">
+	<title>LEMON | INFO </title>
+</head>
+<body>
+	<div>
+    <nav class="navbar navbar-expand-lg ">
+      <a class="navbar-brand" href="/">Trial 1</a>
+      <button
+        class="navbar-toggler btn-outline-light"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+      </button>
+      
+      <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+          </li>
+
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/register/">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/login/">Login</a>
+          </li>
+          {% endif %}
+          
+          <!-- <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/about/">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
+          </li> -->
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+    <div class="box">
+        <div class="row">
+            <div class="col-md-6 reg register-left">
+                <div class="register-form">
+                    <p>
+                    	<h2> INDOOR PLANT - LEMON</h2>
+                    	<br>
+                    	<h3>
+                    		<h2 class="text-left">INTRODUCTION</h2>The Lemon, Citrus Limon, is a species of small evergreen tree in the flowering plant family Rutaceae, native to south asia, primarily north eastern India.
+The tree's ellipsoidal yellow fruit is used for culinary and non-culinary purposes throughout the world, primarily for its juice, which has both culinary and cleaning uses. The pulp and rind are also used in cooking and baking. The juice of the lemon is about 5% to 6% citric acid, with a pH of around 2.2, giving it a sour taste. The distinctive sour taste of lemon juice makes it a key ingredient in drinks and foods such as lemonade and lemon meringue pie.
+                    	</h3>
+                    	<h3>
+                    		<h2 class="text-left">HISTORY </h2>The origin of the lemon is unknown, though lemons are thought to have first grown in Assam (a region in northeast India), northern Burma or China. A genomic study of the lemon indicated it was a hybrid between bitter orange (sour orange) and citron.<br>
+ 
+Lemons entered Europe near southern Italy no later than the second century AD, during the time of Ancient Rome. However, they were not widely cultivated. They were later introduced to Persia and then to Iraq and Egypt around 700 AD. The lemon was first recorded in literature in a 10th-century Arabic treatise on farming, and was also used as an ornamental plant in early Islamic gardens. It was distributed widely throughout the Arab world and the Mediterranean region between 1000 and 1150. An article on Lemon and lime tree cultivation in Andalusia of Spain is brought down in Ibn al-'Awwam's 12th-century agricultural work, Book on Agriculture.
+The first substantial cultivation of lemons in Europe began in Genoa in the middle of the 15th century. The lemon was later introduced to the Americas in 1493 when Christopher Columbus brought lemon seeds to Hispaniola on his voyages. Spanish conquest throughout the New World helped spread lemon seeds. It was mainly used as an ornamental plant and for medicine. In the 19th century, lemons were increasingly planted in Florida and California.
+In 1747, James Lind's experiments on seamen suffering from scurvy involved adding lemon juice to their diets, though vitamin C was not yet known as an important dietary ingredient.
+The origin of the word lemon may be Middle Eastern. The word draws from the Old French limon, then Italian limone, from the Arabic laymūn or līmūn, and from the Persian līmūn, a generic term for citrus fruit, which is a cognate of Sanskrit (nimbū, “lime”).
+                    	</h3>
+                    	<h3>
+                    		<h2 class="text-left">NUTRITION  </h2>Lemon is a rich source of vitamin C, providing 64% of the Daily Value in a 100 g reference amount (table). Other essential nutrients are low in content.
+Lemons contain numerous phytochemicals, including polyphenols, terpenes, and tannins. Lemon juice contains slightly more citric acid than lime juice (about 47 g/l), nearly twice the citric acid of grapefruit juice, and about five times the amount of citric acid found in orange juice.
+                    	</h3>
+                    	<h3>
+                    		<h2 class="text-left">WAYS FOR CULINARY USE  </h2><br><h2>Juice</h2>
+Lemon juice is used to make lemonade, soft drinks, and cocktails. It is used in marinades for fish, where its acid neutralizes amines in fish by converting them into nonvolatile ammonium salts. In meat, the acid partially hydrolyzes tough collagen fibers, tenderizing it.In the United Kingdom, lemon juice is frequently added to pancakes, especially on Shrove Tuesday.
+<br>
+Lemon juice is also used as a short-term preservative on certain foods that tend to oxidize and turn brown after being sliced (enzymatic browning), such as apples, bananas, and avocados, where its acid denatures the enzymes.<br>
+                                          <br><h2>Peel</h2>In Morocco, lemons are preserved in jars or barrels of salt. The salt penetrates the peel and rind, softening them, and curing them so that they last almost indefinitely. The preserved lemon is used in a wide variety of dishes. Preserved lemons can also be found in Sicilian, Italian, Greek, and French dishes.The peel can be used in the manufacture of pectin, a polysaccharide used as a gelling agent and stabilizer in food and other products.<br>
+                                          <br><h2>Oil</h2>Lemon oil is extracted from oil-containing cells in the skin. A machine breaks up the cells, and uses a water spray to flush off the oil. The oil/water mixture is then filtered and separated by centrifugation.<br>
+                                          <br><h2>Leaves</h2>The leaves of the lemon tree are used to make a tea and for preparing cooked meats and seafoods.
+                    	</h3>
+                    	<br><br>
+                    	<h3>
+                    		<h2 class="text-left">OTHER USES</h2><br><h2>Industrial</h2>Lemons were the primary commercial source of citric acid before the development of fermentation-based processes.<br>
+                    		<br><h2>Aroma</h2>Lemon oil may be used in aromatherapy. Lemon oil aroma does not influence the human immune system, but may contribute to relaxation.<br>
+                    		<br><h2>Extra</h2>One educational science experiment involves attaching electrodes to a lemon and using it as a battery to produce electricity. Although very low power, several lemon batteries can power a small digital watch. These experiments also work with other fruits and vegetables.
+
+Lemon juice may be used as a simple invisible ink, developed by heat.
+
+Lemon juice can be used to increase the blonde colour of hair, acting as a natural highlight after the moistened hair is exposed to sunlight. This is due to the citric acid that acts as bleach.
+                    	</h3>
+                    	<h3>
+                    		<h2 class="text-left">HORTICULTURE</h2>Lemons need a minimum temperature of around 7 °C (45 °F), so they are not hardy year-round in temperate climates, but become harder as they mature.[30] Citrus require minimal pruning by trimming overcrowded branches, with the tallest branch cut back to encourage bushy growth. Throughout summer, pinching back tips of the most vigorous growth assures more abundant canopy development. As mature plants may produce unwanted, fast-growing shoots (called "water shoots''), these are removed from the main branches at the bottom or middle of the plant.<br>
+The tradition of urinating near a lemon tree may result from color-based sympathetic magic.
+In cultivation in the UK, the cultivars "Meyer" and "Variegata" have gained the Royal Horticultural Society's Award of Garden Merit (confirmed 2017).
+<br><br><br>
+
+                    	</h3>
+
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 register-right">
+                <div>
+                    <img src="{% static 'images/lemon.png' %}" width="500" height="600">
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+</html>
