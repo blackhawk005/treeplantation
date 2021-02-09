@@ -1,0 +1,288 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang = "en" dir = "ltr">
+    <head>
+        <!--meta tags-->    
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--title-->
+        <title>Gardening Tools</title>
+        <!--bootstrap-->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+            crossorigin="anonymous"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'css_info/indoor.css' %}">
+        <script src="https://kit.fontawesome.com/1d9b3c3ba8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <!-- Navbar section -->
+        <div>
+            <nav class="navbar navbar-expand-lg ">
+                <a class="navbar-brand" href="">Gardening Tools</a>
+                <button
+                class="navbar-toggler btn-outline-light"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                >
+                <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+                </button>
+                
+                <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/register/">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/login/">Login</a>
+                        </li>
+                        {% endif %}
+                        
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+                
+       
+
+       
+
+            <!--Course Cards ROW1-->
+            <div class="row" >
+                <div class="column">
+                <div class="card">
+                    <img  src="https://cdn.pixabay.com/photo/2017/05/16/06/36/hand-trowel-2317020_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
+                    <div class=" content left">
+                        <h5>Hand Trovel</h5>
+                        
+                    </div>
+                    <a href="/information/trowel" style="text-decoration: none;" style="text-decoration: none;">
+                    <div class=" content right">
+                        <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                    </div>
+                    </a>
+                </div>
+                </div>
+            
+                <div class="column">
+                    <div class="card">
+                    <img  src="https://cdn.pixabay.com/photo/2016/05/24/15/11/secateur-1412518_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
+                    <div class=" content left">
+                        <h5>Secateurs</h5>
+                        
+                    </div>
+                    <a href="" style="text-decoration: none;" style="text-decoration: none;">
+                    <div class=" content right">
+                        <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                    </div>
+                    </a>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2018/11/05/12/04/computing-3795962_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
+                    <div class=" content left">
+                        <h5>Rake</h5>
+                        
+                    </div>
+                    <a href="" style="text-decoration: none;">
+                    <div class=" content right">
+                        <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                    </div>
+                    </a>
+                    </div>
+                </div>
+                <!--Row 2-->
+                <div class="column">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2019/10/13/08/50/gardening-4545662_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
+                    <div class=" content left">
+                        <h5>Spade</h5>
+                        
+                    </div>
+                    <a href="" style="text-decoration: none;">
+                    <div class=" content right">
+                        <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                    </div>
+                    </a>
+                </div>
+                </div>
+            
+                <div class="column">
+                    <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2010/12/13/10/23/barrow-2770_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
+                    <div class=" content left">
+                        <h5>Wheel Barrow</h5>
+                        
+                    </div>
+                    <a href="" style="text-decoration: none;">
+                    <div class=" content right">
+                        <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                    </div>
+                    </a>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2017/03/09/11/37/snowdrop-2129446_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
+                    <div class=" content left">
+                        <h5>Watering Can</h5>
+                        
+                    </div>
+                    <a href="" style="text-decoration: none;">
+                    <div class=" content right">
+                        <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                    </div>
+                    </a>
+                    </div>
+                </div>
+
+                <!--Row 3-->
+                <div class="column">
+                    <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2018/05/27/09/36/saw-3433139_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
+                    <div class=" content left">
+                        <h5>Saw</h5>
+                        
+                    </div>
+                    <a href="" style="text-decoration: none;">
+                    <div class=" content right">
+                        <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                    </div>
+                    </a>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="card">
+                        <img src="https://cdn.pixabay.com/photo/2016/11/23/14/32/beach-1853230_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
+                        <div class=" content left">
+                            <h5>Shovel</h5>
+                            
+                        </div>
+                        <a href="" style="text-decoration: none;">
+                        <div class=" content right">
+                            <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="card">
+                        <img src="https://cdn.pixabay.com/photo/2021/02/03/19/06/gardening-5978978_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
+                        <div class=" content left">
+                            <h5>Fork</h5>
+                            
+                        </div>
+                        <a href="" style="text-decoration: none;">
+                        <div class="content right">
+                            <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!--Row 4-->
+                <div class="column">
+                    <div class="card">
+                        <img src="https://cdn.pixabay.com/photo/2020/04/20/21/29/pickaxe-5070026_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
+                        <div class=" content left">
+                            <h5>Pickaxe</h5>
+                            
+                        </div>
+                        <a href="" style="text-decoration: none;">
+                        <div class=" content right">
+                            <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                        </div>
+                        </a>
+                    </div>
+                    </div>
+                
+                    <div class="column">
+                        <div class="card">
+                        <img src="https://media.istockphoto.com/photos/gardening-tool-picture-id157193336?k=6&m=157193336&s=612x612&w=0&h=4lp9cQPZ38P1-wRNyRXfFsiokStlMDHQj1vyvlCsHDA=" alt="" style="height: 300px; object-fit: cover;"> 
+                        <div class=" content left">
+                            <h5>Hoe</h5>
+                            
+                        </div>
+                        <a href="" style="text-decoration: none;">
+                        <div class=" content right">
+                            <h6>More &nbsp; <i class="fa fa-arrow-right"></i></h6>
+                        </div>
+                        </a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <br>
+        
+
+
+        
+                
+            
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"
+        ></script>
+        
+    </body>
+    </html>

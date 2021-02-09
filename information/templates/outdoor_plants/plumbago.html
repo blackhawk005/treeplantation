@@ -1,17 +1,45 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="{% static 'css_info/indoor/lem_plumb.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'css_info/login-regis-styles.css' %}">
-	<title>PLUMBAGO | INFO </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PLUMBAGO  &#127793;</title>
+
+    <link rel="stylesheet" href="{% static 'css_info/outdoor/plumbago.css' %}">
+   
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="new.js"></script>
+
+     <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"> </script> <!--chart.js-->
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+     
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg ">
+    <!-- <a href="register">register</a><br>
+    <a href="login">login</a><br> -->
+
+    
+    
+    <!-- Navbar section -->
+    <nav class="navbar navbar-expand-lg ">
       <a class="navbar-brand" href="/">Trial 1</a>
       <button
         class="navbar-toggler btn-outline-light"
@@ -28,7 +56,7 @@
       <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/functionality/">Plant Information</a>
+            <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
           </li>
 
           {% if user.is_authenticated %}
@@ -64,25 +92,50 @@
         </ul>
       </div>
     </nav>
+ 
+    <div class="pimg1">
+        <div class="ptext">
+            <span class="border">
+                PLUMBAGO 
+            </span>
+        </div>
+    </div >
+    <div class="pimg">
+    <section class="section section-dark">
+    
+      <h1>Introduction</h1>
 
-    <div class="box">
-        <div class="row">
-            <div class="col-md-6 reg register-left">
-                <div class="register-form">
-                    <p>
-                    	<h2> OUTDOOR PLANT - PLUMBAGO</h2>
-                    	<br>
-                    	<h3>
-                    		<h2 class="text-left">INTRODUCTION</h2>Plumbago is a genus of 10–20 species of flowering plants in the family Plumbaginaceae, native to warm temperate to tropical regions of the world. Common names include plumbago and leadwort (names which are also shared by the genus Ceratostigma).
-                    	</h3>
-                    	<h3>
-                    		<h2 class="text-left">HISTORY </h2>The name Plumbago is derived from plumbum meaning lead, referring to it being a supposed cure for lead poisoning. Auriculata means ear-shaped and refers to the leaf base. Plumbago auriculata was known as P. capensis, which was the name given by the botanist Thunberg in 1794. However, the plant had already been named auriculata by Lamarck in 1786 in what was known as the East Indies where it had been taken as a garden plant. The Dutch East India Company trade routes included the Cape and this was most likely how the plant reached the East Indies.
-                    	</h3>
-                    	<h3>
-                    		<h2 class="text-left">USES  </h2>Children often make "earrings" with the sticky flowers, letting them stick to their earlobes. There are sticky, gland tipped hairs on the flower calyx. The seed capsule retains the stickiness which presumably helps disperse the seed by attaching to animals. The top of the capsule splits open and drops the seed out. Plumbago is used traditionally to treat warts, broken bones and wounds. It is taken as a snuff for headaches and as an emetic to dispel bad dreams. A stick of the plant is placed in the thatch of huts to ward off lightning.
-                    	</h3>
-                    	<h3>
-                    		<h2 class="text-left">HORTICULTURE</h2>Plumbago makes a very good informal or formal hedge as it responds well to pruning. It will flower profusely after being cut back or after a growth flush, as it bears flowers on new wood. It may need to be cut back after winter to keep it tidy, even if this is only done every few years. Plumbago will scramble into trees if allowed and, depending on the size and style of your garden, you may need to control it. It is very useful in large gardens and landscapes as it forms suckers and will cover fairly big areas. It is fast growing, drought resistant and rewarding and will grow in any soil, but will perform best if planted with plenty of compost. Plumbago is somewhat frost tender but will quickly regrow if damaged.<br><br>
+     <p>  Plumbago is a genus of 10–20 species of flowering plants in the family Plumbaginaceae, native to warm temperate to tropical regions of the world. Common names include plumbago and leadwort (names which are also shared by the genus Ceratostigma).
+       </p>
+    </section>
+    </div>
+
+    <div class="pimg2">
+
+        <section class="section section-dark">
+          <h1>HISTORY</h1>
+          <p >
+            The name Plumbago is derived from plumbum meaning lead, referring to it being a supposed cure for lead poisoning. Auriculata means ear-shaped and refers to the leaf base. Plumbago auriculata was known as P. capensis, which was the name given by the botanist Thunberg in 1794. However, the plant had already been named auriculata by Lamarck in 1786 in what was known as the East Indies where it had been taken as a garden plant. The Dutch East India Company trade routes included the Cape and this was most likely how the plant reached the East Indies.
+          </p>
+        </section>
+    </div>
+    
+    <div class="pimg3">
+
+    <section class="section section-dark">
+      <h1>USES</h1>
+      <p>
+        Children often make "earrings" with the sticky flowers, letting them stick to their earlobes. There are sticky, gland tipped hairs on the flower calyx. The seed capsule retains the stickiness which presumably helps disperse the seed by attaching to animals. The top of the capsule splits open and drops the seed out. Plumbago is used traditionally to treat warts, broken bones and wounds. It is taken as a snuff for headaches and as an emetic to dispel bad dreams. A stick of the plant is placed in the thatch of huts to ward off lightning.
+      </p>
+    </section>
+
+   </div>
+          <div class="pimg6">
+
+            <section class="section section-dark">
+                <h1>HORTICULTURE</h1>
+                <p>
+                  Plumbago makes a very good informal or formal hedge as it responds well to pruning. It will flower profusely after being cut back or after a growth flush, as it bears flowers on new wood. It may need to be cut back after winter to keep it tidy, even if this is only done every few years. Plumbago will scramble into trees if allowed and, depending on the size and style of your garden, you may need to control it. It is very useful in large gardens and landscapes as it forms suckers and will cover fairly big areas. It is fast growing, drought resistant and rewarding and will grow in any soil, but will perform best if planted with plenty of compost. Plumbago is somewhat frost tender but will quickly regrow if damaged.<br><br>
 Sun Preference: will do well in either sun or partial shade. My experience is that plumbago does best with late afternoon shade.<br><br>
 Spacing: 3 to 3 ½ foot spacing<br>
 Mature Height: 3-4 feet tall, 4-5 feet wide<br>
@@ -90,20 +143,14 @@ Watering: after establishment, water deeply (3/4 inch) twice a month<br>
 Pruning: once in early March and once in late August. Prune ½ of the plant in early spring and ¼ of the plant in late summer.<br>
 Fertilizer: never<br>
 Pests: only humans
-<br><br><br>
+                </p>
+            </section>
+          </div>
+        
+            
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
-                    	</h3>
-
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 register-right">
-                <div>
-                    <img src="{% static 'images/plumbago.png' %}" width="500" height="500">
-                </div>
-            </div>
-        </div>
-</div>
 
 </body>
 </html>

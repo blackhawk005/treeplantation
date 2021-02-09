@@ -1,16 +1,45 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="{% static 'lem_plumb.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'login-regis-styles.css' %}">
-	<title>PLUMBAGO | INFO </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> GARDEN TROWEL  &#127793;</title>
+
+    <link rel="stylesheet" href="{% static 'css_info/gardening_tools/trowel.css' %}">
+   
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="new.js"></script>
+
+     <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"> </script> <!--chart.js-->
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+     
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg ">
+    <!-- <a href="register">register</a><br>
+    <a href="login">login</a><br> -->
+
+    
+    
+    <!-- Navbar section -->
+    <nav class="navbar navbar-expand-lg ">
       <a class="navbar-brand" href="/">Trial 1</a>
       <button
         class="navbar-toggler btn-outline-light"
@@ -27,7 +56,7 @@
       <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/functionality/">Plant Information</a>
+            <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
           </li>
 
           {% if user.is_authenticated %}
@@ -63,37 +92,48 @@
         </ul>
       </div>
     </nav>
-
-    <div class="box">
-        <div class="row">
-            <div class="col-md-6 reg register-left">
-                <div class="register-form">
-                    <p>
-                    	<h2>TOOL – HAND TROWEL</h2>
-                    	<br>
-                    	<h3>
-                    		<h2 class="text-left">INTRODUCTION</h2>A trowel is a small hand tool used for digging, applying, smoothing, or moving small amounts of viscous or particulate material. Common varieties include the masonry trowel, garden trowel, and float trowel.<br>
-A power trowel is a much larger gasoline or electrically powered walk-behind device with rotating paddles used to finish concrete floors.
-
-                    	</h3>
-                    	<h3>
-                    		<h2 class="text-left">GARDEN TROWEL </h2>A hand tool with a pointed, scoop-shaped metal blade and wooden, metal, or plastic handle. It is comparable to a spade or shovel, but is generally much smaller, being designed for use with one hand. It is used for breaking up earth, digging small holes, especially for planting and weeding, mixing in fertilizer or other additives, and transferring plants to pots.
-                    	</h3>
-                    	<h3>
-                    		<h2 class="text-left">WHEN TO USE  </h2>When to use a gardening trowel depends on the job at hand. Garden trowels are used for digging small holes, such for planting bulbs, annuals or perennials. It would take a lot of time and effort to dig a hole for a tree or shrub with a garden trowel. Garden trowels are also used to dig up weeds. In small, tight areas, a narrow width blade will work better to dig out weeds or to install small plants or bulbs. Flat trowel blades work better on weeds with long taproots. Wider trowel blades and scoop-shaped blades work best for digging up small plants, digging holes for perennials, or scooping up soil when potting plants.
-                    	</h3>
-<br><br><br>
-
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 register-right">
-                <div>
-                    <img src="{% static 'gardening-trowel.png' %}" width="300" height="300">
-                </div>
-            </div>
+ 
+    <div class="pimg1">
+        <div class="ptext">
+            <span class="border">
+              GARDEN TROWEL  
+            </span>
         </div>
-</div>
+    </div >
+    <div class="pimg">
+    <section class="section section-dark">
+    
+      <h1>Introduction</h1>
+
+     <p>  A trowel is a small hand tool used for digging, applying, smoothing, or moving small amounts of viscous or particulate material. Common varieties include the masonry trowel, garden trowel, and float trowel.<br>
+      A power trowel is a much larger gasoline or electrically powered walk-behind device with rotating paddles used to finish concrete floors.
+       </p>
+    </section>
+    </div>
+
+    <div class="pimg2">
+
+        <section class="section section-dark">
+          <h1>GARDEN TROWEL</h1>
+          <p >
+            A hand tool with a pointed, scoop-shaped metal blade and wooden, metal, or plastic handle. It is comparable to a spade or shovel, but is generally much smaller, being designed for use with one hand. It is used for breaking up earth, digging small holes, especially for planting and weeding, mixing in fertilizer or other additives, and transferring plants to pots.
+          </p>
+        </section>
+    </div>
+    
+    <div class="pimg3">
+
+    <section class="section section-dark">
+      <h1>WHEN TO USE</h1>
+      <p>
+        When to use a gardening trowel depends on the job at hand. Garden trowels are used for digging small holes, such for planting bulbs, annuals or perennials. It would take a lot of time and effort to dig a hole for a tree or shrub with a garden trowel. Garden trowels are also used to dig up weeds. In small, tight areas, a narrow width blade will work better to dig out weeds or to install small plants or bulbs. Flat trowel blades work better on weeds with long taproots. Wider trowel blades and scoop-shaped blades work best for digging up small plants, digging holes for perennials, or scooping up soil when potting plants.
+      </p>
+    </section>
+
+   </div>   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
 
 </body>
 </html>

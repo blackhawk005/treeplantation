@@ -13,6 +13,9 @@ def indoor(request):
 def outdoor(request):
     return render(request, 'info/outdoor.html')
 
+def tools(request):
+    return render(request, 'info/tools.html')
+
 def page_open_lemon(request):
     return render(request, 'indoor_plants/lemon.html')
 
@@ -21,3 +24,6 @@ def page_open_curry(request):
 
 def page_open_plumbago(request):
     return render(request, 'outdoor_plants/plumbago.html')
+
+def page_open_trowel(request):
+    return render(request, 'gardening_tools/trowel.html')
