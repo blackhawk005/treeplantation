@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Secateurs  &#127793;</title>
+
+    <link rel="stylesheet" href="{% static 'css_info/gardening_tools/secateurs.css' %}">
+   
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="new.js"></script>
+
+     <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"> </script> <!--chart.js-->
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+     
+</head>
+<body>
+    <!-- <a href="register">register</a><br>
+    <a href="login">login</a><br> -->
+
+    
+    
+    <!-- Navbar section -->
+    <nav class="navbar navbar-expand-lg ">
+      <a class="navbar-brand" href="/">Trial 1</a>
+      <button
+        class="navbar-toggler btn-outline-light"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+      </button>
+      
+      <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+          </li>
+
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/register/">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/login/">Login</a>
+          </li>
+          {% endif %}
+          
+          <!-- <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/about/">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
+          </li> -->
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+ 
+    <div class="pimg1">
+        <div class="ptext">
+            <span class="border">
+              Secateurs 
+            </span>
+        </div>
+    </div >
+    <div class="pimg">
+    <section class="section section-dark">
+    
+      <h1>Introduction</h1>
+
+        <p>  
+            Pruning shears, also called hand pruners (in American English), or secateurs (in British English), are a type of scissors for 
+            use on plants. They are strong enough to prune hard branches of trees and shrubs, sometimes up to two centimetres thick. They 
+            are used in gardening, arboriculture, plant nursery works, farming, flower arranging, and nature conservation, where fine-scale 
+            habitat management is required.
+        </p>
+    </section>
+    </div>
+
+    <div class="pimg2">
+
+        <section class="section section-dark">
+          <h1>TYPES OF BLADES</h1>
+          <p>
+            There are two different types of blades for pruning shears: Stainless steel and carbon steel.
+            In addition there are pruning shears that have titanium coating.  
+            Stainless steel have a high corrosion resistance, due to the protective chromium oxide layer that covers the steel 
+            surface after heat treatment. On the other hand, they are not durable for long.
+            Carbon steel has a higher carbon content, which gives the steel a lower melting point, more malleability and durability, 
+            and better heat distribution. The disadvantages are the quick corrosion and staining.          
+          </p>
+        </section>
+    </div>
+    
+    <div class="pimg3">
+
+    <section class="section section-dark">
+      <h1>WHEN TO USE</h1>
+      <p>
+          Secateurs are used in gardens to shapen plants and brushes. The blades are sharp and hence, one must use with caution. For indoor decoration 
+          and shapening of plant, you can replace this with a pair of scissors. 
+      </p>
+    </section>
+
+   </div>   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
