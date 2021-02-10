@@ -1,0 +1,188 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CHILLY  &#127793;</title>
+
+    <link rel="stylesheet" href="{% static 'css_info/indoor/chilly.css' %}">
+   
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+     <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"> </script> <!--chart.js-->
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+     
+</head>
+<body>
+    <!-- <a href="register">register</a><br>
+    <a href="login">login</a><br> -->
+
+    
+    
+    <!-- Navbar section -->
+    <nav class="navbar navbar-expand-lg ">
+      <a class="navbar-brand" href="/">Trial 1</a>
+      <button
+        class="navbar-toggler btn-outline-light"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+      </button>
+      
+      <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+          </li>
+
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/register/">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/login/">Login</a>
+          </li>
+          {% endif %}
+          
+          <!-- <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/about/">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
+          </li> -->
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+ 
+    <div class="pimg">
+        <div class="ptext">
+            <span class="border">
+                CHILLY 
+            </span>
+        </div>
+    </div >
+    <div class="pimg1">
+    <section class="section section-dark">
+    
+      <h1>Introduction</h1>
+
+     <p>  The chili pepper (also chile, chile pepper, chilli pepper, or chilli[3]), from Nahuatl chīlli, is the fruit of plants 
+         from the genus Capsicum which are members of the nightshade family, Solanaceae.[4] Chili peppers are widely used in many 
+         cuisines as a spice to add heat to dishes. The substances giving chili peppers their intensity when ingested or applied topically 
+         are capsaicin and related compounds known as capsaicinoids.
+         </p>
+    </section>
+    </div>
+
+    <div class="pimg2">
+
+        <section class="section section-dark">
+          <h1>GROWING CONDITION</h1>
+          <p >
+            We need a warm climate and sunny position. Requires moisture-retentive soil (clay soil so that more water is retained).
+            18 - 21 &#8451; is the ideal temperature.
+            </p>
+        </section>
+    </div>
+    
+    <div class="pimg3">
+
+    <section class="section section-dark">
+        <h1>WHAT DO THEY LOOK LIKE</h1>
+        <p>Chilli plants grow from small to medium sized bushes from knee high to two metres/six feet 
+            tall. How big they get depends on the species and variety. 
+        </p>
+    </section>
+
+   </div>
+    
+
+    <div class="pimg4">
+
+        <section class="section section-dark">
+            <h1>SOWING AND WATERING</h1>
+            <p>
+            Best Time for sowing is February to April. If you want very hot chillies, 
+            then in January as it needs a Long summer to grow well. Transplant the seedlings individually into 9-10 cm pots.
+            Chillies cannot withstand a lot of water. Hence, heavy rain and stagnated water could spoil your plant. Make gaps in your soil and holes at the bottom of your pot to make sure it is not over-watered.
+            </p>
+        </section>
+    </div>
+    
+        
+
+        <div class="pimg5">
+
+          <section class="section section-dark">
+            <h1>PICKING</h1>
+            <p>
+                Different varieties are picked at different stages of their development. 
+                Fruits that start yellow or green generally ripen to red, though green chillies will sometimes 
+                ripen to orange or yellow, it all depends on the variety. Usually, and regardless of the colour, once they have filled 
+                out and become firm crisp and glossy they can be picked. Experiment by picking one to see if it has all it's heat 
+                and flavour. The sooner you pick the more the plant will produce so even if you don't need them at the time you should 
+                pick them and keep them in the freezer until you do.
+            </p>
+          </section>
+        </div>
+      
+          
+
+          <div class="pimg6">
+
+            <section class="section section-dark">
+                <h1>TAKING GOOD CARE OF YOUR PLANT</h1>
+                <p>
+                    Once the root fills 9-10 cm pots, transfer then in 20-23 cm pots of good compost. Pinch out growing tips when plants 
+                    reach about 15-20cm (6-8in) high to encourage bushy growth and better cropping. Pollination does need to occur to get fruits. 
+                    Rub the bristles of a small paint brush, or your little finger, gently over the flower heads to ensure that pollination occurs. 
+                    Give at least 2 inches of water per week once the fruits have appeared, spray rather than water at the base to prevent over watering.
+                </p>
+            </section>
+          </div>
+        
+            
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

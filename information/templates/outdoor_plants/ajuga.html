@@ -1,0 +1,177 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ajuga  &#127793;</title>
+
+    <link rel="stylesheet" href="{% static 'css_info/outdoor/ajuga.css' %}">
+   
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+     <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"> </script> <!--chart.js-->
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+     
+</head>
+<body>
+    <!-- <a href="register">register</a><br>
+    <a href="login">login</a><br> -->
+
+    
+    
+    <!-- Navbar section -->
+    <nav class="navbar navbar-expand-lg ">
+      <a class="navbar-brand" href="/">Trial 1</a>
+      <button
+        class="navbar-toggler btn-outline-light"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+      </button>
+      
+      <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+          </li>
+
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/register/">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/login/">Login</a>
+          </li>
+          {% endif %}
+          
+          <!-- <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/about/">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
+          </li> -->
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+ 
+    <div class="pimg">
+        <div class="ptext">
+            <span class="border">
+                AJUGA 
+            </span>
+        </div>
+    </div >
+    <div class="pimg1">
+    <section class="section section-dark">
+    
+      <h1>Introduction</h1>
+
+     <p>  Ajuga, also known as bugleweed, ground pine, carpet bugle, or just bugle, is a genus of 40 species annual 
+         and perennial herbaceous flowering plants in the Ajugeae tribe of the mint family Lamiaceae, with most species native to Europe, 
+         Asia, and Africa, but also two species in southeastern Australia
+         </p>
+    </section>
+    </div>
+
+    <div class="pimg2">
+
+        <section class="section section-dark">
+          <h1>GROWING CONDITION</h1>
+          <p >
+            Ajuga ground cover spreads through runners. It is a perfect plant for outdoor planting as it is an evergreen plant and 
+            doesn’t require any special care. These plants can grow in full sunshine or in shade. There is no specific temperature 
+            for this plant but for the best growth, 10-12 &#8451; would be the best. 
+
+
+            </p>
+        </section>
+    </div>
+    
+    <div class="pimg3">
+
+    <section class="section section-dark">
+        <h1>WHAT DO THEY LOOK LIKE</h1>
+        <p>Ajuga are matt forming evergreen plants that are ideal as a ground covering plant. Bugleweed has a mass of blue and purple 
+            flowering stems that sit above a foliage of leaves, these can be as variable in colour as deep green, purple, pink and cream. 
+            Their height ranges from 2-20 inches.
+        </p>
+    </section>
+
+   </div>
+    
+
+    <div class="pimg4">
+
+        <section class="section section-dark">
+            <h1>SOWING AND WATERING</h1>
+            <p>
+                Best time to sow is spring or autumn. Sow it thinly. Germination time: three to four weeks. Transplant to individual
+                 pots when seedlings are strong. Transplant outdoors once further established - in the summer. Space at 12 to 15 inches 
+                 (30—40 cm). Water from below. Cover the container with a plastic bag until seeds germinate.
+            </p>
+        </section>
+    </div>
+      
+          
+
+          <div class="pimg5">
+
+            <section class="section section-dark">
+                <h1>TAKING GOOD CARE OF YOUR PLANT</h1>
+                <p>
+                    This plant prefers shade, but will tolerate full sunlight but needs a good drainage. It mostly soils when grown in 
+                    the shaded requires a richer, humus soil when grown in full/partial sunny areas of the garden. Ideally soil should 
+                    have a slightly acidic to neutral pH. Water during prolonged dry spells if growing in a sunny area. Remove 
+                    un-variegated leaves. Remove offsets/runners from young plants to prevent spread; it is best to grow Ajuga in a 
+                    contained area. Growing Ajuga in a sunny area also slows down its growth/spread rate. Deadhead to prevent seed set. 
+                    Divide every three years to prevent rotting crowns. Propagates by dividing clumps early in the spring or in autumn; 
+                    self-seeds freely.
+                </p>
+            </section>
+          </div>
+        
+            
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
