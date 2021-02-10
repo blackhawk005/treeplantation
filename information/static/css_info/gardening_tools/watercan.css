@@ -1,0 +1,82 @@
+body, html{
+    height: 100%;
+    margin:0;
+    font-size:16px;
+    font-family: "Lato",sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+    
+    }
+    
+    .pimg1, .pimg2, .pimg3{
+        position: relative;
+        opacity: 0.9;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    
+    .pimg1{
+        background-image: url('../img/img-watercan.jpg');
+        min-height: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .pimg2{
+        background-image: url('../img/img-watercan1.jpg');
+        min-height: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .pimg3{
+        background-image: url('../img/img-watercan2.jpg');
+        min-height: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    
+ 
+    
+    .section{
+        text-align: center;
+        padding: 50px 180px;
+    }
+    
+    .information{
+        background-color: #282e34;
+        color: hsl(0, 100%, 99%);
+        
+    }
+    
+    .uses{
+    background-color: #282e34;
+    color: hsl(0, 100%, 99%);
+    }
+    
+   
+    
+    .ptext{
+        position:absolute;
+        top:50%;
+        width: 100%;
+        text-align: center;
+        color:#000;
+        font-size: 27px;
+        letter-spacing: 8px;
+        text-transform: uppercase;
+    }
+    
+    .ptext .border{
+        background-color: #111;
+        color: #fff;
+        padding: 20px;
+        border: 1px solid navajowhite;
+    }
+    
+    @media(max-width:568px){
+    .pimg1,.pimg2,.pimg3{
+        background-attachment: scroll;
+    }
+    }
