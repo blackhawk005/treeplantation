@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANGO &#127793;</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css_info/outdoor/mango.css' %}">
+    
+   
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="new.js"></script>
+
+     <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"> </script> <!--chart.js-->
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+     
+</head>
+<body>
+
+    <!-- Navbar section -->
+
+    <div>
+      <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="">Outdoor Plant</a>
+        <button
+          class="navbar-toggler btn-outline-light"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+        </button>
+        
+        <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/">Home</a>
+          </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+            </li>
+  
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+            </li>
+           {% else %}
+           <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/register/">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/login/">Login</a>
+            </li>
+            {% endif %}
+            
+            
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
+    </div>
+ 
+    <div class="pimg1">
+
+        <div class="ptext">
+            <span class="border">
+                 MANGO
+            </span>
+        </div>
+    </div>
+
+    <section class="section section-dark">
+
+      <h1>SIZE</h1>
+
+     <p>  Mango trees grow to 35–40 m (115–131 ft) tall, with a crown radius of 10 m (33 ft). In deep soil, the taproot descends to a depth of 6 m (20 ft), with profuse, wide-spreading feeder roots and anchor roots penetrating deeply into the soil.</p>
+    </section>
+
+    <div class="pimg2">
+
+        <section class="section section-dark">
+          <h1>LIFE-CYCLE</h1>
+          <p >
+            Mango trees can remain in production for 40 years or more.
+          </p>
+        </section>
+    </div>
+    
+    <div class="pimg3">
+
+    <section class="section section-dark">
+      <h1>CLIMATE</h1>
+      <p>
+        It generally requires Tropical and Sub-Tropical Climate.
+      </p>
+    </section>
+
+   </div>
+    
+
+    <div class="pimg4">
+
+        <section class="section section-dark">
+            <h1>SOIL REQUIREMENTS</h1>
+            <p>
+                Mango grows well on wide variety of soils, such as lateritic, alluvial, sandy loam and sandy.The loamy, alluvial, well-drained, aerated and deep soils (2-2.5 m) rich in organic matter with a pH range of 5.5-7.5 are ideal for mango cultivation.
+
+            </p>
+        </section>
+    </div>
+    
+        
+
+        <div class="pimg5">
+
+          <section class="section section-dark">
+              <h1>WATER TABLE</h1>
+              <p>
+                The water table should be around 3 m
+              </p>
+          </section>
+        </div>
+      
+          
+
+          <div class="pimg6">
+
+            <section class="section section-dark">
+                <h1>FRUITING</h1>
+                <p>
+                    Grafted trees usually produce fruit in 3 to 5 years in dry areas, while seedling trees usually take at least five years to come into bearing.
+                </p>
+            </section>
+          </div>
+        
+            
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
