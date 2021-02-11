@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turmeric Plant &#127793;</title>
+
+    <link rel="stylesheet" href="{% static 'css_info/indoor/turmeric.css' %}">
+    
+   
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="new.js"></script>
+
+     <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"> </script> <!--chart.js-->
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+     
+</head>
+<body>
+
+    <!-- Navbar section -->
+
+    <div>
+      <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="">Indoor Plant</a>
+        <button
+          class="navbar-toggler btn-outline-light"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+        </button>
+        
+        <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/">Home</a>
+          </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+            </li>
+  
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+            </li>
+           {% else %}
+           <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/register/">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/login/">Login</a>
+            </li>
+            {% endif %}
+            
+            
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
+    </div>
+ 
+    <div class="pimg1">
+
+        <div class="ptext">
+            <span class="border">
+                TURMERIC PLANT
+            </span>
+        </div>
+    </div>
+
+    <section class="section section-dark">
+
+      <h1>SIZE</h1>
+
+     <p>  Turmeric plants reach about 1 metre (3.3 feet) in height and bear long simple leaves with long petioles (leaf stems). The leaves emerge from the branching rhizomes that lie just below the soil surface.
+       </p>
+    </section>
+
+    <div class="pimg2">
+
+        <section class="section section-dark">
+          <h1>LIFE-CYCLE</h1>
+          <p >
+            Turmeric takes seven to 10 months from planting to harvest.
+          </p>
+        </section>
+    </div>
+    
+    <div class="pimg3">
+
+    <section class="section section-dark">
+      <h1>CLIMATE</h1>
+      <p>
+        Temperatures between 20 and 30 °C (68 and 86 °F) and a considerable amount of annual rainfall
+
+      </p>
+    </section>
+
+   </div>
+    
+
+    <div class="pimg4">
+
+        <section class="section section-dark">
+            <h1>SOIL REQUIREMENTS</h1>
+            <p>
+              Turmeric thrives in warm, humid conditions and well-drained, neutral soil
+
+            </p>
+        </section>
+    </div>
+    
+        
+
+        <div class="pimg5">
+
+          <section class="section section-dark">
+              <h1>WATER TABLE</h1>
+              <p>
+               Water it about every two days, and spray it with a mist bottle between waterings.
+
+              </p>
+          </section>
+        </div>
+      
+          
+
+          <div class="pimg6">
+
+            <section class="section section-dark">
+                <h1>PLANTING</h1>
+                <p>
+                  Use plump rhizomes with as many bumps (buds) along the sides as possible. Cut your rhizomes into sections. Lay the rhizome sections flat on the soil, and cover with more potting soil.
+                </p>
+            </section>
+          </div>
+        
+            
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
