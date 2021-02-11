@@ -1,13 +1,45 @@
 body, html{
     height: 100%;
-    margin:0;
-    font-size:16px;
-    font-family: "Lato",sans-serif;
-    font-weight: 400;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato" , sans-serif;
+    font-weight: 200;
     line-height: 1.8em;
     color: #666;
-    
-    }
+    background-image: linear-gradient(to left,#01201d,#5e804d);
+
+}
+
+/* Navbar section */
+.navbar {
+    padding: 32px 32px 32px;
+    padding-right: 32px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .navbar-brand:hover {
+    color:#F2A929;
+  }
+  .navbar-brand {
+    color:#fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 48px;
+  }
+  /* .home-nav-collapse {
+    color: white;
+  } */
+
+  
+  .nav-item{
+      margin: 16px;
+      
+  }
+  .nav-link{
+    color: #fff;
+  }
+  
+  .nav-link:hover {
+    color:#F2A929;
+  }
     
     .pimg1, .pimg2, .pimg3{
         position: relative;
@@ -41,25 +73,23 @@ body, html{
     
     .section{
         text-align: center;
-        padding: 50px 180px;
+        padding: 50px 80px;
+    
     }
     
-    .information{
+    .section-light{
+        background-color: #f4f4f4;
+        color: #666;
+    }
+    
+    .section-dark{
         background-color: #282e34;
-        color: hsl(0, 100%, 99%);
-        
+        color: #ddd;
     }
-    
-    .uses{
-    background-color: #282e34;
-    color: hsl(0, 100%, 99%);
-    }
-    
-   
     
     .ptext{
-        position:absolute;
-        top:50%;
+        position: absolute;
+        top: 50%;
         width: 100%;
         text-align: center;
         color:#000;
@@ -72,11 +102,11 @@ body, html{
         background-color: #111;
         color: #fff;
         padding: 20px;
-        border: 1px solid navajowhite;
     }
     
-    @media(max-width:568px){
-    .pimg1,.pimg2,.pimg3{
-        background-attachment: scroll;
-    }
+    p{
+        font-size: x-large;
+        text-align: center;
+        margin-left: 100px;
+        margin-right: 100px;
     }

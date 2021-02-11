@@ -33,6 +33,12 @@ def page_open_aloevera(request):
 def page_open_lemongrass(request):
     return render(request, 'indoor_plants/lemongrass.html')
 
+def page_open_turmeric(request):
+    return render(request, 'indoor_plants/turmeric.html')
+
+def page_open_indianbasil(request):
+    return render(request, 'indoor_plants/indianbasil.html')
+
 # outdoor
 
 def page_open_plumbago(request):
@@ -69,3 +75,6 @@ def page_open_gloves(request):
 
 def page_open_watercan(request):
     return render(request, 'gardening_tools/watercan.html')
+
+def page_open_spade(request):
+    return render(request, 'gardening_tools/spade.html')

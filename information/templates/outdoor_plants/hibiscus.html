@@ -40,7 +40,6 @@
     
     <!-- Navbar section -->
 
-  <div>
     <nav class="navbar navbar-expand-lg ">
       <a class="navbar-brand" href="/">Trial 1</a>
       <button
@@ -54,16 +53,46 @@
       >
         <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
       </button>
-    </div>  
       
       <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
           </li>
-        </div>   
-  </ul>
- </nav>
+
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/register/">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/login/">Login</a>
+          </li>
+          {% endif %}
+          
+          <!-- <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/about/">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
+          </li> -->
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
 
  <div class="pimg1">
     <div class="ptext">

@@ -7,8 +7,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jamun Plant</title>
     <link rel="stylesheet" href="{% static 'css_info/outdoor/jamun.css' %}">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"> </script> <!--chart.js-->
+
+   <!-- Google fonts -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="/">Trial 1</a>
+        <button
+          class="navbar-toggler btn-outline-light"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+        </button>
+        
+        <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+            </li>
+  
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/register/">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/login/">Login</a>
+            </li>
+            {% endif %}
+            
+            <!-- <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/about/">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
+            </li> -->
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
     <div class="pimg1">
         <div class="ptext">
             <span class="border">
@@ -16,7 +88,7 @@
             </span>
         </div>
     </div>
-            <section class="section soil">
+            <section class="section section-dark">
                 <h2 style="color: burlywood; font-size: xx-large;">Soil</h2>
                 <p>
                    The Jamun trees can be grown on a wide range of soils - calcareous, saline sodic soils and marshy areas.<br>
@@ -29,7 +101,7 @@ It does not like very heavy and light sandy soils.
             <div class="pimg2">
              </div>
             
-            <section class="section area">
+            <section class="section section-dark">
                 <h2 style="color: burlywood; font-size: xx-large;">Area</h2>
                 <p>
                     Required pit size- 1m x 1m x 1m.<br>
@@ -44,7 +116,7 @@ It does not like very heavy and light sandy soils.
             <div class="pimg3">
             </div>
 
-            <section class="section temperature">
+            <section class="section section-dark">
                 <h2 style="color: burlywood; font-size: xx-large;">Temperature</h2>
                 <p>
                     Jamun is a hardy fruit, it can be grown under adverse soil and climate conditions.<br>
@@ -59,7 +131,7 @@ It does not like very heavy and light sandy soils.
             <div class="pimg4">
             </div>
 
-            <section class="section lifespan">
+            <section class="section section-dark">
                 <h2 style="color: burlywood; font-size: xx-large;">Lifespan</h2>
                 <p>
                     The seedling Jamun trees start bearing after 9 to 10 years of planting.<br>
@@ -73,7 +145,7 @@ It does not like very heavy and light sandy soils.
             <div class="pimg5">
             </div>
 
-            <section class="section uses">
+            <section class="section section-dark">
                 <h2 style="color: burlywood; font-size: xx-large;">Uses</h2>
                 <p>
                     Jamun fruits, leaves, seeds, and bark are used as ayurvedic medicine.<br>
@@ -93,7 +165,7 @@ It does not like very heavy and light sandy soils.
             <div class="pimg6">
             </div>
 
-            <section class="section benefits">
+            <section class="section section-dark">
                 <h2 style="color: burlywood; font-size: xx-large;">Benefits</h2>
                 <p>
                     Improves hemoglobin count<br>
@@ -112,7 +184,7 @@ It does not like very heavy and light sandy soils.
             <div class="pimg7">
             </div>
 
-            <section class="section fertilizers">
+            <section class="section section-dark">
                 <h2 style="color: burlywood; font-size: xx-large;">Fertilizers</h2>
                 <p>
                     Seedling Jamun trees start bearing fruits @ age of 8 – 10 years while budded and grafted trees  start bearing in 6 – 7 years.<br>
@@ -128,7 +200,7 @@ It does not like very heavy and light sandy soils.
             <div class="pimg8">
             </div>
 
-            <section class="section water">
+            <section class="section section-dark">
                 <h2 style="color: burlywood; font-size: xx-large;">Water</h2>
                 <p>
                     Young Jamun plants in early stages require frequent watering but subsequently, irrigations should be reduced, initial stages of plants require about 12 irrigation per year (monthly once).<br>
@@ -139,5 +211,7 @@ It does not like very heavy and light sandy soils.
             
             <div class="pimg9">
             </div> 
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 </body>
 </html>
