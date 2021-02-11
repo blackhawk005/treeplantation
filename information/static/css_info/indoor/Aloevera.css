@@ -23,27 +23,27 @@ body, html{
 }
 
 .pimg1{
-  background-image:url('aloeveraimg1.jpg');
+  background-image:url('/static/images/Sohan_D/aloeveraimg1.jpg');
   min-height:100%;
 }
 
 .pimg2{
-  background-image:url('aloeveraimg2.jpg';
+  background-image:url('/static/images/Sohan_D/aloeveraimg2.jpg');
   min-height:400px;
 }
 
 .pimg3{
-  background-image:url('aloeveraimg3.jpg');
+  background-image:url('/static/images/Sohan_D/aloeveraimg3.jpg');
   min-height:400px;
 }
 
 .pimg4{
-  background-image:url('aloeveraimg4.jpg');
+  background-image:url('/static/images/Sohan_D/aloeveraimg4.jpg');
   min-height:400px;
 }
 
 .pimg5{
-  background-image:url('aloeveraimg5.jpg');
+  background-image:url('/static/images/Sohan_D/aloeveraimg5.jpg');
   min-height:400px;
 }
 

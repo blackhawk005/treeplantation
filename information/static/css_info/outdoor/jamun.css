@@ -17,57 +17,57 @@ body, html{
     }
     
     .pimg1{
-        background-image: url('../img/img-header.jpeg');
+        background-image: url('/static/images/jamun/img/img-header.jpeg');
         min-height: 100%;
     }
     
     .pimg2{
-        background-image: url('../img/img-soil.jpg');
+        background-image: url('/static/images/jamun/img/img-soil.jpg');
         min-height: 100%;
     }
     
     .pimg3{
-        background-image: url('../img/img-area.jpg');
+        background-image: url('/static/images/jamun/img/img-area.jpg');
         min-height: 100%;
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     
     .pimg4{
-        background-image: url('../img/img-temp.jpg');
+        background-image: url('/static/images/jamun/img/img-temp.jpg');
         min-height: 100%;
     }
     
     .pimg5{
-        background-image: url('../img/img-lifespan.jpeg');
+        background-image: url('/static/images/jamun/img/img-lifespan.jpeg');
         min-height: 100%;
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     
     .pimg6{
-        background-image: url('../img/img-uses.jpeg');
+        background-image: url('/static/images/jamun/img/img-uses.jpeg');
         min-height: 100%;
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     
     .pimg7{
-        background-image: url('../img/img-benefits.jpeg');
+        background-image: url('/static/images/jamun/img/img-benefits.jpeg');
         min-height: 100%;
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     
     .pimg8{
-        background-image: url('../img/img-fertilizers.jpeg');
+        background-image: url('/static/images/jamun/img/img-fertilizers.jpeg');
         min-height: 100%;
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     
     .pimg9{
-        background-image: url('../img/img-water.jpeg');
+        background-image: url('/static/images/jamun/img/img-water.jpeg');
         min-height: 100%;
         background-repeat: no-repeat;
         background-size: 100% 100%;

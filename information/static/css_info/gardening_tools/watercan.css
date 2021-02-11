@@ -17,21 +17,21 @@ body, html{
     }
     
     .pimg1{
-        background-image: url('../img/img-watercan.jpg');
+        background-image: url('/static/images/watercan/img/img-watercan.jpg');
         min-height: 100%;
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     
     .pimg2{
-        background-image: url('../img/img-watercan1.jpg');
+        background-image: url('/static/images/watercan/img/img-watercan1.jpg');
         min-height: 100%;
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     
     .pimg3{
-        background-image: url('../img/img-watercan2.jpg');
+        background-image: url('/static/images/watercan/img/img-watercan2.jpg');
         min-height: 100%;
         background-repeat: no-repeat;
         background-size: 100% 100%;

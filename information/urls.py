@@ -11,15 +11,21 @@ urlpatterns = [
     path('lemon', views.page_open_lemon, name='page_open_lemon'),
     path('chilly', views.page_open_chilly, name='page_open_chilly'),
     path('curry', views.page_open_curry, name='page_open_curry'),
+    path('aloevera', views.page_open_aloevera, name='page_open_aloevera'),
+    path('lemongrass', views.page_open_lemongrass, name='page_open_lemongrass'),
 
     # outdoor
     path('plumbago', views.page_open_plumbago, name="page_open_plumbago"),
     path('ajuga', views.page_open_ajuga, name="page_open_ajuga"),
     path('mango', views.page_open_mango, name="page_open_mango"),
     path('hibiscus', views.page_open_hibiscus, name="page_open_hibiscus"),
+    path('jamun', views.page_open_jamun, name="page_open_jamun"),
+    path('guava', views.page_open_guava, name="page_open_guava"),
     
     #tools
     path('trowel', views.page_open_trowel, name='page_open_trowel'),
     path('secateurs', views.page_open_secateurs, name='page_open_secateurs'),
     path('rake', views.page_open_rake, name='page_open_rake'),
+    path('gloves', views.page_open_gloves, name='page_open_gloves'),
+    path('watercan', views.page_open_watercan, name='page_open_watercan'),
 ]

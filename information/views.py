@@ -26,7 +26,12 @@ def page_open_chilly(request):
 
 def page_open_curry(request):
     return render(request, 'indoor_plants/curry.html')
-    
+
+def page_open_aloevera(request):
+    return render(request, 'indoor_plants/Aloevera.html')
+
+def page_open_lemongrass(request):
+    return render(request, 'indoor_plants/lemongrass.html')
 
 # outdoor
 
@@ -42,6 +47,12 @@ def page_open_hibiscus(request):
 def page_open_mango(request):
     return render(request, 'outdoor_plants/mango.html')
 
+def page_open_jamun(request):
+    return render(request, 'outdoor_plants/jamun.html')
+
+def page_open_guava(request):
+    return render(request, 'outdoor_plants/Guava.html')
+
 # tools
 
 def page_open_trowel(request):
@@ -52,3 +63,9 @@ def page_open_secateurs(request):
 
 def page_open_rake(request):
     return render(request, 'gardening_tools/rake.html')
+
+def page_open_gloves(request):
+    return render(request, 'gardening_tools/gloves.html')
+
+def page_open_watercan(request):
+    return render(request, 'gardening_tools/watercan.html')

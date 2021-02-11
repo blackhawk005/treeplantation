@@ -6,6 +6,7 @@ body, html{
   font-weight:500;
   line-height:1.2em;
   color:rgb(0, 0, 0);
+  background-image: linear-gradient(to left,#01201d,#5e804d);
 }
 
 .pimg1, .pimg2, .pimg3, .pimg4, .pimg5{
@@ -23,27 +24,27 @@ body, html{
 }
 
 .pimg1{
-  background-image:url('../Guava-img/Guavaimg1.jpg');
+  background-image:url('/static/images/Sohan_D/Guavaimg1.jpg');
   min-height:100%;
 }
 
 .pimg2{
-  background-image:url('../Guava-img/Guavaimg2.jfif');
+  background-image:url('/static/images/Sohan_D/Guavaimg2.jfif');
   min-height:400px;
 }
 
 .pimg3{
-  background-image:url('../Guava-img/Guavaimg3.jpg');
+  background-image:url('/static/images/Sohan_D/Guavaimg3.jpg');
   min-height:400px;
 }
 
 .pimg4{
-  background-image:url('../Guava-img/Guavaimg4.jpg');
+  background-image:url('/static/images/Sohan_D/Guavaimg4.jpg');
   min-height:400px;
 }
 
 .pimg5{
-  background-image:url('../Guava-img/Guavaimg5.jfif');
+  background-image:url('/static/images/Sohan_D/Guavaimg5.jfif');
   min-height:400px;
 }
 
@@ -53,13 +54,13 @@ body, html{
 }
 
 .section-light{
-  background-color:#f4f4f4;
-  color:#666;
+  background-color: #f4f4f4;
+  color: #666;
 }
 
 .section-dark{
-  background-color:#e0e0e0;
-  color:rgb(43, 42, 42);
+  background-color: #282e34;
+  color: #ddd;
 }
 
 .ptext{
@@ -81,6 +82,13 @@ body, html{
 
 .ptext .border.trans{
   background-color:transparent;
+}
+
+p{
+  font-size: x-large;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 @media(max-width:568px){

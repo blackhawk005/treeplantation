@@ -17,57 +17,57 @@ color: #666;
 }
 
 .pimg1{
-    background-image: url('../img/img1.jpg');
+    background-image: url('/static/images/lemongrass/img/img1.jpg');
     min-height: 100%;
 }
 
 .pimg2{
-    background-image: url('../img/img2-soil.jpg');
+    background-image: url('/static/images/lemongrass/img/img2-soil.jpg');
     min-height: 100%;
 }
 
 .pimg3{
-    background-image: url('../img/img3-area.jpg');
+    background-image: url('/static/images/lemongrass/img/img3-area.jpg');
     min-height: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
 .pimg4{
-    background-image: url('../img/img4-temp.jpg');
+    background-image: url('/static/images/lemongrass/img/img4-temp.jpg');
     min-height: 100%;
 }
 
 .pimg5{
-    background-image: url('../img/img5-lifespan2.jpg');
+    background-image: url('/static/images/lemongrass/img/img5-lifespan2.jpg');
     min-height: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
 .pimg6{
-    background-image: url('../img/img6-uses2.jpg');
+    background-image: url('/static/images/lemongrass/img/img6-uses2.jpg');
     min-height: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
 .pimg7{
-    background-image: url('../img/img7-benefits.jpg');
+    background-image: url('/static/images/lemongrass/img/img7-benefits.jpg');
     min-height: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
 .pimg8{
-    background-image: url('../img/img8-fertilizers1.jpg');
+    background-image: url('/static/images/lemongrass/img/img8-fertilizers1.jpg');
     min-height: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
 .pimg9{
-    background-image: url('../img/img9-water1.jpg');
+    background-image: url('/static/images/lemongrass/img/img9-water1.jpg');
     min-height: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
