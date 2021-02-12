@@ -34,5 +34,6 @@ urlpatterns = [
     path('gloves', views.page_open_gloves, name='page_open_gloves'),
     path('watercan', views.page_open_watercan, name='page_open_watercan'),
     path('saw', views.page_open_saw, name='page_open_saw'),
-    path('spade', views.page_open_spade, name='page_open_spade')
+    path('spade', views.page_open_spade, name='page_open_spade'),
+    path('hoe', views.page_open_hoe, name='page_open_hoe')
 ]

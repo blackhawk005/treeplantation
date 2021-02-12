@@ -90,3 +90,6 @@ def page_open_spade(request):
 
 def page_open_saw(request):
     return render(request, 'gardening_tools/saw.html') 
+
+def page_open_hoe(request):
+    return render(request, 'gardening_tools/hoe.html') 
