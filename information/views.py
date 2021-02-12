@@ -84,3 +84,6 @@ def page_open_watercan(request):
 
 def page_open_spade(request):
     return render(request, 'gardening_tools/spade.html')
+
+def page_open_saw(request):
+    return render(request, 'gardening_tools/saw.html') 
