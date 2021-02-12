@@ -25,6 +25,7 @@ urlpatterns = [
     path('jamun', views.page_open_jamun, name="page_open_jamun"),
     path('guava', views.page_open_guava, name="page_open_guava"),
     path('papaya', views.page_open_papaya, name="page_open_papaya"),
+    path('coconut', views.page_open_coconut, name="page_open_coconut"),
     
     #tools
     path('trowel', views.page_open_trowel, name='page_open_trowel'),

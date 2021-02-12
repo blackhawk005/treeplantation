@@ -65,6 +65,9 @@ def page_open_guava(request):
 def page_open_papaya(request):
     return render(request, 'outdoor_plants/papaya.html')
 
+def page_open_coconut(request):
+    return render(request, 'outdoor_plants/coconut.html')
+
 # tools
 
 def page_open_trowel(request):
