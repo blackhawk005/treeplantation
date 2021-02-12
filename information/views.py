@@ -39,6 +39,9 @@ def page_open_turmeric(request):
 def page_open_indianbasil(request):
     return render(request, 'indoor_plants/indianbasil.html')
 
+def page_open_babysunrose(request):
+    return render(request, 'indoor_plants/babysunRose.html')
+
 # outdoor
 
 def page_open_plumbago(request):
@@ -58,6 +61,9 @@ def page_open_jamun(request):
 
 def page_open_guava(request):
     return render(request, 'outdoor_plants/Guava.html')
+
+def page_open_papaya(request):
+    return render(request, 'outdoor_plants/papaya.html')
 
 # tools
 
