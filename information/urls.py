@@ -29,6 +29,7 @@ urlpatterns = [
     
     #tools
     path('trowel', views.page_open_trowel, name='page_open_trowel'),
+    path('knife', views.page_open_knife, name='page_open_knife'),
     path('secateurs', views.page_open_secateurs, name='page_open_secateurs'),
     path('rake', views.page_open_rake, name='page_open_rake'),
     path('gloves', views.page_open_gloves, name='page_open_gloves'),

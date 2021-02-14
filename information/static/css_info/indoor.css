@@ -74,7 +74,7 @@
   
   /* Style the counter cards */
   .card {
-    box-shadow: 0 4px 8px 0 rgba(92, 92, 92, 0.2);
+    /* box-shadow: 0 4px 8px 0 rgba(92, 92, 92, 0.2); */
     padding: 15px;
     height: 420px;
     width: 330px;
@@ -84,7 +84,10 @@
     transition: top 0.5s ease;
     background: #fff;
     border-radius: 5%;
-    
+    -moz-box-shadow:    7px 10px 11px 0px rgb(46, 45, 45);
+    -webkit-box-shadow: 7px 10px 11px 0px rgb(46, 45, 45);
+    box-shadow:         7px 10px 11px 0px rgb(46, 45, 45);
+
   }
   
   .card:hover{

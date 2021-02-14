@@ -23,12 +23,12 @@ body, html{
 }
 
 .pimg1{
-  background-image:url('../img/knifeimg1.jpg');
+  background-image:url('/static/images/Sohan_D/knifeimg1.jpg');
   min-height:100%;
 }
 
 .pimg2{
-  background-image:url('../img/knifeimg2.jpg');
+  background-image:url('/static/images/Sohan_D/knifeimg2.jpg');
   min-height:400px;
 }
 

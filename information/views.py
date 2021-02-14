@@ -89,7 +89,10 @@ def page_open_spade(request):
     return render(request, 'gardening_tools/spade.html')
 
 def page_open_saw(request):
-    return render(request, 'gardening_tools/saw.html') 
+    return render(request, 'gardening_tools/saw.html')
 
 def page_open_hoe(request):
-    return render(request, 'gardening_tools/hoe.html') 
+    return render(request, 'gardening_tools/hoe.html')
+
+def page_open_knife(request):
+    return render(request, 'gardening_tools/Gardenknife.html')
