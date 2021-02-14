@@ -68,7 +68,10 @@ img{
     text-align: center;
     background: #f8f8f8;
     border-radius: 5%;
-    padding-top: 50px; 
+    padding-top: 50px;
+    -moz-box-shadow:    7px 10px 11px 0px rgb(46, 45, 45);
+    -webkit-box-shadow: 7px 10px 11px 0px rgb(46, 45, 45);
+    box-shadow:         7px 10px 11px 0px rgb(46, 45, 45);
 }
 /* @media(max-width: 1028px){
     .register-right{
@@ -147,6 +150,9 @@ h3{
     text-align: center;
     background: #f8f8f8;
     border-radius: 5%;
+    -moz-box-shadow:    7px 10px 11px 0px rgb(46, 45, 45);
+    -webkit-box-shadow: 7px 10px 11px 0px rgb(46, 45, 45);
+    box-shadow:         7px 10px 11px 0px rgb(46, 45, 45);
 }
 @media(max-width: 1028px){
     .login-left{
