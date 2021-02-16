@@ -49,28 +49,24 @@
       <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+            <a class="home-nav-link nav-link" href="#intro">INTRODUCTION</a>
           </li>
 
-          {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+            <a class="home-nav-link nav-link" href="#cond">CONDITIONS/REQUIREMENTS</a>
           </li>
+
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+            <a class="home-nav-link nav-link" href="#steps">STEPS FOR PROPAGATION OF NEW WHITE GUAVA</a>
           </li>
+
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+            <a class="home-nav-link nav-link" href="#daily">PROVIDING DAILY CARE</a>
           </li>
-          {% else %}
+
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/register/">Register</a>
+            <a class="home-nav-link nav-link" href="#uses">USES AND BENEFITS</a>
           </li>
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/login/">Login</a>
-          </li>
-          {% endif %}
-          
           <!-- <li class="nav-item">
             <a class="home-nav-link nav-link" href="/about/">About us</a>
           </li>
@@ -93,7 +89,7 @@
     </div>
   </div>
 
-  <section class="section section-dark">
+  <section class="section section-dark" id="intro">
     <h2></h2>
     <p>
       Guava fruits are typically classified by their colored flesh. It popularly ranges from white-yellow-pink. This
@@ -112,7 +108,7 @@
     </div>
   </div>
 
-  <section class="section section-dark">
+  <section class="section section-dark" id="cond">
     <h2></h2>
     <p>
     <h2><u>Climate:</u></h2>
@@ -146,7 +142,7 @@
     </div>
   </div>
 
-  <section class="section section-dark">
+  <section class="section section-dark" id="steps">
     <h2></h2>
     <p>
       Pick whether you’re going to plant by cutting or seed. The process of growing from either is roughly the same.
@@ -188,7 +184,7 @@
     </div>
   </div>
 
-  <section class="section section-dark">
+  <section class="section section-dark" id="daily">
     <h2></h2>
     <p>
       1)Water your tree. While the tree is young, you should water it 2 to 3 times a week. Once it matures, however, it
@@ -216,7 +212,7 @@
     </div>
   </div>
 
-  <section class="section section-dark">
+  <section class="section section-dark" id="uses">
     <h2><b><u><i>HEALTH BENEFITS OF WHITE GUAVA</i></u></b></h2>
     <br>
 

@@ -3,8 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content+"width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content+"ie+edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie+edge">
     <title>Papaya Tree</title>
     <link rel="stylesheet" href="{% static 'css_info/outdoor/papayastyle.css' %}">
 
@@ -46,28 +46,20 @@
       <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+            <a class="home-nav-link nav-link" href="#size">Size</a>
           </li>
 
-          {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+            <a class="home-nav-link nav-link" href="#soil&life">Soil & Life Cycle</a>
           </li>
+
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+            <a class="home-nav-link nav-link" href="#climate">Climate</a>
           </li>
+
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+            <a class="home-nav-link nav-link" href="#water">Watering/Care</a>
           </li>
-          {% else %}
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/register/">Register</a>
-          </li>
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/login/">Login</a>
-          </li>
-          {% endif %}
-          
           <!-- <li class="nav-item">
             <a class="home-nav-link nav-link" href="/about/">About us</a>
           </li>
@@ -91,7 +83,7 @@
       </div>
     </div>
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="size">
       <h2>Size</h2>
       <p>
         Usually with a single stem growing from 5 to 10 m (16 to 33 ft) tall. The leaves are 50–70 cm (20–28 in) in diameter.
@@ -102,7 +94,7 @@
   <div class="pimg2">
     </div>
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="soil&life">
       <h2>Soil</h2>
       <p>
         Papaya grows well in well-drained rich sandy loam soils with a depth of 45cm or medium black soils free from water logging. Light soils with pH between 6.5-7 are very good for papaya, if they are adequately manured.
@@ -116,7 +108,7 @@
     <div class="pimg3">
     </div>
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="climate">
       <h2>Climate</h2>
       <p>
 Papaya is a tropical crop, but it does well in a mild tropical climate. It grows well from sea level upto an altitude of 1000m. Papaya should not be grown in areas with strong, hot or dry winds. Dry climate at the time of ripening adds to the sweetness of fruits. Ideal temperature for growing papaya is between 25-30 C while temperatures below 10 C delays ripening. In high rainfall areas are not suitable for growing papaya due to the death of the plants by collar- rot disease.
@@ -126,7 +118,7 @@ Papaya is a tropical crop, but it does well in a mild tropical climate. It grows
     <div class="pimg4">
     </div>
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="water">
       <h2>Watering/Care</h2>
       <p>
         Papayas need little water. They will, however, give more and bigger fruit if they are watered every 2 weeks in the dry season. The flowers will drop if they do not get enough water. If they are planted in clay soils, make sure that the soil does not stay too wet.

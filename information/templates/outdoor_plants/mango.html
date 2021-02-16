@@ -39,7 +39,7 @@
 
     <div>
       <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand" href="">Outdoor Plant</a>
+        <a class="navbar-brand" href="/">Trial 1</a>
         <button
           class="navbar-toggler btn-outline-light"
           type="button"
@@ -55,32 +55,29 @@
         <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/">Home</a>
-          </li>
+              <a class="home-nav-link nav-link" href="#size">SIZE</a>
+            </li>
+
             <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+              <a class="home-nav-link nav-link" href="#life">LIFE-CYCLE</a>
             </li>
-  
-            {% if user.is_authenticated %}
+
             <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+              <a class="home-nav-link nav-link" href="#climate">CLIMATE</a>
             </li>
+
             <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+              <a class="home-nav-link nav-link" href="#soil">SOIL REQUIREMENTS</a>
             </li>
+
             <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+              <a class="home-nav-link nav-link" href="#watable">WATER TABLE</a>
             </li>
-           {% else %}
-           <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/register/">Register</a>
-            </li>
+
             <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/login/">Login</a>
+              <a class="home-nav-link nav-link" href="#fruit">FRUITING</a>
             </li>
-            {% endif %}
-            
-            
+
             {% if user.is_authenticated %}
             <li class="nav-item">
               <a class="home-nav-link nav-link" href="/logout/">Logout</a>
@@ -100,7 +97,7 @@
         </div>
     </div>
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="size">
 
       <h1>SIZE</h1>
 
@@ -109,7 +106,7 @@
 
     <div class="pimg2">
 
-        <section class="section section-dark">
+        <section class="section section-dark" id="life">
           <h1>LIFE-CYCLE</h1>
           <p >
             Mango trees can remain in production for 40 years or more.
@@ -119,7 +116,7 @@
     
     <div class="pimg3">
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="climate">
       <h1>CLIMATE</h1>
       <p>
         It generally requires Tropical and Sub-Tropical Climate.
@@ -131,7 +128,7 @@
 
     <div class="pimg4">
 
-        <section class="section section-dark">
+        <section class="section section-dark" id="soil">
             <h1>SOIL REQUIREMENTS</h1>
             <p>
                 Mango grows well on wide variety of soils, such as lateritic, alluvial, sandy loam and sandy.The loamy, alluvial, well-drained, aerated and deep soils (2-2.5 m) rich in organic matter with a pH range of 5.5-7.5 are ideal for mango cultivation.
@@ -144,7 +141,7 @@
 
         <div class="pimg5">
 
-          <section class="section section-dark">
+          <section class="section section-dark" id="watable">
               <h1>WATER TABLE</h1>
               <p>
                 The water table should be around 3 m
@@ -156,7 +153,7 @@
 
           <div class="pimg6">
 
-            <section class="section section-dark">
+            <section class="section section-dark" id="fruit">
                 <h1>FRUITING</h1>
                 <p>
                     Grafted trees usually produce fruit in 3 to 5 years in dry areas, while seedling trees usually take at least five years to come into bearing.

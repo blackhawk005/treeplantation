@@ -45,28 +45,37 @@
         <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+              <a class="home-nav-link nav-link" href="#soil">Soil</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="#area">Area</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="#temp">Temperature</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="#life">Lifespan</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="#uses">Uses</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="#ben">Benefits</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="#fert">Fertilizers</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="#water">Water</a>
             </li>
   
-            {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
-            </li>
-            {% else %}
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/register/">Register</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/login/">Login</a>
-            </li>
-            {% endif %}
-            
             <!-- <li class="nav-item">
               <a class="home-nav-link nav-link" href="/about/">About us</a>
             </li>
@@ -88,7 +97,7 @@
             </span>
         </div>
     </div>
-            <section class="section section-dark">
+            <section class="section section-dark" id="soil">
                 <h2 style="color: burlywood; font-size: xx-large;">Soil</h2>
                 <p>
                    The Jamun trees can be grown on a wide range of soils - calcareous, saline sodic soils and marshy areas.<br>
@@ -101,7 +110,7 @@ It does not like very heavy and light sandy soils.
             <div class="pimg2">
              </div>
             
-            <section class="section section-dark">
+            <section class="section section-dark" id="area">
                 <h2 style="color: burlywood; font-size: xx-large;">Area</h2>
                 <p>
                     Required pit size- 1m x 1m x 1m.<br>
@@ -116,7 +125,7 @@ It does not like very heavy and light sandy soils.
             <div class="pimg3">
             </div>
 
-            <section class="section section-dark">
+            <section class="section section-dark" id="temp">
                 <h2 style="color: burlywood; font-size: xx-large;">Temperature</h2>
                 <p>
                     Jamun is a hardy fruit, it can be grown under adverse soil and climate conditions.<br>
@@ -131,7 +140,7 @@ It does not like very heavy and light sandy soils.
             <div class="pimg4">
             </div>
 
-            <section class="section section-dark">
+            <section class="section section-dark" id="life">
                 <h2 style="color: burlywood; font-size: xx-large;">Lifespan</h2>
                 <p>
                     The seedling Jamun trees start bearing after 9 to 10 years of planting.<br>
@@ -145,7 +154,7 @@ It does not like very heavy and light sandy soils.
             <div class="pimg5">
             </div>
 
-            <section class="section section-dark">
+            <section class="section section-dark" id="uses">
                 <h2 style="color: burlywood; font-size: xx-large;">Uses</h2>
                 <p>
                     Jamun fruits, leaves, seeds, and bark are used as ayurvedic medicine.<br>
@@ -165,7 +174,7 @@ It does not like very heavy and light sandy soils.
             <div class="pimg6">
             </div>
 
-            <section class="section section-dark">
+            <section class="section section-dark" id="benefits">
                 <h2 style="color: burlywood; font-size: xx-large;">Benefits</h2>
                 <p>
                     Improves hemoglobin count<br>
@@ -184,7 +193,7 @@ It does not like very heavy and light sandy soils.
             <div class="pimg7">
             </div>
 
-            <section class="section section-dark">
+            <section class="section section-dark" id="fert">
                 <h2 style="color: burlywood; font-size: xx-large;">Fertilizers</h2>
                 <p>
                     Seedling Jamun trees start bearing fruits @ age of 8 – 10 years while budded and grafted trees  start bearing in 6 – 7 years.<br>
@@ -200,7 +209,7 @@ It does not like very heavy and light sandy soils.
             <div class="pimg8">
             </div>
 
-            <section class="section section-dark">
+            <section class="section section-dark" id="water">
                 <h2 style="color: burlywood; font-size: xx-large;">Water</h2>
                 <p>
                     Young Jamun plants in early stages require frequent watering but subsequently, irrigations should be reduced, initial stages of plants require about 12 irrigation per year (monthly once).<br>

@@ -52,28 +52,28 @@
     <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+          <a class="home-nav-link nav-link" href="#size">SIZE</a>
         </li>
 
-        {% if user.is_authenticated %}
         <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+          <a class="home-nav-link nav-link" href="#cycle">LIFE-CYCLE</a>
         </li>
+
         <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+          <a class="home-nav-link nav-link" href="#climate">CLIMATE</a>
         </li>
+
         <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+          <a class="home-nav-link nav-link" href="#soil">SOIL REQUIREMENTS</a>
         </li>
-        {% else %}
+
         <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/register/">Register</a>
+          <a class="home-nav-link nav-link" href="#watable">WATER TABLE</a>
         </li>
+
         <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/login/">Login</a>
+          <a class="home-nav-link nav-link" href="#uses">USES</a>
         </li>
-        {% endif %}
-        
         <!-- <li class="nav-item">
           <a class="home-nav-link nav-link" href="/about/">About us</a>
         </li>
@@ -98,7 +98,7 @@
         </div>
     </div>
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="size">
 
       <h1>SIZE</h1>
 
@@ -109,7 +109,7 @@
 
     <div class="pimg2">
 
-        <section class="section section-dark">
+        <section class="section section-dark" id="cycle">
           <h1>LIFE-CYCLE</h1>
           <p >
              The coconut tree grows from a single seed, which is an entire coconut, taking between 3 and 8 years to bear fruit, and living between 60 and 100 years. Each coconut takes almost a year to develop from a flower into a fruit.
@@ -119,7 +119,7 @@
     
     <div class="pimg3">
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="climate">
       <h1>CLIMATE</h1>
       <p>
        Coconut palms tolerate some drought, but overall are moisture-loving plants that grow in sandy and loamy soils. They grow beautifully in any tropical climate that provides at least 25 inches of annual rainfall, up to 157 inches. Climates with warm, rainy winters and hot, humid and rainy summers are ideal.
@@ -131,7 +131,7 @@
 
     <div class="pimg4">
 
-        <section class="section section-dark">
+        <section class="section section-dark" id="soil">
             <h1>SOIL REQUIREMENTS</h1>
             <p>
                Coconut prefers fertile and adequately drained soils with a minimum depth of 75 cm, with high water-holding capacity (at least 30% clay content). A wide range of soil textures (sand-clay) is suitable for coconut production.
@@ -143,7 +143,7 @@
 
         <div class="pimg5">
 
-          <section class="section section-dark">
+          <section class="section section-dark" id="watable">
               <h1>WATER TABLE</h1>
               <p>
                  Generally, three to four drippers are given per palm. The water requirement for an adult palm is 40 to 50 litres per day.
@@ -155,7 +155,7 @@
 
           <div class="pimg6">
 
-            <section class="section section-dark">
+            <section class="section section-dark" id="uses">
                 <h1>USES</h1>
                 <p>
 		Coconut is the fruit of the coconut palm (Cocos nucifera). It's used for its water, milk, oil, and tasty meat. 

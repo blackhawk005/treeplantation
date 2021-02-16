@@ -57,28 +57,32 @@
       <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+            <a class="home-nav-link nav-link" href="#size">SIZE</a>
           </li>
 
-          {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+            <a class="home-nav-link nav-link" href="#cycle">LIFE-CYCLE</a>
           </li>
+
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+            <a class="home-nav-link nav-link" href="#climate">CLIMATE</a>
           </li>
+
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+            <a class="home-nav-link nav-link" href="#soil">SOIL REQUIREMENTS</a>
           </li>
-          {% else %}
+
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/register/">Register</a>
+            <a class="home-nav-link nav-link" href="#watable">WATER TABLE</a>
           </li>
+
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/login/">Login</a>
+            <a class="home-nav-link nav-link" href="#flower">FLOWERING</a>
           </li>
-          {% endif %}
-          
+
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="#uses">USES</a>
+          </li>
           <!-- <li class="nav-item">
             <a class="home-nav-link nav-link" href="/about/">About us</a>
           </li>
@@ -102,7 +106,7 @@
     </div>
 </div>
 
-<section class="section section-dark">
+<section class="section section-dark" id="size">
     <h1>SIZE</h1>
     <p>
        
@@ -114,7 +118,7 @@
 
 <div class="pimg2">
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="cycle">
         <h1>LIFE-CYCLE</h1>
         <p>
             THEY CAN LIVE UPTO 50 YEARS OR MORE.
@@ -124,7 +128,7 @@
 
 <div class="pimg3">
 
-<section class="section section-dark">
+<section class="section section-dark" id="climate">
     <h1>CLIMATE</h1>
     <p>
         Hibiscuses like temperatures between 60-85°F. If temperatures are below 50°F, most growth and blooming will stop and flower size will be smaller and deformed.
@@ -137,7 +141,7 @@
 
 <div class="pimg4">
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="soil">
         <h1>SOIL REQUIREMENTS</h1>
         <p>
             Tropical hibiscus needs moist but well-drained soil. Perennial hibiscus grows best in moist soil that never completely dries out
@@ -150,8 +154,8 @@
 
     <div class="pimg5">
 
-      <section class="section section-dark">
-          <h1>WATER TABLE:</h1>
+      <section class="section section-dark" id="watable">
+          <h1>WATER TABLE</h1>
           <p>
             Keep the soil surrounding the hibiscus moist but not soggy. For the first week after planting, water daily, tapering off to once every two days in the second week,
             and then about twice a week thereafter, when there is no rainfall. 
@@ -164,7 +168,7 @@
 
       <div class="pimg6">
 
-        <section class="section section-dark">
+        <section class="section section-dark" id="flower">
             <h1>FLOWERING</h1>
             <p>
                 They typically have larger flowers and lighter green leaves, but the bloom size and leaf color vary greatly from species to species. Some plants can grow to be quite large (up to 7 to 8 feet tall). 
@@ -176,7 +180,7 @@
 
       <div class="pimg7">
 
-        <section class="section section-dark">
+        <section class="section section-dark" id="uses">
             <h1>USES</h1>
             <p>
               Hibuscus Tea helps to:<br>

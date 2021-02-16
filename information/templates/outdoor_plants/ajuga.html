@@ -55,28 +55,25 @@
       <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+            <a class="home-nav-link nav-link" href="#intro">Introduction</a>
           </li>
 
-          {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+            <a class="home-nav-link nav-link" href="#grow">GROWING CONDITION</a>
           </li>
+
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+            <a class="home-nav-link nav-link" href="#look">WHAT DO THEY LOOK LIKE</a>
           </li>
+
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+            <a class="home-nav-link nav-link" href="#sowWater">SOWING AND WATERING</a>
           </li>
-          {% else %}
+
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/register/">Register</a>
+            <a class="home-nav-link nav-link" href="#care">TAKING GOOD CARE OF YOUR PLANT</a>
           </li>
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/login/">Login</a>
-          </li>
-          {% endif %}
-          
+
           <!-- <li class="nav-item">
             <a class="home-nav-link nav-link" href="/about/">About us</a>
           </li>
@@ -100,7 +97,7 @@
         </div>
     </div >
     <div class="pimg1">
-    <section class="section section-dark">
+    <section class="section section-dark" id="intro">
     
       <h1>Introduction</h1>
 
@@ -113,7 +110,7 @@
 
     <div class="pimg2">
 
-        <section class="section section-dark">
+        <section class="section section-dark" id="grow">
           <h1>GROWING CONDITION</h1>
           <p >
             Ajuga ground cover spreads through runners. It is a perfect plant for outdoor planting as it is an evergreen plant and 
@@ -127,7 +124,7 @@
     
     <div class="pimg3">
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="look">
         <h1>WHAT DO THEY LOOK LIKE</h1>
         <p>Ajuga are matt forming evergreen plants that are ideal as a ground covering plant. Bugleweed has a mass of blue and purple 
             flowering stems that sit above a foliage of leaves, these can be as variable in colour as deep green, purple, pink and cream. 
@@ -140,7 +137,7 @@
 
     <div class="pimg4">
 
-        <section class="section section-dark">
+        <section class="section section-dark" id="sowWater">
             <h1>SOWING AND WATERING</h1>
             <p>
                 Best time to sow is spring or autumn. Sow it thinly. Germination time: three to four weeks. Transplant to individual
@@ -154,7 +151,7 @@
 
           <div class="pimg5">
 
-            <section class="section section-dark">
+            <section class="section section-dark" id="care">
                 <h1>TAKING GOOD CARE OF YOUR PLANT</h1>
                 <p>
                     This plant prefers shade, but will tolerate full sunlight but needs a good drainage. It mostly soils when grown in 
