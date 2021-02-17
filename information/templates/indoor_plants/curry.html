@@ -34,6 +34,7 @@
      
 </head>
 <body>
+  <script src="{% static 'js/scroll.js' %}"></script>
     <!-- <a href="register">register</a><br>
     <a href="login">login</a><br> -->
 
@@ -60,29 +61,27 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="home-nav-link nav-link" href="/">Home</a>
-          </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
-            </li>
-  
-            {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
-            </li>
-            {% else %}
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/register/">Register</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/login/">Login</a>
-            </li>
-            {% endif %}
+              <li class="nav-item">
+                <a class="home-nav-link nav-link" href="#size">Size</a>
+              </li>
+              <li class="nav-item">
+                <a class="home-nav-link nav-link" href="#life_cycle">Life Cycle</a>
+              </li>
+              <li class="nav-item">
+                <a class="home-nav-link nav-link" href="#climate">Climate</a>
+              </li>
+              <li class="nav-item">
+                <a class="home-nav-link nav-link" href="#soil">Soil</a>
+              </li>
+              <li class="nav-item">
+                <a class="home-nav-link nav-link" href="#water_table">Water Table</a>
+              </li>
+              <li class="nav-item">
+                <a class="home-nav-link nav-link" href="#harvesting">Harvesting</a>
+              </li>
+              <li class="nav-item">
+                <a class="home-nav-link nav-link" href="#uses">Uses</a>
+              </li>
             
             <!-- <li class="nav-item">
               <a class="home-nav-link nav-link" href="/about/">About us</a>
@@ -109,7 +108,7 @@
         </div>
     </div>
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="size">
 
       <h1>SIZE</h1>
 
@@ -120,7 +119,7 @@
 
     <div class="pimg2">
 
-        <section class="section section-dark">
+        <section class="section section-dark" id="life_cycle">
           <h1>LIFE-CYCLE</h1>
           <p >
             Curry Plants are known to last upto a life-cycle of 30 Years.
@@ -130,7 +129,7 @@
     
     <div class="pimg3">
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="climate">
       <h1>CLIMATE</h1>
       <p>
         It generally requires Tropical and Sub-Tropical Climate.
@@ -142,7 +141,7 @@
 
     <div class="pimg4">
 
-        <section class="section section-dark">
+        <section class="section section-dark" id="soil">
             <h1>SOIL REQUIREMENTS</h1>
             <p>
               When it comes to the curry leaf plant,
@@ -156,7 +155,7 @@
 
         <div class="pimg5">
 
-          <section class="section section-dark">
+          <section class="section section-dark" id="water_table">
               <h1>WATER TABLE</h1>
               <p>
                 During the spring and the less hot months of the year, this is a plant that will grow well with a once a week watering. However, during the hot summer months, 
@@ -169,7 +168,7 @@
 
           <div class="pimg6">
 
-            <section class="section section-dark">
+            <section class="section section-dark" id="harvesting">
                 <h1>HARVESTING</h1>
                 <p>
                   ONCE THE PLANT IS 2-3 YEARS OLD IT IS READY TO BE HARVESTED FROM.
@@ -179,7 +178,7 @@
 
           <div class="pimg7">
 
-            <section class="section section-dark">
+            <section class="section section-dark" id="uses">
                 <h1>USES</h1>
                 <p>
                  1)Curry leaves have antioxidants that fight the cell damaging free radicals in the body and keep the body from any health problem.<br>

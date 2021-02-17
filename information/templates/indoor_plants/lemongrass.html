@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lemongrass Plant</title>
     <link rel="stylesheet" href="{% static 'css_info/indoor/lemongrass.css' %}">
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
@@ -28,6 +29,8 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+  <script src="{% static 'js/scroll.js' %}"></script>
+
     <nav class="navbar navbar-expand-lg ">
         <a class="navbar-brand" href="/">Trial 1</a>
         <button
@@ -45,27 +48,29 @@
         <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
-            </li>
-  
-            {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+              <a class="home-nav-link nav-link" href="#soil">Soil</a>
             </li>
             <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+              <a class="home-nav-link nav-link" href="#area">Plantation area</a>
             </li>
             <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
-            </li>
-            {% else %}
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/register/">Register</a>
+              <a class="home-nav-link nav-link" href="#temperature">Temperature</a>
             </li>
             <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/login/">Login</a>
+              <a class="home-nav-link nav-link" href="#lifespan">Lifespan</a>
             </li>
-            {% endif %}
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="#uses">Uses</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="#benefits">Benefits</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="#fertilizers">Fertilizers</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="#water">Water</a>
+            </li>
             
             <!-- <li class="nav-item">
               <a class="home-nav-link nav-link" href="/about/">About us</a>
@@ -88,7 +93,7 @@
             </span>
         </div>
     </div>
-            <section class="section soil">
+            <section class="section soil" id="soil">
                 <h2 style="color: burlywood; font-size: xx-large;">Soil</h2>
                 <p>
                      If you’re planting lemongrass in a pot, use well-draining potting soil .
@@ -101,7 +106,7 @@
             <div class="pimg2">
              </div>
             
-            <section class="section area">
+            <section class="section area" id="area">
                 <h2 style="color: burlywood; font-size: xx-large;">Area</h2>
                 <p>
                     A pot that is large and wide enough to ensure it won’t tip over, since lemon grass can grow quite tall.
@@ -113,7 +118,7 @@
             <div class="pimg3">
             </div>
 
-            <section class="section temperature">
+            <section class="section temperature" id="temperature">
                 <h2 style="color: burlywood; font-size: xx-large;">Temperature</h2>
                 <p>
                     Lemongrass, in its native habitat, enjoys long and hot growing seasons and will grow best in areas that can replicate these conditions.<br>
@@ -126,7 +131,7 @@
             <div class="pimg4">
             </div>
 
-            <section class="section lifespan">
+            <section class="section lifespan" id="lifespan">
                 <h2 style="color: burlywood; font-size: xx-large;">Lifespan</h2>
                 <p>
                     Lemon grass can reach a height of 1.8 m (6 ft) and will grow for several years, typically its economical lifespan is 4 years.
@@ -137,7 +142,7 @@
             <div class="pimg5">
             </div>
 
-            <section class="section uses">
+            <section class="section uses" id="uses">
                 <h2 style="color: burlywood; font-size: xx-large;">Uses</h2>
                 <p>
                     Leaves may also be used to make lemon grass tea.<br>The essential oil extracted from the leaves is commonly used in insect repellents, perfumes and soaps.<br>
@@ -149,7 +154,7 @@
             <div class="pimg6">
             </div>
 
-            <section class="section benefits">
+            <section class="section benefits" id="benefits">
                 <h2 style="color: burlywood; font-size: xx-large;">Benefits</h2>
                 <p>
                     Relieving anxiety<br>
@@ -166,7 +171,7 @@
             <div class="pimg7">
             </div>
 
-            <section class="section fertilizers">
+            <section class="section fertilizers" id="fertilizers">
                 <h2 style="color: burlywood; font-size: xx-large;">Fertilizers</h2>
                 <p>
                     As a grassy plant, lemongrass needs a nitrogen-rich fertilizer for its best growth. <br>You can use a slow-release 6-4-0 fertilizer that will feed lemongrass throughout the growing season. <br>You can also water your lemongrass plants with manure tea, which will add trace nutrients.
@@ -177,7 +182,7 @@
             <div class="pimg8">
             </div>
 
-            <section class="section water">
+            <section class="section water" id="water">
                 <h2 style="color: burlywood; font-size: xx-large;">Water</h2>
                 <p>
                     Your lemongrass plant needs to be watered regularly in order to maintain soil moisture. <br>Add some mulch over the soil to hold moisture.<br>You can also place your pots on top of a saucer with pebbles. <br>The stones will produce moisture for the soil.<br>
@@ -187,6 +192,8 @@
             </section>
             
             <div class="pimg9">
-            </div> 
+            </div>
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
 </body>
 </html>

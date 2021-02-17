@@ -34,7 +34,7 @@
      
 </head>
 <body>
-
+  <script src="{% static 'js/scroll.js' %}"></script>
     <!-- Navbar section -->
 
     <div>
@@ -56,29 +56,25 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="home-nav-link nav-link" href="/">Home</a>
-          </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
-            </li>
+              <li class="nav-item">
+                <a class="home-nav-link nav-link" href="#size">Size</a>
+              </li>
+              <li class="nav-item">
+                <a class="home-nav-link nav-link" href="#life_cycle">Life Cycle</a>
+              </li>
+              <li class="nav-item">
+                <a class="home-nav-link nav-link" href="#climate">Climate</a>
+              </li>
+              <li class="nav-item">
+                <a class="home-nav-link nav-link" href="#soil">Soil</a>
+              </li>
+              <li class="nav-item">
+                <a class="home-nav-link nav-link" href="#water_table">Water Table</a>
+              </li>
+              <li class="nav-item">
+                <a class="home-nav-link nav-link" href="#planting">Planting</a>
+              </li>
   
-            {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
-            </li>
-           {% else %}
-           <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/register/">Register</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/login/">Login</a>
-            </li>
-            {% endif %}
             
             
             {% if user.is_authenticated %}
@@ -100,7 +96,7 @@
         </div>
     </div>
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="size">
 
       <h1>SIZE</h1>
 
@@ -110,7 +106,7 @@
 
     <div class="pimg2">
 
-        <section class="section section-dark">
+        <section class="section section-dark" id="life_cycle">
           <h1>LIFE-CYCLE</h1>
           <p >
             Turmeric takes seven to 10 months from planting to harvest.
@@ -120,7 +116,7 @@
     
     <div class="pimg3">
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="climate">
       <h1>CLIMATE</h1>
       <p>
         Temperatures between 20 and 30 °C (68 and 86 °F) and a considerable amount of annual rainfall
@@ -133,7 +129,7 @@
 
     <div class="pimg4">
 
-        <section class="section section-dark">
+        <section class="section section-dark" id="soil">
             <h1>SOIL REQUIREMENTS</h1>
             <p>
               Turmeric thrives in warm, humid conditions and well-drained, neutral soil
@@ -146,7 +142,7 @@
 
         <div class="pimg5">
 
-          <section class="section section-dark">
+          <section class="section section-dark" id="water_table">
               <h1>WATER TABLE</h1>
               <p>
                Water it about every two days, and spray it with a mist bottle between waterings.
@@ -159,7 +155,7 @@
 
           <div class="pimg6">
 
-            <section class="section section-dark">
+            <section class="section section-dark" id="planting">
                 <h1>PLANTING</h1>
                 <p>
                   Use plump rhizomes with as many bumps (buds) along the sides as possible. Cut your rhizomes into sections. Lay the rhizome sections flat on the soil, and cover with more potting soil.

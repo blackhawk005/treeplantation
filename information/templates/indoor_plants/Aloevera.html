@@ -31,6 +31,7 @@
 </head>
 
 <body>
+  <script src="{% static 'js/scroll.js' %}"></script>
   <nav class="navbar navbar-expand-lg ">
     <a class="navbar-brand" href="/">Trial 1</a>
     <button
@@ -48,27 +49,17 @@
     <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
-        </li>
-
-        {% if user.is_authenticated %}
-        <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+          <a class="home-nav-link nav-link" href="#intro">Introduction</a>
         </li>
         <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+          <a class="home-nav-link nav-link" href="#climate">Climate & Requirements</a>
         </li>
         <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
-        </li>
-        {% else %}
-        <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/register/">Register</a>
+          <a class="home-nav-link nav-link" href="#taking_care">Taking Care</a>
         </li>
         <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/login/">Login</a>
+          <a class="home-nav-link nav-link" href="#uses_benefits">Uses & Benefits</a>
         </li>
-        {% endif %}
         
         <!-- <li class="nav-item">
           <a class="home-nav-link nav-link" href="/about/">About us</a>
@@ -93,7 +84,7 @@
     </div>
   </div>
 
-  <section class="section section-dark">
+  <section class="section section-dark" id="intro">
     <h2></h2>
     <p>
       Aloe vera is a succulent plant species of the genus Aloe. An evergreen perennial, it originates from the Arabian
@@ -112,7 +103,7 @@
     </div>
   </div>
 
-  <section class="section section-dark">
+  <section class="section section-dark" id="climate">
     <h2></h2>
     <p>
     <h2><u>Climate:</u></h2>
@@ -150,7 +141,7 @@
     </div>
   </div>
 
-  <section class="section section-dark">
+  <section class="section section-dark" id="propagation">
     <h2></h2>
     <p>
       The aloe plant cannot be grown from a leaf cutting, and instead is typically propagated by detaching younger clone
@@ -192,7 +183,7 @@
     </div>
   </div>
 
-  <section class="section section-dark">
+  <section class="section section-dark" id="taking_care">
     <h2></h2>
     <p>
       1)Give the plant adequate sunlight and warmth. Aloe vera plants prefer 8–10 hours of sunlight a day. While they
@@ -226,7 +217,7 @@
     </div>
   </div>
 
-  <section class="section section-dark">
+  <section class="section section-dark" id="uses_benefits">
     <h2></h2>
     <p>
       <h2><u>Digestive Cure</u></h2> 
