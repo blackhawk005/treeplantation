@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Shovel &#127793;</title>
+
+    <link rel="stylesheet" href="{% static 'css_info/gardening_tools/shovel.css' %}">
+    <link rel="stylesheet" href="{% static 'css_info/navbar.css' %}">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="new.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"> </script>
+    <!--chart.js-->
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+</head>
+
+<body>
+    <!-- <a href="register">register</a><br>
+    <a href="login">login</a><br> -->
+
+
+
+    <!-- Navbar section -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
+        <a class="navbar-brand" href="/">Trial 1</a>
+        <button class="navbar-toggler btn-outline-light" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+        </button>
+
+        <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="home-nav-link nav-link" href="#intro">Introduction</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="home-nav-link nav-link" href="#uses">Uses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="home-nav-link nav-link" href="#types">Types</a>
+                </li>
+
+
+                <!-- <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/about/">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
+          </li> -->
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+    <div class="pimg1">
+        <div class="ptext">
+            <span class="border">
+                SHOVEL
+            </span>
+        </div>
+    </div>
+    <div class="pimg">
+        <section class="section section-dark" id="intro">
+
+            <h1>INTRODUCTION</h1>
+
+            <p>
+                A shovel is a tool for digging, lifting, and moving bulk materials, such as soil, coal, gravel, snow,
+                sand, or ore.
+
+                Most shovels are hand tools consisting of a broad blade fixed to a medium-length handle. Shovel blades
+                are usually made of sheet steel or hard plastics and are very strong. Shovel handles are usually made of
+                wood (especially specific varieties such as ash or maple) or glass-reinforced plastic (fibreglass).
+                Hand shovels have been adapted for many different tasks and environments. They can be optimized for a
+                single task or designed as cross-over or compromise multitaskers. They are very useful in agriculture.
+            </p>
+        </section>
+    </div>
+
+    </div class="pimg1">
+
+    <section class="section section-dark" id="uses">
+        <h1>USES</h1>
+        <p>
+            In gardening, a shovel is a hand tool used to dig or loosen ground, or to break up lumps in the soil. It
+            forms one of the chief implements wielded by the hand in agriculture and horticulture. Its typical shape is
+            a broad flat blade with a sharp lower edge, straight or curved. The upper edge on either side of the handle
+            affords space for the user's foot, which drives it into the ground. The wooden handle ends in a cross-piece,
+            sometimes T-shaped and sometimes forming a kind of loop for the hand.
+        </p>
+    </section>
+
+    </div>
+
+    <div class="pimg2">
+
+        <section class="section section-dark" id="types">
+            <h1>TYPES</h1>
+            <p>
+                1. square shovel : A general category of shovel that includes many types with a generally square outline
+                (rather than being pointed like many spades are). But there is no rigorous, always-enforced distinction
+                between square shovels and spades.
+
+                3. gardening trowel : A trowel in general is a small, single-hand implement for digging, scooping,
+                spreading, or otherwise manipulating dirt or other bulk materials (such as mortar). In gardening and
+                horticulture, they are useful in planting and potting for digging holes and breaking up clumps of soil.
+                Gardening trowels typically have strong, narrow blades with sharp points. They are a [small] type of
+                spade.
+
+                4. grain shovel/ barn shovel : Has a wide aluminium or plastic blade that is attached to a short
+                hardwood handle with "D" top. This shovel has been designed to offer a lighter tool that does not damage
+                the grain. Early models were made from timber.
+
+            </p>
+        </section>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

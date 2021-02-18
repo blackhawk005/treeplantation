@@ -16,6 +16,7 @@ urlpatterns = [
     path('turmeric', views.page_open_turmeric, name='page_open_turmeric'),
     path('indianbasil', views.page_open_indianbasil, name='page_open_indianbasil'),
     path('babysunrose', views.page_open_babysunrose, name='page_open_babysunrose'),
+    path('cycaspalm', views.page_open_palm, name='page_open_palm'),
 
     # outdoor
     path('plumbago', views.page_open_plumbago, name="page_open_plumbago"),
@@ -26,6 +27,7 @@ urlpatterns = [
     path('guava', views.page_open_guava, name="page_open_guava"),
     path('papaya', views.page_open_papaya, name="page_open_papaya"),
     path('coconut', views.page_open_coconut, name="page_open_coconut"),
+    path('neem', views.page_open_neem, name="page_open_neem"),
     
     #tools
     path('trowel', views.page_open_trowel, name='page_open_trowel'),
@@ -36,5 +38,6 @@ urlpatterns = [
     path('watercan', views.page_open_watercan, name='page_open_watercan'),
     path('saw', views.page_open_saw, name='page_open_saw'),
     path('spade', views.page_open_spade, name='page_open_spade'),
-    path('hoe', views.page_open_hoe, name='page_open_hoe')
+    path('hoe', views.page_open_hoe, name='page_open_hoe'),
+    path('shovel', views.page_open_shovel, name='page_open_shovel')
 ]
