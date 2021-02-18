@@ -42,6 +42,10 @@ def page_open_indianbasil(request):
 def page_open_babysunrose(request):
     return render(request, 'indoor_plants/babysunRose.html')
 
+def page_open_palm(request):
+    return render(request, 'indoor_plants/cycas_palm.html')
+
+
 # outdoor
 
 def page_open_plumbago(request):
@@ -67,6 +71,10 @@ def page_open_papaya(request):
 
 def page_open_coconut(request):
     return render(request, 'outdoor_plants/coconut.html')
+
+def page_open_neem(request):
+    return render(request, 'outdoor_plants/neem.html')
+
 
 # tools
 
@@ -96,3 +104,6 @@ def page_open_hoe(request):
 
 def page_open_knife(request):
     return render(request, 'gardening_tools/Gardenknife.html')
+
+def page_open_shovel(request):
+    return render(request, 'gardening_tools/shovel.html')

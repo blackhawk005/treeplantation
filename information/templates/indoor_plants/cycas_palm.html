@@ -1,0 +1,213 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cycas revoluta &#127793;</title>
+
+    <link rel="stylesheet" href="{% static 'css_info/indoor/palm.css' %}">
+    <link rel="stylesheet" href="{% static 'css_info/navbar.css' %}">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="new.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"> </script>
+    <!--chart.js-->
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+</head>
+
+<body>
+    <!-- <a href="register">register</a><br>
+    <a href="login">login</a><br> -->
+
+
+
+    <!-- Navbar section -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
+        <a class="navbar-brand" href="/">Trial 1</a>
+        <button class="navbar-toggler btn-outline-light" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+        </button>
+
+        <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="home-nav-link nav-link" href="#intro">Introduction</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="home-nav-link nav-link" href="#appearance">Appearance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="home-nav-link nav-link" href="#size">Size</a>
+                </li>
+                <li class="nav-item">
+                    <a class="home-nav-link nav-link" href="#water_usage">Water Usage</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="home-nav-link nav-link" href="#requirments">Requirments</a>
+                </li>
+                <li class="nav-item">
+                    <a class="home-nav-link nav-link" href="#maintenance"></a>Maintenance</a>
+                </li>
+
+
+                <!-- <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/about/">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
+          </li> -->
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+    <div class="pimg1">
+        <div class="ptext">
+            <span class="border">
+                CYCAS PALM
+            </span>
+        </div>
+    </div>
+    <div class="pimg">
+        <section class="section section-dark" id="intro">
+
+            <h1>INTRODUCTION</h1>
+
+            <p> Cycas revoluta, is a species of gymnosperm in the family Cycadaceae, native to southern Japan including
+                the
+                Ryukyu Islands. It is one of several species used for the production of sago, as well as an ornamental
+                plant and
+                in bonsai.
+
+            </p>
+        </section>
+    </div>
+
+    <div class="pimg2">
+
+        <section class="section section-dark" id="appearance">
+            <h1>APPEARANCE</h1>
+            <p>
+                The palm usually grows with a single trunk, although some old specimens make grow in clumps of several
+                trunks.
+                the short thick trunk is topped with a large rosette of arching leaves that grow in a circular pattern.
+                The
+                feathery leaves, which are dark glossy green in colour are 0.6-0.9 metre long,are deeply divided into
+                stiff
+                leathery leaflets 10 cm long that curl out, giving the palm its species name revoluta. New leaves come
+                out as
+                light green spikes that form a circle around the trunk. The leaves and inquired slowly as they grow to
+                full
+                length, settling into a new rosette of leaves.
+                The female flower is a globe formed by modified leaves, which letter produces tightly packed seed head,
+                covered
+                with small whitish leaves. The male clone is yellowish and grows 30 to 45 cm high. the seeds that form
+                in the
+                female flower are 3.5 CM in diameter and become brownish red when ripe.
+            </p>
+        </section>
+    </div>
+
+    <div class="pimg3">
+
+        <section class="section section-dark" id="size">
+            <h1>SIZE</h1>
+            <p>
+                This very symmetrical plant supports a crown of shiny, dark green leaves on a thick shaggy trunk that is
+                typically about 20 cm (7.9 in) in diameter, sometimes wider. The trunk is very low to subterranean in
+                young
+                plants, but lengthens above ground with age. It can grow into very old specimens with 6–7 m (over 20
+                feet) of
+                trunk; however, the plant is very slow-growing and requires about 50–100 years to achieve this height.
+                Trunks
+                can branch several times, thus producing multiple heads of leaves
+
+            </p>
+        </section>
+
+    </div>
+
+    <div class="pimg3">
+
+        <section class="section section-dark" id="water_usage">
+            <h1>WATER USAGE</h1>
+            <p>
+                Requires some watering once established. generally, trees need supplemental irrigation to get
+                established, especially if planted after the rainy season. during the first year, irrigate in the amount
+                of 20 to 25 litres of water twice a week. during it's second year, a tree needs to be irrigated in the
+                amount of 40 litres per week. Beginning with the third year, when the tress get establish, they need to
+                be irritated in the amount of 50 to 60 litres once a month in order to achieve optimal flowering.
+            </p>
+        </section>
+
+    </div>
+
+    <div class="pimg3">
+
+        <section class="section section-dark" id="requirments">
+            <h1>REQUIRMENTS</h1>
+            <p>
+                Grows in full Sun or partial shade, and are drought-tolerant. they prefer rich soil, but are tough
+                enough to grow in almost any soil. good drainage is required on the plant will rot.
+            </p>
+        </section>
+
+    </div>
+
+    <div class="pimg3">
+
+        <section class="section section-dark" id="maintenance">
+            <h1>MAINTENANCE</h1>
+            <p>
+                Any leaves that turn yellow or brown should be removed to reduce stress on the plant and to promote new
+                growth.the lowest set of leaves should be cut close to the trunk if the tips begin to turn brown.
+
+            </p>
+        </section>
+
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
