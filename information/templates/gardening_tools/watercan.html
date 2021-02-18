@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watercan</title>
     <link rel="stylesheet" href="{% static 'css_info/gardening_tools/watercan.css' %}">
+    <link rel="stylesheet" href="{% static 'css_info/navbar.css' %}">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -28,7 +29,8 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg ">
+  <script src="{% static 'js/scroll.js' %}"></script>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
         <a class="navbar-brand" href="/">Trial 1</a>
         <button
           class="navbar-toggler btn-outline-light"
@@ -45,28 +47,13 @@
         <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+              <a class="home-nav-link nav-link" href="#inform">Information</a>
             </li>
-  
-            {% if user.is_authenticated %}
+
             <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+              <a class="home-nav-link nav-link" href="#use">Uses</a>
             </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
-            </li>
-            {% else %}
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/register/">Register</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/login/">Login</a>
-            </li>
-            {% endif %}
-            
+
             <!-- <li class="nav-item">
               <a class="home-nav-link nav-link" href="/about/">About us</a>
             </li>
@@ -88,7 +75,7 @@
             </span>
         </div>
     </div>
-            <section class="section section-dark">
+            <section class="section section-dark" id="inform">
                 <h2>Information</h2>
                 <p>
                     The capacity of the container can be anywhere from 0.5 litres (for indoor household plants) to 10 litres (for general garden use).<br>
@@ -102,7 +89,7 @@
             <div class="pimg2">
              </div>
             
-            <section class="section section-dark">
+            <section class="section section-dark" id="use">
                 <h2>Uses</h2>
                 <p>
                     A watering can (or watering pot) is a portable container, usually with a handle and a funnel, used to water plants by hand.<br>

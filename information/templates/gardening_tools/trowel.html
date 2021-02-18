@@ -8,6 +8,7 @@
     <title> HAND TROWEL  &#127793;</title>
 
     <link rel="stylesheet" href="{% static 'css_info/gardening_tools/trowel.css' %}">
+    <link rel="stylesheet" href="{% static 'css_info/navbar.css' %}">
    
      <!-- Latest compiled and minified CSS -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -33,13 +34,14 @@
      
 </head>
 <body>
+  <script src="{% static 'js/scroll.js' %}"></script>
     <!-- <a href="register">register</a><br>
     <a href="login">login</a><br> -->
 
     
     
     <!-- Navbar section -->
-    <nav class="navbar navbar-expand-lg ">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
       <a class="navbar-brand" href="/">Trial 1</a>
       <button
         class="navbar-toggler btn-outline-light"
@@ -56,27 +58,16 @@
       <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+            <a class="home-nav-link nav-link" href="#intro">Introduction</a>
           </li>
 
-          {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+            <a class="home-nav-link nav-link" href="#gtro">GARDEN TROWEL</a>
           </li>
+
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+            <a class="home-nav-link nav-link" href="#use">WHEN TO USE</a>
           </li>
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
-          </li>
-          {% else %}
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/register/">Register</a>
-          </li>
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/login/">Login</a>
-          </li>
-          {% endif %}
           
           <!-- <li class="nav-item">
             <a class="home-nav-link nav-link" href="/about/">About us</a>
@@ -101,7 +92,7 @@
         </div>
     </div >
     <div class="pimg">
-    <section class="section section-dark">
+    <section class="section section-dark" id="intro">
     
       <h1>Introduction</h1>
 
@@ -113,7 +104,7 @@
 
     <div class="pimg2">
 
-        <section class="section section-dark">
+        <section class="section section-dark" id="gtro">
           <h1>GARDEN TROWEL</h1>
           <p >
             A hand tool with a pointed, scoop-shaped metal blade and wooden, metal, or plastic handle. It is comparable to a spade or shovel, but is generally much smaller, being designed for use with one hand. It is used for breaking up earth, digging small holes, especially for planting and weeding, mixing in fertilizer or other additives, and transferring plants to pots.
@@ -123,7 +114,7 @@
     
     <div class="pimg3">
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="use">
       <h1>WHEN TO USE</h1>
       <p>
         When to use a gardening trowel depends on the job at hand. Garden trowels are used for digging small holes, such for planting bulbs, annuals or perennials. It would take a lot of time and effort to dig a hole for a tree or shrub with a garden trowel. Garden trowels are also used to dig up weeds. In small, tight areas, a narrow width blade will work better to dig out weeds or to install small plants or bulbs. Flat trowel blades work better on weeds with long taproots. Wider trowel blades and scoop-shaped blades work best for digging up small plants, digging holes for perennials, or scooping up soil when potting plants.

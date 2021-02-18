@@ -8,6 +8,7 @@
     <title>MANGO &#127793;</title>
 
     <link rel="stylesheet" type="text/css" href="{% static 'css_info/outdoor/mango.css' %}">
+    <link rel="stylesheet" href="{% static 'css_info/navbar.css' %}">
     
    
      <!-- Latest compiled and minified CSS -->
@@ -34,11 +35,12 @@
      
 </head>
 <body>
+  <script src="{% static 'js/scroll.js' %}"></script>
 
     <!-- Navbar section -->
 
     <div>
-      <nav class="navbar navbar-expand-lg ">
+      <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
         <a class="navbar-brand" href="/">Trial 1</a>
         <button
           class="navbar-toggler btn-outline-light"

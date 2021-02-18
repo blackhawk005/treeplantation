@@ -8,6 +8,7 @@
     <title>SPADE &#127793;</title>
 
     <link rel="stylesheet" type="text/css" href="{% static 'css_info/gardening_tools/spade.css' %}">
+    <link rel="stylesheet" href="{% static 'css_info/navbar.css' %}">
     
    
      <!-- Latest compiled and minified CSS -->
@@ -34,11 +35,12 @@
      
 </head>
 <body>
+  <script src="{% static 'js/scroll.js' %}"></script>
 
     <!-- Navbar section -->
 
     <div>
-      <nav class="navbar navbar-expand-lg ">
+      <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
         <a class="navbar-brand" href="">Tools</a>
         <button
           class="navbar-toggler btn-outline-light"
@@ -58,28 +60,12 @@
               <a class="home-nav-link nav-link" href="/">Home</a>
           </li>
             <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+              <a class="home-nav-link nav-link" href="#intro">INTRODUCTION</a>
             </li>
-  
-            {% if user.is_authenticated %}
+
             <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+              <a class="home-nav-link nav-link" href="#use">HOW TO USE</a>
             </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
-            </li>
-           {% else %}
-           <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/register/">Register</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/login/">Login</a>
-            </li>
-            {% endif %}
-            
             
             {% if user.is_authenticated %}
             <li class="nav-item">
@@ -100,7 +86,7 @@
         </div>
     </div>
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="intro">
 
       <h1>INTRODUCTION</h1>
 
@@ -110,7 +96,7 @@
 
     <div class="pimg2">
 
-        <section class="section section-dark">
+        <section class="section section-dark" id="use">
           <h1>HOW TO USE</h1>
           <p >
             For spades, the basic technique is to insert the blade into the ground, using one foot to push down on the ledge at the top of the blade, called the “step.” Spades should be pushed into the ground vertically to create a straight edge.The handle is grasped in two areas.
