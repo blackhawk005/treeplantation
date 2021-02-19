@@ -1,0 +1,147 @@
+body, html{
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato" , sans-serif;
+    font-weight: 200;
+    line-height: 1.8em;
+    color: #666;
+    background-image: linear-gradient(to left,#01201d,#5e804d);
+
+}
+
+/* Navbar section */
+.navbar {
+    padding: 32px 32px 32px;
+    padding-right: 32px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .navbar-brand:hover {
+    color:#F2A929;
+  }
+  .navbar-brand {
+    color:#fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 48px;
+  }
+  /* .home-nav-collapse {
+    color: white;
+  } */
+
+  
+  .nav-item{
+      margin: 16px;
+      
+  }
+  .nav-link{
+    color: #fff;
+  }
+  
+  .nav-link:hover {
+    color:#F2A929;
+  }
+
+
+.pimg1 , .pimg2 , .pimg3 , .pimg4 , .pimg5 , .pimg6, .pigm7, .pigm8, .pigm9{
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+}
+
+.pimg1{
+    background-image: url("https://thumbs.dreamstime.com/b/delonix-regia-flower-bloom-delonix-regia-flower-royal-poinciana-flamboyant-tree-flame-tree-peacock-flower-gulmohar-bloom-118130864.jpg");
+    min-height: 100%;
+
+}
+
+.pimg2{
+    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F469711436118265097%2F&psig=AOvVaw2oFicHl4IOTBPYBb-KpJLE&ust=1613829263162000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjByOOM9u4CFQAAAAAdAAAAABAJ");
+    min-height: 100%;
+   
+    
+}
+
+.pimg3{
+    background-image: url("https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-seeds-delonix-regia-gulmohar-seeds_300x@2x.jpg?v=1600666636");
+    min-height: 100%;
+    
+}
+
+.pimg4{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxDavkhEo50hGst4quIVV_-Jcw6f4zKkzayQ&usqp=CAU");
+    min-height: 100%;
+    
+}
+
+.pimg5{
+    background-image: url("https://img.onmanorama.com/content/dam/mm/en/news/columns/keralaspora/images/2020/5/31/gulmohar-kaalvaripoo.jpg");
+    min-height: 100%;
+    
+}
+
+.pimg6{
+    background-image: url("https://static.boredpanda.com/blog/wp-content/uploads/2017/05/I-thought-of-getting-friendly-with-the-most-colourful-tree-blossom-in-India-Gulmohar-5907a2b10c746__880.jpg");
+    min-height: 100%;
+}
+
+.pimg7{
+    background-image: url("https://i.pinimg.com/originals/5b/a0/23/5ba023a03cabed83b6eb5bceb02974db.jpg");
+    min-height: 100%;
+    
+}
+
+.pimg8{
+    background-image: url("https://nestreeo.com/wp-content/uploads/2020/02/Gulmohar-Delonix-Regia-Red-Orange-Red-krishnachura-Plant.jpg");
+    min-height: 100%;
+    
+}
+
+.pimg9{
+    background-image: url("https://images.unsplash.com/photo-1465743079618-f6ac1ba1e52f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Z3VsbW9oYXIlMjBmbG93ZXJ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80");
+    min-height: 100%;
+}
+
+.section{
+    text-align: center;
+    padding: 50px 80px;
+
+}
+
+.section-light{
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section-dark{
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color:#000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border{
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+p{
+    font-size: x-large;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
