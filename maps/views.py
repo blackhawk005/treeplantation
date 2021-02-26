@@ -23,7 +23,7 @@ def get_name(request):
             trial = Blog(user=request.user.username, address=address, maps_link=maps_link, area=area, permission_required=str(permission_required),contact_management_name=contact_management_name, contact_management_num=contact_management_num)
             trial.save()
             # print('hello')
-            return HttpResponse('THANKS')
+            return redirect('/maps/bloginfo')
 
     # if a GET (or any other method) we'll create a blank form
     else:
