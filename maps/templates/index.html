@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/maps/your-name" method="post">
+        <p><label for="id_address">Address:</label>
+            <textarea name="address" id="id_address" required></textarea></p>
+        <p><label for="id_link">Link:</label>
+            <input type="text" name="maps_link" id="id_link" value="NA"></p>
+        <p><label for="id_area">Approx Size Of Place For Plantation:</label>
+            <input type="text" name="area" id="id_area" ></p>
+        <p><label for="id_permission">Permission Required:</label>
+            <input type="checkbox" name="permission_required" id="id_permission"></p>
+        <p>Management info (if any)</p>
+        <p><label for="id_name">Name:</label>
+            <input type="text" name="contact_management_name" id="id_name" value="NA"></p>
+        <p><label for="id_num">Contact No:</label>
+            <input type="text" name="contact_management_num" id="id_num" value="NA"></p>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
