@@ -13,7 +13,10 @@
     <div class="col-md-3 col-3 col sm-6 col-3 reg register-left">
         <h2> User: {{ blog.user }}</h2>
         <h4> Address: {{ blog.address }}</h4>
+        {% if blog.maps_link == 'NA' %}
+        {% else %}
         <h4> <a class="but-text1 " href=" {{ blog.maps_link }} ">Click Here For Map</a></h4>
+        {% endif %}
         <h4> Approx Size Of Place For Plantation: {{ blog.area }}</h4>
         {% if blog.permission_required == '1' %}
         <h4>permisson required: Yes</h4>
