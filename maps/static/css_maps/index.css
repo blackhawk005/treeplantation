@@ -146,15 +146,16 @@ body
     border-style: solid;
     border-color: #fff;
   }
-
+*/
   .but-text1 {
     text-decoration: none;
-    color: #fff;
+    color: rgb(0, 0, 0);
     
   }
   .but-text1:hover {
-    color: black;
+    color: rgb(2, 122, 2);
   }
+  /*
   .but-text2 {
     text-decoration: none;
     color: #fff;

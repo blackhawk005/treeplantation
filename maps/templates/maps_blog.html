@@ -10,10 +10,10 @@
 </head>
 <body>
     {% for blog in blog_data %}
-    <div class="col-md-3 reg register-left" ">
+    <div class="col-md-3 col-3 col sm-6 col-3 reg register-left">
         <h2> User: {{ blog.user }}</h2>
         <h4> Address: {{ blog.address }}</h4>
-        <h4> Link: {{ blog.maps_link }}</h4>
+        <h4> <a class="but-text1 " href=" {{ blog.maps_link }} ">Click Here For Map</a></h4>
         <h4> Approx Size Of Place For Plantation: {{ blog.area }}</h4>
         {% if blog.permission_required == '1' %}
         <h4>permisson required: Yes</h4>
@@ -24,6 +24,7 @@
         <h4>permisson required: No</h4>
         {% endif %}
       </div>
+      <br><br><br>
     {% endfor %}
 </body>
 </html>
