@@ -8,3 +8,4 @@ class Blog(models.Model):
     permission_required = models.BooleanField()
     contact_management_name = models.CharField(max_length=100)
     contact_management_num = models.CharField(max_length=100)
+    unique_id = models.CharField(max_length=100)

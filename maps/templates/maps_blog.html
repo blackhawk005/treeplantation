@@ -26,6 +26,13 @@
         {% else %}
         <h4>permisson required: No</h4>
         {% endif %}
+        {% if blog.user == user.username %}
+        <form action="/maps/delete_blog" method="POST">
+            
+            <input type="hidden" name="hidden_unique_id" value="{{ blog.unique_id }}">
+            <input class="register-left delete-btn" type="submit" value="Delete">
+        </form>
+        {% endif %}
       </div>
       <br><br><br>
     {% endfor %}
