@@ -21,84 +21,84 @@
     <title>Available Locations</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand" href="/">Trial 1</a>
-        <button
-          class="navbar-toggler btn-outline-light"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
-        </button>
+  <nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand" href="/">Trial 1</a>
+    <button
+      class="navbar-toggler btn-outline-light"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+    </button>
+    
+    <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+        </li>
+
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/maps/bloginfo">Available Locations</a>
+        </li>
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/maps/">Insert Location</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+        </li> -->
+        {% else %}
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/register/">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/login/">Login</a>
+        </li>
+        {% endif %}
         
-        <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
-            </li>
-  
-            {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/maps/bloginfo">Maps</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/maps/">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
-            </li>
-            {% else %}
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/register/">Register</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/login/">Login</a>
-            </li>
-            {% endif %}
-            
-            <!-- <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/about/">About us</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
-            </li> -->
-            {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/logout/">Logout</a>
-            </li>
-            {% endif %}
-          </ul>
-        </div>
-      </nav>
-
-
+        <!-- <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/about/">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
+        </li> -->
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
     {% for blog in blog_data %}
-    <div class="col-md-3 col-3 col sm-6 col-3 reg register-left">
-        <h2> User: {{ blog.user }}</h2>
-        <h4> Address: {{ blog.address }}</h4>
+    <div class="col-md-8 col-lg-6 col-sm-11 col-11 reg register-form register-left" style="align-content: center;">
+        <h2> <b>User -></b> {{ blog.user }}</h2>
+        <h4> <b>Address -></b> {{ blog.address }}</h4>
         {% if blog.maps_link == 'NA' %}
         {% else %}
         <h4> <a class="but-text1 " href=" {{ blog.maps_link }} ">Click Here For Map</a></h4>
         {% endif %}
-        <h4> Approx Size Of Place For Plantation: {{ blog.area }}</h4>
+        <h4> <b>Approx Size Of Place For Plantation -></b> {{ blog.area }}</h4>
         {% if blog.permission_required == '1' %}
-        <h4>permisson required: Yes</h4>
-        <h4>Management info:</h4>
-        <h4>Name = {{blog.contact_management_name}}</h4>
-        <h4>Contact No. = {{blog.contact_management_num}}</h4>
+        <h4><b>permisson required -></b> Yes</h4>
+        <h4><i>Management info</i></h4>
+        <h4><b>Name -></b> {{blog.contact_management_name}}</h4>
+        <h4><b>Contact No. -></b> {{blog.contact_management_num}}</h4>
         {% else %}
-        <h4>permisson required: No</h4>
+        <h4><b>permisson required -></b> No</h4>
         {% endif %}
         {% if blog.user == user.username %}
-        <form action="/maps/delete_blog" method="POST">
-            
+        <br>
+        <div style="margin-left:30%;">
+        <form class="delete-btn" style="margin-right:40%; display:inline-block; " action="/maps/delete_blog" method="POST">
             <input type="hidden" name="hidden_unique_id" value="{{ blog.unique_id }}">
-            <input class="register-left delete-btn" type="submit" value="Delete">
+            <input class="delete-btn btn " style="border-radius: 50%; color:ivory;" type="submit" value="Delete">
         </form>
+        </div>
         {% endif %}
       </div>
       <br><br><br>

@@ -36,18 +36,19 @@ body
   }
 
   /* Title section */
-
-  .title-text {
+  .title-section {
+    padding-bottom: 112px;
+    padding-top: 32px;
+  }
+  
+  .title-text{
     font-family: Copperplate,Copperplate Gothic Light,fantasy; 
     color: #fff;
     font-size: 32px;
     margin-left: 32px;
     padding-top: 80px;
   }
-  .title-section {
-    padding-bottom: 112px;
-    padding-top: 32px;
-  }
+
   .btn {
     margin-top: 1rem;
     padding-top: 6.4px;

@@ -1,27 +1,105 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css_maps/index.css' %}">
+     <!-- Google fonts -->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+     <!-- Bootstrap -->
+     <!-- CSS only -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+     <!-- JS, Popper.js, and jQuery -->
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <title>Address Form</title>
 </head>
 <body>
+    
+    <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="/">Trial 1</a>
+        <button
+          class="navbar-toggler btn-outline-light"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+        </button>
+        
+        <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+            </li>
+  
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/maps/bloginfo">Available Locations</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/maps/">Insert Location</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+            </li> -->
+            {% else %}
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/register/">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/login/">Login</a>
+            </li>
+            {% endif %}
+            
+            <!-- <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/about/">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
+            </li> -->
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
+      <br><br><br>
+      <div class="row">
+    <div class="col-md-6 reg register-left">
+    <div class="register-form">
+      <h2 class="" style="font-size: 32px;">Details of location</h2>
+
     <form action="/maps/your-name" method="post">
-        <p><label for="id_address">Address:</label>
-            <textarea name="address" id="id_address" required></textarea></p>
-        <p><label for="id_link">Link:</label>
-            <input type="text" name="maps_link" id="id_link" value="NA"></p>
-        <p><label for="id_area">Approx Size Of Place For Plantation:</label>
-            <input type="text" name="area" id="id_area" ></p>
-        <p><label for="id_permission">Permission Required:</label>
-            <input type="checkbox" name="permission_required" id="id_permission"></p>
-        <p>Management info (if any)</p>
-        <p><label for="id_name">Name:</label>
-            <input type="text" name="contact_management_name" id="id_name" value="NA"></p>
-        <p><label for="id_num">Contact No:</label>
-            <input type="text" name="contact_management_num" id="id_num" value="NA"></p>
-        <input type="submit" value="Submit">
+        <label for="id_address" style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;" >Address:</label>
+            <textarea class="form-control" name="address" id="id_address" required></textarea><br>
+        <label for="id_link" style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;" >Link:</label>
+            <input type="text" class="form-control" name="maps_link" id="id_link" value="NA"><br>
+        <label for="id_area" style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;" >Approx Size Of Place For Plantation:</label>
+            <input type="text" class="form-control" name="area" id="id_area" ><br>
+        <label for="id_permission" style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;" >Permission Required ( Leave blank if not sure ) </label>
+            <input type="checkbox" class="form-control" name="permission_required" id="id_permission"><br>
+        <h2 class="text-success" style="font-size: 32px; font-family: Georgia, 'Times New Roman', Times, serif;">Management info (If any)</h2>
+        <label for="id_name" style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;" >Name</label>
+            <input type="text" class="form-control" name="contact_management_name" id="id_name" value="NA"><br>
+        <label for="id_num" style="font-size: 20px; font-family: 'Courier New', Courier, monospace;" >Contact Number</label>
+            <input type="text" class="form-control" name="contact_management_num" id="id_num" value="NA"><br>
+            <br><br>
+        <input type="submit" class="btn reg-btn btn-primary" value="Submit">
     </form>
+</div>
+</div>
+</div>
 </body>
 </html>

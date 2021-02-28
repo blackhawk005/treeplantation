@@ -11,6 +11,36 @@ img{
     /* padding-left: 9.375rem; */
 }
 
+.navbar {
+    padding: 32px 32px 32px;
+    padding-right: 32px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .navbar-brand:hover {
+    color:#F2A929;
+  }
+  .navbar-brand {
+    color:#fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 48px;
+  }
+  /* .home-nav-collapse {
+    color: white;
+  } */
+
+  
+  .nav-item{
+      margin: 16px;
+      
+  }
+  .nav-link{
+    color: #fff;
+  }
+  
+  .nav-link:hover {
+    color:#F2A929;
+  }
+
 
 .regis-page
 {

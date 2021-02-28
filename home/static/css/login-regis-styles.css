@@ -24,6 +24,14 @@ img{
     box-sizing: border-box;
 }
 
+.title-text {
+    font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+    color: #fff;
+    font-size: 32px;
+    margin-left: 32px;
+    padding-top: 80px;
+  }
+
 .register-right
 {
     text-align: center;
