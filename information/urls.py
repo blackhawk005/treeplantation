@@ -17,6 +17,7 @@ urlpatterns = [
     path('indianbasil', views.page_open_indianbasil, name='page_open_indianbasil'),
     path('babysunrose', views.page_open_babysunrose, name='page_open_babysunrose'),
     path('cycaspalm', views.page_open_palm, name='page_open_palm'),
+    path('moneyplant', views.page_open_moneyplant, name='page_open_palm'),
 
     # outdoor
     path('plumbago', views.page_open_plumbago, name="page_open_plumbago"),
@@ -39,5 +40,6 @@ urlpatterns = [
     path('saw', views.page_open_saw, name='page_open_saw'),
     path('spade', views.page_open_spade, name='page_open_spade'),
     path('hoe', views.page_open_hoe, name='page_open_hoe'),
+    path('fork', views.page_open_hoe, name='page_open_fork'),
     path('shovel', views.page_open_shovel, name='page_open_shovel')
 ]

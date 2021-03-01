@@ -45,6 +45,8 @@ def page_open_babysunrose(request):
 def page_open_palm(request):
     return render(request, 'indoor_plants/cycas_palm.html')
 
+def page_open_moneyplant(request):
+    return render(request, 'indoor_plants/moneyplant.html')
 
 # outdoor
 
@@ -107,3 +109,6 @@ def page_open_knife(request):
 
 def page_open_shovel(request):
     return render(request, 'gardening_tools/shovel.html')
+
+def page_open_fork(request):
+    return render(request, 'gardening_tools/fork.html')
