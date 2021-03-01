@@ -25,6 +25,7 @@ urlpatterns = [
     path('mango', views.page_open_mango, name="page_open_mango"),
     path('hibiscus', views.page_open_hibiscus, name="page_open_hibiscus"),
     path('jamun', views.page_open_jamun, name="page_open_jamun"),
+    path('gulmohar', views.page_open_gulmohar, name="page_open_gulmohar"),
     path('guava', views.page_open_guava, name="page_open_guava"),
     path('papaya', views.page_open_papaya, name="page_open_papaya"),
     path('coconut', views.page_open_coconut, name="page_open_coconut"),
@@ -40,6 +41,6 @@ urlpatterns = [
     path('saw', views.page_open_saw, name='page_open_saw'),
     path('spade', views.page_open_spade, name='page_open_spade'),
     path('hoe', views.page_open_hoe, name='page_open_hoe'),
-    path('fork', views.page_open_hoe, name='page_open_fork'),
+    path('fork', views.page_open_fork, name='page_open_fork'),
     path('shovel', views.page_open_shovel, name='page_open_shovel')
 ]

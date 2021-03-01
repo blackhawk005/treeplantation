@@ -53,6 +53,9 @@ def page_open_moneyplant(request):
 def page_open_plumbago(request):
     return render(request, 'outdoor_plants/plumbago.html')
 
+def page_open_gulmohar(request):
+    return render(request, 'outdoor_plants/gulmohar.html')
+
 def page_open_ajuga(request):
     return render(request, 'outdoor_plants/ajuga.html')
 
