@@ -18,6 +18,7 @@ urlpatterns = [
     path('babysunrose', views.page_open_babysunrose, name='page_open_babysunrose'),
     path('cycaspalm', views.page_open_palm, name='page_open_palm'),
     path('moneyplant', views.page_open_moneyplant, name='page_open_palm'),
+    path('tomato', views.page_open_tomato, name='page_open_tomato'),
 
     # outdoor
     path('plumbago', views.page_open_plumbago, name="page_open_plumbago"),

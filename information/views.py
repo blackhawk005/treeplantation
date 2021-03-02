@@ -18,6 +18,9 @@ def tools(request):
 
 # indoor 
 
+def page_open_tomato(request):
+    return render(request, 'indoor_plants/tomato.html')
+
 def page_open_lemon(request):
     return render(request, 'indoor_plants/lemon.html')
 
