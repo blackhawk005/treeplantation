@@ -1,0 +1,212 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coconut &#127793;</title>
+
+    <link rel="stylesheet" href="{% static 'css_info/outdoor/ashoka.css' %}">
+    <link rel="stylesheet" href="{% static 'css_info/navbar.css' %}">
+    
+   
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="new.js"></script>
+
+     <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"> </script> <!--chart.js-->
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+     
+</head>
+<body>
+  <script src="{% static 'js/scroll.js' %}"></script>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">&#8593;</button>  <!--back to top button-->
+
+  <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
+    <a class="navbar-brand" href="/">Trial 1</a>
+    <button
+      class="navbar-toggler btn-outline-light"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+    </button>
+    
+    <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="#size">SIZE</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="#cycle">LIFE-CYCLE</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="#climate">CLIMATE</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="#soil">SOIL REQUIREMENTS</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="#watable">WATER TABLE</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="#uses">USES</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/about/">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
+        </li> -->
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
+ 
+    <div class="pimg1">
+
+        <div class="ptext">
+            <span class="border">
+                 ASHOKA
+            </span>
+        </div>
+    </div>
+
+    <section class="section section-dark" id="size">
+
+      <h1>SIZE</h1>
+
+     <p>  
+		Trees are classified as dwarf or tall; average height is 50 to 60 feet for tall and 25 feet for dwarf trees. 
+	 </p>
+    </section>
+
+    <div class="pimg2">
+
+        <section class="section section-dark" id="cycle">
+          <h1>LIFE-CYCLE</h1>
+          <p >
+            The Ashoka tree life span is around 50 years.
+          </p>
+        </section>
+    </div>
+    
+    <div class="pimg3">
+
+    <section class="section section-dark" id="climate">
+      <h1>CLIMATE</h1>
+      <p>
+        It grows well in a frost-free climate, between the range of 20 – 35° C (68 – 95° F) temperature. 
+        The tree flourishes well in humid condition and performs poorly in dry and arid climatic areas.
+	</p>
+    </section>
+
+   </div>
+    
+
+    <div class="pimg4">
+
+        <section class="section section-dark" id="soil">
+            <h1>SOIL REQUIREMENTS</h1>
+            <p>
+            Ashoka tree calls for fertile and well-draining soil with slightly acidic to neutral ph 5-7.5. Loamy, sandy loamy, or clay-loamy soil is perfect for growing the Ashoka tree.
+            </p>
+        </section>
+    </div>
+    
+        
+
+        <div class="pimg5">
+
+          <section class="section section-dark" id="watable">
+              <h1>WATER TABLE</h1>
+              <p>
+              For small plants growing, check the soil around by poking one and a half inch finger in the soil, if it feels dry, water it. If your yard is large enough, you can even install drip irrigation to provide precise watering.
+		</p>
+          </section>
+        </div>
+      
+          
+
+          <div class="pimg1">
+
+            <section class="section section-dark" id="uses">
+                <h1>USES</h1>
+                <p>
+                    It helps in managing problems related to menstruation (periods) like irregular periods, stomach pain, cramps etc. 
+                    It acts as a uterine tonic and helps to manage menstrual flow and hormones. 
+                    It has antimicrobial, anti-inflammatory and analgesic property due to which it helps in the management of infections, swelling and pain. 
+                    Ashoka powder helps in managing skin related problems and maintain clearer skin by removing toxins from the body due to its antioxidant property. 
+                    It also helps in managing cancer, diabetes, piles, ulcers, worm infestation, fever, etc. due to the presence of certain chemical compounds
+    
+                </p>
+
+		
+            </section>
+          </div>
+
+          <!--back to top start-->
+
+          <script>
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+            
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+            
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+            </script>
+
+            <!--back to top end-->
+        
+            
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+
+
