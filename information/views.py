@@ -83,6 +83,9 @@ def page_open_coconut(request):
 def page_open_neem(request):
     return render(request, 'outdoor_plants/neem.html')
 
+def page_open_ashoka(request):
+    return render(request, 'outdoor_plants/ashoka.html')
+
 
 # tools
 

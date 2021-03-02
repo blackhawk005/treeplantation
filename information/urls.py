@@ -31,6 +31,7 @@ urlpatterns = [
     path('papaya', views.page_open_papaya, name="page_open_papaya"),
     path('coconut', views.page_open_coconut, name="page_open_coconut"),
     path('neem', views.page_open_neem, name="page_open_neem"),
+    path('ashoka', views.page_open_ashoka, name="page_open_ashoka"),
     
     #tools
     path('trowel', views.page_open_trowel, name='page_open_trowel'),
