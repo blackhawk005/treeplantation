@@ -22,11 +22,16 @@ def info_send(request):
             print(date, time, place, address)
             trial = tt(date=str(date), time=time, host=request.user.username, place=place, info=address)
             trial.save()
-            return ( request, "display_page.html")
+            return redirect("/schedule/")
     return HttpResponse('not thank you')
 
 def display_info(request):
-    tt_1 = tt.objects.all()
-    # print(tt_1[1])
-    return render(request, 'display_page.html', {'tt_1': tt_1})
+    if (request.method=='GET'):
+        # getting all the objects of Map
+        tt_1 = tt.objects.all()
+        return render(request, 'display_page.html', {'tt_1': tt_1})
+    if (request.method=='POST'):
+        # getting all the objects of Map
+        tt_1 = tt.objects.all()
+        return render(request, 'display_page.html', {'tt_1': tt_1})
 
