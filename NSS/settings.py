@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'information.apps.InformationConfig',
     'maps.apps.MapsConfig',
+    'schedule.apps.ScheduleConfig',
     'home.apps.HomeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
