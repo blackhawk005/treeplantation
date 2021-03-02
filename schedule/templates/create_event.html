@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script> -->
+
+</head>
+<!-- <script src="{% static 'js/combodate.js' %}"></script> -->
+<!-- <script src="https://momentjs.com/downloads/moment.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.4.3/inputs/combodate/combodate.js"></script> -->
+
+
+<body>
+    <form action="action_page" method="POST">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" placeholder="dd/mm/yy"><br><br>
+        <label for="time">Time:</label>
+        <input type="text" id="time" name="time" placeholder="hh:mm AM/PM"><br><br>
+        <label for="place">Place:</label>
+        <input type="text" id="place" name="place" placeholder="Place"><br><br>
+        <label for="address">Information:</label>
+        <textarea  name="address" id="address" ></textarea><br><br>
+        <input type="submit">
+      </form>
+   </div>
+</div>
+</body>
+</html>
