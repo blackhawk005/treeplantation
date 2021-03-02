@@ -53,7 +53,7 @@
                     <li class="nav-item">
                       <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
                     </li>
-          
+            
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                       <a class="home-nav-link nav-link" href="/maps/bloginfo">Available Locations</a>
@@ -61,6 +61,12 @@
                     <li class="nav-item">
                       <a class="home-nav-link nav-link" href="/maps/">Insert Location</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="home-nav-link nav-link" href="/schedule/">All Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="home-nav-link nav-link" href="/schedule/form_fill">Create new event</a>
+                      </li>
                     <!-- <li class="nav-item">
                       <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
                     </li> -->
@@ -87,6 +93,7 @@
                   </ul>
                 </div>
               </nav>
+              <br><br>
         </div>
 
 
