@@ -18,14 +18,15 @@
 
 
 <body>
-    <form action="/action_page.php" method="POST">
-        <label for="birthday">Date:</label>
-        <input type="date" id="Date" name="birthday"><br><br>
+    <form action="action_page" method="POST">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" placeholder="dd/mm/yy"><br><br>
         <label for="time">Time:</label>
         <input type="text" id="time" name="time" placeholder="hh:mm AM/PM"><br><br>
         <label for="place">Place:</label>
         <input type="text" id="place" name="place" placeholder="Place"><br><br>
-        <label for="info">Information:</label>
+        <label for="address">Information:</label>
+        <textarea  name="address" id="address" ></textarea><br><br>
         <input type="submit">
       </form>
    </div>
