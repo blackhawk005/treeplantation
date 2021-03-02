@@ -6,12 +6,6 @@ import MySQLdb
 import uuid
 
 # Create your views here.
-def index(request):
-    if (request.method=='GET'):
-        # getting all the objects of Map
-        tt = tt.objects.all()
-        return render(request, 'create_event.html', {'tt_index': tt})
-    return render( request, "create_event.html")
 
 def form_fill(request):
     return render( request, "create_event.html")
@@ -28,5 +22,11 @@ def info_send(request):
             print(date, time, place, address)
             trial = tt(date=str(date), time=time, host=request.user.username, place=place, info=address)
             trial.save()
-            return HttpResponse('thank you')
+            return ( request, "display_page.html")
     return HttpResponse('not thank you')
+
+def display_info(request):
+    tt_1 = tt.objects.all()
+    # print(tt_1[1])
+    return render(request, 'display_page.html', {'tt_1': tt_1})
+

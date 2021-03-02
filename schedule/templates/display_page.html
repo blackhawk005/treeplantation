@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-    {{ for tt in tt_index }}
-    {{ endfor }}
+    {% for tt in tt_1 %}
+    {{ tt.date }}
+    {{ tt.time }}
+    {{ tt.host }}
+    {{ tt.place }}
+    {{ tt.info }}<br>
+    {% endfor %}
 </body>
 </html>
