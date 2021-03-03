@@ -85,11 +85,27 @@
 
     {% for tt in tt_1 %}
     <div class="col-md-8 col-lg-6 col-sm-11 col-11 reg register-form register-left" style="align-content: center;">
-        <h2><b>PLantation Event Host - </b>{{ tt.host }}</h2>
+        <h2><b>{{ tt.event_name }}</h2>
+        <h2><b>Host - </b>{{ tt.host }}</h2>
         <h2><b>Date - </b>{{ tt.date }}</h2>
         <h2><b>Time - </b>{{ tt.time }}</h2>
         <h2><b>Place - </b>{{ tt.place }}</h2>
         <h2><b>Note - </b>{{ tt.info }}</h2><br>
+        {% if tt.host == user.username %}
+        <form action="delete_data" method="POST">
+          <input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
+          <input class="btn btn-dark" type="submit" value="Delete">
+        </form>
+        {% else %}
+        <form action="send_data" method="POST">
+          <input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
+          <input type="hidden" name="hidden_event_name" value="{{ tt.event_name }}">
+          <input type="hidden" name="hidden_date" value="{{ tt.date }}">
+          <input type="hidden" name="hidden_time" value="{{ tt.time }}">
+          <input type="hidden" name="hidden_place" value="{{ tt.place }}">
+          <input class="btn btn-dark" type="submit" value="Participate">
+        </form>
+        {% endif %}
     </div>
     <br><br><br>
     {% endfor %}

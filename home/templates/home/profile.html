@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Username = {{ user.username }}</h3>
+    <h3>First Name = {{ user.first_name }}</h3>
+    <h3>Last Name = {{ user.last_name }}</h3>
+    <h3>E-mail = {{ user.email }}</h3>
+    <h2>Hosted Events</h2>
+    {% for tt in tt_1 %}
+    {% if tt.host == user.username %}
+    <form action="delete_hosted_event/" method="POST">
+        <h3>Event Name: {{ tt.event_name }}</h3>
+        <h3>Date: {{ tt.date }}</h3>
+        <h3>Time: {{ tt.time }}</h3>
+        <input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
+        <input type="submit" value="Delete">
+    </form>
+    {% endif %}
+    {% endfor %}
+    <h2>Participated Events</h2>
+    {% for participant in participants_1 %}
+    {% if participant.name == user.username %}
+    <form action="delete_participated_events/" method="POST">
+        <h3>Event Name: {{ participant.event_name }}</h3>
+        <h3>Date: {{ participant.date }}</h3>
+        <h3>Time: {{ participant.time }}</h3>
+        <h3>Place: {{ participant.place }}</h3>
+        <input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
+        <input type="submit" value="Delete">
+    </form>
+    {% endif %}
+    {% endfor %}
+    <h2>Added Maps</h2>
+    {% for blog in blogs %}
+    {% if blog.user == user.username %}
+    <form action="delete_map_blog/" method="POST">
+        <h3>Address: {{ blog.address }}</h3>
+        <input type="hidden" name="hidden_unique_id" value="{{ blog.unique_id }}">
+        <input type="submit" value="Delete">
+    </form>
+    {% endif %}
+    {% endfor %}
+</body>
+</html>

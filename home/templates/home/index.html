@@ -108,8 +108,12 @@
               <div class="col-lg-6">
                   <h1 class="title-text">This is a Quote.</h1>
                   <div class="buttons">
-                    
-                    <button type="button" class="btn  btn-light" ><a class="but-text1" href="/information/">Plant Information</a></button>
+                    {% if user.is_authenticated %}
+                    <button type="button" class="btn  btn-light" ><a class="but-text1" href="profile">Profile</a></button>
+                    {% else %}
+                    <button type="button" class="btn  btn-light" ><a class="but-text1" href="/login/">Login</a></button>
+                    <button type="button" class="btn  btn-light" ><a class="but-text1" href="/register/">Register</a></button>
+                    {% endif %}
                     <button type="button" class="btn  btn-outline-light" ><a class="but-text2" href="/about/">Our NGOs</a></button>
                   </div>
               </div>
