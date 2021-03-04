@@ -82,7 +82,7 @@
       </nav>
       <br><br>
 
-
+    
     {% for tt in tt_1 %}
     <div class="col-md-8 col-lg-6 col-sm-11 col-11 reg register-form register-left" style="align-content: center;">
         <h2><b>{{ tt.event_name }}</h2>
@@ -91,6 +91,7 @@
         <h2><b>Time - </b>{{ tt.time }}</h2>
         <h2><b>Place - </b>{{ tt.place }}</h2>
         <h2><b>Note - </b>{{ tt.info }}</h2><br>
+        {% if user.is_authenticated %}
         {% if tt.host == user.username %}
         <form action="delete_data" method="POST">
           <input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
@@ -106,8 +107,20 @@
           <input class="btn btn-dark" type="submit" value="Participate">
         </form>
         {% endif %}
+        {% else %}
+        <button type="button" class="btn  btn-light" ><a class="but-text1" href="/login/">Login To Participate</a></button>
+        
+        {% endif %}
+        
     </div>
     <br><br><br>
     {% endfor %}
+    <script>
+      if ('{{ flag }}' == 1){
+        alert('You have already participated in the event');
+        widow.location.replace("/schedule/")
+      }
+      
+    </script>
 </body>
 </html>
