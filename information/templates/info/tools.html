@@ -49,6 +49,12 @@
                 
                 <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
+                    <form class="form-inline" method="POST">
+                        <li class="nav-item">
+                          <input class="form-control" id="search_bar" type="search" onkeyup="myFunction()" placeholder="SEARCH..." >
+                      </li>
+                      </form>
+
                     <li class="nav-item">
                       <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
                     </li>
@@ -100,8 +106,8 @@
 
 
             <!--Course Cards ROW1-->
-            <div class="row" >
-                <div class="column">
+            <ul class="row" id="out">
+                <li class="column" id="in">
                 <div class="card">
                     <img  src="https://cdn.pixabay.com/photo/2017/05/16/06/36/hand-trowel-2317020_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
                     <div class=" content left">
@@ -114,9 +120,9 @@
                     </div>
                     </a>
                 </div>
-                </div>
+                </li>
 
-                <div class="column">
+                <li class="column" id="in">
                     <div class="card">
                     <img  src="https://cdn.pixabay.com/photo/2016/05/24/15/11/secateur-1412518_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
                     <div class=" content left">
@@ -129,9 +135,9 @@
                     </div>
                     </a>
                     </div>
-                </div>
+                </li>
                 
-                <div class="column">
+                <li class="column" id="in">
                     <div class="card">
                     <img src="https://cdn.pixabay.com/photo/2018/11/05/12/04/computing-3795962_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
                     <div class=" content left">
@@ -144,9 +150,9 @@
                     </div>
                     </a>
                     </div>
-                </div>
+                </li>
                 <!--Row 2-->
-                <div class="column">
+                <li class="column" id="in">
                 <div class="card">
                     <img src="https://cdn.pixabay.com/photo/2019/10/13/08/50/gardening-4545662_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
                     <div class=" content left">
@@ -159,9 +165,9 @@
                     </div>
                     </a>
                 </div>
-                </div>
+                </li>
 
-                <div class="column">
+                <li class="column" id="in">
                     <div class="card">
                     <img src="https://cdn.pixabay.com/photo/2010/12/13/10/23/barrow-2770_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
                     <div class=" content left">
@@ -174,9 +180,9 @@
                     </div>
                     </a>
                     </div>
-                </div>
+                </li>
                 
-                <div class="column">
+                <li class="column" id="in">
                     <div class="card">
                     <img src="https://cdn.pixabay.com/photo/2017/03/09/11/37/snowdrop-2129446_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
                     <div class=" content left">
@@ -189,10 +195,10 @@
                     </div>
                     </a>
                     </div>
-                </div>
+                </li>
 
                 <!--Row 3-->
-                <div class="column">
+                <li class="column" id="in">
                     <div class="card">
                     <img src="https://cdn.pixabay.com/photo/2018/05/27/09/36/saw-3433139_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
                     <div class=" content left">
@@ -205,9 +211,9 @@
                     </div>
                     </a>
                     </div>
-                </div>
+                </li>
                 
-                <div class="column">
+                <li class="column" id="in">
                     <div class="card">
                         <img src="https://cdn.pixabay.com/photo/2016/11/23/14/32/beach-1853230_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
                         <div class=" content left">
@@ -220,9 +226,9 @@
                         </div>
                         </a>
                     </div>
-                </div>
+                </li>
                 
-                <div class="column">
+                <li class="column" id="in">
                     <div class="card">
                         <img src="https://cdn.pixabay.com/photo/2021/02/03/19/06/gardening-5978978_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
                         <div class=" content left">
@@ -235,10 +241,10 @@
                         </div>
                         </a>
                     </div>
-                </div>
+                </li>
 
                 <!--Row 4-->
-                <div class="column">
+                <li class="column" id="in">
                     <div class="card">
                         <img src="{% static 'images/Sohan_D/knifeimg2.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
                         <div class=" content left">
@@ -251,9 +257,9 @@
                         </div>
                         </a>
                     </div>
-                    </div>
+                </li>
                 
-                    <div class="column">
+                    <li class="column" id="in">
                         <div class="card">
                         <img src="https://media.istockphoto.com/photos/gardening-tool-picture-id157193336?k=6&m=157193336&s=612x612&w=0&h=4lp9cQPZ38P1-wRNyRXfFsiokStlMDHQj1vyvlCsHDA=" alt="" style="height: 300px; object-fit: cover;"> 
                         <div class=" content left">
@@ -266,9 +272,9 @@
                         </div>
                         </a>
                         </div>
-                    </div>
+                    </li>
 
-                    <div class="column">
+                    <li class="column" id="in">
                         <div class="card">
                         <img src="https://cdn.pixabay.com/photo/2017/07/19/08/50/gardening-2518377_960_720.jpg" alt="" style="height: 300px; object-fit: cover;"> 
                         <div class=" content left">
@@ -281,10 +287,30 @@
                         </div>
                         </a>
                         </div>
-                    </div>
-            </div>
-        </div>
+                    </li>
+            </ul>
+        
         <br>
+
+        <script>
+            function myFunction() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("search_bar");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("out");
+                li = ul.getElementsByTagName("li");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("h5")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+            </script>
+        
         
 
 

@@ -50,6 +50,11 @@
                 
                 <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
+                      <form class="form-inline" method="POST">
+                      <li class="nav-item">
+                        <input class="form-control" id="search_bar" type="search" onkeyup="myFunction()" placeholder="SEARCH..." >
+                    </li>
+                    </form>
                     <li class="nav-item">
                       <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
                     </li>
@@ -102,8 +107,8 @@
 
 
     <!--Course Cards ROW1-->
-<div class="row" >
-    <div class="column">
+<ul class="row" id="out">
+    <li class="column" id="in">
         <div class="card">
         <img  src="{% static 'images/indoor/tomato.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
         <div class=" content left">
@@ -115,9 +120,9 @@
             </div>
             </a>
         </div>
-    </div>
+    </li>
 
-    <div class="column">
+    <li class="column" id="in">
         <div class="card">
             <img  src="{% static 'images/indoor/lemon.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
             <div class=" content left">
@@ -129,9 +134,9 @@
                 </div>
             </a>
         </div>
-    </div>
+    </li>
 
-    <div class="column">
+    <li class="column" id="in">
         <div class="card">
             <img src="{% static 'images/indoor/chilly.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
             <div class=" content left">
@@ -143,9 +148,9 @@
                 </div>
             </a>
         </div>
-    </div>
+    </li>
 <!--Row 2-->
-    <div class="column">
+    <li class="column" id="in">
         <div class="card">
             <img src="{% static 'images/indoor/curry.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
             <div class=" content left">
@@ -157,9 +162,9 @@
                 </div>
             </a>
         </div>
-    </div>
+    </li>
 
-    <div class="column">
+    <li class="column" id="in">
         <div class="card">
             <img src="{% static 'images/indoor/turmeric.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
             <div class=" content left">
@@ -171,9 +176,9 @@
                 </div>
             </a>
         </div>
-    </div>
+    </li>
 
-    <div class="column">
+    <li class="column" id="in">
         <div class="card">
             <img src="{% static 'images/indoor/lemon_grass.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
             <div class=" content left">
@@ -185,10 +190,10 @@
                 </div>
             </a>
         </div>
-    </div>
+    </li>
 
 <!--Row 3-->
-    <div class="column">
+    <li class="column" id="in">
         <div class="card">
             <img src="{% static 'images/indoor/baby_sun_rose.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
             <div class=" content left">
@@ -200,9 +205,9 @@
                 </div>
             </a>
         </div>
-    </div>
+    </li>
 
-    <div class="column">
+    <li class="column" id="in">
         <div class="card">
             <img src="{% static 'images/indoor/cycas_palm.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
             <div class=" content left">
@@ -214,9 +219,9 @@
                 </div>
             </a>
         </div>
-    </div>
+    </li>
 
-    <div class="column">
+    <li class="column" id="in">
         <div class="card">
             <img src="{% static 'images/indoor/turmeric.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
             <div class=" content left">
@@ -228,10 +233,10 @@
                 </div>
             </a>
         </div>
-    </div>
+    </li>
 
 <!--Row 4-->
-    <div class="column">
+    <li class="column" id="in">
         <div class="card">
             <img src="{% static 'images/indoor/aloevera.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
             <div class=" content left">
@@ -243,9 +248,9 @@
                 </div>
             </a>
         </div>
-    </div>
+    </li>
 
-    <div class="column">
+    <li class="column" id="in">
         <div class="card">
             <img src="{% static 'images/indoor/indian_basil.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> 
             <div class=" content left">
@@ -257,11 +262,29 @@
                 </div>
             </a>
         </div>
-    </div>
+    </li>
 
-</div>
+</ul>
 <br>
 
+<script>
+    function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("search_bar");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("out");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("h5")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    </script>
 
 
 
