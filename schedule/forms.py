@@ -4,6 +4,6 @@ from django import forms
 class EventForm(forms.Form):
     event_name = forms.CharField(max_length=100)
     date = forms.DateField()
-    time = forms.CharField(max_length=100)
+    time = forms.TimeField()
     place = forms.CharField(max_length=100)
     address = forms.CharField(widget=forms.Textarea)
