@@ -6,13 +6,14 @@ from .models import tt, participants
 from django.contrib import messages
 import MySQLdb
 import uuid
+from .send_mail import send_email
 
 # Create your views here.
 
 def form_fill(request):
     return render( request, "create_event.html")
 
-def info_send(request):
+def create_event(request):
     if request.method == 'POST':
         form = EventForm(request.POST)
         if form.is_valid():
@@ -26,6 +27,7 @@ def info_send(request):
             print(date, time, place, address)
             trial = tt(date=str(date), time=time, host=request.user.username, place=place, info=address, unique_id=y, event_name=event_name)
             trial.save()
+            send_email(username=request.user.username, event=event_name, date=str(date), place=place,flag=1)
             return redirect("/schedule/")
     return HttpResponse('not thank you')
 
@@ -68,12 +70,13 @@ def send_data(request):
             else:
                 print('not there')
         if flag == 0:
+            send_email(username=request.user.username, event=event_name, date=date, place=place, flag=flag)
             trial = participants(name=request.user.username, email=request.user.email, unique_id=unique_id, event_name=event_name, date=date, time=time, place=place)
             trial.save()
         elif flag==1:
             # return redirect("/schedule/", flag='1')
             tt_1 = tt.objects.all()
-            return render(request, 'display_page.html', {'flag': 1, 'tt_1': tt_1})
+            return render(request, 'display_page.html', {'flag': flag, 'tt_1': tt_1})
         return redirect("/schedule/")
     return redirect("/schedule/")
 

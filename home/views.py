@@ -14,7 +14,7 @@ def index(request):
 
 # login page
 def login_page(request):
-    
+
     if (request.method == 'POST'):
         user_name = request.POST['user_name']
         pass_word = request.POST['pass']
@@ -90,7 +90,7 @@ def delete_participated_events(request):
         print("Can't connect to database")
         return
     mycursor = mydb.cursor()
-    query = "DELETE FROM schedule_tt WHERE unique_id='"+unique_id+"'"
+    query = "DELETE FROM schedule_participants WHERE unique_id='"+unique_id+"'"
     mycursor.execute(query)
     mydb.commit()
     return redirect('/profile')

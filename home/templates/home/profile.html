@@ -19,7 +19,7 @@
         <h3>Event Name: {{ tt.event_name }}</h3>
         <h3>Date: {{ tt.date }}</h3>
         <h3>Time: {{ tt.time }}</h3>
-        <input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
+        <input type="hidden" id="hidden_unique_id" name="hidden_unique_id" value="{{ tt.unique_id }}">
         <input type="submit" value="Delete">
     </form>
     {% endif %}
@@ -32,7 +32,8 @@
         <h3>Date: {{ participant.date }}</h3>
         <h3>Time: {{ participant.time }}</h3>
         <h3>Place: {{ participant.place }}</h3>
-        <input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
+        <!-- <h3>Unique id: {{ participant.unique_id }}</h3> -->
+        <input type="hidden" id="hidden_unique_id" name="hidden_unique_id" value="{{ participant.unique_id }}">
         <input type="submit" value="Delete">
     </form>
     {% endif %}
