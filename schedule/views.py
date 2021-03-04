@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from .forms import EventForm
 from .models import tt, participants
+from django.contrib import messages
 import MySQLdb
 import uuid
 
@@ -66,9 +67,13 @@ def send_data(request):
                 break
             else:
                 print('not there')
-            if flag == 0:
-                trial = participants(name=request.user.username, email=request.user.email, unique_id=unique_id, event_name=event_name, date=date, time=time, place=place)
-                trial.save()
+        if flag == 0:
+            trial = participants(name=request.user.username, email=request.user.email, unique_id=unique_id, event_name=event_name, date=date, time=time, place=place)
+            trial.save()
+        elif flag==1:
+            # return redirect("/schedule/", flag='1')
+            tt_1 = tt.objects.all()
+            return render(request, 'display_page.html', {'flag': 1, 'tt_1': tt_1})
         return redirect("/schedule/")
     return redirect("/schedule/")
 

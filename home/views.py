@@ -14,6 +14,7 @@ def index(request):
 
 # login page
 def login_page(request):
+    
     if (request.method == 'POST'):
         user_name = request.POST['user_name']
         pass_word = request.POST['pass']
