@@ -71,12 +71,21 @@
                       <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
                     </li> -->
                     {% else %}
+                    <script>
+                      var x = 1;
+                    </script>
                     <li class="nav-item">
-                      <a class="home-nav-link nav-link" href="/register/">Register</a>
+                      <a class="home-nav-link nav-link" href="/login/">Available Locations</a>
                     </li>
                     <li class="nav-item">
-                      <a class="home-nav-link nav-link" href="/login/">Login</a>
+                      <a class="home-nav-link nav-link" href="/login/">Insert Location</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="home-nav-link nav-link" href="/schedule/">All Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="home-nav-link nav-link" href="/login/">Create new event</a>
+                      </li>
                     {% endif %}
                     
                     <!-- <li class="nav-item">
@@ -92,8 +101,8 @@
                     {% endif %}
                   </ul>
                 </div>
-              </nav>
-              <br><br>
+            </nav>
+            <br><br>
         </div>
 
 
