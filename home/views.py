@@ -25,6 +25,8 @@ def login_page(request):
         if user is not None:
             login(request, user)
             return redirect('/')
+        elif user is None:
+            return redirect('login')
         else:
             return HttpResponse("Login Failed")
     else:
