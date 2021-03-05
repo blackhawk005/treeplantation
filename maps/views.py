@@ -4,12 +4,15 @@ from .forms import ContactForm
 from .models import Blog
 import MySQLdb
 import uuid
+from .past_or_present import past_or_present
 # Create your views here.
 
 def index(request):
+    past_or_present()
     return render(request, 'index.html')
 
 def get_name(request):
+    past_or_present()
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -33,6 +36,7 @@ def get_name(request):
     return render(request, 'name.html', {'form': form})
 
 def delete_blog(request):
+    past_or_present()
     if (request.method=='POST'):
         unique_id = request.POST['hidden_unique_id']
         try:
@@ -52,6 +56,7 @@ def delete_blog(request):
         return redirect('/maps/bloginfo')
 
 def display_blog_info(request):
+    past_or_present()
     if (request.method=='GET'):
         # getting all the objects of Map
         Blogs = Blog.objects.all()

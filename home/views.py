@@ -5,16 +5,18 @@ from django.contrib.auth import login, authenticate, logout
 from schedule.models import tt, participants
 from maps.models import Blog
 import MySQLdb
+from .past_or_present import past_or_present
 
 # Create your views here.
 
 # home page
 def index(request):
+    past_or_present()
     return render(request, 'home/index.html')
 
 # login page
 def login_page(request):
-    
+    past_or_present()
     if (request.method == 'POST'):
         user_name = request.POST['user_name']
         pass_word = request.POST['pass']
@@ -29,6 +31,7 @@ def login_page(request):
 
 # registration page
 def register(request):
+    past_or_present()
     if (request.method == 'POST'):
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']
@@ -51,12 +54,14 @@ def register(request):
         return render(request, 'home/register.html')
 
 def profile(request):
+    past_or_present()
     tt_1 = tt.objects.all()
     participants_1 = participants.objects.all()
     blogs = Blog.objects.all()
     return render(request, 'home/profile.html', {'tt_1': tt_1, 'participants_1': participants_1, 'blogs': blogs})
 
 def delete_hosted_event(request):
+    past_or_present()
     unique_id = request.POST['hidden_unique_id']
     try:
         mydb = MySQLdb.connect(
@@ -78,6 +83,7 @@ def delete_hosted_event(request):
     return redirect('/profile')
 
 def delete_participated_events(request):
+    past_or_present()
     unique_id = request.POST['hidden_unique_id']
     try:
         mydb = MySQLdb.connect(
@@ -90,12 +96,13 @@ def delete_participated_events(request):
         print("Can't connect to database")
         return
     mycursor = mydb.cursor()
-    query = "DELETE FROM schedule_tt WHERE unique_id='"+unique_id+"'"
+    query = "DELETE FROM schedule_participants WHERE unique_id='"+unique_id+"'"
     mycursor.execute(query)
     mydb.commit()
     return redirect('/profile')
 
 def delete_map_blog(request):
+    past_or_present()
     unique_id = request.POST['hidden_unique_id']
     try:
         mydb = MySQLdb.connect(
@@ -115,18 +122,22 @@ def delete_map_blog(request):
 
 # logout page
 def logout_page(request):
+    past_or_present()
     logout(request)
     return redirect('/')
 
 # how it works page
 def functionality(request):
+    past_or_present()
     return render(request, 'home/functionality.html')
 
 # about page
 def about(request):
+    past_or_present()
     return render(request, 'home/about.html')
 
 # contact us page
 def contact_us(request):
+    past_or_present()
     return render(request, 'home/contact_us.html')
 
