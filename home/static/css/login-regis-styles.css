@@ -153,6 +153,10 @@ img{
     color: white
 }
 
+.messages{
+    color: red;
+}
+
 .below-writeup{
     text-align: center;
 
