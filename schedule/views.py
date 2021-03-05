@@ -8,6 +8,7 @@ import MySQLdb
 import uuid
 from .send_mail import send_email
 from .past_or_present import past_or_present
+import threading
 
 # Create your views here.
 
@@ -30,7 +31,9 @@ def create_event(request):
             print(date, time, place, address)
             trial = tt(date=str(date), time=time, host=request.user.username, place=place, info=address, unique_id=y, event_name=event_name)
             trial.save()
-            send_email(username=request.user.username, event=event_name, date=str(date), place=place,flag=1)
+            t1 = threading.Thread(target=send_email, args=(request.user.username, event_name, str(date), place, 1))
+            t1.start()
+            # send_email(username=request.user.username, event=event_name, date=str(date), place=place,flag=1)
             return redirect("/schedule/")
     return HttpResponse('not thank you')
 
