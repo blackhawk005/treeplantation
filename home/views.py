@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
-from schedule.models import tt, participants
+from schedule.models import tt, participants, pastevents
 from maps.models import Blog
 import MySQLdb
 from .past_or_present import past_or_present
@@ -12,7 +12,8 @@ from .past_or_present import past_or_present
 # home page
 def index(request):
     past_or_present()
-    return render(request, 'home/index.html')
+    past_presents = pastevents.objects.all()
+    return render(request, 'home/index.html', {'past_presents':past_presents})
 
 # login page
 def login_page(request):
