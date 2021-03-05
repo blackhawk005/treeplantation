@@ -135,26 +135,16 @@
         </thead>
     {% for tt in tt_1 %}
     {% if tt.host == user.username %}
-<<<<<<< HEAD
         <tbody>
             <tr>
                 <th scope="row"></th>
                 <td>{{ tt.event_name }}</td>
                 <td>{{ tt.date }}</td>
                 <td>{{ tt.time }}</td>
-                <td><input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
+                <td><input type="hidden" id="hidden_unique_id" name="hidden_unique_id" value="{{ tt.unique_id }}">
                     <input class="btn-dark" style="padding: 2%;" type="submit" value="Delete"></td>
             </tr>
         </tbody>
-=======
-    <form action="delete_hosted_event/" method="POST">
-        <h3>Event Name: {{ tt.event_name }}</h3>
-        <h3>Date: {{ tt.date }}</h3>
-        <h3>Time: {{ tt.time }}</h3>
-        <input type="hidden" id="hidden_unique_id" name="hidden_unique_id" value="{{ tt.unique_id }}">
-        <input type="submit" value="Delete">
-    </form>
->>>>>>> 5ffa1558f2980a3c2a56668885446c85ca4585d5
     {% endif %}
     {% endfor %}
 </table>
@@ -173,7 +163,6 @@
         </thead>
     {% for participant in participants_1 %}
     {% if participant.name == user.username %}
-<<<<<<< HEAD
     <tbody>
         <tr>
             <th scope="row"></th>
@@ -181,21 +170,10 @@
             <td>{{ participant.date }}</td>
             <td>{{ participant.time }}</td>
             <td>{{ participant.place }}</td>
-            <td><input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
+            <td><input type="hidden" id="hidden_unique_id" name="hidden_unique_id" value="{{ participant.unique_id }}">
                 <input class="btn-dark" style="padding: 2%;" type="submit" value="Delete"></td>
         </tr>
     </tbody>
-=======
-    <form action="delete_participated_events/" method="POST">
-        <h3>Event Name: {{ participant.event_name }}</h3>
-        <h3>Date: {{ participant.date }}</h3>
-        <h3>Time: {{ participant.time }}</h3>
-        <h3>Place: {{ participant.place }}</h3>
-        <!-- <h3>Unique id: {{ participant.unique_id }}</h3> -->
-        <input type="hidden" id="hidden_unique_id" name="hidden_unique_id" value="{{ participant.unique_id }}">
-        <input type="submit" value="Delete">
-    </form>
->>>>>>> 5ffa1558f2980a3c2a56668885446c85ca4585d5
     {% endif %}
     {% endfor %}
     </table>
