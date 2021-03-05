@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css\login-regis-styles.css' %}" type="text/css">
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
@@ -21,12 +20,12 @@
 
 
     <!-- css -->
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
     <title>Document</title>
 </head>
 <body >
     <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand" href="/">Trial 1</a>
+        <a class="navbar-brand" href="/">TreeAsure</a>
         <button
           class="navbar-toggler btn-outline-light"
           type="button"
@@ -93,37 +92,28 @@
           </ul>
         </div>
       </nav>
-    <div class="reg register-left" style=" border-radius:30%; margin:3%;">
-    <form class="register-form" >
-        <h2>User Details</h2>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col"></th>
-                <th scope="col">Username</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row"></th>
-                <td>{{ user.username }}</td>
-                <td>{{ user.first_name }}</td>
-                <td>{{ user.last_name }}</td>
-            </tr>
-        </tbody>
 
-    </table>
+
+      <div class="container-fluid " style="position:relative; ">
+    <div class="col-md-6 register-c order-2 order-md-1 ">
+    <form class="" >
+        <h2 style="padding:2%; font-size:55px; color:black;"><b>User Details</b></h2>
+                <h3 scope="col"></h3>
+                <h3 scope="col"><b>Username : </b>{{ user.username }}</h3>
+                <h3 scope="col"><b>First Name : </b>{{ user.first_name }}</h3>
+                <h3 scope="col"><b>Last Name : </b>{{ user.last_name }}</h3>
     <form class="form-inline">
     <h2 >Email</h2><h3 style="font-size: 20px;">{{ user.email }}</h3>
     </form>
     <br><br>
 </form>
 </div>
+</div>
     <br><br>
-    <form action="delete_hosted_event/" method="POST" class="register-left" style="margin:3%;">
-    <h2>Hosted Events</h2>
+    <div class="container-fluid" style="position:relative;">
+    <div class="col-md-6 register-c order-2 order-md-1  " >
+    <form class="login-f" action="delete_hosted_event/" method="POST" class="register-c col-6">
+    <h2 style="padding:2%; margin-bottom:80px; margin-top:0; font-size:55px; color:black;"><b>Hosted Events</b></h2>
     <table class="table">
         <thead>
             <tr>
@@ -148,9 +138,15 @@
     {% endif %}
     {% endfor %}
 </table>
+<br><br>
     </form>
-    <form class="register-left" action="delete_participated_events/" method="POST" style="margin:3%;">
-    <h2>Participated Events</h2>
+  </div>
+</div>
+<br><br>
+<div class="container-fluid" style="position:relative; ">
+  <div class="col-md-6 register-c order-2 order-md-1  " >
+    <form class="login-f" action="delete_participated_events/" method="POST" style="">
+    <h2 style="padding:2%; margin-bottom:80px; margin-top:0; font-size:55px; color:black;"><b>Participated Events</b></h2>
     <table class="table">
         <thead>
             <tr>
@@ -177,9 +173,15 @@
     {% endif %}
     {% endfor %}
     </table>
+    <br><br>
     </form>
-    <form class="register-left" action="delete_map_blog/" method="POST" style="margin:3%;">
-    <h2>Added Maps</h2>
+    </div>
+    </div>
+    <br><br>
+    <div class="container-fluid" style="position:relative;">
+      <div class="col-md-6 register-c order-2 order-md-1  " >
+    <form class="login-f" action="delete_map_blog/" method="POST" style="margin:3%;">
+    <h2 style="padding:2%; margin-bottom:80px; margin-top:0; font-size:55px; color:black;"><b>Added Maps</b></h2>
     <table class="table">
     <thead>
         <tr>
@@ -199,7 +201,8 @@
     </tbody>
     {% endif %}
     {% endfor %}
-    </form>
     </table>
+    <br><br>
+  </form>
 </body>
 </html>

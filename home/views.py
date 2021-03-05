@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
 from schedule.models import tt, participants, pastevents
 from maps.models import Blog
+from django.contrib import messages
 import MySQLdb
 from .past_or_present import past_or_present
 
@@ -26,6 +27,7 @@ def login_page(request):
             login(request, user)
             return redirect('/')
         elif user is None:
+            messages.warning(request, 'User doesnot exist')
             return redirect('login')
         else:
             return HttpResponse("Login Failed")

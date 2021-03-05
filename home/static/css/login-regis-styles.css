@@ -72,11 +72,29 @@ img{
 .register-left
 {
     border: black;
-    align-self: center;
+    
     text-align: center;
     background: #f8f8f8;
     border-radius: 5%;
+    padding: 20px;
     padding-top: 50px;
+    -moz-box-shadow:    7px 10px 11px 0px rgb(46, 45, 45);
+    -webkit-box-shadow: 7px 10px 11px 0px rgb(46, 45, 45);
+    box-shadow:         7px 10px 11px 0px rgb(46, 45, 45);
+}
+
+.register-c
+{
+    height: auto;
+    border: black;
+    align-self: center;
+    text-align: center;
+    background: white;
+    border-radius: 4%;
+    padding: 50px;
+    top: 0;
+    transition: top 0.5s ease;
+    margin: auto;
     -moz-box-shadow:    7px 10px 11px 0px rgb(46, 45, 45);
     -webkit-box-shadow: 7px 10px 11px 0px rgb(46, 45, 45);
     box-shadow:         7px 10px 11px 0px rgb(46, 45, 45);
@@ -105,7 +123,7 @@ img{
 
 .register-form
 {
-    padding: 32px;
+    padding: 80px;
     padding-right: 64px;
     padding-left: 64px;
     padding-bottom: 11px;
@@ -186,6 +204,14 @@ h3{
 .login-form
 {
     padding: 80px;
+    padding-right: 64px;
+    padding-left: 64px;
+    padding-bottom: 11px;
+    text-align: center;
+}
+
+.login-f{
+    padding: 30px;
     padding-right: 64px;
     padding-left: 64px;
     padding-bottom: 11px;
