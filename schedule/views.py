@@ -53,6 +53,7 @@ def send_data(request):
         date = request.POST['hidden_date']
         time = request.POST['hidden_time']
         place = request.POST['hidden_place']
+        current_user = request.user.username
         try:
             mydb = MySQLdb.connect(
                 "localhost",
@@ -68,7 +69,7 @@ def send_data(request):
         result = mycursor.fetchall()
         flag = 0
         for i in result:
-            if unique_id in i:
+            if unique_id  and current_user in i:
                 print('already there')
                 flag = 1
                 break
