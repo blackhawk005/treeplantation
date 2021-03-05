@@ -117,7 +117,8 @@
               <div class="col-lg-6">
                   <h1 class="title-text" >Events conducted in the past</h1>
                   {% for past_events in past_presents %}
-                    <h2 class="subtitle-text"> { past_events.event_name }}</h2>
+                    <h2 class="subtitle-text"> {{ past_events.event_name }}</h2>
+                    <h2 class="smallsubtitle-text">Conducted on: {{ past_events.date }} By: {{ past_events.host }}</h2>
                   {% endfor %}
                   <div class="buttons">
                     {% if user.is_authenticated %}

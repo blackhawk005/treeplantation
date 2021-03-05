@@ -51,6 +51,13 @@ body
   .subtitle-text{
     font-family: Copperplate,Copperplate Gothic Light,fantasy; 
     color: #fff;
+    font-size: 26px;
+    margin-left: 32px;
+    /* padding-top: 80px; */
+  }
+  .smallsubtitle-text{
+    font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+    color: #fff;
     font-size: 20px;
     margin-left: 32px;
     /* padding-top: 80px; */
