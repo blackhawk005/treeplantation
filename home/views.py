@@ -27,10 +27,11 @@ def login_page(request):
             login(request, user)
             return redirect('/')
         elif user is None:
-            messages.warning(request, 'User doesnot exist')
+            messages.warning(request, 'Wrong Password')
             return redirect('login')
         else:
-            return HttpResponse("Login Failed")
+            messages.warning(request, 'Wrong Password')
+            return redirect('login')
     else:
         return render(request, 'home/login.html')
 
@@ -46,15 +47,18 @@ def register(request):
         pass2 = request.POST['pass2']
         if (pass1 == pass2):
             if (User.objects.filter(username=user_name).exists()):
-                return HttpResponse("Username Taken")
+                messages.warning(request, 'Username Already Taken')
+                return redirect('register')
             elif (User.objects.filter(email=email).exists()):
-                return HttpResponse("Email already used")
+                messages.warning(request, 'Email Already Taken')
+                return redirect('register')
             else:
                 user = User.objects.create_user(username=user_name, first_name=first_name, last_name=last_name, email=email, password=pass1)
                 user.save()
                 return redirect('/login/')
         else:
-            return HttpResponse("Passwords do not match")
+            messages.warning(request, 'Password donot match')
+            return redirect('register')
     else:
         return render(request, 'home/register.html')
 
