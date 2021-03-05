@@ -75,7 +75,7 @@ body
     clear: both;
   }
 
-  .register-left{
+  .register-c{
     height: auto;
     border: black;
     align-self: center;
@@ -91,11 +91,11 @@ body
     box-shadow:         7px 10px 11px 0px rgb(46, 45, 45);
   }
 
-  .register-left:hover{
+  .register-c:hover{
     top: -10px;
 }
 
-  .register-left h2
+  .register-c h2
   {
     font-size: 200%;
     text-align: center;
@@ -105,11 +105,11 @@ body
 
   }
 
-  .register-left p {
+  .register-c p {
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
   
-  .register-left .reg-btn
+  .register-c .reg-btn
   { 
     font-size: 100%;
     float: center;
@@ -121,7 +121,7 @@ body
     font-style: inherit;
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
-  .register-left .btn-primary:hover
+  .register-c .btn-primary:hover
   {
       background: rgb(252, 187, 46);
       color: white;
