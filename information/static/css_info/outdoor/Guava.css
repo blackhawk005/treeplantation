@@ -10,6 +10,10 @@ body, html{
 
 }
 
+h1{
+  text-align: center;
+}
+
 #myBtn {
   display: none;
   position: fixed;
