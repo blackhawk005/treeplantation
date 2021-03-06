@@ -75,6 +75,11 @@
           <li class="nav-item">
             <a class="home-nav-link nav-link" href="#watering">WATERING/CARE</a>
           </li>
+          {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+                </li>
+                {% endif %}
         </div>   
   </ul>
  </nav>
