@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hibuscus &#127800;</title>
 
-    <link rel="stylesheet" href="{% static 'css_info/outdoor/hibiscus.css' %}">
-    <link rel="stylesheet" href="{% static 'css_info/navbar.css' %}">
+    <link rel="stylesheet" href="hibuscus.css">
    
      <!-- Latest compiled and minified CSS -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -34,9 +32,6 @@
      
 </head>
 <body>
-  <script src="{% static 'js/scroll.js' %}"></script>
-
-  <button onclick="topFunction()" id="myBtn" title="Go to top">&#8593;</button>  <!--back to top button-->
     <!-- <a href="register">register</a><br>
     <a href="login">login</a><br> -->
 
@@ -44,8 +39,9 @@
     
     <!-- Navbar section -->
 
-    <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
-      <a class="navbar-brand" href="/">TreeAsure</a>
+  <div>
+    <nav class="navbar navbar-expand-lg ">
+      <a class="navbar-brand" href="/">Trial 1</a>
       <button
         class="navbar-toggler btn-outline-light"
         type="button"
@@ -57,50 +53,16 @@
       >
         <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
       </button>
+    </div>  
       
       <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="#size">SIZE</a>
+            <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
           </li>
-
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="#cycle">LIFE-CYCLE</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="#climate">CLIMATE</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="#soil">SOIL REQUIREMENTS</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="#watable">WATER TABLE</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="#flower">FLOWERING</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="#uses">USES</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/about/">About us</a>
-          </li>
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
-          </li> -->
-          {% if user.is_authenticated %}
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/logout/">Logout</a>
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-    </nav>
+        </div>   
+  </ul>
+ </nav>
 
  <div class="pimg1">
     <div class="ptext">
@@ -110,34 +72,39 @@
     </div>
 </div>
 
-<section class="section section-dark" id="size">
-    <h1>SIZE</h1>
+<section class="section section-dark">
+  
     <p>
+      Hibiscus is a genus of flowering plants in the mallow family, Malvaceae. The genus is quite large, comprising several hundred species that are native to warm temperate, subtropical and 
+tropical regions throughout the world. Member species are renowned for their large, showy flowers and those species are commonly known simply as "hibiscus", or less widely known as rose mallow. 
+Other names include hardy hibiscus, rose of sharon, and tropical hibiscus.
+
        
-        Hibiscus species capable of growing to the size of trees are commonly pruned and grown as shrubs 10 to 15 feet tall. Unpruned, they grow into trees with either single and multiple trunks, 
-        depending on the species. Some Hibiscus varieties grow as shrubs in weather that is marginal for their species, but grow into trees in suitable climates. 
-        The largest Hibiscus trees, those that reach 30 feet or higher, grow in Hawaii or U.S.
+        
     </p>
 </section>
 
 <div class="pimg2">
 
-    <section class="section section-dark" id="cycle">
-        <h1>LIFE-CYCLE</h1>
+    <section class="section section-dark">
+        <h1>SIZE</h1>
         <p>
-            THEY CAN LIVE UPTO 50 YEARS OR MORE.
+          Hibiscus species capable of growing to the size of trees are commonly pruned and grown as shrubs 10 to 15 feet tall. Unpruned, they grow into trees with either single and multiple trunks, 
+          depending on the species. Some Hibiscus varieties grow as shrubs in weather that is marginal for their species, but grow into trees in suitable climates. 
+          The largest Hibiscus trees, those that reach 30 feet or higher, grow in Hawaii or U.S.
+          
         </p>
     </section>
 </div>
 
 <div class="pimg3">
 
-<section class="section section-dark" id="climate">
-    <h1>CLIMATE</h1>
+<section class="section section-dark">
+    <h1>LIFE CYCLE</h1>
     <p>
-        Hibiscuses like temperatures between 60-85°F. If temperatures are below 50°F, most growth and blooming will stop and flower size will be smaller and deformed.
-        A freeze will cause the plant to die so be sure to move your plant indoors before the first fall frost. 
-       Hibiscus is also very sensitive to extreme heat.
+      They can live upto 50 years or more.
+
+       
     </p>
 </section>
 </div>
@@ -145,11 +112,13 @@
 
 <div class="pimg4">
 
-    <section class="section section-dark" id="soil">
-        <h1>SOIL REQUIREMENTS</h1>
+    <section class="section section-dark">
+        <h1>CLIMATE</h1>
         <p>
-            Tropical hibiscus needs moist but well-drained soil. Perennial hibiscus grows best in moist soil that never completely dries out
-(this type can handle a bit more water than tropical hibiscus).
+          Hibiscuses like temperatures between 60-85°F. If temperatures are below 50°F, most growth and blooming will stop and flower size will be smaller and deformed.
+ A freeze will cause the plant to die so be sure to move your plant indoors before the first fall frost. 
+Hibiscus is also very sensitive to extreme heat.
+
         </p>
     </section>
 </div>
@@ -158,12 +127,12 @@
 
     <div class="pimg5">
 
-      <section class="section section-dark" id="watable">
-          <h1>WATER TABLE</h1>
+      <section class="section section-dark">
+          <h1>SOIL</h1>
           <p>
-            Keep the soil surrounding the hibiscus moist but not soggy. For the first week after planting, water daily, tapering off to once every two days in the second week,
-            and then about twice a week thereafter, when there is no rainfall. 
-            If the weather becomes especially hot and dry, water every other day.
+            Tropical hibiscus needs moist but well-drained soil. Perennial hibiscus grows best in moist soil that never completely dries out
+            (this type can handle a bit more water than tropical hibiscus).
+            
           </p>
       </section>
     </div>
@@ -172,11 +141,13 @@
 
       <div class="pimg6">
 
-        <section class="section section-dark" id="flower">
-            <h1>FLOWERING</h1>
+        <section class="section section-dark">
+            <h1>WATERING/CARE</h1>
             <p>
-                They typically have larger flowers and lighter green leaves, but the bloom size and leaf color vary greatly from species to species. Some plants can grow to be quite large (up to 7 to 8 feet tall). 
-                Perennial hibiscus blooms in mid to late summer.Flowers are typically white, pink, lavender, red, or burgundy.
+              Keep the soil surrounding the hibiscus moist but not soggy. For the first week after planting, water daily, tapering off to once every two days in the second week,
+              and then about twice a week thereafter, when there is no rainfall. 
+              If the weather becomes especially hot and dry, water every other day.
+              
                 
             </p>
         </section>
@@ -184,43 +155,16 @@
 
       <div class="pimg7">
 
-        <section class="section section-dark" id="uses">
+        <section class="section section-dark">
             <h1>USES</h1>
             <p>
-              Hibuscus Tea helps to:<br>
-                1)It can help prevent Hair Loss.<br>
-                2)Helps in improving digestion.<br>
-                3)Helps in managing blood pressure.
+              They typically have larger flowers and lighter green leaves, but the bloom size and leaf color vary greatly from species to species. Some plants can grow to be quite large (up to 7 to 8 feet tall). 
+              Perennial hibiscus blooms in mid to late summer.Flowers are typically white, pink, lavender, red, or burgundy.
+              
                 
             </p>
         </section>
       </div>
-
-      <!--back to top start-->
-
-      <script>
-        //Get the button
-        var mybutton = document.getElementById("myBtn");
-        
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {scrollFunction()};
-        
-        function scrollFunction() {
-          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-          } else {
-            mybutton.style.display = "none";
-          }
-        }
-        
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-        }
-        </script>
-
-        <!--back to top end-->
 
     
         
