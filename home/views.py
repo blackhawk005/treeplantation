@@ -22,7 +22,13 @@ def login_page(request):
     if (request.method == 'POST'):
         user_name = request.POST['user_name']
         pass_word = request.POST['pass']
+        if (User.objects.filter(username=user_name).exists()):
+            pass
+        else:
+            messages.warning(request, 'Username Doesnot Exist')
+            return redirect('login')
         user = authenticate(username=user_name, password=pass_word)
+        print('User Authentication: ',user)
         if user is not None:
             login(request, user)
             return redirect('/')
@@ -40,9 +46,29 @@ def register(request):
     past_or_present()
     if (request.method == 'POST'):
         first_name = request.POST['first_name']
+        if first_name == '':
+            messages.warning(request, 'Please put your first name')
+            return redirect('register')
+        else:
+            pass
         last_name = request.POST['last_name']
+        if last_name == '':
+            messages.warning(request, 'Please put your last name')
+            return redirect('register')
+        else:
+            pass
         user_name = request.POST['username']
+        if user_name == '':
+            messages.warning(request, 'Please put a username')
+            return redirect('register')
+        else:
+            pass
         email = request.POST['email']
+        if email == '':
+            messages.warning(request, 'Please put an email')
+            return redirect('register')
+        else:
+            pass
         pass1 = request.POST['pass1']
         pass2 = request.POST['pass2']
         if (pass1 == pass2):

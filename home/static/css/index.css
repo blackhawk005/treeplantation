@@ -64,6 +64,25 @@ body
     margin-left: 32px;
     /* padding-top: 80px; */
   }
+
+  .footer-subtitle-text{
+    font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+    color: #fff;
+    font-size: 15px;
+    margin-left: 32px;
+    text-align: left;
+    /* padding-top: 80px; */
+  }
+
+  .footertextright{
+    font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+    color: #fff;
+    font-size: 15px;
+    margin-left: 32px;
+    text-align: end;
+    /* padding-top: 80px; */
+  }
+
   .smallsubtitle-text{
     font-family: Copperplate,Copperplate Gothic Light,fantasy; 
     color: #fff;
@@ -113,6 +132,10 @@ body
     
   }
   
+  #left {    
+    float: left;  
+    }  
+
   .buttons {
     padding-top: 16px;
     padding-left: 16px;
