@@ -6,6 +6,11 @@ body
 }
 
 /* Navbar section */
+nav{
+  border-bottom: 1px solid white;
+  background: rgba(0, 0, 0, 0.4);
+}
+
 .navbar {
   padding: 32px 32px 32px;
   padding-right: 32px;
@@ -17,7 +22,7 @@ body
 .navbar-brand {
   color:#fff;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 56px;
+  font-size: 48px;
 }
 /* .home-nav-collapse {
   color: white;

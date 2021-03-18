@@ -5,6 +5,11 @@ body
    text-align: center;
 }
 
+nav{
+  border-bottom: 1px solid white;
+  background: rgba(0, 0, 0, 0.4);
+}
+
 /* Navbar section */
 .navbar {
   padding: 32px 32px 32px;
