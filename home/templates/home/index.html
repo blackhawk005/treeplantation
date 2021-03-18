@@ -100,9 +100,6 @@
     <br><br>
   </div>
 
-
-  
-
     <!-- Title section -->
     <div class="title-section container">
         <div class="row">
@@ -129,19 +126,35 @@
               
         </div>
       </div>
+      <br><br><br>
       <footer  class="panel-footer panel-custom" >
         <br><br>
         <div class="row form-inline">
-        <div class="container-fluid form-group col-12">
-        
-        <h2 class="footer-subtitle-text">Designed And Developed by NSS UNIT | SIESGST</h2>
-        <a href="https://www.instagram.com/nss_siesgst/"><img  style="margin-left:3%; height:auto; width:60px; float:left;" src="{% static 'images/Nss_logo.png' %}" id="left"></a>
-        <img style="margin-left:3%; height:auto; width:70px;" src="{% static 'images/Sies_logo.jpeg' %}">
-        <h2 class="footertextright">Contact Us: treeasurenss@gmail.com</h2>
+        <div class="container form-group col-xl-6 col-lg-6 col-md-5 col-sm-5 col-xs-12">   
+        <h2 class="footer-subtitle-text">© Designed And Developed by NSS UNIT | SIESGST </h2>
+        <a href="https://www.instagram.com/nss_siesgst/"><img  style="margin-left:5%; height:auto; width:40px; float:left;" src="{% static 'images/Nss_logo.png' %}" id="left"></a>
+        <a href="http://www.siesgst.edu.in/"><img style="margin-left:5%; height:auto; width:50px;" src="{% static 'images/Sies_logo.jpeg' %}"></a>
+      </div>
+      <div class="container form-group col-xl-6 col-lg-6 col-md-5 col-sm-5 col-xs-12"> 
+      <div style="position: absolute; right:3%;">
+        <h2  class="footertextright">Contact Us:  <a href="" onclick="copyToClipboard()" style="color: white;">treeasurenss@gmail.com</a></h2>
+      </div>
       </div>
     </div>
       <br>
       </footer>
+
+      <script>
+        function copyToClipboard(text) {
+          var inputc = document.body.appendChild(document.createElement("input"));
+          inputc.value = "treeasurenss@gmail.com";
+          inputc.focus();
+          inputc.select();
+          document.execCommand('copy');
+          inputc.parentNode.removeChild(inputc);
+          alert("URL Copied.");
+          }
+      </script>
       
       
 </body>
