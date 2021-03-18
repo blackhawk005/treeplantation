@@ -6,8 +6,7 @@ body
 
 /* Navbar section */
 .navbar {
-    padding: 32px 32px 32px;
-    padding-right: 32px;
+   
     font-family: 'Courier New', Courier, monospace;
   }
   .navbar-brand:hover {
@@ -16,7 +15,6 @@ body
   .navbar-brand {
     color:#fff;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 48px;
   }
   /* .home-nav-collapse {
     color: white;
