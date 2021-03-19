@@ -159,7 +159,11 @@ nav{
 	.navbar .nav-item .dropdown-menu{ display: none; }
 	.navbar .nav-item:hover .nav-link{ color: #F2A929;  }
 	.navbar .nav-item:hover .dropdown-menu{ display: block; /*background-color: #fcc76b;*/ border-radius: 2%; }
+<<<<<<< HEAD
   .navbar .nav-item:hover .dropdown-item:hover{ color: white; background-color: rgb(175, 175, 175); }
+=======
+  .navbar .nav-item:hover .dropdown-item:hover{ color: white; background-color: #727272; }
+>>>>>>> 768b3db5d5307c2766579edc314733f9fa39485a
 	.navbar .nav-item .dropdown-menu{ margin-top:0; }
 }
   
