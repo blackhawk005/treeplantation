@@ -22,7 +22,6 @@ nav{
 .navbar-brand {
   color:#fff;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 48px;
 }
 /* .home-nav-collapse {
   color: white;
@@ -61,11 +60,6 @@ nav{
   {
     box-sizing: border-box;
   } */
-  img {
-    width: 100%;
-    height: auto;
-    padding: 10%;
-  }
   .box{
   	padding: 2%;
   }
