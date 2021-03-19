@@ -7,18 +7,22 @@ from maps.models import Blog
 from django.contrib import messages
 import MySQLdb
 from .past_or_present import past_or_present
+import threading
 
 # Create your views here.
 
 # home page
 def index(request):
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
     past_or_present()
     past_presents = pastevents.objects.all()
     return render(request, 'home/index.html', {'past_presents':past_presents})
 
 # login page
 def login_page(request):
-    past_or_present()
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
     if (request.method == 'POST'):
         user_name = request.POST['user_name']
         pass_word = request.POST['pass']
@@ -43,7 +47,8 @@ def login_page(request):
 
 # registration page
 def register(request):
-    past_or_present()
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
     if (request.method == 'POST'):
         first_name = request.POST['first_name']
         if first_name == '':
@@ -89,14 +94,16 @@ def register(request):
         return render(request, 'home/register.html')
 
 def profile(request):
-    past_or_present()
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
     tt_1 = tt.objects.all()
     participants_1 = participants.objects.all()
     blogs = Blog.objects.all()
     return render(request, 'home/profile.html', {'tt_1': tt_1, 'participants_1': participants_1, 'blogs': blogs})
 
 def delete_hosted_event(request):
-    past_or_present()
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
     unique_id = request.POST['hidden_unique_id']
     try:
         mydb = MySQLdb.connect(
@@ -118,7 +125,8 @@ def delete_hosted_event(request):
     return redirect('/profile')
 
 def delete_participated_events(request):
-    past_or_present()
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
     unique_id = request.POST['hidden_unique_id']
     try:
         mydb = MySQLdb.connect(
@@ -137,7 +145,8 @@ def delete_participated_events(request):
     return redirect('/profile')
 
 def delete_map_blog(request):
-    past_or_present()
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
     unique_id = request.POST['hidden_unique_id']
     try:
         mydb = MySQLdb.connect(
@@ -157,22 +166,26 @@ def delete_map_blog(request):
 
 # logout page
 def logout_page(request):
-    past_or_present()
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
     logout(request)
     return redirect('/')
 
 # how it works page
 def functionality(request):
-    past_or_present()
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
     return render(request, 'home/functionality.html')
 
 # about page
 def about(request):
-    past_or_present()
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
     return render(request, 'home/about.html')
 
 # contact us page
 def contact_us(request):
-    past_or_present()
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
     return render(request, 'home/contact_us.html')
 

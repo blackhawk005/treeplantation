@@ -13,11 +13,13 @@ import threading
 # Create your views here.
 
 def form_fill(request):
-    past_or_present()
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
     return render( request, "create_event.html")
 
 def create_event(request):
-    past_or_present()
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
     if request.method == 'POST':
         form = EventForm(request.POST)
         if form.is_valid():
@@ -38,7 +40,8 @@ def create_event(request):
     return HttpResponse('not thank you')
 
 def display_info(request):
-    past_or_present()
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
     if (request.method=='GET'):
         # getting all the objects of Map
         tt_1 = tt.objects.all()
@@ -49,7 +52,8 @@ def display_info(request):
         return render(request, 'display_page.html', {'tt_1': tt_1})
 
 def send_data(request):
-    past_or_present()
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
     if (request.method=='POST'):
         unique_id = request.POST['hidden_unique_id']
         event_name = request.POST['hidden_event_name']
@@ -91,7 +95,8 @@ def send_data(request):
     return redirect("/schedule/")
 
 def delete_data(request):
-    past_or_present()
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
     if (request.method=='POST'):
         unique_id = request.POST['hidden_unique_id']
         try:
