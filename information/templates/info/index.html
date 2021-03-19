@@ -35,7 +35,7 @@
 
     <div>
       <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand" href="/"><img src="{% static 'images/tree2.png' %}" height="40px" width="325px"></a>
+        <a class="navbar-brand" href="/"><div><img src="{% static 'images/tree2.png' %}" height="40px" width="325px"></div></a>
         <button
           class="navbar-toggler btn-outline-light"
           type="button"
@@ -53,20 +53,30 @@
             <li class="nav-item">
               <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
             </li>
-    
+            
             {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/maps/bloginfo">Available Locations</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Locations  </a>
+               <ul class="dropdown-menu">
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/maps/bloginfo">Available Locations</a>
+                </li>
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/maps/">Insert Location</a>
+                </li>
+               </ul>
             </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/maps/">Insert Location</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Events  </a>
+               <ul class="dropdown-menu">
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/schedule/">All Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/schedule/form_fill">Create new event</a>
+                </li>
+               </ul>
             </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/schedule/">All Events</a>
-            </li>
-            <li class="nav-item">
-                <a class="home-nav-link nav-link" href="/schedule/form_fill">Create new event</a>
-              </li>
             <!-- <li class="nav-item">
               <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
             </li> -->
@@ -74,18 +84,28 @@
             <script>
               var x = 1;
             </script>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/login/">Available Locations</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Locations  </a>
+               <ul class="dropdown-menu">
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/login/">Available Locations</a>
+                </li>
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/login/">Insert Location</a>
+                </li>
+               </ul>
             </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/login/">Insert Location</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Events  </a>
+               <ul class="dropdown-menu">
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/login/">All Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/login/">Create new event</a>
+                </li>
+               </ul>
             </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/schedule/">All Events</a>
-            </li>
-            <li class="nav-item">
-                <a class="home-nav-link nav-link" href="/login/">Create new event</a>
-              </li>
             {% endif %}
             
             <!-- <li class="nav-item">

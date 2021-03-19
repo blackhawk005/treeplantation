@@ -170,6 +170,12 @@ nav{
     color: rgb(2, 122, 2);
   }
 
+  @media all and (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu{ display: none; }
+    .navbar .nav-item:hover .nav-link{ color: #fff;  }
+    .navbar .nav-item:hover .dropdown-menu{ display: block; }
+    .navbar .nav-item .dropdown-menu{ margin-top:0; }
+  }
   /*
   .but-text2 {
     text-decoration: none;
