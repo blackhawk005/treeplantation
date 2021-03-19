@@ -159,7 +159,7 @@ nav{
 	.navbar .nav-item .dropdown-menu{ display: none; }
 	.navbar .nav-item:hover .nav-link{ color: #F2A929;  }
 	.navbar .nav-item:hover .dropdown-menu{ display: block; /*background-color: #fcc76b;*/ border-radius: 2%; }
-  .navbar .nav-item:hover .dropdown-item:hover{ color: white; background-color: #F2A929; }
+  .navbar .nav-item:hover .dropdown-item:hover{ color: white; background-color: #727272; }
 	.navbar .nav-item .dropdown-menu{ margin-top:0; }
 }
   
