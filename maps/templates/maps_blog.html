@@ -137,7 +137,7 @@
         <h4 style="position: absolute; right:5%;"><b>permisson :</b> No</h4>
         {% endif %}
         {% if blog.user == user.username %}
-        <br>
+        <br><br><br>
         <div style="margin-left:30%;">
         <form class="delete-btn" style="margin-right:40%; display:inline-block; " action="/maps/delete_blog" method="POST">
             <input type="hidden" name="hidden_unique_id" value="{{ blog.unique_id }}">
