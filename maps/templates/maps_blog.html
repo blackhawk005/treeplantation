@@ -120,16 +120,20 @@
         {% if blog.maps_link == 'NA' %}
         <h4> <b>User :</b> {{ blog.user }}</h4>
         {% else %}
-        <h4> <b>User :</b> {{ blog.user }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="but-text1 " href=" {{ blog.maps_link }} ">Click Here For Map</a></h4>
+        <h4 style="position: absolute; left:5%;"> <b>User :</b> {{ blog.user }}</h4>
+        <h4 style="position: absolute; right:5%;"><a class="but-text1 " href=" {{ blog.maps_link }} ">Click Here For Map</a></h4>
         {% endif %}
+        <br><br>
         {% if blog.permission_required == '1' %}
-        <h4><b>Area available :</b> {{ blog.area }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>permisson required :</b> Yes</h4>
+        <h4 style="position: absolute; left:5%;"><b>Area available :</b> {{ blog.area }}</h4>
+        <h4 style="position: absolute; right:5%;"><b>permisson required :</b> Yes</h4>
         <br><br>
         <h4><b><i>Management info</i></b></h4>
-        <br><br>
-        <h4><b>Name :</b> {{blog.contact_management_name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Contact No. :</b> {{blog.contact_management_num}}</h4>
+        <br>
+        <h4 style="position: absolute; left:5%;"><b>Name :</b> {{blog.contact_management_name}}</h4>
+        <h4 style="position: absolute; right:5%;"><b>Contact No. :</b> {{blog.contact_management_num}}</h4>
         {% else %}
-        <h4><b>Area available :</b> {{ blog.area }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>permisson required :</b> No</h4>
+        <h4><b>Area available :</b> {{ blog.area }}<b>permisson required :</b> No</h4>
         {% endif %}
         {% if blog.user == user.username %}
         <br>
