@@ -76,7 +76,7 @@ nav{
 
   .register-left{
     height: auto;
-    border: black;
+
     align-self: center;
     text-align: center;
     background: rgb(255, 255, 255);
@@ -85,14 +85,14 @@ nav{
     top: 0;
     transition: top 0.5s ease;
     margin: auto;
-    -moz-box-shadow:    7px 10px 11px 0px rgb(46, 45, 45);
+    -moz-box-shadow:    7px 10px 11px 0px rgb(46, 46, 45);
     -webkit-box-shadow: 7px 10px 11px 0px rgb(46, 45, 45);
     box-shadow:         7px 10px 11px 0px rgb(46, 45, 45);
   }
 
   .register-left:hover{
     top: -10px;
-}
+  }
 
   .register-left h2
   {
@@ -161,7 +161,8 @@ nav{
     
   }
   .but-text1:hover {
-    color: rgb(2, 122, 2);
+    color: rgb(252, 187, 46);
+    background-color: ;
   }
 
   @media all and (min-width: 992px) {
@@ -170,6 +171,9 @@ nav{
     .navbar .nav-item:hover .dropdown-menu{ display: block; /*background-color: #fcc76b;*/ border-radius: 2%; }
     .navbar .nav-item:hover .dropdown-item:hover{ color: white; background-color: #727272; }
     .navbar .nav-item .dropdown-menu{ margin-top:0; }
+  }
+  h4{
+    font-family: 'Courier New', Courier, monospace;
   }
   /*
   .but-text2 {

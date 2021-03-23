@@ -115,20 +115,21 @@
   
     {% for blog in blog_data %}
     <div class="col-md-8 col-lg-6 col-sm-11 col-11 reg register-form register-left" >
-        <h2> <b>User -></b> {{ blog.user }}</h2>
-        <h4> <b>Address -></b> {{ blog.address }}</h4>
+      <h2> <b>Address -></b> {{ blog.address }}</h2>
+      <br><br>
         {% if blog.maps_link == 'NA' %}
+        <h4> <b>User :</b> {{ blog.user }}</h4>
         {% else %}
-        <h4> <a class="but-text1 " href=" {{ blog.maps_link }} ">Click Here For Map</a></h4>
+        <h4> <b>User :</b> {{ blog.user }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="but-text1 " href=" {{ blog.maps_link }} ">Click Here For Map</a></h4>
         {% endif %}
-        <h4> <b>Approx Size Of Place For Plantation -></b> {{ blog.area }}</h4>
         {% if blog.permission_required == '1' %}
-        <h4><b>permisson required -></b> Yes</h4>
-        <h4><i>Management info</i></h4>
-        <h4><b>Name -></b> {{blog.contact_management_name}}</h4>
-        <h4><b>Contact No. -></b> {{blog.contact_management_num}}</h4>
+        <h4><b>Area available :</b> {{ blog.area }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>permisson required :</b> Yes</h4>
+        <br><br>
+        <h4><b><i>Management info</i></b></h4>
+        <br><br>
+        <h4><b>Name :</b> {{blog.contact_management_name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Contact No. :</b> {{blog.contact_management_num}}</h4>
         {% else %}
-        <h4><b>permisson required -></b> No</h4>
+        <h4><b>Area available :</b> {{ blog.area }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>permisson required :</b> No</h4>
         {% endif %}
         {% if blog.user == user.username %}
         <br>
