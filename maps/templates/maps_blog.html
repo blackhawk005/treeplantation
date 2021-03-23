@@ -125,15 +125,16 @@
         {% endif %}
         <br><br>
         {% if blog.permission_required == '1' %}
-        <h4 style="position: absolute; left:5%;"><b>Area available :</b> {{ blog.area }}</h4>
-        <h4 style="position: absolute; right:5%;"><b>permisson required :</b> Yes</h4>
+        <h4 style="position: absolute; left:5%;"><b>Area :</b> {{ blog.area }}</h4>
+        <h4 style="position: absolute; right:5%;"><b>permisson :</b> Yes</h4>
         <br><br>
         <h4><b><i>Management info</i></b></h4>
         <br>
         <h4 style="position: absolute; left:5%;"><b>Name :</b> {{blog.contact_management_name}}</h4>
         <h4 style="position: absolute; right:5%;"><b>Contact No. :</b> {{blog.contact_management_num}}</h4>
         {% else %}
-        <h4><b>Area available :</b> {{ blog.area }}<b>permisson required :</b> No</h4>
+        <h4 style="position: absolute; left:5%;"><b>Area :</b> {{ blog.area }}</h4>
+        <h4 style="position: absolute; right:5%;"><b>permisson :</b> No</h4>
         {% endif %}
         {% if blog.user == user.username %}
         <br>
