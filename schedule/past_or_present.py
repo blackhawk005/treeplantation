@@ -26,11 +26,14 @@ def past_or_present():
         date_time_obj = datetime.strptime(event_date_time, '%Y-%m-%d %H:%M:%S')
         if now > date_time_obj:
             print('Event is done')
+            print(i[2])
             query_2 = 'INSERT INTO schedule_pastevents SELECT * FROM schedule_tt WHERE unique_id="' + i[2] + '"'
             mycursor.execute(query_2)
             mydb.commit()
+            
             query_3 = "DELETE FROM schedule_tt WHERE unique_id='" + i[2] + "'"
             mycursor.execute(query_3)
             mydb.commit()
         elif now < date_time_obj:
             print('Event will come')
+
