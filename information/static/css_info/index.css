@@ -2,6 +2,7 @@
 body
 {
    background-image: linear-gradient(to left,#01201d,#5e804d);
+   overflow-x: hidden;
 }
 
 /* Navbar section */
@@ -127,6 +128,18 @@ body
       background: rgb(252, 187, 46);
       color: white
   }
+
+  .panel-footer.panel-custom {
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: block;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    overflow-x: hidden;
+    margin-bottom: 0%;
+   
+
+}
 
   @media all and (min-width: 992px) {
     .navbar .nav-item .dropdown-menu{ display: none; }

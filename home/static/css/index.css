@@ -162,4 +162,11 @@ nav{
   .navbar .nav-item:hover .dropdown-item:hover{ color: white; background-color: #727272; }
   .navbar .nav-item .dropdown-menu{ margin-top:0; }
 }
-  
+.hide {
+  display: none;
+}
+    
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
+}
