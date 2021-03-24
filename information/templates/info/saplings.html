@@ -1,156 +1,240 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang = "en" dir = "ltr">
-    <head>
-        <!--meta tags-->    
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!--title-->
-        <title>Gardening Tools</title>
-        <!--bootstrap-->
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-            crossorigin="anonymous"
-        />
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-        <!-- Google Fonts -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="{% static 'css_info/indoor.css' %}">
-        <script src="https://kit.fontawesome.com/1d9b3c3ba8.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
+<html>
+<head>
+    
+    <!--meta tags-->    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--title-->
+    <title>Gardening Tools</title>
+    <!--bootstrap-->
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+        crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css_info/index.css' %}">
+    <script src="https://kit.fontawesome.com/1d9b3c3ba8.js" crossorigin="anonymous"></script>
 
-        <!-- Navbar section -->
-        <div>
-            <nav class="navbar navbar-expand-lg ">
-                <a class="navbar-brand" href="/"><div><img src="{% static 'images/tree2.png' %}" height="40px" width="325px"></div></a>
-                <button
-                  class="navbar-toggler btn-outline-light"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
-                </button>
-                
-                <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Plants  </a>
-                         <ul class="dropdown-menu">
-                          <li class="nav-item">
-                            <a class="dropdown-item" href="/information/">Plant Information</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="dropdown-item" href="/information/saplings/">Saplings</a>
-                          </li>
-                         </ul>
-                      </li>
-                    
-                    {% if user.is_authenticated %}
-                    <li class="nav-item dropdown">
-                      <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Locations  </a>
-                       <ul class="dropdown-menu">
-                        <li class="nav-item">
-                          <a class="dropdown-item" href="/maps/bloginfo">Available Locations</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="dropdown-item" href="/maps/">Insert Location</a>
-                        </li>
-                       </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Events  </a>
-                       <ul class="dropdown-menu">
-                        <li class="nav-item">
-                          <a class="dropdown-item" href="/schedule/">All Events</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="dropdown-item" href="/schedule/form_fill">Create new event</a>
-                        </li>
-                       </ul>
-                    </li>
-                    <!-- <li class="nav-item">
-                      <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
-                    </li> -->
-                    {% else %}
-                    <script>
-                      var x = 1;
-                    </script>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Locations  </a>
-                       <ul class="dropdown-menu">
-                        <li class="nav-item">
-                          <a class="dropdown-item" href="/login/">Available Locations</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="dropdown-item" href="/login/">Insert Location</a>
-                        </li>
-                       </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Events  </a>
-                       <ul class="dropdown-menu">
-                        <li class="nav-item">
-                          <a class="dropdown-item" href="/login/">All Events</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="dropdown-item" href="/login/">Create new event</a>
-                        </li>
-                       </ul>
-                    </li>
-                    {% endif %}
-                    
-                    <!-- <li class="nav-item">
-                      <a class="home-nav-link nav-link" href="/about/">About us</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
-                    </li> -->
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                      <a class="home-nav-link nav-link" href="/logout/">Logout</a>
-                    </li>
-                    {% endif %}
-                  </ul>
-                </div>
-              </nav>
+<style>
+.hide {
+  display: none;
+}
+.myDIV{
+    background-color: white;
+    width: 100%;
+}
+
+.img1{
+    width:100%;
+    max-width:300px ;
+    min-height: 80px;
+    max-height: 80px;
+}
+.row{
+    justify-content: center;
+}
+    
+.myDIV:hover + .hide {
+  display: block;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  padding: 5%;
+}
+.register-left{
+    margin:5%;
+}
+</style>
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="/"><div><img src="{% static 'images/tree2.png' %}" height="40px" width="325px"></div></a>
+        <button
+          class="navbar-toggler btn-outline-light"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+        </button>
+        
+        <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Plants  </a>
+                 <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a class="dropdown-item" href="/information/">Plant Information</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="dropdown-item" href="/information/saplings">Saplings</a>
+                  </li>
+                 </ul>
+              </li>
             
+            {% if user.is_authenticated %}
+            <li class="nav-item dropdown">
+              <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Locations  </a>
+               <ul class="dropdown-menu">
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/maps/bloginfo">Available Locations</a>
+                </li>
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/maps/">Insert Location</a>
+                </li>
+               </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Events  </a>
+               <ul class="dropdown-menu">
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/schedule/">All Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/schedule/form_fill">Create new event</a>
+                </li>
+               </ul>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+            </li> -->
+            {% else %}
+            <script>
+              var x = 1;
+            </script>
+            <li class="nav-item dropdown">
+              <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Locations  </a>
+               <ul class="dropdown-menu">
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/login/">Available Locations</a>
+                </li>
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/login/">Insert Location</a>
+                </li>
+               </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Events  </a>
+               <ul class="dropdown-menu">
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/login/">All Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/login/">Create new event</a>
+                </li>
+               </ul>
+            </li>
+            {% endif %}
+            
+            <!-- <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/about/">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
+            </li> -->
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+            </li>
+            {% endif %}
+          </ul>
         </div>
+      </nav>
+</div>
+    <br><br>
+<div class="row">
 
+<div class="register-left col-md-4" style="justify-content:center;">
+<div class="myDIV"><a href="https://nurserylive.com/"><img class="img1" src="{% static 'images/123.jpeg' %}" ></a></div>
+<div class="hide">NurseryLive is one of the biggest websites where you can get plants of any category and type. And the best part is that the website is not only related to the same, but it also extends beyond that to fertilizers, plant accessories like - plant stands, pots, pebbles and many more. 
+    All of this is available at a quite reasonable price so that everyone can have their own glorious and lush plants set-up at their loving abode.</div>
+</div>
+<br><br>
+<div class="register-left col-md-4" style="justify-content:center;">
+<div class="myDIV"><a href="https://www.amazon.in/Plants/b?ie=UTF8&node=4297302031"><img class="img1" src="{% static 'images/amazon.png' %}" ></a></div>
+<div class="hide">NurseryLive is one of the biggest websites where you can get plants of any category and type. And the best part is that the website is not only related to the same, but it also extends beyond that to fertilizers, plant accessories like - plant stands, pots, pebbles and many more. 
+    All of this is available at a quite reasonable price so that everyone can have their own glorious and lush plants set-up at their loving abode.</div>
+</div>
+<br><br>
+<div class="register-left col-md-4" style="justify-content:center;">
+<div class="myDIV"><a href=" https://www.gardenworld.in/online-nursery/"><img class="img1" src="{% static 'images/garden_world.jpeg' %}" ></a></div>
+<div class="hide">NurseryLive is one of the biggest websites where you can get plants of any category and type. And the best part is that the website is not only related to the same, but it also extends beyond that to fertilizers, plant accessories like - plant stands, pots, pebbles and many more. 
+    All of this is available at a quite reasonable price so that everyone can have their own glorious and lush plants set-up at their loving abode.</div>
+</div>
+<br><br>
+<div class="register-left col-md-4" style="justify-content:center;">
+<div class="myDIV"><a href="https://mybageecha.com/pages/buy-plants-online"><img class="img1" src="{% static 'images/My_Bageecha.jpeg' %}" ></a></div>
+<div class="hide">NurseryLive is one of the biggest websites where you can get plants of any category and type. And the best part is that the website is not only related to the same, but it also extends beyond that to fertilizers, plant accessories like - plant stands, pots, pebbles and many more. 
+    All of this is available at a quite reasonable price so that everyone can have their own glorious and lush plants set-up at their loving abode.</div>
+</div>
+<br><br>
+<div class="register-left col-md-4" style="justify-content:center;">
+<div class="myDIV"><a href="https://www.plantsguru.com/"><img class="img1" src="{% static 'images/Plants_guru.jpeg' %}" ></a></div>
+<div class="hide">NurseryLive is one of the biggest websites where you can get plants of any category and type. And the best part is that the website is not only related to the same, but it also extends beyond that to fertilizers, plant accessories like - plant stands, pots, pebbles and many more. 
+    All of this is available at a quite reasonable price so that everyone can have their own glorious and lush plants set-up at their loving abode.</div>
+</div>
+<br><br>
+<div class="register-left col-md-4" style="justify-content:center;">
+<div class="myDIV"><a href="https://plantz.in/?gclid=CjwKCAjwxuuCBhATEiwAIIIz0dmjRFzfvSPM9HcmRj1RJp9cEnE7RGikvZWBreNOBKvq9kBYvXRIXBoC5O0QAvD_BwE"><img class="img1" src="{% static 'images/Cart.jpeg' %}" ></a></div>
+<div class="hide">Shop your plants online with plantzcart they sell flowering plants , ornamental plants, foliage plants , indoor plants etc . If you want to buy seeds then you can buy it from here and they also sell some garden tools.
+    Price is also reasonable.</div>
+</div>
+<br><br>
+<div class="register-left col-md-4" style="justify-content:center;">
+<div class="myDIV"><a href="https://www.ugaoo.com/"><img class="img1" src="{% static 'images/Ugaoo.jpeg' %}" ></a></div>
+<div class="hide">Ugaoo is one of the popular websites for buying plants online. It allows you to select from a wide range of plants. Moreover other products such a tools fertilizers, pots as well as pest control kits are available. It also allows you to select plants according to your need. Plant subscription offer is also provided by the website wherein you can pay once and receive plants every month for a certain duration.</div>
+</div>
 
+</div>
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script
-            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-            crossorigin="anonymous"
-        ></script>
-        
-    </body>
-    </html>
+<br><br><br>
+<footer  class="panel-footer panel-custom" >
+  <br><br>
+  <div class="row form-inline">
+  <div class="container form-group col-xl-6 col-lg-6 col-md-5 col-sm-5 col-xs-12">   
+  <h2 class="footer-subtitle-text">© NSS UNIT | SIESGST </h2>
+  <a href="https://www.instagram.com/nss_siesgst/"><img  style="margin-left:5%; height:auto; width:40px; float:left;" src="{% static 'images/Nss_logo.png' %}" id="left"></a>
+  <a href="http://www.siesgst.edu.in/"><img style="margin-left:5%; height:auto; width:50px;" src="{% static 'images/Sies_logo.jpeg' %}"></a>
+</div>
+<div class="container form-group col-xl-6 col-lg-6 col-md-5 col-sm-5 col-xs-12"> 
+<div style="position: absolute; right:3%;">
+  <h2  class="footertextright">Contact Us:  <a href="" onclick="copyToClipboard()" style="color: white;">treeasurenss@gmail.com</a></h2>
+</div>
+</div>
+</div>
+<br>
+</footer>
+
+<script>
+  function copyToClipboard(text) {
+    var inputc = document.body.appendChild(document.createElement("input"));
+    inputc.value = "treeasurenss@gmail.com";
+    inputc.focus();
+    inputc.select();
+    document.execCommand('copy');
+    inputc.parentNode.removeChild(inputc);
+    alert("URL Copied.");
+    }
+</script>
+</body>
+</html>
