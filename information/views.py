@@ -24,6 +24,11 @@ def tools(request):
     t1.start()
     return render(request, 'info/tools.html')
 
+def saplings(request):
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
+    return render(request, 'info/saplings.html')
+
 # indoor 
 
 def page_open_tomato(request):

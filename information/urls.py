@@ -7,6 +7,8 @@ urlpatterns = [
     path('indoor', views.indoor, name='indoor'),
     path('outdoor', views.outdoor, name='outdoor'),
     path('tools', views.tools, name='tools'),
+    path('saplings', views.saplings, name='saplings'),
+
     # indoor
     path('lemon', views.page_open_lemon, name='page_open_lemon'),
     path('chilly', views.page_open_chilly, name='page_open_chilly'),
