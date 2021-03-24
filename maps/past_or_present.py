@@ -28,7 +28,6 @@ def past_or_present():
             print('Event is done')
             query_2 = 'INSERT INTO schedule_pastevents SELECT * FROM schedule_tt WHERE unique_id="' + i[2] + '"'
             mycursor.execute(query_2)
-            mydb.commit()
             query_3 = "DELETE FROM schedule_tt WHERE unique_id='" + i[2] + "'"
             mycursor.execute(query_3)
             mydb.commit()
