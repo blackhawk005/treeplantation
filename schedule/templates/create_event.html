@@ -143,8 +143,24 @@
         <input class="form-control" type="text" id="place" name="place" placeholder="Place"><br><br>
         <label for="address">Information:</label>
         <textarea class="form-control" name="address" id="address" ></textarea><br><br>
-        <input class="btn btn-dark" type="submit">
+        <label style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;" >I agree to all the <a href="#">terms and conditons</a> of this website regarding hosting an event</label>
+        <input type="checkbox" onclick="enableForm()" class="form-control" name="permission_required" id="id_permission"><br>
+        <input class="btn btn-dark" type="submit" id="submit" disabled>
       </form>
+      <script>
+        var y = 0;
+        function enableForm() {
+          if(y==0){
+            document.getElementById("submit").disabled = false;
+            y = 1;
+          }
+          else{
+            document.getElementById("submit").disabled = true;
+            y = 0;
+          }
+          
+        }
+      </script>
     </div>
 </div>
 </body>
