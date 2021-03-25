@@ -118,3 +118,7 @@ def delete_data(request):
         mydb.commit()
         return redirect("/schedule/")
 
+def terms(request):
+    return render( request, "terms.html")
+
+
