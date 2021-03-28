@@ -81,6 +81,9 @@
                 <li class="nav-item">
                   <a class="dropdown-item" href="/schedule/form_fill">Create new event</a>
                 </li>
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/schedule/terms">Terms and Conditions</a>
+                </li>
                </ul>
             </li>
             <!-- <li class="nav-item">
@@ -110,6 +113,9 @@
                 <li class="nav-item">
                   <a class="dropdown-item" href="/login/">Create new event</a>
                 </li>
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/schedule/terms">Terms and Conditions</a>
+                </li>
                </ul>
             </li>
             {% endif %}
@@ -124,10 +130,15 @@
             <li class="nav-item">
               <a class="home-nav-link nav-link" href="/logout/">Logout</a>
             </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/login/">Login</a>
+            </li>
             {% endif %}
           </ul>
         </div>
       </nav>
+    
 </div>
 <br><br>
     <div class="col-md-6 reg register-left">

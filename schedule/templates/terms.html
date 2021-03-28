@@ -71,6 +71,9 @@
                 <li class="nav-item">
                   <a class="dropdown-item" href="/schedule/form_fill">Create new event</a>
                 </li>
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/schedule/terms">Terms and Conditions</a>
+                </li>
                </ul>
             </li>
             <!-- <li class="nav-item">
@@ -100,6 +103,9 @@
                 <li class="nav-item">
                   <a class="dropdown-item" href="/login/">Create new event</a>
                 </li>
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/schedule/terms">Terms and Conditions</a>
+                </li>
                </ul>
             </li>
             {% endif %}
@@ -114,10 +120,15 @@
             <li class="nav-item">
               <a class="home-nav-link nav-link" href="/logout/">Logout</a>
             </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/login/">Login</a>
+            </li>
             {% endif %}
           </ul>
         </div>
       </nav>
+    
 </div>
 <br><br><br><br>
 <h2 class="text-center" style="color:white;font-family: Georgia, 'Times New Roman', Times, serif; font-size:3vw;">Terms & Conditions</h2>
@@ -126,8 +137,11 @@
     <li class="list-group-item">All the information provided should be legit</li>
     <li class="list-group-item">All the necessary permissions must be taken prior to event creation on the website</li>
     <li class="list-group-item">Any mischievous act done intentionally will lead to the deletion of your account</li>
-    <li class="list-group-item">You are solely responsible for your event once the event has been created and is live on the website and </li>
+    <li class="list-group-item">You are solely responsible for your event once the event has been created and is live on the website  </li>
+    <li class="list-group-item">This site won’t provide you with saplings. It will either be the responsibility of event manager to buy those or will have to inform the participants to bring their own saplings(mention it in the information section of the form).</li>
+    {% if user.is_authenticated %}
     <li class="list-group-item"><a class="btn btn-outline-dark" href="form_fill">Click here to go back to the form</a></li>
+    {% endif %}
 </ul>
     
 </body>

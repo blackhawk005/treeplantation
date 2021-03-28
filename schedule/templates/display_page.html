@@ -71,6 +71,9 @@
                 <li class="nav-item">
                   <a class="dropdown-item" href="/schedule/form_fill">Create new event</a>
                 </li>
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/schedule/terms">Terms and Conditions</a>
+                </li>
                </ul>
             </li>
             <!-- <li class="nav-item">
@@ -100,6 +103,9 @@
                 <li class="nav-item">
                   <a class="dropdown-item" href="/login/">Create new event</a>
                 </li>
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/schedule/terms">Terms and Conditions</a>
+                </li>
                </ul>
             </li>
             {% endif %}
@@ -114,13 +120,20 @@
             <li class="nav-item">
               <a class="home-nav-link nav-link" href="/logout/">Logout</a>
             </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="home-nav-link nav-link" href="/login/">Login</a>
+            </li>
             {% endif %}
           </ul>
         </div>
       </nav>
+    
 </div>
 <br><br>
+<p>
     {% for tt in tt_1 %}
+    
     <div class="col-md-8 col-lg-6 col-sm-11 col-11 reg register-form register-left" style="align-content: center;">
         <h2><b>{{ tt.event_name }}</h2>
         <h2><b>Host - </b>{{ tt.host }}</h2>
@@ -153,6 +166,7 @@
     </div>
     <br><br><br>
     {% endfor %}
+  </p>
     <script>
       if ('{{ flag }}' == 1){
         alert('You have already participated in the event');
