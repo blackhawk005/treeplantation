@@ -213,8 +213,7 @@ nav{
  
    */
    .card {
-    
-    background: #000;
+    margin:auto;
 }
 .card .image {
     overflow:hidden;
