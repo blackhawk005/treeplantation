@@ -194,6 +194,9 @@ nav{
     .navbar .nav-item:hover .dropdown-item:hover{ color: white; background-color: #727272; }
     .navbar .nav-item .dropdown-menu{ margin-top:0; }
   }
+  @media all and (max-width: 520px) {
+
+  }
 
   /*
   .but-text2 {
@@ -212,14 +215,11 @@ nav{
  
    */
    .card {
-    width: 35vw;
-    height: 40vw;
+    
     background: #000;
 }
 .card .image {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    overflow:hidden;
 }
 .card .image img {
     width: 100%;
@@ -233,8 +233,8 @@ nav{
     position: absolute;
     top: 0;
     left: 0;
-    width: 25vw;/*100%*/
-    height: 40vw;
+    width: 50%;/*100%*/
+    height: 100%;
     background: #ffc107;
     transition: .5s;
     transform-origin: left;
@@ -248,8 +248,7 @@ nav{
     text-align: center;
     background: #fff;
     position: absolute;
-    width: 25vw;
-    height:30vw;
+    width: 100%;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -257,7 +256,7 @@ nav{
     margin: 0;
     padding: 0;
     color: #ff3636;
-    font-size: 3vw;
+    /* font-size: 3vw; */
     text-transform: uppercase;
 }
 .card .details .center h1 span {
@@ -267,7 +266,7 @@ nav{
 .card .details .center p {
     margin: 0.25vw 0;
     padding: 0;
-    font-size: 1.5vw;
+    /* font-size: 1.5vw; */
     color: #262626;
 }
 .card .details .center ul {
