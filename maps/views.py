@@ -6,6 +6,7 @@ import MySQLdb
 import uuid
 from .past_or_present import past_or_present
 import threading
+import random
 # Create your views here.
 
 def index(request):
@@ -27,7 +28,9 @@ def get_name(request):
             permission_required = form.cleaned_data['permission_required']
             contact_management_name = form.cleaned_data['contact_management_name']
             contact_management_num = form.cleaned_data['contact_management_num']
-            trial = Blog(user=request.user.username, address=address, maps_link=maps_link, area=area, permission_required=str(permission_required),contact_management_name=contact_management_name, contact_management_num=contact_management_num, unique_id=y)
+            x = random.randint(1, 25)
+            y_new = "/media/"+str(x)+".svg"
+            trial = Blog(user=request.user.username, address=address, maps_link=maps_link, area=area, permission_required=str(permission_required),contact_management_name=contact_management_name, contact_management_num=contact_management_num, unique_id=y, image=y_new)
             trial.save()
             # print('hello')
             return redirect('/maps/bloginfo')
@@ -66,5 +69,9 @@ def display_blog_info(request):
         # getting all the objects of Map
         Blogs = Blog.objects.all()
         print(len(Blogs))
-        return render(request, 'maps_blog.html', {'blog_data': Blogs})
+        image = []
+        for i in range(len(Blogs)):
+            x = random.randint(1, 25)
+            y = "/media/"+str(x)+".svg"
+        return render(request, 'maps_blog.html', {'blog_data': Blogs, 'images': image})
     return redirect('/geofence/display_maps/')

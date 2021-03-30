@@ -134,7 +134,8 @@
     {% if blog_data %}
     {% for blog in blog_data %}
     <div class="col-md-8 col-lg-6 col-sm-11 col-11 reg register-form register-left" >
-      <div><img style="filter: blur(50); height:50%; width:50%;" src="{% static 'images/map.svg' %}"></div>
+      
+      <div><img style="filter: blur(50); height:50%; width:50%;" src="/maps{{ blog.image }}"></div>
       <h2> <b>Address:</b> {{ blog.address }}</h2>
       <br><br>
         {% if blog.maps_link == 'NA' %}
@@ -180,5 +181,19 @@
     {% else %}
     <h1 class="text-center" style="color: white; position:absolute; left:40%; right:40%; top:50%; font-size:5vw;">No Data Available!</h4>
     {% endif %}
+    <script>
+      function getRandomImage() {
+        var images = ['/maps/media/1.svg', '/maps/media/2.svg', '/maps/media/3.svg'];
+        var image = images[Math.floor(Math.random()*images.length)];
+         
+        return image;
+        }
+         
+        function displayRandomImage() {
+        var htmlImage = document.getElementById("randomImage");
+        htmlImage.src = getRandomImage();
+        }
+        displayRandomImage();
+    </script>
 </body>
 </html>
