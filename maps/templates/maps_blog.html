@@ -181,19 +181,5 @@
     {% else %}
     <h1 class="text-center" style="color: white; position:absolute; left:40%; right:40%; top:50%; font-size:5vw;">No Data Available!</h4>
     {% endif %}
-    <script>
-      function getRandomImage() {
-        var images = ['/maps/media/1.svg', '/maps/media/2.svg', '/maps/media/3.svg'];
-        var image = images[Math.floor(Math.random()*images.length)];
-         
-        return image;
-        }
-         
-        function displayRandomImage() {
-        var htmlImage = document.getElementById("randomImage");
-        htmlImage.src = getRandomImage();
-        }
-        displayRandomImage();
-    </script>
 </body>
 </html>

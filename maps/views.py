@@ -68,10 +68,5 @@ def display_blog_info(request):
     if (request.method=='GET'):
         # getting all the objects of Map
         Blogs = Blog.objects.all()
-        print(len(Blogs))
-        image = []
-        for i in range(len(Blogs)):
-            x = random.randint(1, 25)
-            y = "/media/"+str(x)+".svg"
-        return render(request, 'maps_blog.html', {'blog_data': Blogs, 'images': image})
+        return render(request, 'maps_blog.html', {'blog_data': Blogs})
     return redirect('/geofence/display_maps/')
