@@ -214,6 +214,8 @@ nav{
    */
    .card { 
     background: #000;
+    width: 40%;
+    height: 80%;
 }
 .card .image {
     overflow:hidden;
