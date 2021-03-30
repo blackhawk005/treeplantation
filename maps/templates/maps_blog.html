@@ -134,7 +134,7 @@
     {% if blog_data %}
     {% for blog in blog_data %}
     <div class="col-md-8 col-lg-6 col-sm-11 col-11 reg register-form register-left" >
-      
+      <div><img style="filter: blur(50); height:50%; width:50%;" src="{% static 'images/map.svg' %}"></div>
       <h2> <b>Address:</b> {{ blog.address }}</h2>
       <br><br>
         {% if blog.maps_link == 'NA' %}
