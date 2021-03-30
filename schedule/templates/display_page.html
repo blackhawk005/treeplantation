@@ -135,6 +135,7 @@
     {% if tt_1 %}
     {% for tt in tt_1 %}
     <div class="col-md-8 col-lg-6 col-sm-11 col-11 reg register-form register-left" style="align-content: center;">
+      <div><img style="filter: blur(50); height:50%; width:50%;" src="/schedule{{ tt.image }}"></div>
         <h2><b>{{ tt.event_name }}</h2>
         <h2><b>Host - </b>{{ tt.host }}</h2>
         <h2><b>Date - </b>{{ tt.date }}</h2>
@@ -173,7 +174,7 @@
     <br><br><br>
     {% endfor %}
     {% else %}
-    <h1 class="text-center" style="color: white; position:absolute; left:40%; right:40%; top:50%; font-size:5vw;">No Data Available!</h4>
+    <h1 class="text-center" style="color: white; position:absolute; left:40%; right:40%; top:50%; font-size:5vw;">No Event Created!</h4>
     {% endif %}
   </p>
     <script>

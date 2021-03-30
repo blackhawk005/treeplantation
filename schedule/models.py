@@ -8,6 +8,7 @@ class tt(models.Model):
     info = models.CharField(max_length=300)
     unique_id = models.CharField(max_length=300)
     event_name = models.CharField(max_length=300)
+    image = models.CharField(max_length=100)
 
 class participants(models.Model):
     name = models.CharField(max_length=300)
@@ -26,3 +27,4 @@ class pastevents(models.Model):
     info = models.CharField(max_length=300)
     unique_id = models.CharField(max_length=300)
     event_name = models.CharField(max_length=300)
+    image = models.CharField(max_length=100)

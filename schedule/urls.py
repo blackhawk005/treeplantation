@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     # ex: /
@@ -9,4 +11,5 @@ urlpatterns = [
      path('send_data', views.send_data, name='send_data' ),
      path('delete_data', views.delete_data, name='delete_data' ),
      path('terms',views.terms, name='terms')
-]
+]+ static(settings.MEDIA_URL, 
+                              document_root=settings.MEDIA_ROOT)
