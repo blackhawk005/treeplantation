@@ -4,7 +4,7 @@ body
 {
    background-image: linear-gradient(to left,#01201d,#5e804d);
    text-align: center;
-   overflow: hidden;
+   overflow-x: hidden;
 }
 
 
