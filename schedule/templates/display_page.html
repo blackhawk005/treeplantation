@@ -130,18 +130,25 @@
       </nav>
     
 </div>
-<br><br>
+<br><br><br><br><br>
 <p>
     {% if tt_1 %}
     {% for tt in tt_1 %}
-    <div class="col-md-8 col-lg-6 col-sm-11 col-11 reg register-form register-left" style="align-content: center;">
-      <div><img style="filter: blur(50); height:50%; width:50%;" src="/schedule{{ tt.image }}"></div>
-        <h2><b>{{ tt.event_name }}</h2>
-        <h2><b>Host - </b>{{ tt.host }}</h2>
-        <h2><b>Date - </b>{{ tt.date }}</h2>
-        <h2><b>Time - </b>{{ tt.time }}</h2>
-        <h2><b>Place - </b>{{ tt.place }}</h2>
-        <h2><b>Note - </b>{{ tt.info }}</h2><br>
+    <div class=" row" style="justify-content:center;">
+      <div class="card">
+        <div class="image">
+          <img src="/schedule{{ tt.image }}">
+          <br><br><br>
+          <h2><b>{{ tt.event_name }}</h2>
+        </div>
+        <div class="details">
+          <div class="center">
+            <h1><b>{{ tt.event_name }}</h1>
+        <p><b>Host - </b>{{ tt.host }}</p>
+        <p><b>Date - </b>{{ tt.date }}</p>
+        <p><b>Time - </b>{{ tt.time }}</p>
+        <p><b>Place - </b>{{ tt.place }}</p>
+        <p><b>Note - </b>{{ tt.info }}</p><br>
         {% if user.is_authenticated %}
         {% if tt.host == user.username %}
         <form action="delete_data" method="POST">
@@ -170,7 +177,11 @@
         {% else %}
         <button type="button" class="btn  btn-light" ><a class="but-text1" href="/login/">Login To Participate</a></button>
         {% endif %}
+          </div>
+        </div>
+      </div>
     </div>
+    
     <br><br><br>
     {% endfor %}
     {% else %}
