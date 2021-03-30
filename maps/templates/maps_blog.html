@@ -135,24 +135,24 @@
     {% for blog in blog_data %}
     <div class="col-md-8 col-lg-6 col-sm-11 col-11 reg register-form register-left" >
       
-      <div><img style="filter: blur(50); height:50%; width:50%;" src="/maps{{ blog.image }}"></div>
+      <div><img style="filter: blur(50); height:50%; width:50%;" src="/maps{{ blog.image }}"></div><br>
       <h2> <b>Address:</b> {{ blog.address }}</h2>
-      <br><br>
+      <br>
         {% if blog.maps_link == 'NA' %}
         <h4> <b>User :</b> {{ blog.user }}</h4>
         {% else %}
         <h4 style="position: absolute; left:5%;"> <b>User:</b> {{ blog.user }}</h4>
         <h4 style="position: absolute; right:5%;"><a class="but-text1 " href=" {{ blog.maps_link }} ">Click Here For Map</a></h4>
         {% endif %}
-        <br><br>
+        <br>
         {% if blog.permission_required == '1' %}
         <h4 style="position: absolute; left:5%;"><b>Area:</b> {{ blog.area }}</h4>
         <h4 style="position: absolute; right:5%;"><b>permisson:</b> Yes</h4>
         <br><br>
         <h4><b><i>Management info</i></b></h4>
         <br>
-        <h4 style="position: absolute; left:5%;"><b>Name:</b> {{blog.contact_management_name}}</h4>
-        <h4 style="position: absolute; right:5%;"><b>Contact No.:</b> {{blog.contact_management_num}}</h4>
+        <h4 ><b>Name:</b> {{blog.contact_management_name}}</h4><br>
+        <h4 ><b>Contact No.:</b> {{blog.contact_management_num}}</h4>
         {% else %}
         <h4 style="position: absolute; left:5%;"><b>Area:</b> {{ blog.area }}</h4>
         <h4 style="position: absolute; right:5%;"><b>permisson:</b> No</h4>

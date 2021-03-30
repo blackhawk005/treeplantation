@@ -208,3 +208,13 @@ nav{
   }
  
    */
+
+   @media all and (max-width: 630px) {
+    .register-left h4{
+      font-size: 80%;
+    }
+    
+    .register-left h2{
+      font-size: 110%;
+    }
+  }

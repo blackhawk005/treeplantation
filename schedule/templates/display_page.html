@@ -155,22 +155,22 @@
           <input class="delete-btn" type="submit" value="Delete">
         </form>
         {% else %}
-        <div class="row" style="justify-content:center;">
-        <form  action="send_data" method="POST">
+        
+        <form  action="send_data" method="POST" style="justify-content: center;">
           <input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
           <input type="hidden" name="hidden_event_name" value="{{ tt.event_name }}">
           <input type="hidden" name="hidden_date" value="{{ tt.date }}">
           <input type="hidden" name="hidden_time" value="{{ tt.time }}">
           <input type="hidden" name="hidden_place" value="{{ tt.place }}">
-          <input class="btn btn-outline-dark" type="submit" value="Participate">
+          <input class="delete-btn" type="submit" value="Participate">
         </form>
-        <div style="margin-left:10%;">
-        <form  style="margin-right:40%; display:inline-block; " action="/maps/report_blog" method="POST">
+        
+        <form  style=" display:inline-block; justify-content: center;" action="/maps/report_blog" method="POST" >
             <input type="hidden" name="hidden_unique_id" value="{{ blog.unique_id }}">
-            <input class=" btn btn-outline-danger " type="submit" value="Report">
+            <input class=" report-btn " type="submit" value="Report">
         </form>
-        </div>
-      </div>
+        
+     
         {% endif %}
         {% else %}
         <button type="button" class="btn  btn-light" ><a class="but-text1" href="/login/">Login To Participate</a></button>
