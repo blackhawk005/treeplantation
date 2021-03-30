@@ -131,7 +131,7 @@
     
 </div>
 <br><br>
-  
+    {% if blog_data %}
     {% for blog in blog_data %}
     <div class="col-md-8 col-lg-6 col-sm-11 col-11 reg register-form register-left" >
       <h2> <b>Address:</b> {{ blog.address }}</h2>
@@ -164,8 +164,20 @@
         </form>
         </div>
         {% endif %}
+        {% if blog.user != user.username %}
+        <br><br><br>
+        <div style="margin-left:30%;">
+        <form class="report-btn" style="margin-right:40%; display:inline-block; " action="/maps/report_blog" method="POST">
+            <input type="hidden" name="hidden_unique_id" value="{{ blog.unique_id }}">
+            <input class="report-btn btn " style="border-radius: 50%; color:ivory;" type="submit" value="Report">
+        </form>
+        </div>
+        {% endif %}
       </div>
       <br><br><br>
     {% endfor %}
+    {% else %}
+    <h1 class="text-center" style="color: white; position:absolute; left:40%; right:40%; top:50%; font-size:5vw;">No Data Available!</h4>
+    {% endif %}
 </body>
 </html>
