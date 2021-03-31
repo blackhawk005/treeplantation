@@ -1,9 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-    
-   
-  }
+
+
+  /* body{
+    overflow-x: hidden;
+  } */
 
   .navbar {
     padding: 32px 32px 32px;
@@ -57,9 +56,9 @@
   /* Float columns side by side */
   .column {
     position: relative;
-    margin-left: 50px;
-    margin-right: 60px;
-    margin-top: 70px;
+    margin-left: 5%;
+    margin-right: 3%;
+    margin-top: 6%;
     padding: 0 10px;
     width: 23%;
   }
@@ -102,7 +101,7 @@
   
   /* Remove extra left and right margins, due to padding */
   .row {
-      position: relative;
+      
       margin-left: 0px;
     }
   
@@ -136,20 +135,13 @@
   }
   
   @media screen and (min-width:340px) and (max-width:670px){
-    /*Navbar*/
-    /*#navbar{
-        width: 104%;
-        position: fixed;
-    }
-    .navbar{
-        z-index: 1;
-    }*/
+  
   
     .column{
         position: relative;
-        margin-left: 50px;
-        margin-right: 50px;
-        margin-top: 70px;
+        margin-left: 4%;
+        margin-right: 3%;
+        margin-top: 6%;
         padding: 0 0px;
         width: 55%;
     }
@@ -163,20 +155,13 @@
   }
   
   @media screen and (min-width:671px) and (max-width:850px){
-    /*Navbar*/
-    /*#navbar{
-        width: 104%;
-        position: fixed;
-    }
-    .navbar{
-        z-index: 1;
-    }*/
+   
     
     .column{
         position: relative;
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 70px;
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-top: 6%;
         padding: 0 0px;
         width: 50%;
     }
@@ -194,9 +179,9 @@
     
     .column{
         position: relative;
-        margin-left: 40px;
+        margin-left: 3%;
         margin-right: 0px;
-        margin-top: 70px;
+        margin-top: 6%;
         padding: 0 0px;
         width: 45%;
     }
@@ -215,9 +200,9 @@
     
     .column{
         position: relative;
-        margin-left: 65px;
+        margin-left: 3.5%;
         margin-right: 0px;
-        margin-top: 70px;
+        margin-top: 6%;
         padding: 0 0px;
         width: 40%;
     }
@@ -246,20 +231,9 @@
     padding: 10px;
   }
 
-  @media screen and (min-width:1101px) and (max-width:1200px){
-    /*Navbar*/
-    /*#navbar{
-        width: 104%;
-        position: fixed;
-    }
-    .navbar{
-        z-index: 1;
-    }*/
-  
-    
-  }
 
-  @media all and (min-width: 992px) {
+
+  @media all and (min-width: 1302px) {
     .navbar .nav-item .dropdown-menu{ display: none; }
     .navbar .nav-item:hover .nav-link{ color: #F2A929;  }
     .navbar .nav-item:hover .dropdown-menu{ display: block; /*background-color: #fcc76b;*/ border-radius: 2%; }
