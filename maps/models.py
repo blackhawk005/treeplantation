@@ -9,3 +9,4 @@ class Blog(models.Model):
     contact_management_name = models.CharField(max_length=100)
     contact_management_num = models.CharField(max_length=100)
     unique_id = models.CharField(max_length=100)
+    image = models.CharField(max_length=100)

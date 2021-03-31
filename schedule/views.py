@@ -9,6 +9,7 @@ import uuid
 from .send_mail import send_email
 from .past_or_present import past_or_present
 import threading
+import random
 
 # Create your views here.
 
@@ -31,7 +32,9 @@ def create_event(request):
             place = form.cleaned_data['place']
             address = form.cleaned_data['address']
             print(date, time, place, address)
-            trial = tt(date=str(date), time=time, host=request.user.username, place=place, info=address, unique_id=y, event_name=event_name)
+            x = random.randint(1, 25)
+            y_new = "/media/"+str(x)+".svg"
+            trial = tt(date=str(date), time=time, host=request.user.username, place=place, info=address, unique_id=y, event_name=event_name,image=y_new)
             trial.save()
             t1 = threading.Thread(target=send_email, args=(request.user.username, event_name, str(date), place, 1))
             t1.start()

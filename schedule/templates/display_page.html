@@ -132,40 +132,59 @@
 </div>
 <br><br>
 <p>
+    {% if tt_1 %}
     {% for tt in tt_1 %}
-    
-    <div class="col-md-8 col-lg-6 col-sm-11 col-11 reg register-form register-left" style="align-content: center;">
-        <h2><b>{{ tt.event_name }}</h2>
-        <h2><b>Host - </b>{{ tt.host }}</h2>
-        <h2><b>Date - </b>{{ tt.date }}</h2>
-        <h2><b>Time - </b>{{ tt.time }}</h2>
-        <h2><b>Place - </b>{{ tt.place }}</h2>
-        <h2><b>Note - </b>{{ tt.info }}</h2><br>
+    <div class=" row" style="justify-content:center;">
+      <div class="card" >
+        <div class="image">
+          <img src="/schedule{{ tt.image }}">
+          <h2><b>{{ tt.event_name }}</h2>
+        </div>
+        <div class="details">
+          <div class="center">
+            <h1><b>{{ tt.event_name }}</h1>
+        <p><b>Host - </b>{{ tt.host }}</p>
+        <p><b>Date - </b>{{ tt.date }}</p>
+        <p><b>Time - </b>{{ tt.time }}</p>
+        <p><b>Place - </b>{{ tt.place }}</p>
+        <p><b>Note - </b>{{ tt.info }}</p><br>
         {% if user.is_authenticated %}
         {% if tt.host == user.username %}
         <form action="delete_data" method="POST">
           <input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
-          <input class="btn btn-dark" type="submit" value="Delete">
+          <input class="delete-btn" type="submit" value="Delete">
         </form>
         {% else %}
-        <form action="send_data" method="POST">
+        
+        <form  action="send_data" method="POST" style="justify-content: center;">
           <input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
           <input type="hidden" name="hidden_event_name" value="{{ tt.event_name }}">
           <input type="hidden" name="hidden_date" value="{{ tt.date }}">
           <input type="hidden" name="hidden_time" value="{{ tt.time }}">
           <input type="hidden" name="hidden_place" value="{{ tt.place }}">
-          <input class="btn btn-dark" type="submit" value="Participate">
+          <input class="delete-btn" type="submit" value="Participate">
         </form>
+        
+        <form  style=" display:inline-block; justify-content: center;" action="/maps/report_blog" method="POST" >
+            <input type="hidden" name="hidden_unique_id" value="{{ blog.unique_id }}">
+            <input class=" report-btn " type="submit" value="Report">
+        </form>
+        
+     
         {% endif %}
         {% else %}
         <button type="button" class="btn  btn-light" ><a class="but-text1" href="/login/">Login To Participate</a></button>
-        
-
         {% endif %}
-        
+          </div>
+        </div>
+      </div>
     </div>
+    
     <br><br><br>
     {% endfor %}
+    {% else %}
+    <h1 class="text-center" style="color: white; position:absolute; left:40%; right:40%; top:50%; font-size:5vw;">No Event Created!</h4>
+    {% endif %}
   </p>
     <script>
       if ('{{ flag }}' == 1){
