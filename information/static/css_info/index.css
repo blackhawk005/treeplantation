@@ -71,11 +71,11 @@ body
     margin-top: 10px;
   }*/
 
-  .row:after {
+  /*.row:after {
     content: "";
     display: table;
     clear: both;
-  }
+  }*/
 
   /*.register-left{
     width: 25%;
@@ -159,17 +159,17 @@ body
   }
 
   /* Remove extra left and right margins, due to padding */
-  .row {
+  /*.row {
     position: relative;
     margin-left: 0px;
-  }
+  }*/
 
 /* Clear floats after the columns */
-.row:after {
+/*.row:after {
   content: "";
   display: table;
   clear: both;
-}
+}*/
 
 /* Style the counter cards */
 .card {
