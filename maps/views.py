@@ -62,6 +62,27 @@ def delete_blog(request):
         mydb.commit()
         return redirect('/maps/bloginfo')
 
+def report_blog(request):
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
+    if (request.method=='POST'):
+        unique_id = request.POST['hidden_unique_id']
+        try:
+            mydb = MySQLdb.connect(
+                "localhost",
+                "root",
+                "",
+                "plantation"
+            )
+        except:
+            print("Can't connect to database")
+            return
+        mycursor = mydb.cursor()
+        query = ""
+        mycursor.execute(query)
+        mydb.commit()
+    return redirect('/maps/bloginfo')
+
 def display_blog_info(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()

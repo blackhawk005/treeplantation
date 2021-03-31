@@ -1,8 +1,8 @@
 
 
-  /* body{
-    overflow-x: hidden;
-  } */
+  body{
+    overflow-x: none;
+  }
 
   .navbar {
     padding: 32px 32px 32px;
@@ -41,6 +41,14 @@
 
 
   /* Title section */
+  .title-text {
+    font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+    color: #fff;
+    font-size: 32px;
+    margin-left: 32px;
+    padding-top: 80px;
+  }
+
   .title-section {
     padding-bottom: 112px;
     padding-top: 32px;
@@ -233,11 +241,11 @@
 
 
 
-  @media all and (min-width: 1302px) {
+  /* @media all and (min-width: 1302px) {
     .navbar .nav-item .dropdown-menu{ display: none; }
     .navbar .nav-item:hover .nav-link{ color: #F2A929;  }
-    .navbar .nav-item:hover .dropdown-menu{ display: block; /*background-color: #fcc76b;*/ border-radius: 2%; }
+    .navbar .nav-item:hover .dropdown-menu{ display: block; border-radius: 2%; }
     .navbar .nav-item:hover .dropdown-item:hover{ color: white; background-color: #727272; }
     .navbar .nav-item .dropdown-menu{ margin-top:0; }
-  }
+  } */
   

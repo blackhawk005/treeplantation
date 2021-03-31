@@ -8,6 +8,7 @@ from django.contrib import messages
 import MySQLdb
 from .past_or_present import past_or_present
 import threading
+from .models import users
 
 # Create your views here.
 
@@ -86,6 +87,8 @@ def register(request):
             else:
                 user = User.objects.create_user(username=user_name, first_name=first_name, last_name=last_name, email=email, password=pass1)
                 user.save()
+                user_save = users(user=user_name, report='0')
+                user_save.save()
                 return redirect('/login/')
         else:
             messages.warning(request, 'Password donot match')
