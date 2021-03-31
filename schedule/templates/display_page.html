@@ -155,8 +155,8 @@
           <input class="delete-btn" type="submit" value="Delete">
         </form>
         {% else %}
-        
-        <form  action="send_data" method="POST" style="justify-content: center;">
+        <div class="row" style="justify-content: center;">
+        <form  action="send_data" method="POST" >
           <input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
           <input type="hidden" name="hidden_event_name" value="{{ tt.event_name }}">
           <input type="hidden" name="hidden_date" value="{{ tt.date }}">
@@ -165,11 +165,12 @@
           <input class="delete-btn" type="submit" value="Participate">
         </form>
         
-        <form  style=" display:inline-block; justify-content: center;" action="/maps/report_blog" method="POST" >
+        <form   action="/maps/report_blog" method="POST" style="margin-left: 5%;">
             <input type="hidden" name="hidden_unique_id" value="{{ blog.unique_id }}">
             <input class=" report-btn " type="submit" value="Report">
         </form>
-        
+      
+      </div>
      
         {% endif %}
         {% else %}
