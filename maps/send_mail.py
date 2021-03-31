@@ -7,12 +7,11 @@ def mail_seder(receiver_email, user, event, date, place, flag):
     sender_email = "treeasurenss@gmail.com"
     password = 'treeasure1234'
     message = MIMEMultipart("alternative")
-    message["Subject"] = "Nature is calling you........"
     message["From"] = sender_email
     message["To"] = receiver_email
-
     # Create the plain-text and HTML version of your message
     if flag == 1:
+        message["Subject"] = "Nature is calling you........"
         text = """\
         Hello """ + user + """
         We have a new event organized on """ + date + """.
@@ -31,6 +30,7 @@ def mail_seder(receiver_email, user, event, date, place, flag):
         </html>
         """
     elif flag==0:
+        message["Subject"] = "Nature is calling you........"
         mydb = MySQLdb.connect(
         "localhost",
         "root",
@@ -60,6 +60,21 @@ def mail_seder(receiver_email, user, event, date, place, flag):
                 Place: """ + place + """<br>
                 Information: """ + result[0][0] +"""<br>
                 Do visit our website to participate.
+            </p>
+            </body>
+        </html>
+        """
+    elif flag == 3:
+        message["Subject"] = "We are disappointed"
+        text = """\
+        Hello """ + user + """
+        You have been reported.
+        """
+        html = """\
+        <html>
+            <body>
+            <p>Hello """ + user + """,<br>
+                You have been reported
             </p>
             </body>
         </html>
