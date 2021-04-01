@@ -133,9 +133,17 @@ body, html{
     padding: 20px;
 }
 
-p{
-    font-size: x-large;
-    text-align: center;
-    margin-left: 100px;
-    margin-right: 100px;
+p {
+  font-size: 120%;
+  text-align: center;
+
+}
+
+@media screen and (min-width:240px) and (max-width:670px){
+  p{
+    font-size: 75%;
+    text-align: left;
+  }
+
+  
 }
