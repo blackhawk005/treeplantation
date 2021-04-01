@@ -5,7 +5,7 @@ from email.mime.multipart import MIMEMultipart
 
 def mail_seder(receiver_email, user, event, date, place, flag):
     sender_email = "treeasurenss@gmail.com"
-    password = 'treeasure1234'
+    password = 'treeasure@nss123'
     message = MIMEMultipart("alternative")
     message["From"] = sender_email
     message["To"] = receiver_email

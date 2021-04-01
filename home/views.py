@@ -9,6 +9,7 @@ import MySQLdb
 from .past_or_present import past_or_present
 import threading
 from .models import users
+from .send_mail import mail_seder
 
 # Create your views here.
 
@@ -89,6 +90,9 @@ def register(request):
                 user.save()
                 user_save = users(user=user_name, report='0')
                 user_save.save()
+            # mail_seder(receiver_email=email, user=result[0][0], event='', date='', place='', flag=3)
+                t2 = threading.Thread(target=mail_seder, args=(email, user_name, '', '', '', 5))
+                t2.start()
                 return redirect('/login/')
         else:
             messages.warning(request, 'Password donot match')
