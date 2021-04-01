@@ -144,22 +144,24 @@
               <div class="col-lg-6 watch-img">
                 <img class="img" src="{% static 'images/undraw_nature_m5ll.svg' %}"> <!-- width="400" height="400">-->
                 <!-- <img src="{% static 'images/image1.jpeg' %}" width="364", height="300"> -->
+                <div class="buttons">
+                  {% if user.is_authenticated %}
+                  <button type="button" class="btn  btn-light" ><a class="but-text1" href="profile">Profile</a></button>
+                  {% else %}
+                  <button type="button" class="btn  btn-light" ><a class="but-text1" href="/login/">Login</a></button>
+                  <button type="button" class="btn  btn-light" ><a class="but-text1" href="/register/">Register</a></button>
+                  {% endif %}
+                  <button type="button" class="btn  btn-outline-light" ><a class="but-text2" href="/about/">About Us</a></button>
+                </div>
               </div> 
               <div class="col-lg-6">
+                  
+                  
                   <h1 class="title-text" >Events conducted in the past</h1><br>
                   {% for past_events in past_presents %}
                     <h2 class="subtitle-text"> {{ past_events.event_name }}</h2>
                     <h2 class="smallsubtitle-text">Conducted on: {{ past_events.date }} By: {{ past_events.host }}</h2><br>
                   {% endfor %}
-                  <div class="buttons">
-                    {% if user.is_authenticated %}
-                    <button type="button" class="btn  btn-light" ><a class="but-text1" href="profile">Profile</a></button>
-                    {% else %}
-                    <button type="button" class="btn  btn-light" ><a class="but-text1" href="/login/">Login</a></button>
-                    <button type="button" class="btn  btn-light" ><a class="but-text1" href="/register/">Register</a></button>
-                    {% endif %}
-                    <button type="button" class="btn  btn-outline-light" ><a class="but-text2" href="/about/">About Us</a></button>
-                  </div>
               </div>
               
         </div>
