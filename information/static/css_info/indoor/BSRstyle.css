@@ -72,28 +72,27 @@ body, html{
 }
 
 .pimg1{
-  background-image: url("https://twothirstygardeners.co.uk/wp-content/uploads/2014/05/2TG_hand_fork_660x250.jpg");
-  min-height: 100%;
+  background-image:url('/static/images/shreya/BSR1.jpg');
+  min-height:100%;
 
 }
 
 .pimg2{
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1bUb7WHryBvp3Ou_hOd-GkrS1LJwvS0tjvw&usqp=CAU");
-  min-height: 100%;
- 
-  
+  background-image:url('/static/images/shreya/BSR2.jpg');
+  min-height:400px;
+
 }
 
 .pimg3{
-  background-image: url("https://bulldoghandtools.co.uk/media/catalog/product/cache/2796159956acad2253e75d1727a8c241/5/7/5722042850.jpg");
-  min-height: 100%;
-  
+  background-image:url('/static/images/shreya/BSR3.jpg');
+  min-height:400px;
+
 }
 
 .pimg4{
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7QMtT__xMHYQ8dC-tm5MTD4JUyhk5efI-Gg&usqp=CAU");
-  min-height: 100%;
-  
+  background-image:url('/static/images/shreya/BSR4.jpg');
+  min-height:400px;
+
 }
 
 .section{
