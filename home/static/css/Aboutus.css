@@ -127,14 +127,14 @@ p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 } */
 
-/* @media screen and (min-width:240px) and (max-width:670px){
+@media screen and (min-width:240px) and (max-width:670px){
   p{
-    font-size: 40%;
+    font-size: 75%;
   }
 
   
 }
-
+/*
 @media screen and (min-width:671px) and (max-width:900px){
   
 p{
