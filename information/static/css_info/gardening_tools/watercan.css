@@ -1,132 +1,125 @@
 body, html{
-    height: 100%;
-    margin: 0;
-    font-size: 16px;
-    font-family: "Lato" , sans-serif;
-    font-weight: 200;
-    line-height: 1.8em;
-    color: #666;
-    background-image: linear-gradient(to left,#01201d,#5e804d);
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Lato" , sans-serif;
+  font-weight: 200;
+  line-height: 1.8em;
+  color: #666;
+  background-image: linear-gradient(to left,#01201d,#5e804d);
 
 }
 
 #myBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: red;
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 10px;
-  }
-  
-  #myBtn:hover {
-    background-color: #111;
-  }
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#myBtn:hover {
+  background-color: #111;
+}
 
 /* Navbar section */
 .navbar {
-    padding: 32px 32px 32px;
-    padding-right: 32px;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  .navbar-brand:hover {
-    color:#F2A929;
-  }
-  .navbar-brand {
-    color:#fff;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 48px;
-  }
-  /* .home-nav-collapse {
-    color: white;
-  } */
+  padding: 32px 32px 32px;
+  padding-right: 32px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.navbar-brand:hover {
+  color:#F2A929;
+}
+.navbar-brand {
+  color:#fff;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 48px;
+}
+/* .home-nav-collapse {
+  color: white;
+} */
 
-  
-  .nav-item{
-      margin: 16px;
-      
-  }
-  .nav-link{
+
+.nav-item{
+    margin: 16px;
+    
+}
+.nav-link{
+  color: #fff;
+}
+
+.nav-link:hover {
+  color:#F2A929;
+}
+
+.pimg1, .pimg2, .pimg3{
+  position: relative;
+  opacity: 0.9;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.pimg1{
+  background-image: url('/static/images/watercan/img/img-watercan.jpg');
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.pimg2{
+  background-image: url('/static/images/watercan/img/img-watercan1.jpg');
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.pimg3{
+  background-image: url('/static/images/watercan/img/img-watercan2.jpg');
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+.section{
+  text-align:center;
+  padding:50px 80px;
+}
+
+.section-light{
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section-dark{
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color:#000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border{
+    background-color: #111;
     color: #fff;
-  }
-  
-  .nav-link:hover {
-    color:#F2A929;
-  }
-    
-    .pimg1, .pimg2, .pimg3{
-        position: relative;
-        opacity: 0.9;
-        background-position: center;
-        background-attachment: fixed;
-    }
-    
-    .pimg1{
-        background-image: url('/static/images/watercan/img/img-watercan.jpg');
-        min-height: 100%;
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-    }
-    
-    .pimg2{
-        background-image: url('/static/images/watercan/img/img-watercan1.jpg');
-        min-height: 100%;
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-    }
-    
-    .pimg3{
-        background-image: url('/static/images/watercan/img/img-watercan2.jpg');
-        min-height: 100%;
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-    }
-    
- 
-    
-    .section{
-        text-align: center;
-        padding: 50px 80px;
-    
-    }
-    
-    .section-light{
-        background-color: #f4f4f4;
-        color: #666;
-    }
-    
-    .section-dark{
-        background-color: #282e34;
-        color: #ddd;
-    }
-    
-    .ptext{
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        text-align: center;
-        color:#000;
-        font-size: 27px;
-        letter-spacing: 8px;
-        text-transform: uppercase;
-    }
-    
-    .ptext .border{
-        background-color: #111;
-        color: #fff;
-        padding: 20px;
-    }
-    
-    p{
-        font-size: x-large;
-        text-align: center;
-        margin-left: 100px;
-        margin-right: 100px;
-    }
+    padding: 20px;
+}
+
+
