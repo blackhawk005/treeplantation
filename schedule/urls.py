@@ -10,6 +10,7 @@ urlpatterns = [
      path('create_event', views.create_event, name='info_send' ),
      path('send_data', views.send_data, name='send_data' ),
      path('delete_data', views.delete_data, name='delete_data' ),
-     path('terms',views.terms, name='terms')
+     path('terms',views.terms, name='terms'),
+     path('report_event', views.report_event, name='report_event')
 ]+ static(settings.MEDIA_URL, 
                               document_root=settings.MEDIA_ROOT)
