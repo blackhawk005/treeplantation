@@ -11,6 +11,9 @@ img{
     /* padding-left: 9.375rem; */
 }
 
+/* body{
+    overflow-x: hidden;
+} */
 
 .regis-page
 {
@@ -184,12 +187,8 @@ h3{
     -webkit-box-shadow: 7px 10px 11px 0px rgb(46, 45, 45);
     box-shadow:         7px 10px 11px 0px rgb(46, 45, 45);
 }
-@media(max-width: 1028px){
-    .login-left{
-        border-top-right-radius: 0%;
-        border-bottom-right-radius: 0%;
-    }
-}
+
+
 
 
 .login-left h1
@@ -207,7 +206,8 @@ h3{
 
 .login-form
 {
-    padding: 80px;
+    
+    padding: 10%;
     padding-right: 64px;
     padding-left: 64px;
     padding-bottom: 11px;
@@ -244,7 +244,7 @@ h3{
 
 .login-below-writeup{
     text-align: center;
-    padding: 32px;
+    padding: 8%;
 
 }
 h3{
@@ -254,6 +254,7 @@ h3{
 
 .login-right
 {
+    width: 60%;
     text-align: center;
     color: #ffffff;
 }
