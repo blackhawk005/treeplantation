@@ -145,7 +145,7 @@
                 <h3 scope="col"><b>First Name : </b>{{ user.first_name }}</h3>
                 <h3 scope="col"><b>Last Name : </b>{{ user.last_name }}</h3>
     <form class="form-inline">
-    <h2 >Email</h2><h3 style="font-size: 20px;">{{ user.email }}</h3>
+    <h2 >Email</h2><h3>{{ user.email }}</h3>
     </form>
     <br><br>
 </form>
@@ -207,9 +207,9 @@
             <td>{{ participant.event_name }}</td>
             <td>{{ participant.date }}</td>
             <td>{{ participant.time }}</td>
-            <td>{{ participant.place }}</td>
-            <td><input type="hidden" id="hidden_unique_id" name="hidden_unique_id" value="{{ participant.unique_id }}">
-                <input class="btn-dark" style="padding: 2%;" type="submit" value="Delete"></td>
+            <td>{{ participant.place }} <input type="hidden" id="hidden_unique_id" name="hidden_unique_id" value="{{ participant.unique_id }}">
+              <input class="btn-dark" style="padding: 2%;" type="submit" value="Delete"></td>
+            
         </tr>
     </tbody>
     {% endif %}

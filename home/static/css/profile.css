@@ -190,47 +190,71 @@ nav{
    */
 
    @media screen and (min-width:901px) and (max-width:1100px){
-     h2{
-       font-size: 100%;
-     }
 
-    /* .register-c{
+     .register-c{
         padding: 0 0px;
         width: 50%;
-    } */
+    } 
     
   }
 
   @media screen and (min-width:851px) and (max-width:900px){
-    h2{
-      font-size: 125%;
+    .register-c h2{
+      font-size: 175%;
     }
-    
-    /* .register-c{
-        padding: 0 0px;
-        width: 65%;
-    } */
-    
-  }
 
-  @media screen and (min-width:761px) and (max-width:850px){
-    h2{
-      font-size: 150%;
+    .register-c h3{
+      font-size: 145%;
     }
     
     .register-c{
         padding: 0 0px;
-        width: 100%;
+        width: 65%;
+    } 
+    
+  }
+
+  @media screen and (min-width:761px) and (max-width:850px){
+    .register-c h2{
+      font-size: 150%;
+    }
+
+    .register-c h3{
+      font-size: 105%;
+    }
+    
+    .register-c{
+        padding: 0 0px;
+        width: 75%;
     }
     
   }
 
 
   @media screen and (min-width:671px) and (max-width:760px){
-    h2{
+    .register-c h2{
       font-size: 150%;
     }
+    .register-c h3{
+      font-size: 125%;
+    }
     
+    .register-c{
+        padding: 0 0px;
+        width: 75%;
+    }
+    
+  }
+
+  @media screen and (min-width:429px) and (max-width:670px){
+    .register-c h2{
+      font-size: 175%;
+    }
+
+    .register-c h3{
+      font-size: 150%;
+    }
+  
     .register-c{
         padding: 0 0px;
         width: 100%;
@@ -238,9 +262,29 @@ nav{
     
   }
 
-  @media screen and (min-width:240px) and (max-width:670px){
-    h2{
-      font-size: 175%;
+  @media screen and (min-width:240px) and (max-width:428px){
+    body{
+      overflow-x: hidden;
+    }
+
+   .register-c h2{
+      font-size: 20px;
+    }
+
+    .register-c h3{
+      font-size: 15px;
+    }
+
+    table{
+      width: 50%;
+    }
+
+    th{
+      font-size: 3vw;
+    }
+
+    td{
+      font-size: 3vw;
     }
   
     .register-c{
