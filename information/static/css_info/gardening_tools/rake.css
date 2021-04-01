@@ -1,12 +1,12 @@
 body, html{
-    height: 100%;
-    margin: 0;
-    font-size: 16px;
-    font-family: "Lato" , sans-serif;
-    font-weight: 200;
-    line-height: 1.8em;
-    color: #666;
-    background-image: linear-gradient(to left,#01201d,#5e804d);
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Lato" , sans-serif;
+  font-weight: 200;
+  line-height: 1.8em;
+  color: #666;
+  background-image: linear-gradient(to left,#01201d,#5e804d);
 
 }
 
@@ -32,72 +32,67 @@ body, html{
 
 /* Navbar section */
 .navbar {
-    padding: 32px 32px 32px;
-    padding-right: 32px;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  .navbar-brand:hover {
-    color:#F2A929;
-  }
-  .navbar-brand {
-    color:#fff;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 48px;
-  }
-  /* .home-nav-collapse {
-    color: white;
-  } */
-
-  
-  .nav-item{
-      margin: 16px;
-      
-  }
-  .nav-link{
-    color: #fff;
-  }
-  
-  .nav-link:hover {
-    color:#F2A929;
-  }
+  padding: 32px 32px 32px;
+  padding-right: 32px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.navbar-brand:hover {
+  color:#F2A929;
+}
+.navbar-brand {
+  color:#fff;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 48px;
+}
+/* .home-nav-collapse {
+  color: white;
+} */
 
 
-  .pimg1 , .pimg2 , .pimg3 , .pimg4 , .pimg5 , .pimg6{
-    position: relative;
-    opacity: 0.70;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.nav-item{
+    margin: 16px;
+    
+}
+.nav-link{
+  color: #fff;
+}
 
-    background-attachment: fixed;
+.nav-link:hover {
+  color:#F2A929;
+}
+
+.pimg1 , .pimg2 , .pimg3 , .pimg4 , .pimg5 , .pimg6{
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
 
 }
 
 .pimg1{
-    background-image: url(/static/images/images3/rake1.jpg);
-    min-height: 100%;
+  background-image: url(/static/images/images3/rake1.jpg);
+  min-height: 100%;
 
 }
 
 .pimg2{
-    background-image: url(/static/images/images3/rake2.jpg);
-    min-height: 100%;
-   
-    
+  background-image: url(/static/images/images3/rake2.jpg);
+  min-height: 100%;
+ 
+  
 }
 
 .pimg3{
-    background-image: url(/static/images/images3/howtouse2.jpg);
-    min-height: 100%;
-    
+  background-image: url(/static/images/images3/howtouse2.jpg);
+  min-height: 100%;
 }
 
-
-
 .section{
-    text-align: center;
-    padding: 50px 80px;
-
+  text-align:center;
+  padding:50px 80px;
 }
 
 .section-light{
@@ -127,9 +122,4 @@ body, html{
     padding: 20px;
 }
 
-p{
-    font-size: x-large;
-    text-align: center;
-    margin-left: 100px;
-    margin-right: 100px;
-}
+
