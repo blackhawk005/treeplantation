@@ -123,10 +123,6 @@ p {
 
 }
 
-/* .cursive {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-} */
-
 @media screen and (min-width:240px) and (max-width:670px){
   p{
     font-size: 75%;
