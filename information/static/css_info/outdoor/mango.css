@@ -7,10 +7,10 @@ body, html{
     line-height: 1.8em;
     color: #666;
     background-image: linear-gradient(to left,#01201d,#5e804d);
-
-}
-
-#myBtn {
+  
+  }
+  
+  #myBtn {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -29,10 +29,9 @@ body, html{
   #myBtn:hover {
     background-color: #111;
   }
-
-
-/* Navbar section */
-.navbar {
+  
+  /* Navbar section */
+  .navbar {
     padding: 32px 32px 32px;
     padding-right: 32px;
     font-family: 'Courier New', Courier, monospace;
@@ -45,8 +44,10 @@ body, html{
     font-family: 'Courier New', Courier, monospace;
     font-size: 48px;
   }
+  /* .home-nav-collapse {
+    color: white;
+  } */
   
-
   
   .nav-item{
       margin: 16px;
@@ -59,9 +60,8 @@ body, html{
   .nav-link:hover {
     color:#F2A929;
   }
-
-
-.pimg1 , .pimg2 , .pimg3 , .pimg4 , .pimg5 , .pimg6{
+  
+  .pimg1 , .pimg2 , .pimg3 , .pimg4 , .pimg5 , .pimg6{
     position: relative;
     opacity: 0.70;
     background-position: center;
@@ -108,42 +108,38 @@ body, html{
     min-height: 100%;
 }
 
-.section{
-    text-align: center;
-    padding: 50px 80px;
-
-}
-
-.section-light{
-    background-color: #f4f4f4;
-    color: #666;
-}
-
-.section-dark{
-    background-color: #282e34;
-    color: #ddd;
-}
-
-.ptext{
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    color:#000;
-    font-size: 27px;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-}
-
-.ptext .border{
-    background-color: #111;
-    color: #fff;
-    padding: 20px;
-}
-
-p{
-    font-size: x-large;
-    text-align: center;
-    margin-left: 100px;
-    margin-right: 100px;
-}
+  
+  .section{
+    text-align:center;
+    padding:50px 80px;
+  }
+  
+  .section-light{
+      background-color: #f4f4f4;
+      color: #666;
+  }
+  
+  .section-dark{
+      background-color: #282e34;
+      color: #ddd;
+  }
+  
+  .ptext{
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      text-align: center;
+      color:#000;
+      font-size: 27px;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+  }
+  
+  .ptext .border{
+      background-color: #111;
+      color: #fff;
+      padding: 20px;
+  }
+  
+  
+  

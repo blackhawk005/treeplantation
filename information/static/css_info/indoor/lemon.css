@@ -61,7 +61,7 @@ body, html{
     color:#F2A929;
   }
   
-  .pimg1, .pimg2, .pimg3, .pimg4{
+  .pimg1, .pimg2, .pimg3, .pimg4, .pimg5, .pimg6{
     position:relative;
     opacity:0.70;
     background-position:center;
@@ -72,44 +72,44 @@ body, html{
   }
   
   .pimg{
-    background-image: url(/static/images/karthik_i/lemon4.jpg);
+    background-image: url('/static/images/karthik_i/lemon4.jpg');
     min-height: 100%;
 
 }
 
 .pimg1{
-    background-image: url(/static/images/karthik_i/lemon1.jpg);
+    background-image: url('/static/images/karthik_i/lemon1.jpg');
     min-height: 100%;
 
 }
 
 .pimg2{
-    background-image: url(/static/images/karthik_i/lemon2.jpg);
+    background-image: url('/static/images/karthik_i/lemon2.jpg');
     min-height: 100%;
    
     
 }
 
 .pimg3{
-    background-image: url(/static/images/karthik_i/lemon3.jpg);
+    background-image: url('/static/images/karthik_i/lemon3.jpg');
     min-height: 100%;
     
 }
 
 .pimg4{
-    background-image: url(/static/images/karthik_i/lemon5.jpg);
+    background-image: url('/static/images/karthik_i/lemon5.jpg');
     min-height: 100%;
     
 }
 
 .pimg5{
-    background-image: url(/static/images/karthik_i/lemon5.jpg);
+    background-image: url('/static/images/karthik_i/lemon5.jpg');
     min-height: 100%;
     
 }
 
 .pimg6{
-    background-image: url(/static/images/karthik_i/lemon6.jpg);
+    background-image: url('/static/images/karthik_i/lemon6.jpg');
     min-height: 100%;
 }
   
