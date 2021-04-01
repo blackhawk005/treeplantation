@@ -1,132 +1,152 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie+edge">
-    <title>Baby Sun Rose</title>
-    <link rel="stylesheet" href="{% static 'css_info/indoor/BSRstyle.css' %}">
-    <link rel="stylesheet" href="{% static 'css_info/navbar.css' %}">
+    <title>Turmeric Plant &#127793;</title>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css_info/gardening_tools/fork.css' %}">
+    
+   
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="new.js"></script>
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="new.js"></script>
 
-    <!-- Popper JS -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"> </script> <!--chart.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"> </script> <!--chart.js-->
 
-   <!-- Google fonts -->
-   <link rel="preconnect" href="https://fonts.gstatic.com">
-   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="{% static 'js/scroll.js' %}"></script>
+  
+     
+</head>
+<body>
 
-    <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
-      <a class="navbar-brand" href="/"><img src="{% static 'images/tree2.png' %}" height="40px"></a>
-      <button
-        class="navbar-toggler btn-outline-light"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
-      </button>
-      
-      <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="#intro">Introduction</a>
-          </li>
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="#soil_lifecycle">Soil & Life Cycle</a>
-          </li>
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="#climate">Climate</a>
-          </li>
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="#watering">Watering</a>
-          </li>
-          {% if user.is_authenticated %}
-                <li class="nav-item">
-                    <a class="home-nav-link nav-link" href="/logout/">Logout</a>
-                </li>
-                {% endif %}
-        </ul>
-      </div>
-    </nav>
+  <nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand" href="/"><img src="{% static 'images/tree2.png' %}" height="40px"></a>
+    <button
+      class="navbar-toggler btn-outline-light"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+    </button>
+    
+    <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+        </li>
 
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
+        </li>
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/register/">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/login/">Login</a>
+        </li>
+        {% endif %}
+        
+        <!-- <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/about/">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
+        </li> -->
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">&#8593;</button>  <!--back to top button-->
+
+    
+ 
     <div class="pimg1">
-      <div class="ptext">
-        <span class="border">
-          Baby Sun Rose
-        </span>
-      </div>
+
+        <div class="ptext">
+            <span class="border">
+                FORK
+            </span>
+        </div>
     </div>
 
-    <section class="section section-dark" id="intro">
-      <h2>Size</h2>
-      <p>
-        The stays very flat and grows at a slow to moderate pace. Plants only rise to about 10 centimetres (3.9 in) tall but prostrate stems reach up to about 60 centimetres (24 in) long. The stems are green and stalk-round. The fleshy, small leaves are about 2.5 centimetres (0.98 in) long and covered with fine papillae.
-      </p>
+    <section class="section section-dark">
+
+      <h1>DESCRIPTION</h1>
+
+     <p> It is a gardening implement, with a handle and several (usually four) short. 
+       </p>
     </section>
 
-  <div class="pimg2">
+    <div class="pimg2">
+
+        <section class="section section-dark">
+          <h1>PURPOSE</h1>
+          <p >
+            It is used for loosening, lifting and turning over soil in gardening and farming.
+          </p>
+        </section>
     </div>
-
-    <section class="section section-dark" id="soil_lifecycle">
-      <h2>Soil</h2>
-      <p>
-      The plant prefers a well-draining, rich, sandy, or loamy soils. It can tolerates drought conditions, but prefers regular watering, especially during the hot summer months.
-      </p>
-      <h2>Life Cycle</h2>
-      <p>
-      2-3 years.
-      </p>
-    </section>
-
+    
     <div class="pimg3">
-    </div>
 
-    <section class="section section-dark" id="climate">
-      <h2>Climate</h2>
+    <section class="section section-dark">
+      <h1>USEFULNESS</h1>
       <p>
-        The plant thrives in hot, dry, sunny areas. Though you can grow baby sun rose in a container or hanging basket to bring indoors during cold weather.
+        The tines allow the implement to be pushed more easily into the ground, it can take out stones and weeds and break up clods, it is not so easily stopped by stones, and it does not cut through weed roots or root-crops.
       </p>
     </section>
+
+   </div>
+    
 
     <div class="pimg4">
+
+        <section class="section section-dark">
+            <h1>DIFFERENCE</h1>
+            <p>
+              Garden forks are slightly different from pitchforks, which are used for moving loose materials such as piled hay, compost, or manure. 
+Garden forks have comparatively a fairly short, usually wooden handle, with a "D" or "T" end. 
+Their tines are usually shorter, flatter, thicker, and more closely spaced.
+            </p>
+        </section>
     </div>
 
-    <section class="section section-dark" id="watering">
-      <h2>Watering/Care</h2>
-      <p>
-        Water on a regular basis with enough time for the soil to dry out between waterings. Make sure the area is very well drained or this succulent plant won't make it. Fertilize about twice a year.
-      </p>
-    </section>
+     <!--back to top start-->
 
-    <div class="pimg1">
-      <div class="ptext">
-      </div>
-    </div>
-
-    <!--back to top start-->
-
-    <script>
+     <script>
       //Get the button
       var mybutton = document.getElementById("myBtn");
       
@@ -149,10 +169,11 @@
       </script>
 
       <!--back to top end-->
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
 
-
-
-
-  </body>
+</body>
 </html>
