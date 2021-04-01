@@ -216,7 +216,7 @@ body
 }
 
 
-@media screen and (min-width:340px) and (max-width:670px){
+@media screen and (min-width:240px) and (max-width:670px){
     /*Navbar*/
     /*#navbar{
         width: 104%;
@@ -225,6 +225,9 @@ body
     .navbar{
         z-index: 1;
     }*/
+    .sapling-left{
+      width: 60%;
+    }
   
     .column{
         position: relative;
