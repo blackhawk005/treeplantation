@@ -29,8 +29,9 @@
  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
-<nav class="navbar navbar-expand-lg ">
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">&#8593;</button>  <!--back to top button-->
+<nav class="navbar navbar-expand-lg fixed-top navbar-custom">
   <a class="navbar-brand" href="/"><img src="{% static 'images/tree2.png' %}" height="40px"></a>
   <button
     class="navbar-toggler btn-outline-light"
@@ -47,47 +48,19 @@
   <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+        <a class="home-nav-link nav-link" href="#intro">Introduction</a>
       </li>
-
+      <li class="nav-item">
+        <a class="home-nav-link nav-link" href="#use">Uses</a>
+      </li>
       {% if user.is_authenticated %}
-      <li class="nav-item">
-        <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
-      </li>
-      <li class="nav-item">
-        <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
-      </li>
-      <li class="nav-item">
-        <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
-      </li>
-      {% else %}
-      <li class="nav-item">
-        <a class="home-nav-link nav-link" href="/register/">Register</a>
-      </li>
-      <li class="nav-item">
-        <a class="home-nav-link nav-link" href="/login/">Login</a>
-      </li>
-      {% endif %}
-      
-      <!-- <li class="nav-item">
-        <a class="home-nav-link nav-link" href="/about/">About us</a>
-      </li>
-      <li class="nav-item">
-        <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
-      </li> -->
-      {% if user.is_authenticated %}
-      <li class="nav-item">
-        <a class="home-nav-link nav-link" href="/logout/">Logout</a>
-      </li>
-      {% endif %}
+            <li class="nav-item">
+                <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+            </li>
+            {% endif %}
     </ul>
   </div>
 </nav>
-
-<body>
-
-  <button onclick="topFunction()" id="myBtn" title="Go to top">&#8593;</button>  <!--back to top button-->
-
 
   <div class="pimg1">
     <div class="ptext">
@@ -97,7 +70,7 @@
     </div>
   </div>
 
-  <section class="section section-dark">
+  <section class="section section-dark" id="intro">
     <h2></h2>
     <p>
       Garden knife is also know as hori hori.<br>
@@ -116,7 +89,7 @@
     </div>
   </div>
 
-  <section class="section section-dark">
+  <section class="section section-dark" id="use">
     <h2></h2>
     <p>
       <br>

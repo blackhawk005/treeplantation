@@ -38,60 +38,36 @@
   <button onclick="topFunction()" id="myBtn" title="Go to top">&#8593;</button>  <!--back to top button-->
 
     <!-- Navbar section -->
-
-    <div>
-      <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand" href="/"><img src="{% static 'images/tree2.png' %}" height="40px"></a>
-        <button
-          class="navbar-toggler btn-outline-light"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
-        </button>
-        
-        <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/">Home</a>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
+      <a class="navbar-brand" href="/"><img src="{% static 'images/tree2.png' %}" height="40px"></a>
+      <button
+        class="navbar-toggler btn-outline-light"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+      </button>
+      
+      <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="#intro">Introduction</a>
           </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
-            </li>
-  
-            {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
-            </li>
-           {% else %}
-           <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/register/">Register</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/login/">Login</a>
-            </li>
-            {% endif %}
-            
-            
-            {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/logout/">Logout</a>
-            </li>
-            {% endif %}
-          </ul>
-        </div>
-      </nav>
-    </div>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="#use">How to use</a>
+          </li>
+          {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+                </li>
+                {% endif %}
+        </ul>
+      </div>
+    </nav>
  
     <div class="pimg1">
 
@@ -102,7 +78,7 @@
         </div>
     </div>
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="intro">
 
       <h1>INTRODUCTION</h1>
 
@@ -112,7 +88,7 @@
 
     <div class="pimg2">
 
-        <section class="section section-dark">
+        <section class="section section-dark" id="use">
           <h1>HOW TO USE</h1>
           <p >
             Hold the hoe as you would hold a broom to sweep a floor. Angle the hoe so that the tip of the blade will enter the soil just below the surface. Use a broad, fluid sweeping motion to slice the tops off the weeds. Change hands frequently while hoeing so your hands won't get sore.
