@@ -79,21 +79,6 @@ def mail_seder(receiver_email, user, event, date, place, flag):
             </body>
         </html>
         """
-    elif flag == 4:
-        message["Subject"] = "We are disappointed"
-        text = """\
-        Hello """ + user + """
-        Your event """ + event + """ have been reported.
-        """
-        html = """\
-        <html>
-            <body>
-            <p>Hello """ + user + """,<br>
-                Your event """ + event + """ have been reported.
-            </p>
-            </body>
-        </html>
-        """
 
     # Turn these into plain/html MIMEText objects
     part1 = MIMEText(text, "plain")

@@ -170,3 +170,18 @@ nav{
   display: block;
   color: red;
 }
+
+.img{
+    width: 400px;
+    height: 400px;
+  }
+ 
+@media screen and (min-width:340px) and (max-width:670px){
+    .img
+    {
+      width: 370px;
+      height: 370px;
+    }
+      
+
+  }

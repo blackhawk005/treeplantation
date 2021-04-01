@@ -181,5 +181,13 @@
     {% else %}
     <h1 class="text-center" style="color: white; position:absolute; left:40%; right:40%; top:50%; font-size:5vw;">No Data Available!</h4>
     {% endif %}
+
+    <script>
+      if ('{{ flag }}' == 1){
+        alert('You have reported once, you cannot report again');
+        location.replace("/maps/bloginfo/")
+      }
+      
+    </script>
 </body>
 </html>

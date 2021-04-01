@@ -9,6 +9,7 @@ class tt(models.Model):
     unique_id = models.CharField(max_length=300)
     event_name = models.CharField(max_length=300)
     image = models.CharField(max_length=100)
+    reported = models.CharField(max_length=100)
 
 class participants(models.Model):
     name = models.CharField(max_length=300)

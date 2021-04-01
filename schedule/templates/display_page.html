@@ -155,8 +155,8 @@
           <input class="delete-btn" type="submit" value="Delete">
         </form>
         {% else %}
-        
-        <form  action="send_data" method="POST" style="justify-content: center;">
+        <div class="row" style="justify-content: center;">
+        <form  action="send_data" method="POST" >
           <input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
           <input type="hidden" name="hidden_event_name" value="{{ tt.event_name }}">
           <input type="hidden" name="hidden_date" value="{{ tt.date }}">
@@ -165,11 +165,13 @@
           <input class="delete-btn" type="submit" value="Participate">
         </form>
         
-        <form  style=" display:inline-block; justify-content: center;" action="/maps/report_blog" method="POST" >
-            <input type="hidden" name="hidden_unique_id" value="{{ blog.unique_id }}">
+        <form   action="/schedule/report_event" method="POST" style="margin-left: 5%;">
+            <input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
+            <input type="hidden" name="hidden_event_name" value="{{ tt.event_name }}">
             <input class=" report-btn " type="submit" value="Report">
         </form>
-        
+      
+      </div>
      
         {% endif %}
         {% else %}
@@ -194,7 +196,13 @@
         alert('You have already participated in the event');
         location.replace("/schedule/")
       }
-      
+      if ('{{ flag_1 }}' == 1){
+        alert('You have already participated in the event');
+        location.replace("/schedule/")
+      }else if('{{ flag_1 }}' == 1){
+        alert('You have already participated in the event');
+        location.replace("/schedule/")
+      }
     </script>
 </body>
 </html>
