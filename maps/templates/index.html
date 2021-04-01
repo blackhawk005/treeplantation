@@ -149,9 +149,9 @@
         <label for="id_name" style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif; display: none;" id="name_1" >Name</label>
             <input type="text" class="form-control" name="contact_management_name" id="id_name" value="NA" style="display: none;"><br>
         <label for="id_num" style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif; display: none;" id="num_1" >Contact Number</label>
-            <input type="text" class="form-control" name="contact_management_num" id="id_num" value="NA" style="display: none;"><br>
+            <input type="text" class="form-control" name="contact_management_num" id="id_num" onkeyup="check()" value="NA" style="display: none;"><br>
             <br><br>
-        <input type="submit" class="btn reg-btn btn-primary" value="Submit">
+        <input type="submit" class="btn reg-btn btn-primary" id="reg_btn" value="Submit" >
     </form>
     <script>
       var y = 0;
@@ -163,6 +163,7 @@
           document.getElementById("num_1").style.display = "block";
           document.getElementById("id_num").style.display = "block";
           y = 1;
+          document.getElementById("reg_btn").disabled = true;
         }
         else{
           document.getElementById("management_info").style.display = "none";
@@ -171,9 +172,29 @@
           document.getElementById("num_1").style.display = "none";
           document.getElementById("id_num").style.display = "none";
           y = 0;
+          document.getElementById("reg_btn").disabled = false;
         }
         
       }
+
+      function check(){
+    var mobile = document.getElementById('id_num');
+    var message = document.getElementById('reg_btn');
+
+   var goodColor = "green";
+    var badColor = "red";
+  
+    if(mobile.value.length!=10){
+        mobile.style.color = badColor;
+        document.getElementById("reg_btn").disabled = true;
+    }
+    else{
+      mobile.style.color = goodColor;
+      document.getElementById("reg_btn").disabled = false;
+    }
+  }
+
+      
     </script>
 </div>
 </div>
