@@ -47,10 +47,10 @@ nav{
   
   .register-form{
     margin: 50px;
-    padding: 32px;
-    padding-right: 64px;
-    padding-left: 64px;
+    padding-right: 5%;
+    padding-left: 5%;
     padding-bottom: 11px;
+    padding-top: 11px;
     text-align: center;
   }
   .nav-link:hover {
