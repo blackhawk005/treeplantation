@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 26, 2021 at 12:53 PM
+-- Generation Time: Apr 02, 2021 at 08:38 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.1
 
@@ -106,6 +106,13 @@ CREATE TABLE `auth_user` (
   `is_active` tinyint(1) NOT NULL,
   `date_joined` datetime(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `auth_user`
+--
+
+INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`) VALUES
+(10, 'pbkdf2_sha256$216000$3ns2GeAlFYCY$XeCYYfY85lGMnc4xhWU59TA+XqeU++uVHquGx+QlXNM=', '2021-04-01 16:03:34.376244', 1, 'treeasureadmin', '', '', 'treeasurenss@gmail.com', 1, 1, '2021-04-01 16:00:17.140895');
 
 -- --------------------------------------------------------
 
@@ -227,8 +234,21 @@ CREATE TABLE `django_session` (
 
 INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
 ('8i5r0wr0af2vreepx2cup80shd96w58w', '.eJxVjDsOwjAQBe_iGln-b0JJzxmstb2LA8iR4qRC3B0ipYD2zcx7iYjbWuPWaYlTEWfhxOl3S5gf1HZQ7thus8xzW5cpyV2RB-3yOhd6Xg7376Bir9-aLQ7MAZxhPyrL3qCnRGZEYBzAE6MNIRBonbNXGcgl1k5BsIl8AfH-APbVOEY:1lOn4D:030i0-UFLSaXm2Z4T3sznRj08F4WcAwAJfqy1RvZg54', '2021-04-06 19:51:53.587403'),
-('fgxia5eoi6pjboy3yek5jolwg4reje1z', '.eJxVjDsOwjAQBe_iGll2_Kek5wzW7nqDA8iR4qRC3B0ipYD2zcx7iQzbWvPWeclTEWdhxOl3Q6AHtx2UO7TbLGlu6zKh3BV50C6vc-Hn5XD_Dir0-q1HG5CYIxkclPI6aIs0OsSYki8AIXljfKDkEKxDjQRxUMY5KuitZ_H-APV7ODI:1lPQz0:nA9NMhX3oHex13iIHuQ6-JnnB2pMVkBMcj34Sjtyyo0', '2021-04-08 14:29:10.145028'),
+('elg7gvo9wqnky3fxv0a8bcf1m321reve', '.eJxVjEEOwiAQRe_C2pABLBSX7nsGMjCDVA0kpV0Z765NutDtf-_9lwi4rSVsnZcwk7gIBeL0O0ZMD647oTvWW5Op1XWZo9wVedAup0b8vB7u30HBXr71AANDMo6toUROWW1GmzO40VpNyeuB8lmh8eBBe9SWs3fOG3QAOTKK9wfqZTeA:1lRznC:RRyJXj0bprRjgzavc19estRdX3WJKddHKD3LaK91lIg', '2021-04-15 16:03:34.435800'),
 ('qwks2vygs4vfwq5fwaar26mrev99ad1m', '.eJxVjMsOwiAQRf-FtSF05DG4dO83EGCmUjWQlHZl_HfbpAvd3nPOfYsQ16WEtfMcJhIXMYjT75ZifnLdAT1ivTeZW13mKcldkQft8taIX9fD_TsosZetduCNIbYenCeGM6NHMIq09jkpynEwzirj8mZw0iMB4OgYI2qr0YP4fAHFhzcQ:1l7Lb7:8-NWeKHxfmEGT3RUrkrFEjlvIRmYsZqJbAJY3RHoUJE', '2021-02-17 17:05:45.009237');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `home_users`
+--
+
+CREATE TABLE `home_users` (
+  `user` varchar(255) DEFAULT NULL,
+  `report` varchar(225) DEFAULT NULL,
+  `reported_map` varchar(255) DEFAULT '',
+  `reported_event` varchar(255) DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -245,7 +265,8 @@ CREATE TABLE `maps_blog` (
   `contact_management_name` varchar(50) DEFAULT NULL,
   `contact_management_num` varchar(50) DEFAULT NULL,
   `id` int(254) NOT NULL,
-  `unique_id` varchar(50) DEFAULT NULL
+  `unique_id` varchar(50) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -279,7 +300,9 @@ CREATE TABLE `schedule_pastevents` (
   `info` varchar(255) DEFAULT NULL,
   `unique_id` varchar(255) DEFAULT NULL,
   `event_name` varchar(255) DEFAULT NULL,
-  `id` int(255) NOT NULL
+  `id` int(255) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `reported` varchar(255) DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -296,7 +319,9 @@ CREATE TABLE `schedule_tt` (
   `info` varchar(300) DEFAULT NULL,
   `unique_id` varchar(400) DEFAULT NULL,
   `event_name` varchar(300) DEFAULT NULL,
-  `id` int(254) NOT NULL
+  `id` int(254) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `reported` varchar(255) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -426,7 +451,7 @@ ALTER TABLE `auth_permission`
 -- AUTO_INCREMENT for table `auth_user`
 --
 ALTER TABLE `auth_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `auth_user_groups`
@@ -444,7 +469,7 @@ ALTER TABLE `auth_user_user_permissions`
 -- AUTO_INCREMENT for table `django_admin_log`
 --
 ALTER TABLE `django_admin_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `django_content_type`
@@ -462,25 +487,25 @@ ALTER TABLE `django_migrations`
 -- AUTO_INCREMENT for table `maps_blog`
 --
 ALTER TABLE `maps_blog`
-  MODIFY `id` int(254) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(254) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `schedule_participants`
 --
 ALTER TABLE `schedule_participants`
-  MODIFY `id` int(254) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(254) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `schedule_pastevents`
 --
 ALTER TABLE `schedule_pastevents`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `schedule_tt`
 --
 ALTER TABLE `schedule_tt`
-  MODIFY `id` int(254) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(254) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Constraints for dumped tables
