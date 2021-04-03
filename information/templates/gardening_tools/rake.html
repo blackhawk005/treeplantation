@@ -8,6 +8,8 @@
     <title>Rake Tool</title>
 
     <link rel="stylesheet" href="{% static 'css_info/gardening_tools/rake.css' %}">
+    <link rel="stylesheet" href="{% static 'css_info/navbar.css' %}">
+
 
      <!-- Latest compiled and minified CSS -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -42,7 +44,7 @@
 
   
 
-    <nav class="navbar navbar-expand-lg ">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
       <a class="navbar-brand" href="/"><img src="{% static 'images/tree2.png' %}" height="40px"></a>
       <button
         class="navbar-toggler btn-outline-light"
@@ -59,39 +61,19 @@
       <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+            <a class="home-nav-link nav-link" href="#intro">Introduction</a>
           </li>
-
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="#type">Types</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="#step">Steps</a>
+          </li>
           {% if user.is_authenticated %}
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
-          </li>
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
-          </li>
-          {% else %}
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/register/">Register</a>
-          </li>
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/login/">Login</a>
-          </li>
-          {% endif %}
-          
-          <!-- <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/about/">About us</a>
-          </li>
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
-          </li> -->
-          {% if user.is_authenticated %}
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/logout/">Logout</a>
-          </li>
-          {% endif %}
+                <li class="nav-item">
+                    <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+                </li>
+                {% endif %}
         </ul>
       </div>
     </nav>
@@ -104,7 +86,7 @@
       </div>
   </div>
 
-  <section class="section section-dark">
+  <section class="section section-dark" id="intro">
 
    
 
@@ -117,7 +99,7 @@
 
   <div class="pimg2">
 
-      <section class="section section-dark">
+      <section class="section section-dark" id="type">
         <h1>TYPES</h1>
         <p >
           
@@ -129,7 +111,7 @@
   
   <div class="pimg3">
 
-  <section class="section section-dark">
+  <section class="section section-dark" id="step">
     <h1>STEPS</h1>
     <p>
       1)PLACE THE RINES ON THE FLOOR AND APPLY LITTLE BIT PRESSURE<br>

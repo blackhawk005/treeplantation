@@ -110,7 +110,7 @@ def mail_seder(receiver_email, user, event, date, place, flag):
                 Welcome to treeasure. Make sure you authenticate your account within 2 days of making your account. 
                 On failing to do so will result in dismissal of your account. 
                 If already authenticated during the registration process, kindly ignore this message
-                To authenticate, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQHXTjRni7cgm2Gsh8aYtJtpLN2wGhtNeASD-As2N4TxoXqA/viewform?usp=sf_link">Click here </a>
+                To authenticate, <a href="https://forms.gle/7LXQsSb9HvZCf7m27">Click here </a>
             </p>
             </body>
         </html>

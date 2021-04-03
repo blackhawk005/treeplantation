@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie+edge">
     <title>Papaya Tree</title>
     <link rel="stylesheet" href="{% static 'css_info/gardening_tools/sawstyle.css' %}">
+    <link rel="stylesheet" href="{% static 'css_info/navbar.css' %}">
+
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -32,7 +34,7 @@
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">&#8593;</button>  <!--back to top button-->
 
-    <nav class="navbar navbar-expand-lg ">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
       <a class="navbar-brand" href="/"><img src="{% static 'images/tree2.png' %}" height="40px"></a>
       <button
         class="navbar-toggler btn-outline-light"
@@ -49,39 +51,16 @@
       <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+            <a class="home-nav-link nav-link" href="#intro">Introduction</a>
           </li>
-
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="#whenuse">When to use</a>
+          </li>
           {% if user.is_authenticated %}
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
-          </li>
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
-          </li>
-          {% else %}
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/register/">Register</a>
-          </li>
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/login/">Login</a>
-          </li>
-          {% endif %}
-          
-          <!-- <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/about/">About us</a>
-          </li>
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
-          </li> -->
-          {% if user.is_authenticated %}
-          <li class="nav-item">
-            <a class="home-nav-link nav-link" href="/logout/">Logout</a>
-          </li>
-          {% endif %}
+                <li class="nav-item">
+                    <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+                </li>
+                {% endif %}
         </ul>
       </div>
     </nav>
@@ -94,7 +73,7 @@
       </div>
     </div>
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="intro">
       <p>
         A pruning saw is a tool with the same sharp teeth as saws used for cutting lumber. But pruning saws are intended to help you trim larger shrubs and smaller tree branches.
       </p>
@@ -103,7 +82,7 @@
   <div class="pimg2">
     </div>
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="whenuse">
       <h2>When to use?</h2>
       <p>
         Shrubs and trees will need shaping and pruning from time to time, not to mention those woody weeds like briars that will need to be tackled too.

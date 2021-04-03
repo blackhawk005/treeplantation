@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turmeric Plant &#127793;</title>
+    <title>Fork &#127793;</title>
 
     <link rel="stylesheet" href="{% static 'css_info/gardening_tools/fork.css' %}">
+    <link rel="stylesheet" href="{% static 'css_info/navbar.css' %}">
     
    
      <!-- Latest compiled and minified CSS -->
@@ -34,8 +35,9 @@
      
 </head>
 <body>
-
-  <nav class="navbar navbar-expand-lg ">
+  <button onclick="topFunction()" id="myBtn" title="Go to top">&#8593;</button>  <!--back to top button-->
+  <script src="{% static 'js/scroll.js' %}"></script>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
     <a class="navbar-brand" href="/"><img src="{% static 'images/tree2.png' %}" height="40px"></a>
     <button
       class="navbar-toggler btn-outline-light"
@@ -52,47 +54,26 @@
     <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/information/">Plant Information</a>
+          <a class="home-nav-link nav-link" href="#desc">Description</a>
         </li>
-
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="#purp">Purpose</a>
+        </li>
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="#use">USefullness</a>
+        </li>
+        <li class="nav-item">
+          <a class="home-nav-link nav-link" href="#dif">Difference</a>
+        </li>
         {% if user.is_authenticated %}
-        <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/functionality/">Maps</a>
-        </li>
-        <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/geofence/">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
-        </li>
-        {% else %}
-        <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/register/">Register</a>
-        </li>
-        <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/login/">Login</a>
-        </li>
-        {% endif %}
-        
-        <!-- <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/about/">About us</a>
-        </li>
-        <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
-        </li> -->
-        {% if user.is_authenticated %}
-        <li class="nav-item">
-          <a class="home-nav-link nav-link" href="/logout/">Logout</a>
-        </li>
-        {% endif %}
+              <li class="nav-item">
+                  <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+              </li>
+              {% endif %}
       </ul>
     </div>
   </nav>
-
-  <button onclick="topFunction()" id="myBtn" title="Go to top">&#8593;</button>  <!--back to top button-->
-
     
- 
     <div class="pimg1">
 
         <div class="ptext">
@@ -102,9 +83,9 @@
         </div>
     </div>
 
-    <section class="section section-dark">
+    <section class="section section-dark" id="desc">
 
-      <h1>DESCRIPTION</h1>
+      <h2>DESCRIPTION</h2>
 
      <p> It is a gardening implement, with a handle and several (usually four) short. 
        </p>
@@ -112,8 +93,8 @@
 
     <div class="pimg2">
 
-        <section class="section section-dark">
-          <h1>PURPOSE</h1>
+        <section class="section section-dark" id="purp">
+          <h2>PURPOSE</h2>
           <p >
             It is used for loosening, lifting and turning over soil in gardening and farming.
           </p>
@@ -122,8 +103,8 @@
     
     <div class="pimg3">
 
-    <section class="section section-dark">
-      <h1>USEFULNESS</h1>
+    <section class="section section-dark" id="use">
+      <h2>USEFULNESS</h2>
       <p>
         The tines allow the implement to be pushed more easily into the ground, it can take out stones and weeds and break up clods, it is not so easily stopped by stones, and it does not cut through weed roots or root-crops.
       </p>
@@ -134,8 +115,8 @@
 
     <div class="pimg4">
 
-        <section class="section section-dark">
-            <h1>DIFFERENCE</h1>
+        <section class="section section-dark" id="dif">
+            <h2>DIFFERENCE</h2>
             <p>
               Garden forks are slightly different from pitchforks, which are used for moving loose materials such as piled hay, compost, or manure. 
 Garden forks have comparatively a fairly short, usually wooden handle, with a "D" or "T" end. 
@@ -171,9 +152,9 @@ Their tines are usually shorter, flatter, thicker, and more closely spaced.
       <!--back to top end-->
     
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
+ -->
 
 </body>
 </html>

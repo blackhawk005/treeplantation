@@ -1,0 +1,8 @@
+.navbar-custom{
+  background-image: linear-gradient(to left,#01201d,#5e804d);
+}
+
+nav{
+  border-bottom: 1px solid white;
+  background: rgba(0, 0, 0, 0.4);
+}
