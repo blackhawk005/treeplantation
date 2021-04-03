@@ -9,6 +9,7 @@ from .past_or_present import past_or_present
 import threading
 import random
 from .send_mail import mail_seder
+from home.mysql import mysqldb
 # Create your views here.
 
 def index(request):
@@ -48,16 +49,7 @@ def delete_blog(request):
     t1.start()
     if (request.method=='POST'):
         unique_id = request.POST['hidden_unique_id']
-        try:
-            mydb = MySQLdb.connect(
-                "localhost",
-                "root",
-                "",
-                "plantation"
-            )
-        except:
-            print("Can't connect to database")
-            return
+        mydb = mysqldb()
         mycursor = mydb.cursor()
         query = "DELETE FROM maps_blog WHERE unique_id='"+unique_id+"'"
         mycursor.execute(query)
@@ -70,16 +62,7 @@ def report_blog(request):
     if (request.method=='POST'):
         unique_id = request.POST['hidden_unique_id']
         print('unique_id:', unique_id)
-        try:
-            mydb = MySQLdb.connect(
-                "localhost",
-                "root",
-                "",
-                "plantation"
-            )
-        except:
-            print("Can't connect to database")
-            return
+        mydb = mysqldb()
         flag = 3
         mycursor = mydb.cursor()
         query = "select * from home_users where user in (select user from maps_blog where unique_id="+'"'+unique_id+'")'

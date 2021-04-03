@@ -2,6 +2,7 @@ import MySQLdb
 import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from home.mysql import mysqldb
 
 def mail_seder(receiver_email, user, event, date, place, flag):
     sender_email = "treeasurenss@gmail.com"
@@ -31,12 +32,13 @@ def mail_seder(receiver_email, user, event, date, place, flag):
         """
     elif flag==0:
         message["Subject"] = "Nature is calling you........"
-        mydb = MySQLdb.connect(
-        "localhost",
-        "root",
-        "",
-        "plantation"
-        )
+        # mydb = MySQLdb.connect(
+        # "localhost",
+        # "root",
+        # "",
+        # "plantation"
+        # )
+        mydb = mysqldb()
         mycursor = mydb.cursor()
         query = 'select info from schedule_tt where event_name="'+event+'"'
         mycursor.execute(query)
@@ -135,12 +137,13 @@ def mail_seder(receiver_email, user, event, date, place, flag):
 
 
 def send_email(username, event, date, place, flag):
-    mydb = MySQLdb.connect(
-        "localhost",
-        "root",
-        "",
-        "plantation"
-    )
+    # mydb = MySQLdb.connect(
+    #     "localhost",
+    #     "root",
+    #     "",
+    #     "plantation"
+    # )
+    mydb = mysqldb()
     mycursor = mydb.cursor()
     print(username)
     if flag == 0:

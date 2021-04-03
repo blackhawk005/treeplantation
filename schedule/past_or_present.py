@@ -1,4 +1,5 @@
 from datetime import date, datetime
+from home.mysql import mysqldb
 import MySQLdb
 
 def past_or_present():
@@ -9,12 +10,13 @@ def past_or_present():
     # dd/mm/YY H:M:S
     dt_string = now.strftime("%y-%m-%d %H:%M:%S")
     print(dt_string)
-    mydb = MySQLdb.connect(
-        "localhost",
-        "root",
-        "",
-        "plantation"
-    )
+    # mydb = MySQLdb.connect(
+    #     "localhost",
+    #     "root",
+    #     "",
+    #     "plantation"
+    # )
+    mydb = mysqldb()
     mycursor = mydb.cursor()
     # query ='INSERT INTO schedule_pastevents SELECT * FROM schedule_tt WHERE unique_id="4284d9f6-5b44-4105-b863-4731de9251b6"'
     query = 'SELECT date, time, unique_id from schedule_tt'

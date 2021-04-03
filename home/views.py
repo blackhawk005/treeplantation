@@ -1,3 +1,4 @@
+from home.mysql import mysqldb
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
@@ -112,16 +113,7 @@ def delete_hosted_event(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
     unique_id = request.POST['hidden_unique_id']
-    try:
-        mydb = MySQLdb.connect(
-            "localhost",
-            "root",
-            "",
-            "plantation"
-        )
-    except:
-        print("Can't connect to database")
-        return
+    mydb = mysqldb()
     mycursor = mydb.cursor()
     query = "DELETE FROM schedule_tt WHERE unique_id='"+unique_id+"'"
     mycursor.execute(query)
@@ -135,16 +127,7 @@ def delete_participated_events(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
     unique_id = request.POST['hidden_unique_id']
-    try:
-        mydb = MySQLdb.connect(
-            "localhost",
-            "root",
-            "",
-            "plantation"
-        )
-    except:
-        print("Can't connect to database")
-        return
+    mydb = mysqldb()
     mycursor = mydb.cursor()
     query = "DELETE FROM schedule_participants WHERE unique_id='"+unique_id+"'"
     mycursor.execute(query)
@@ -155,16 +138,7 @@ def delete_map_blog(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
     unique_id = request.POST['hidden_unique_id']
-    try:
-        mydb = MySQLdb.connect(
-            "localhost",
-            "root",
-            "",
-            "plantation"
-        )
-    except:
-        print("Can't connect to database")
-        return
+    mydb = mysqldb()
     mycursor = mydb.cursor()
     query = "DELETE FROM maps_blog WHERE unique_id='"+unique_id+"'"
     mycursor.execute(query)

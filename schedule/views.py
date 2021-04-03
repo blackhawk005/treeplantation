@@ -11,6 +11,7 @@ from .past_or_present import past_or_present
 import threading
 import random
 from .send_mail import mail_seder
+from home.mysql import mysqldb
 
 # Create your views here.
 
@@ -66,16 +67,17 @@ def send_data(request):
         place = request.POST['hidden_place']
         current_user = request.user.username
         print(current_user)
-        try:
-            mydb = MySQLdb.connect(
-                "localhost",
-                "root",
-                "",
-                "plantation"
-            )
-        except:
-            print("Can't connect to database")
-            return
+        # try:
+        #     mydb = MySQLdb.connect(
+        #         "localhost",
+        #         "root",
+        #         "",
+        #         "plantation"
+        #     )
+        # except:
+        #     print("Can't connect to database")
+        #     return
+        mydb = mysqldb()
         mycursor = mydb.cursor()
         mycursor.execute("SELECT * FROM schedule_participants")
         result = mycursor.fetchall()
@@ -103,16 +105,17 @@ def delete_data(request):
     t1.start()
     if (request.method=='POST'):
         unique_id = request.POST['hidden_unique_id']
-        try:
-            mydb = MySQLdb.connect(
-                "localhost",
-                "root",
-                "",
-                "plantation"
-            )
-        except:
-            print("Can't connect to database")
-            return
+        # try:
+        #     mydb = MySQLdb.connect(
+        #         "localhost",
+        #         "root",
+        #         "",
+        #         "plantation"
+        #     )
+        # except:
+        #     print("Can't connect to database")
+        #     return
+        mydb = mysqldb()
         mycursor = mydb.cursor()
         query = "DELETE FROM schedule_tt WHERE unique_id='"+unique_id+"'"
         mycursor.execute(query)
@@ -129,16 +132,17 @@ def report_event(request):
         unique_id = request.POST['hidden_unique_id']
         event_name = request.POST['hidden_event_name']
         print('unique_id:', unique_id)
-        try:
-            mydb = MySQLdb.connect(
-                "localhost",
-                "root",
-                "",
-                "plantation"
-            )
-        except:
-            print("Can't connect to database")
-            return
+        # try:
+        #     mydb = MySQLdb.connect(
+        #         "localhost",
+        #         "root",
+        #         "",
+        #         "plantation"
+        #     )
+        # except:
+        #     print("Can't connect to database")
+        #     return
+        mydb = mysqldb()
         flag = 3
         mycursor = mydb.cursor()
         query = "select * from home_users where user in (select user from schedule_tt where unique_id="+'"'+unique_id+'")'
