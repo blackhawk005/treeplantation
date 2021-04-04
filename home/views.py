@@ -18,7 +18,7 @@ from .send_mail import mail_seder
 def index(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
-    past_or_present()
+    # past_or_present()
     past_presents = pastevents.objects.all()
     return render(request, 'home/index.html', {'past_presents':past_presents})
 
