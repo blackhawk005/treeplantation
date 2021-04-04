@@ -131,11 +131,9 @@ p {
 
   .pimg1{
     background-image: url(/static/images/images/about1.jpg);
-  min-height: 80%;
-  min-width: 60%;
+  min-height: 8vw;
+  min-width: 6vw;
   }
-
-  
 }
 
 @media all and (min-width: 992px) {
