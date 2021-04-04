@@ -34,7 +34,7 @@ def saplings(request):
 def page_open_tomato(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
-    return render(request, 'indoor_plants/tomato.html')
+    return render(request, 'indoor_plants/Tomato.html')
 
 def page_open_lemon(request):
     t1 = threading.Thread(target=past_or_present)
@@ -141,7 +141,7 @@ def page_open_neem(request):
 def page_open_ashoka(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
-    return render(request, 'outdoor_plants/ashoka.html')
+    return render(request, 'outdoor_plants/Ashoka.html')
 
 
 # tools
