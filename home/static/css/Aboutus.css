@@ -123,14 +123,15 @@ p {
 
 }
 
-@media screen and (min-width:200px) and (max-width:670px){
+@media screen and (min-width:240px) and (max-width:670px){
   p{
     font-size: 75%;
     text-align: left;
   }
 
   .pimg1{
-    background-size: contain;
+    background-image: url(/static/images/images/about1.jpg);
+    background-size: cover;
   }
 }
 
