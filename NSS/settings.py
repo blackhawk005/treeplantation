@@ -78,13 +78,15 @@ WSGI_APPLICATION = 'NSS.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# mysql://bf07c1db527b49:3caf1e6d@us-cdbr-east-03.cleardb.com/heroku_7c0e58c726f0b71?reconnect=true
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'plantation',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
+        'NAME': 'heroku_7c0e58c726f0b71',
+        'USER': 'bf07c1db527b49',
+        'PASSWORD': '3caf1e6d',
+        'HOST': 'us-cdbr-east-03.cleardb.com',
     }
 }
 
