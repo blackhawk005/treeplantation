@@ -26,6 +26,6 @@ urlpatterns = [
     path('maps/', include('maps.urls')),
     path('schedule/', include('schedule.urls')),
 
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^media/$', serve,{'document_root':       settings.MEDIA_ROOT}), 
     url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]
