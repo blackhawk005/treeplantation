@@ -4,9 +4,9 @@ def mysqldb():
     try:
         mydb = MySQLdb.connect(
             "localhost",
-            "coswebin_treeasurenss",
-            "zthaL6#=HiTN",
-            "coswebin_treeasurenss"
+            "root",
+            "",
+            "plantation"
         )
     except:
         print("Can't connect to database")
