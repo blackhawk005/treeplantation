@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '&a%k#g+bsqh$zvfy0jg7$e6s_1+^fizy0=z@t-m%z(s&=q8(@i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', '192.168.29.132', 'treeasurenss.siesgst.ac.in', 'treeasurenss.herokuapp.com']
 
@@ -130,8 +130,8 @@ PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 STATIC_URL = '/static/'
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # location for server to store files
-# MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # location for server to store files
+MEDIA_URL = '/media/'
 
-MEDIA_URL = 'http://treeasurenss.heroku.com/media/'
-MEDIA_ROOT = '/home/admin/webapps/static_media'
+# MEDIA_URL = 'http://treeasurenss.heroku.com/media/'
+# MEDIA_ROOT = '/home/admin/webapps/static_media'
