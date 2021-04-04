@@ -131,7 +131,7 @@ p {
 
   .pimg1{
     background-image: url(/static/images/images/about1.jpg);
-    background-size: contain;
+    background-size: 80%;
   }
 }
 
