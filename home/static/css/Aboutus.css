@@ -6,7 +6,8 @@ html {
   font-family: "Lato", sans-serif;
   font-weight: 200;
   line-height: 1.8em;
-  background-image: #000;
+  color: #666;
+  background-image: linear-gradient(to left, #0000, #0000);
 }
 
 /* Navbar section */
