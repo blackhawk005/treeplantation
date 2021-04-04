@@ -130,7 +130,7 @@ p {
   }
 
   .pimg1{
-    background-size: contain;
+    background-size: cover;
   }
 }
 
