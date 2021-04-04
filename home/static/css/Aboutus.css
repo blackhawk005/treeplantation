@@ -131,7 +131,8 @@ p {
 
   .pimg1{
     background-image: url(/static/images/images/about1.jpg);
-  min-height: 100%;
+  min-height: 60%;
+  min-width: 60%;
   }
 
   
