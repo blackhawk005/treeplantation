@@ -50,6 +50,7 @@
                 <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
                     <form class="form-inline" method="POST">
+                        {% csrf_token %}
                         <li class="nav-item">
                           <input class="form-control" id="search_bar" type="search" onkeyup="myFunction()" placeholder="SEARCH..." style="width: 100%;">
                       </li>
