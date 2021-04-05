@@ -138,7 +138,7 @@
       <div><img style="filter: blur(50); height:50%; width:50%;" src="/maps{{ blog.image }}"></div><br>
       <h2> <b>Address:</b> {{ blog.address }}</h2>
       <br>
-        {% if blog.maps_link[0:5] != 'https' %}
+        {% if blog.maps_link == 'NA' %}
         <h4> <b>User :</b> {{ blog.user }}</h4>
         {% else %}
         <h4 style="position: absolute; left:5%;"> <b>User:</b> {{ blog.user }}</h4>
