@@ -160,20 +160,15 @@
         <input class="btn btn-dark" type="submit" id="submit" disabled>
       </form>
       <script>
-        let y;
-        var check = getElementById("id_permission");
+        var y=0;
         function enableForm() {
-          if(check.checked==true){
-            y = 0;
-          }
-          else{
-            y = 1;
-          }
           if(y==0){
             document.getElementById("submit").disabled = false;
+            y = 1;
           }
           else{
             document.getElementById("submit").disabled = true;
+            y = 1;
           }
         }
       </script>
