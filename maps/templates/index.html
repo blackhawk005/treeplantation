@@ -136,7 +136,7 @@
     <div class="">
       <h2 class="" style="font-size: 32px;"><b>Details of location</b></h2>
 
-    <form action="/maps/your-name" name="form1" style="padding: 10%;" method="post" >
+    <form action="/maps/your-name" name="form1" style="padding: 10%;" method="post" onsubmit="required()">
       {% csrf_token %}
         <label for="id_address" style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;" >Address:</label>
             <textarea class="form-control" name="address" id="id_address" required></textarea><br>
