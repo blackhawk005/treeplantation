@@ -18,6 +18,7 @@
                 <h1>Login</h1>
                 <div class="login-form">
                    <form action="/login/" method="POST">
+                    {% csrf_token %}
                        <input type="text" class="form-control" name="user_name" placeholder="Username"><br>
                        <input type="password" class="form-control" name="pass" placeholder="Password"><br>
                        <input type="submit" class="btn login-btn btn-primary" value="Login">
