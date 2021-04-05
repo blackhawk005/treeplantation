@@ -160,6 +160,7 @@
         {% else %}
         <div class="row" style="justify-content: center;">
         <form  action="send_data" method="POST" >
+          {% csrf_token %}
           <input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
           <input type="hidden" name="hidden_event_name" value="{{ tt.event_name }}">
           <input type="hidden" name="hidden_date" value="{{ tt.date }}">
@@ -169,6 +170,7 @@
         </form>
         
         <form   action="/schedule/report_event" method="POST" style="margin-left: 5%;">
+          {% csrf_token %}
             <input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
             <input type="hidden" name="hidden_event_name" value="{{ tt.event_name }}">
             <input class=" report-btn " type="submit" value="Report">
