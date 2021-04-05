@@ -189,6 +189,13 @@ h3{
 }
 
 
+@media screen and (min-width:340px) and (max-width:670px){
+    .login-left{
+        justify-content: center;
+    }
+      
+
+  }
 
 
 .login-left h1
