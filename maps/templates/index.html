@@ -136,20 +136,20 @@
     <div class="">
       <h2 class="" style="font-size: 32px;"><b>Details of location</b></h2>
 
-    <form action="/maps/your-name" name="form1" style="padding: 10%;" method="post" onsubmit="required()">
+    <form action="/maps/your-name" name="form1" style="padding: 10%;" method="post" >
         <label for="id_address" style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;" >Address:</label>
             <textarea class="form-control" name="address" id="id_address" required></textarea><br>
         <label for="id_link" style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;" >Link:</label>
-            <input type="text" class="form-control" name="maps_link" id="id_link" value="NA"><br>
+            <input type="text" class="form-control" name="maps_link" id="id_link" value="NA" required><br>
         <label for="id_area" style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;" >Approx Size Of Place For Plantation:</label>
-            <input type="text" class="form-control" name="area" id="id_area" ><br>
+            <input type="text" class="form-control" name="area" id="id_area" required><br>
         <label for="id_permission" style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;" >Permission Required ( Leave blank if not sure ) </label>
-            <input type="checkbox" onclick="enableForm()" class="form-control" name="permission_required" id="id_permission"><br>
+            <input type="checkbox" onclick="enableForm()" class="form-control" name="permission_required" id="id_permission" ><br>
         <h2 class="text-success" style="font-size: 32px; font-family: Georgia, 'Times New Roman', Times, serif; display: none;" id="management_info">Management info (If any)</h2>
         <label for="id_name" style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif; display: none;" id="name_1" >Name</label>
-            <input type="text" class="form-control" name="contact_management_name" id="id_name" value="NA" style="display: none;"><br>
+            <input type="text" class="form-control" name="contact_management_name" id="id_name" value="NA" style="display: none;" required><br>
         <label for="id_num" style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif; display: none;" id="num_1" >Contact Number</label>
-            <input type="text" class="form-control" name="contact_management_num" id="id_num" onkeyup="check()" value="NA" style="display: none;"><br>
+            <input type="text" class="form-control" name="contact_management_num" id="id_num" onkeyup="check()" value="NA" style="display: none;" required><br>
             <br><br>
         <input type="submit" class="btn reg-btn btn-primary" id="reg_btn" value="Submit" >
     </form>
