@@ -2,6 +2,9 @@ from django.urls import path
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls import url
+from django.conf import settings
+from django.views.static import serve
 
 urlpatterns = [
     # ex: /
@@ -11,6 +14,9 @@ urlpatterns = [
      path('send_data', views.send_data, name='send_data' ),
      path('delete_data', views.delete_data, name='delete_data' ),
      path('terms',views.terms, name='terms'),
-     path('report_event', views.report_event, name='report_event')
-]+ static(settings.MEDIA_URL, 
-                              document_root=settings.MEDIA_ROOT)
+     path('report_event', views.report_event, name='report_event'),
+
+     url(r'^media/(?P<path>.*)$',  serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root':       settings.STATIC_ROOT}),]
+# ]+ static(settings.MEDIA_URL, 
+#                               document_root=settings.MEDIA_ROOT)

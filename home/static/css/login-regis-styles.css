@@ -19,8 +19,15 @@ img{
 {
     background-image: linear-gradient(to right,#01201d,#5e804d);
     margin-top: 60px;
-    margin-left: 70px;
+    padding-left: 10%;
 }
+
+@media screen and (min-width:340px) and (max-width:670px){
+    .regis-page{
+        padding: 10%;
+    }
+
+  }
 
 .container
 {
@@ -175,7 +182,6 @@ h3{
 {
     background-image: linear-gradient(to left,#01201d,#5e804d);
     margin-top: 120px;
-    margin-left: 70px;
 }
 .login-left
 {
@@ -189,6 +195,14 @@ h3{
 }
 
 
+/* @media screen and (min-width:340px) and (max-width:670px){
+    .row{
+        justify-content: center;
+        margin-left: 7%;
+    }
+      
+
+  } */
 
 
 .login-left h1

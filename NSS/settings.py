@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -23,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '&a%k#g+bsqh$zvfy0jg7$e6s_1+^fizy0=z@t-m%z(s&=q8(@i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', '192.168.29.132', 'treeasurenss.siesgst.ac.in', 'treeasurenss.herokuapp.com']
 
@@ -128,9 +127,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+# print(STATIC_ROOT)
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # location for server to store files
+# MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
+# print(MEDIA_ROOT)
 MEDIA_URL = '/media/'
 
 # MEDIA_URL = 'http://treeasurenss.heroku.com/media/'
