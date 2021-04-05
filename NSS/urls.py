@@ -19,12 +19,14 @@ from django.views.static import serve
 from django.conf.urls import url
 from django.conf import settings
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('information/', include('information.urls')),
     path('maps/', include('maps.urls')),
     path('schedule/', include('schedule.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
 
     url(r'^media/(?P<path>.*)$',  serve,{'document_root':       settings.MEDIA_ROOT}), 
     url(r'^static/(?P<path>.*)$', serve,{'document_root':       settings.STATIC_ROOT}), 

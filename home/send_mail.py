@@ -112,7 +112,6 @@ def mail_seder(receiver_email, user, event, date, place, flag):
             </body>
         </html>
         """
-
     # Turn these into plain/html MIMEText objects
     part1 = MIMEText(text, "plain")
     part2 = MIMEText(html, "html")
