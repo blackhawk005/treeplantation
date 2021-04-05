@@ -154,6 +154,7 @@
         {% if user.is_authenticated %}
         {% if tt.host == user.username %}
         <form action="delete_data" method="POST">
+          {% csrf_token %}
           <input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
           <input class="delete-btn" type="submit" value="Delete">
         </form>
