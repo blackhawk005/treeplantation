@@ -11,6 +11,7 @@ from .past_or_present import past_or_present
 import threading
 from .models import users
 from .send_mail import mail_seder
+from home.user_check import user_check
 
 # Create your views here.
 
@@ -18,6 +19,8 @@ from .send_mail import mail_seder
 def index(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     # past_or_present()
     past_presents = pastevents.objects.all()
     return render(request, 'home/index.html', {'past_presents':past_presents})
@@ -26,6 +29,8 @@ def index(request):
 def login_page(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     if (request.method == 'POST'):
         user_name = request.POST['user_name']
         pass_word = request.POST['pass']
@@ -52,6 +57,8 @@ def login_page(request):
 def register(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     if (request.method == 'POST'):
         first_name = request.POST['first_name']
         if first_name == '':
@@ -104,6 +111,8 @@ def register(request):
 def profile(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     tt_1 = tt.objects.all()
     participants_1 = participants.objects.all()
     blogs = Blog.objects.all()
@@ -112,6 +121,8 @@ def profile(request):
 def delete_hosted_event(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     unique_id = request.POST['hidden_unique_id']
     mydb = mysqldb()
     mycursor = mydb.cursor()
@@ -126,6 +137,8 @@ def delete_hosted_event(request):
 def delete_participated_events(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     unique_id = request.POST['hidden_unique_id']
     mydb = mysqldb()
     mycursor = mydb.cursor()
@@ -137,6 +150,8 @@ def delete_participated_events(request):
 def delete_map_blog(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     unique_id = request.POST['hidden_unique_id']
     mydb = mysqldb()
     mycursor = mydb.cursor()
@@ -149,6 +164,8 @@ def delete_map_blog(request):
 def logout_page(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     logout(request)
     return redirect('/')
 
@@ -156,17 +173,23 @@ def logout_page(request):
 def functionality(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     return render(request, 'home/functionality.html')
 
 # about page
 def about(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     return render(request, 'home/about.html')
 
 # contact us page
 def contact_us(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     return render(request, 'home/contact_us.html')
 

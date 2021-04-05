@@ -1,3 +1,4 @@
+from re import I
 from schedule.send_mail import mail_seder, send_email
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
@@ -10,16 +11,21 @@ import threading
 import random
 from .send_mail import mail_seder
 from home.mysql import mysqldb
+from home.user_check import user_check
 # Create your views here.
 
 def index(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     return render(request, 'index.html')
 
 def get_name(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -47,6 +53,8 @@ def get_name(request):
 def delete_blog(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     if (request.method=='POST'):
         unique_id = request.POST['hidden_unique_id']
         mydb = mysqldb()
@@ -59,6 +67,8 @@ def delete_blog(request):
 def report_blog(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     if (request.method=='POST'):
         unique_id = request.POST['hidden_unique_id']
         print('unique_id:', unique_id)
@@ -113,6 +123,8 @@ def report_blog(request):
 def display_blog_info(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     if (request.method=='GET'):
         # getting all the objects of Map
         Blogs = Blog.objects.all()

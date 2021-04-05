@@ -12,17 +12,22 @@ import threading
 import random
 from .send_mail import mail_seder
 from home.mysql import mysqldb
+from home.user_check import user_check
 
 # Create your views here.
 
 def form_fill(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     return render( request, "create_event.html")
 
 def create_event(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     if request.method == 'POST':
         form = EventForm(request.POST)
         if form.is_valid():
@@ -47,6 +52,8 @@ def create_event(request):
 def display_info(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     if (request.method=='GET'):
         # getting all the objects of Map
         tt_1 = tt.objects.all()
@@ -59,6 +66,8 @@ def display_info(request):
 def send_data(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     if (request.method=='POST'):
         unique_id = request.POST['hidden_unique_id']
         event_name = request.POST['hidden_event_name']
@@ -103,6 +112,8 @@ def send_data(request):
 def delete_data(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     if (request.method=='POST'):
         unique_id = request.POST['hidden_unique_id']
         # try:
@@ -128,6 +139,8 @@ def delete_data(request):
 def report_event(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     if (request.method=='POST'):
         unique_id = request.POST['hidden_unique_id']
         event_name = request.POST['hidden_event_name']
@@ -201,6 +214,10 @@ def report_event(request):
 
 
 def terms(request):
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
     return render( request, "terms.html")
 
 
