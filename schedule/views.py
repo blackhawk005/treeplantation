@@ -13,6 +13,7 @@ import random
 from .send_mail import mail_seder
 from home.mysql import mysqldb
 from home.user_check import user_check
+from datetime import date, datetime
 
 # Create your views here.
 
@@ -21,6 +22,15 @@ def form_fill(request):
     t1.start()
     t2 = threading.Thread(target=user_check)
     t2.start()
+    today = date.today()
+    now = datetime.now()
+    print("now =", now)
+
+    rest_date_time = '2021-04-30 12:00:00'
+    then = datetime.strptime(rest_date_time, '%Y-%m-%d %H:%M:%S')
+    print("then=", then)
+    if now < then:
+        return render(request, "covid.html")
     return render( request, "create_event.html")
 
 def create_event(request):
