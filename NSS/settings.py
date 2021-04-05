@@ -130,7 +130,8 @@ STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 # print(STATIC_ROOT)
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media') # location for server to store files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # location for server to store files
+MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
 # print(MEDIA_ROOT)
 MEDIA_URL = '/media/'
 
