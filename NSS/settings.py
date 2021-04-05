@@ -132,7 +132,7 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # location for server to store files
 # print(MEDIA_ROOT)
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'
 
 # MEDIA_URL = 'http://treeasurenss.heroku.com/media/'
 # MEDIA_ROOT = '/home/admin/webapps/static_media'
