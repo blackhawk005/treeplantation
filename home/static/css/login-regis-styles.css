@@ -189,14 +189,14 @@ h3{
 }
 
 
-@media screen and (min-width:340px) and (max-width:670px){
+/* @media screen and (min-width:340px) and (max-width:670px){
     .row{
         justify-content: center;
         margin-left: 7%;
     }
       
 
-  }
+  } */
 
 
 .login-left h1
