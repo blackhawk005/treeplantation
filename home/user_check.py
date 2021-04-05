@@ -25,4 +25,6 @@ def user_check():
             mycursor.execute(query3)
             query3 = "delete from schedule_tt where host='" + i + "'"
             mycursor.execute(query3)
+            query4 = "delete from home_users where user='" + i + "'"
+            mycursor.execute(query4)
             mydb.commit()
