@@ -144,6 +144,7 @@
     <div class="col-md-6 reg register-left" style="justify-content: center;">
         <div class="register-form" style="justify-content: center;">
     <form action="create_event" method="POST" style="justify-content: center;">
+      {% csrf_token %}
       <label for="place">Event Name:</label>
         <input class="form-control" type="text" id="event_name" name="event_name" placeholder="Event Name" required><br><br>
         <label for="date">Date:</label>
