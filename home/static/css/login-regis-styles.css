@@ -21,6 +21,13 @@ img{
     margin-top: 60px;
 }
 
+@media screen and (min-width:340px) and (max-width:670px){
+    .regis-page{
+        padding: 10%;
+    }
+
+  }
+
 .container
 {
     box-sizing: border-box;
