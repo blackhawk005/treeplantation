@@ -39,6 +39,8 @@ def get_name(request):
             contact_management_num = form.cleaned_data['contact_management_num']
             x = random.randint(1, 25)
             y_new = "/media/"+str(x)+".svg"
+            if maps_link[0:5] != "https":
+                maps_link = "NA"
             trial = Blog(user=request.user.username, address=address, maps_link=maps_link, area=area, permission_required=str(permission_required),contact_management_name=contact_management_name, contact_management_num=contact_management_num, unique_id=y, image=y_new)
             trial.save()
             # print('hello')
