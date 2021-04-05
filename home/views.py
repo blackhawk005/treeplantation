@@ -46,10 +46,10 @@ def login_page(request):
             return redirect('/')
         elif user is None:
             messages.warning(request, 'Wrong Password')
-            return redirect('login')
+            return redirect('/login/')
         else:
             messages.warning(request, 'Wrong Password')
-            return redirect('login')
+            return redirect('/login/')
     else:
         return render(request, 'home/login.html')
 
