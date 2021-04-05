@@ -135,7 +135,7 @@
     {% for blog in blog_data %}
     <div class="col-md-8 col-lg-6 col-sm-11 col-11 reg register-form register-left" >
       
-      <div><img style="filter: blur(50); height:50%; width:50%;" src="/{{ blog.image }}"></div><br>
+      <div><img style="filter: blur(50); height:50%; width:50%;" src="/maps{{ blog.image }}"></div><br>
       <h2> <b>Address:</b> {{ blog.address }}</h2>
       <br>
         {% if blog.maps_link == 'NA' %}
