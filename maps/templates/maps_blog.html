@@ -142,7 +142,7 @@
         <h4> <b>User :</b> {{ blog.user }}</h4>
         {% else %}
         <h4 style="position: absolute; left:5%;"> <b>User:</b> {{ blog.user }}</h4>
-        <h4 style="position: absolute; right:5%;"><a class="but-text1 " href=" {{ blog.maps_link }} ">Click Here For Map</a></h4>
+        <h4 style="position: absolute; right:5%;"><a class="but-text1 " href=" {{ blog.maps_link }} " target="_blank" rel="noopener noreferrer">Click Here For Map</a></h4>
         {% endif %}
         <br>
         {% if blog.permission_required == '1' %}
