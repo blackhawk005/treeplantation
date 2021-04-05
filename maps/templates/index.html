@@ -136,7 +136,7 @@
     <div class="">
       <h2 class="" style="font-size: 32px;"><b>Details of location</b></h2>
 
-    <form action="/maps/your-name" style="padding: 10%;" method="post">
+    <form action="/maps/your-name" name="form1" style="padding: 10%;" method="post" onsubmit="required()">
         <label for="id_address" style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;" >Address:</label>
             <textarea class="form-control" name="address" id="id_address" required></textarea><br>
         <label for="id_link" style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;" >Link:</label>
@@ -194,7 +194,23 @@
     }
   }
 
-      
+  function required()
+  {
+  var address = document.forms["form1"]["address"].value;
+  var maps_link = document.forms["form1"]["maps_link"].value;
+  var area = document.forms["form1"]["area"].value;
+  
+  if (address == "" || maps_link == "" || area == "")
+  {
+  alert("Please input a Value");
+  return false;
+  }
+  else 
+  {
+  alert('Code has accepted : you can try another');
+  return true; 
+  }
+  }
     </script>
 </div>
 </div>
