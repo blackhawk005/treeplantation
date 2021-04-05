@@ -19,6 +19,7 @@ img{
 {
     background-image: linear-gradient(to right,#01201d,#5e804d);
     margin-top: 60px;
+    padding-left: 10%;
 }
 
 @media screen and (min-width:340px) and (max-width:670px){
