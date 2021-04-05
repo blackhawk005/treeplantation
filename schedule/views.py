@@ -16,7 +16,6 @@ from home.user_check import user_check
 from datetime import date, datetime
 
 # Create your views here.
-
 def form_fill(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
