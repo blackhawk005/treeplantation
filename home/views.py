@@ -38,7 +38,7 @@ def login_page(request):
             pass
         else:
             messages.warning(request, 'Username Doesnot Exist')
-            return redirect('login')
+            return redirect('/login/')
         user = authenticate(username=user_name, password=pass_word)
         print('User Authentication: ',user)
         if user is not None:
