@@ -39,7 +39,6 @@ def create_event(request):
     t2 = threading.Thread(target=user_check)
     t2.start()
 
-    today = date.today()
     now = datetime.now()
     print("now =", now)
     rest_date_time = '2021-05-01 00:00:00'
