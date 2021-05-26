@@ -157,7 +157,7 @@ def delete_data(request):
     today = date.today()
     now = datetime.now()
     print("now =", now)
-    rest_date_time = '2021-05-01 00:00:00'
+    rest_date_time = '2021-06-01 00:00:00'
     then = datetime.strptime(rest_date_time, '%Y-%m-%d %H:%M:%S')
     print("then=", then)
     if now < then:
