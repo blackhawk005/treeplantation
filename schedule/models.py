@@ -29,3 +29,4 @@ class pastevents(models.Model):
     unique_id = models.CharField(max_length=300)
     event_name = models.CharField(max_length=300)
     image = models.CharField(max_length=100)
+

@@ -27,7 +27,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['0.0.0.0:8000', '127.0.0.1', '192.168.29.132', 'treeasurenss.siesgst.ac.in', 'treeasurenss.herokuapp.com']
 
 
-SENDGRID_API_KEY = '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'
+# SENDGRID_API_KEY = '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'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -91,12 +91,23 @@ WSGI_APPLICATION = 'NSS.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'heroku_7c0e58c726f0b71',
-        'USER': 'bf07c1db527b49',
-        'PASSWORD': '3caf1e6d',
-        'HOST': 'us-cdbr-east-03.cleardb.com',
+        'NAME': 'plantation',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'heroku_7c0e58c726f0b71',
+#         'USER': 'bf07c1db527b49',
+#         'PASSWORD': '3caf1e6d',
+#         'HOST': 'us-cdbr-east-03.cleardb.com',
+#     }
+# }
+
 
 
 # Password validation

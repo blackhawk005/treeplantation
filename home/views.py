@@ -1,3 +1,4 @@
+from random import randint
 from home.mysql import mysqldb
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
@@ -40,7 +41,7 @@ def login_page(request):
             messages.warning(request, 'Username Doesnot Exist')
             return redirect('/login/')
         user = authenticate(username=user_name, password=pass_word)
-        print('User Authentication: ',user)
+        # print('User Authentication: ',user)
         if user is not None:
             login(request, user)
             return redirect('/')
@@ -116,7 +117,19 @@ def profile(request):
     tt_1 = tt.objects.all()
     participants_1 = participants.objects.all()
     blogs = Blog.objects.all()
-    return render(request, 'home/profile.html', {'tt_1': tt_1, 'participants_1': participants_1, 'blogs': blogs})
+    event_names = list(tt.objects.filter(host=request.user.username).values_list('unique_id', 'event_name'))
+    print(event_names)
+    x = []
+    for i in range(len(event_names)):
+        all_participants = list(participants.objects.filter(unique_id=event_names[i][0]).values_list('name'))
+        y_1 = list(event_names[i])
+        y_1.append(list(x[0] for x in all_participants))
+        print(tuple(y_1))
+        if len(all_participants) != 0:
+            x.append(tuple(y_1))
+    print(x)
+    # print(all_participant)
+    return render(request, 'home/profile.html', {'tt_1': tt_1, 'participants_1': participants_1, 'blogs': blogs, 'participants': x,})
 
 def delete_hosted_event(request):
     t1 = threading.Thread(target=past_or_present)

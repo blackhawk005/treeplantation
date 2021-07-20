@@ -151,8 +151,8 @@
 </form>
 </div>
 </div>
-    <br><br>
-    <div class="container-fluid" style="position:relative;">
+<br><br>
+<div class="container-fluid" style="position:relative;">
     <div class="col-md-6 register-c order-2 order-md-1  " >
     <form class="login-f" action="delete_hosted_event/" method="POST" class="register-c col-6">
     <h2 style="padding:2%; margin-bottom:80px; margin-top:0; color:black;"><b>Hosted Events</b></h2>
@@ -184,6 +184,33 @@
     </form>
   </div>
 </div>
+<br><br><br>
+
+<div class="container-fluid" style="position:relative;">
+  <div class="col-md-6 register-c order-2 order-md-1  ">
+    <h2>Participants</h2>
+    {% for participant in participants %}
+      <h2 style="padding:2%; margin-bottom:30px; margin-top:0; color:black;"><b>{{participant.1}}</b></h2>
+      <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Participants</th>
+            </tr>
+        </thead>
+        {% for name in participant.2 %}
+          <tbody>
+            <tr>
+              <td>{{name}}</td>
+            </tr>
+          </tbody>
+        {% endfor %}
+    </table>
+    {% endfor %}
+    
+    
+  </div>
+</div>
+
 <br><br>
 <div class="container-fluid" style="position:relative; ">
   <div class="col-md-6 register-c order-2 order-md-1  " >

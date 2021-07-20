@@ -98,7 +98,7 @@ def send_data(request):
     t2 = threading.Thread(target=user_check)
     t2.start()
 
-    today = date.today()
+    # today = date.today()
     now = datetime.now()
     print("now =", now)
     rest_date_time = '2021-05-01 00:00:00'
@@ -141,6 +141,7 @@ def send_data(request):
             send_email(username=request.user.username, event=event_name, date=date, place=place, flag=flag)
             trial = participants(name=request.user.username, email=request.user.email, unique_id=unique_id, event_name=event_name, date=date, time=time, place=place)
             trial.save()
+
         elif flag==1:
             # return redirect("/schedule/", flag='1')
             tt_1 = tt.objects.all()

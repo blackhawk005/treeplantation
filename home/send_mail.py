@@ -133,7 +133,7 @@ def mail_seder(receiver_email, user, event, date, place, flag):
 def send_email(username, event, date, place, flag):
     mydb = mysqldb()
     mycursor = mydb.cursor()
-    print(username)
+    # print(username)
     if flag == 0:
         query = 'select email, username from auth_user where username="'+username+'"'
     else:
