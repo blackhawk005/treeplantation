@@ -136,7 +136,13 @@
     <div class="col-md-8 col-lg-6 col-sm-11 col-11 reg register-form register-left" >
       
       <div><img style="filter: blur(50); height:50%; width:50%;" src="/maps{{ blog.image }}"></div><br>
-      <h2> <b>Address:</b> {{ blog.address }}</h2>
+      <script>
+        var x = "{{blog.address}}"
+        var y = x.split(",")[0]
+        document.getElementById('name_location').value = y
+      </script>
+      <h2 id="name_location"></h2>
+      <h4> <b>Address:</b> {{ blog.address }}</h2>
       <br>
         {% if blog.maps_link == 'NA' %}
         <h4> <b>User :</b> {{ blog.user }}</h4>
