@@ -197,6 +197,8 @@ def send_data(request):
             send_email(username=request.user.username, event=event_name, date=date, place=place, flag=flag)
             trial = participants(name=request.user.username, email=request.user.email, unique_id=unique_id, event_name=event_name, date=date, time=time, place=place)
             trial.save()
+            tt_1 = tt.objects.all()
+            return render(request, 'display_page.html', {'flag': flag, 'tt_1': tt_1})
 
         elif flag==1:
             # return redirect("/schedule/", flag='1')
