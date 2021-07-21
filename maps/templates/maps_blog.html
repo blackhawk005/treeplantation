@@ -1,4 +1,5 @@
 {% load static %}
+{% load maps_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -136,12 +137,10 @@
     <div class="col-md-8 col-lg-6 col-sm-11 col-11 reg register-form register-left" >
       
       <div><img style="filter: blur(50); height:50%; width:50%;" src="/maps{{ blog.image }}"></div><br>
-      <script>
-        var x = "{{blog.address}}"
-        var y = x.split(",")[0]
-        document.getElementById('name_location').value = y
-      </script>
-      <h2 id="name_location"></h2>
+      {% with blog.address|split:',' as strs %}
+      <h2><b>{{strs.0}}</b></h2>
+      {% endwith %}
+      <br>
       <h4> <b>Address:</b> {{ blog.address }}</h4>
       <br>
         {% if blog.maps_link == 'NA' %}

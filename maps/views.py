@@ -132,3 +132,4 @@ def display_blog_info(request):
         Blogs = Blog.objects.all()
         return render(request, 'maps_blog.html', {'blog_data': Blogs})
     return redirect('/geofence/display_maps/')
+
