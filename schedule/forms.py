@@ -5,7 +5,7 @@ class EventForm(forms.Form):
     event_name = forms.CharField(max_length=100)
     date = forms.DateField()
     time = forms.TimeField()
-    place = forms.CharField(max_length=100)
+    place = forms.CharField(widget=forms.Textarea)
     address = forms.CharField(widget=forms.Textarea)
 
 class EditEventForm(forms.Form):

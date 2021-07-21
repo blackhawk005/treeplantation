@@ -73,6 +73,7 @@ def create_event(request):
             t1.start()
             # send_email(username=request.user.username, event=event_name, date=str(date), place=place,flag=1)
             return redirect("/schedule/")
+        return HttpResponse('not very thank you')
     return HttpResponse('not thank you')
 
 def edit_event_form(request):

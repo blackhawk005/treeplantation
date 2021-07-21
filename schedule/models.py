@@ -4,7 +4,7 @@ class tt(models.Model):
     date = models.CharField(max_length=300)
     time = models.CharField(max_length=300)
     host = models.CharField(max_length=300)
-    place = models.CharField(max_length=100)
+    place = models.CharField(max_length=300)
     info = models.CharField(max_length=300)
     unique_id = models.CharField(max_length=300)
     event_name = models.CharField(max_length=300)
