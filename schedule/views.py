@@ -8,7 +8,7 @@ from .models import tt, participants
 from django.contrib import messages
 import MySQLdb
 import uuid
-from .past_or_present import past_or_present
+from home.past_or_present import past_or_present
 import threading
 import random
 from home.send_mail import mail_seder, send_email
@@ -148,6 +148,7 @@ def display_info(request):
         tt_1 = tt.objects.all()
         return render(request, 'display_page.html', {'tt_1': tt_1})
 
+
 def send_data(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
@@ -171,16 +172,6 @@ def send_data(request):
         place = request.POST['hidden_place']
         current_user = request.user.username
         print(current_user)
-        # try:
-        #     mydb = MySQLdb.connect(
-        #         "localhost",
-        #         "root",
-        #         "",
-        #         "plantation"
-        #     )
-        # except:
-        #     print("Can't connect to database")
-        #     return
         mydb = mysqldb()
         mycursor = mydb.cursor()
         mycursor.execute("SELECT * FROM schedule_participants")
