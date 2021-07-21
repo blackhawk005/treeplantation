@@ -224,6 +224,7 @@
                 <th scope="col">Date</th>
                 <th scope="col">Time</th>
                 <th scope="col">Place</th>
+                <th scope="col">Action</th>
             </tr>
         </thead>
     {% for participant in participants_1 %}
@@ -234,7 +235,9 @@
             <td>{{ participant.event_name }}</td>
             <td>{{ participant.date }}</td>
             <td>{{ participant.time }}</td>
-            <td>{{ participant.place }} <input type="hidden" id="hidden_unique_id" name="hidden_unique_id" value="{{ participant.unique_id }}">
+            <td>{{ participant.place }}</td>
+            <td><input type="hidden" id="hidden_unique_id" name="hidden_unique_id" value="{{ participant.unique_id }}">
+              <input type="hidden" id="csrfmiddlewaretoken" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
               <input class="btn-dark" style="padding: 2%;" type="submit" value="Delete"></td>
             
         </tr>

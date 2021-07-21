@@ -24,7 +24,11 @@ def past_or_present():
     result = mycursor.fetchall()
     event_date = ''
     for i in result:
-        event_date_time = '' + i[0] + ' ' + i[1]
+        seconds = i[1].seconds
+        hours = str(seconds//3600)
+        minutes = str((seconds//60)%60)
+        time_1 = hours+":"+minutes+":"+"00"
+        event_date_time = '' + i[0].strftime('%Y-%m-%d') + ' ' + time_1
         date_time_obj = datetime.strptime(event_date_time, '%Y-%m-%d %H:%M:%S')
         if now > date_time_obj:
             print('Event is done')
