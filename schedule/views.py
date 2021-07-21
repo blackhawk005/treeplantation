@@ -69,8 +69,8 @@ def create_event(request):
             y_new = "/media/"+str(x)+".svg"
             trial = tt(date=str(date), time=time, host=request.user.username, place=place, info=address, unique_id=y, event_name=event_name,image=y_new, reported='0')
             trial.save()
-            t1 = threading.Thread(target=send_email, args=(request.user.username, event_name, str(date), place, 1))
-            t1.start()
+            # t1 = threading.Thread(target=send_email, args=(request.user.username, event_name, str(date), place, 1))
+            # t1.start()
             # send_email(username=request.user.username, event=event_name, date=str(date), place=place,flag=1)
             return redirect("/schedule/")
         return HttpResponse('not very thank you')
