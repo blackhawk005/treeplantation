@@ -9,5 +9,10 @@ admin.site.register(participants)
 admin.site.register(pastevents)
 admin.site.register(users)
 admin.site.register(tt)
-admin.site.register(Blog)
+
+class BlogAdmin(admin.ModelAdmin):
+    # a list of displayed columns name.
+    list_display = ['address', 'user']
+    
+admin.site.register(Blog, BlogAdmin)
 
