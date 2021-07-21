@@ -158,11 +158,11 @@
           <div class="center">
             <div class="scroll">
               <h1><b>{{ tt.event_name }}</h1>
-              Host - <p>{{ tt.host }}</p>
-              <b>Date - </b><p>{{ tt.date }}</p>
-              <b>Time - </b><p>{{ tt.time }}</p>
-              <b>Place - </b><p>{{ tt.place }}</p>
-              <b>Note - </b><p style="white-space: pre-line;">{{ tt.info }}</p><br>
+              Host - <p style="font-size: 15px;">{{ tt.host }}</p>
+              <b>Date - </b><p style="font-size: 15px;">{{ tt.date }}</p>
+              <b>Time - </b><p style="font-size: 15px;">{{ tt.time }}</p>
+              <b>Place - </b><p style="font-size: 15px;">{{ tt.place }}</p>
+              <b>Note - </b><p style="white-space: pre-line; font-size: 15px;">{{ tt.info }}</p><br>
             </div>
             <br>
             {% if user.is_authenticated %}
