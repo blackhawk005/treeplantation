@@ -229,8 +229,9 @@
       }else if('{{ flag }}' == 1){
         alert('You have already participated in the event');
         location.replace("/schedule/")
-      }else if ('{{ flag }}' == 0){
+      }else if ('{{ flag }}' == 2){
         alert('You have sucessfully participated in the event');
+        location.replace("/schedule/")
       }
 
       if ('{{ flag_1 }}' == 1){

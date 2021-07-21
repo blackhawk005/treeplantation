@@ -194,9 +194,11 @@ def send_data(request):
             else:
                 print('not there')
         if flag == 0:
-            send_email(username=request.user.username, event=event_name, date=date, place=place, flag=flag)
+            t1 = threading.Thread(target=send_email, args=(request.user.username, event_name, str(date), place, flag))
+            t1.start()
             trial = participants(name=request.user.username, email=request.user.email, unique_id=unique_id, event_name=event_name, date=date, time=time, place=place)
             trial.save()
+            flag = 2
             tt_1 = tt.objects.all()
             return render(request, 'display_page.html', {'flag': flag, 'tt_1': tt_1})
 
