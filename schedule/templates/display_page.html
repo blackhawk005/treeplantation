@@ -19,6 +19,17 @@
      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <title>All Events</title>
+    <style>
+      div.scroll {
+        margin:4px, 4px;
+        padding:4px;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-align:justify;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    </style>
 </head>
 <body>
   <div>
@@ -145,14 +156,17 @@
         </div>
         <div class="details">
           <div class="center">
-            <h1><b>{{ tt.event_name }}</h1>
-        <p><b>Host - </b>{{ tt.host }}</p>
-        <p><b>Date - </b>{{ tt.date }}</p>
-        <p><b>Time - </b>{{ tt.time }}</p>
-        <p><b>Place - </b>{{ tt.place }}</p>
-        <p><b>Note - </b>{{ tt.info }}</p><br>
-        {% if user.is_authenticated %}
-        {% if tt.host == user.username %}
+            <div class="scroll">
+              <h1><b>{{ tt.event_name }}</h1>
+              Host - <p>{{ tt.host }}</p>
+              <b>Date - </b><p>{{ tt.date }}</p>
+              <b>Time - </b><p>{{ tt.time }}</p>
+              <b>Place - </b><p>{{ tt.place }}</p>
+              <b>Note - </b><p style="white-space: pre-line;">{{ tt.info }}</p><br>
+            </div>
+            <br>
+            {% if user.is_authenticated %}
+            {% if tt.host == user.username %}
         <div class="row" style="justify-content: center;">
           <form action="delete_data" method="POST">
             {% csrf_token %}
