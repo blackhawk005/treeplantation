@@ -153,11 +153,25 @@
         <p><b>Note - </b>{{ tt.info }}</p><br>
         {% if user.is_authenticated %}
         {% if tt.host == user.username %}
-        <form action="delete_data" method="POST">
-          {% csrf_token %}
-          <input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
-          <input class="delete-btn" type="submit" value="Delete">
-        </form>
+        <div class="row" style="justify-content: center;">
+          <form action="delete_data" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
+            <input class="delete-btn" type="submit" value="Delete">
+          </form>
+  
+          <form action="edit_event_form" method="POST" style="margin-left: 5%;">
+            {% csrf_token %}
+            <input type="hidden" name="hidden_unique_id" value="{{ tt.unique_id }}">
+            <input type="hidden" name="hidden_event_name" value="{{ tt.event_name }}">
+            <input type="hidden" name="hidden_date" value="{{ tt.date }}">
+            <input type="hidden" name="hidden_time" value="{{ tt.time }}">
+            <input type="hidden" name="hidden_place" value="{{ tt.place }}">
+            <input type="hidden" name="hidden_place" value="{{ tt.info }}">
+            <input class="report-btn" type="submit" value="Edit">
+          </form>
+        </div>
+        
         {% else %}
         <div class="row" style="justify-content: center;">
         <form  action="send_data" method="POST" >

@@ -24,166 +24,168 @@
 <body>
   <div>
     <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand" href="/"><div><img src="{% static 'images/tree2.png' %}" height="40px" width="325px"></div></a>
-        <button
-          class="navbar-toggler btn-outline-light"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
-        </button>
+      <a class="navbar-brand" href="/"><div><img src="{% static 'images/tree2.png' %}" height="40px" width="325px"></div></a>
+      <button
+        class="navbar-toggler btn-outline-light"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+      </button>
         
-        <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Plants  </a>
-                 <ul class="dropdown-menu">
-                  <li class="nav-item">
-                    <a class="dropdown-item" href="/information/">Plant Information</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="dropdown-item" href="/information/saplings">Saplings</a>
-                  </li>
-                 </ul>
+      <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+              <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Plants  </a>
+                <ul class="dropdown-menu">
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/information/">Plant Information</a>
+                </li>
+                <li class="nav-item">
+                  <a class="dropdown-item" href="/information/saplings">Saplings</a>
+                </li>
+                </ul>
+            </li>
+          
+          {% if user.is_authenticated %}
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Locations  </a>
+              <ul class="dropdown-menu">
+              <li class="nav-item">
+                <a class="dropdown-item" href="/maps/bloginfo">Available Locations</a>
               </li>
-            
-            {% if user.is_authenticated %}
-            <li class="nav-item dropdown">
-              <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Locations  </a>
-               <ul class="dropdown-menu">
-                <li class="nav-item">
-                  <a class="dropdown-item" href="/maps/bloginfo">Available Locations</a>
-                </li>
-                <li class="nav-item">
-                  <a class="dropdown-item" href="/maps/">Insert Location</a>
-                </li>
-               </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Events  </a>
-               <ul class="dropdown-menu">
-                <li class="nav-item">
-                  <a class="dropdown-item" href="/schedule/">All Events</a>
-                </li>
-                <li class="nav-item">
-                  <a class="dropdown-item" href="/schedule/form_fill">Create new event</a>
-                </li>
-                <li class="nav-item">
-                  <a class="dropdown-item" href="/schedule/terms">Terms and Conditions</a>
-                </li>
-               </ul>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
-            </li> -->
-            {% else %}
-            <script>
-              var x = 1;
-            </script>
-            <li class="nav-item dropdown">
-              <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Locations  </a>
-               <ul class="dropdown-menu">
-                <li class="nav-item">
-                  <a class="dropdown-item" href="/login/">Available Locations</a>
-                </li>
-                <li class="nav-item">
-                  <a class="dropdown-item" href="/login/">Insert Location</a>
-                </li>
-               </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Events  </a>
-               <ul class="dropdown-menu">
-                <li class="nav-item">
-                  <a class="dropdown-item" href="/login/">All Events</a>
-                </li>
-                <li class="nav-item">
-                  <a class="dropdown-item" href="/login/">Create new event</a>
-                </li>
-                <li class="nav-item">
-                  <a class="dropdown-item" href="/schedule/terms">Terms and Conditions</a>
-                </li>
-               </ul>
-            </li>
-            {% endif %}
-            
-            <!-- <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/about/">About us</a>
-            </li>
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
-            </li> -->
-            {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/logout/">Logout</a>
-            </li>
-            {% else %}
-            <li class="nav-item">
-              <a class="home-nav-link nav-link" href="/login/">Login</a>
-            </li>
-            {% endif %}
-          </ul>
-        </div>
-      </nav>
-    
-</div>
-<br><br>
-    {% if blog_data %}
-    {% for blog in blog_data %}
-    <div class="col-md-8 col-lg-6 col-sm-11 col-11 reg register-form register-left" >
-      
-      <div><img style="filter: blur(50); height:50%; width:50%;" src="/maps{{ blog.image }}"></div><br>
-      {% with blog.address|split:',' as strs %}
-      <h2><b>{{strs.0}}</b></h2>
-      {% endwith %}
-      <br>
-      <h4> <b>Address:</b> {{ blog.address }}</h4>
-      <br>
-        {% if blog.maps_link == 'NA' %}
-        <h4> <b>User :</b> {{ blog.user }}</h4>
-        {% else %}
-        <h4 style="position: absolute; left:5%;"> <b>User:</b> {{ blog.user }}</h4>
-        <h4 style="position: absolute; right:5%;"><a class="but-text1 " href=" {{ blog.maps_link }} " target="_blank" rel="noopener noreferrer">Click Here For Map</a></h4>
-        {% endif %}
-        <br>
-        {% if blog.permission_required == '1' %}
-        <h4 style="position: absolute; left:5%;"><b>Area:</b> {{ blog.area }}</h4>
-        <h4 style="position: absolute; right:5%;"><b>permisson:</b> Yes</h4>
-        <br><br>
-        <h4><b><i>Management info</i></b></h4>
-        <br>
-        <h4 ><b>Name:</b> {{blog.contact_management_name}}</h4><br>
-        <h4 ><b>Contact No.:</b> {{blog.contact_management_num}}</h4>
-        {% else %}
-        <h4 style="position: absolute; left:5%;"><b>Area:</b> {{ blog.area }}</h4>
-        <h4 style="position: absolute; right:5%;"><b>permisson:</b> No</h4>
-        {% endif %}
-        {% if blog.user == user.username %}
-        <br><br><br>
-        <div style="margin-left:30%;">
-        <form class="delete-btn" style="margin-right:40%; display:inline-block; " action="/maps/delete_blog" method="POST">
-          {% csrf_token %}
-            <input type="hidden" name="hidden_unique_id" value="{{ blog.unique_id }}">
-            <input class="delete-btn btn " style="border-radius: 50%; color:ivory;" type="submit" value="Delete">
-        </form>
-        </div>
-        {% endif %}
-        {% if blog.user != user.username %}
-        <br><br><br>
-        <div style="margin-left:30%;">
-        <form style="margin-right:40%; display:inline-block; " action="/maps/report_blog" method="POST">
-          {% csrf_token %}
-            <input type="hidden" name="hidden_unique_id" value="{{ blog.unique_id }}">
-            <input class="btn btn-outline-danger" type="submit" value="Report">
-        </form>
-        </div>
-        {% endif %}
+              <li class="nav-item">
+                <a class="dropdown-item" href="/maps/">Insert Location</a>
+              </li>
+              </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Events  </a>
+              <ul class="dropdown-menu">
+              <li class="nav-item">
+                <a class="dropdown-item" href="/schedule/">All Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="dropdown-item" href="/schedule/form_fill">Create new event</a>
+              </li>
+              <li class="nav-item">
+                <a class="dropdown-item" href="/schedule/terms">Terms and Conditions</a>
+              </li>
+              </ul>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/geofence/display_maps/">Review</a>
+          </li> -->
+          {% else %}
+          <script>
+            var x = 1;
+          </script>
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Locations  </a>
+              <ul class="dropdown-menu">
+              <li class="nav-item">
+                <a class="dropdown-item" href="/login/">Available Locations</a>
+              </li>
+              <li class="nav-item">
+                <a class="dropdown-item" href="/login/">Insert Location</a>
+              </li>
+              </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Events  </a>
+              <ul class="dropdown-menu">
+              <li class="nav-item">
+                <a class="dropdown-item" href="/login/">All Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="dropdown-item" href="/login/">Create new event</a>
+              </li>
+              <li class="nav-item">
+                <a class="dropdown-item" href="/schedule/terms">Terms and Conditions</a>
+              </li>
+              </ul>
+          </li>
+          {% endif %}
+          
+          <!-- <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/about/">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/contact_us/">Contact us</a>
+          </li> -->
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/logout/">Logout</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="home-nav-link nav-link" href="/login/">Login</a>
+          </li>
+          {% endif %}
+        </ul>
       </div>
-      <br><br><br>
+    </nav>
+    
+  </div>
+  <br><br>
+  {% if blog_data %}
+  {% for blog in blog_data %}
+  <div class="col-md-8 col-lg-6 col-sm-11 col-11 reg register-form register-left" > 
+    <div><img style="filter: blur(50); height:50%; width:50%;" src="/maps{{ blog.image }}"></div><br>
+    {% with blog.address|split:',' as strs %}
+      <h2><b>{{strs.0}}</b></h2>
+    {% endwith %}
+    <br>
+    <h4> <b>Address:</b> {{ blog.address }}</h4>
+    <br>
+    {% if blog.maps_link == 'NA' %}
+      <h4> <b>User :</b> {{ blog.user }}</h4>
+    {% else %}
+      <h4 style="position: absolute; left:5%;"> <b>User:</b> {{ blog.user }}</h4>
+      <h4 style="position: absolute; right:5%;"><a class="but-text1 " href=" {{ blog.maps_link }} " target="_blank" rel="noopener noreferrer">Click Here For Map</a></h4>
+    {% endif %}
+    <br>
+    {% if blog.permission_required == '1' %}
+      <h4 style="position: absolute; left:5%;"><b>Area:</b> {{ blog.area }}</h4>
+      <h4 style="position: absolute; right:5%;"><b>permisson:</b> Yes</h4>
+      <br><br>
+      <h4><b><i>Management info</i></b></h4>
+      <br>
+      <h4 ><b>Name:</b> {{blog.contact_management_name}}</h4><br>
+      <h4 ><b>Contact No.:</b> {{blog.contact_management_num}}</h4>
+    {% else %}
+      <h4 style="position: absolute; left:5%;"><b>Area:</b> {{ blog.area }}</h4>
+      <h4 style="position: absolute; right:5%;"><b>permisson:</b> No</h4>
+    {% endif %}
+    <br><br><br>
+    <div class="row" style="justify-content: center;">
+    <form   action="/schedule/form_half_fill" style="margin-right: 4%;" method="POST">
+      {% csrf_token %}
+        <input type="hidden" name="hidden_unique_id" value="{{ blog.unique_id }}">
+        <input type="hidden" name="hidden_place" value="{{ blog.address }}">
+        <input type="hidden" name="hidden_link" value="{{ blog.maps_link }}">
+        <input class="btn btn-outline-success"  type="submit" value="Create Event">
+    </form>
+    {% if blog.user == user.username %}
+      <form class="delete-btn" style="margin-left: 4%;"  action="/maps/delete_blog" method="POST">
+        {% csrf_token %}
+          <input type="hidden" name="hidden_unique_id" value="{{ blog.unique_id }}">
+          <input class="delete-btn btn " style="border-radius: 50%; color:ivory;" type="submit" value="Delete">
+      </form>
+    {% else %}
+    <form style="margin-left: 4%;" action="/maps/report_blog" method="POST">
+      {% csrf_token %}
+        <input type="hidden" name="hidden_unique_id" value="{{ blog.unique_id }}">
+        <input class="btn btn-outline-danger" type="submit" value="Report">
+    </form>
+    {% endif %}
+    </div>
+    </div>
+    <br><br><br>
     {% endfor %}
     {% else %}
     <h1 class="text-center" style="color: white; position:absolute; left:40%; right:40%; top:50%; font-size:5vw;">No Data Available!</h4>

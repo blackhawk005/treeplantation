@@ -1,21 +1,27 @@
+from maps.models import Blog
+from django.core.checks.messages import Info
 from django.db.models import query_utils
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
-from .forms import EventForm
+from .forms import EventForm, EditEventForm
 from .models import tt, participants
 from django.contrib import messages
 import MySQLdb
 import uuid
-from .send_mail import send_email
 from .past_or_present import past_or_present
 import threading
 import random
-from .send_mail import mail_seder
+from home.send_mail import mail_seder, send_email
 from home.mysql import mysqldb
 from home.user_check import user_check
 from datetime import date, datetime
 
 # Create your views here.
+def form_half_fill(request):
+    if request.method=="POST":
+        print(request.POST)
+        return render(request, 'create_event.html', {'event_place': request.POST['hidden_place'], 'event_link': request.POST['hidden_link']})
+
 def form_fill(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
@@ -48,6 +54,7 @@ def create_event(request):
         return render(request, "covid.html")
 
     if request.method == 'POST':
+        print(request.POST)
         form = EventForm(request.POST)
         if form.is_valid():
             print('if executed')
@@ -68,6 +75,49 @@ def create_event(request):
             return redirect("/schedule/")
     return HttpResponse('not thank you')
 
+def edit_event_form(request):
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
+    now = datetime.now()
+    rest_date_time = '2021-05-01 00:00:00'
+    then = datetime.strptime(rest_date_time, '%Y-%m-%d %H:%M:%S')
+    if now < then:
+        return render(request, "covid.html")
+
+    if request.method=="POST":
+        x = tt.objects.get(unique_id=request.POST['hidden_unique_id'])
+        print(x)
+        return render( request, "edit_event.html", {'edit_values': x})
+
+def edit_event(request):
+    t1 = threading.Thread(target=past_or_present)
+    t1.start()
+    t2 = threading.Thread(target=user_check)
+    t2.start()
+
+    now = datetime.now()
+    rest_date_time = '2021-05-01 00:00:00'
+    then = datetime.strptime(rest_date_time, '%Y-%m-%d %H:%M:%S')
+    if now < then:
+        return render(request, "covid.html")
+
+    if request.method == 'POST':
+        form = EditEventForm(request.POST)
+        if form.is_valid():
+            date = form.cleaned_data['date']
+            time = form.cleaned_data['time']
+            info = form.cleaned_data['address']
+            event_name = tt.objects.get(unique_id=request.POST['hidden_unique_id']).event_name
+            place = tt.objects.get(unique_id=request.POST['hidden_unique_id']).place
+            tt.objects.filter(unique_id=request.POST['hidden_unique_id']).update(date=date, time=time, info=info)
+            print("event name:",event_name)
+            t1 = threading.Thread(target=send_email, args=(request.user.username, event_name, str(date), place, 6))
+            t1.start()
+            return redirect("/schedule/")
+            
+
 def display_info(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
@@ -86,6 +136,11 @@ def display_info(request):
     if (request.method=='GET'):
         # getting all the objects of Map
         tt_1 = tt.objects.all()
+        blog = Blog.objects.all()
+        print(blog)
+        y = [x.place for x in tt_1]
+        z = [x.address for x in blog]
+        print(y, z)
         return render(request, 'display_page.html', {'tt_1': tt_1})
     if (request.method=='POST'):
         # getting all the objects of Map

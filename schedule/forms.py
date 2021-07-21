@@ -7,3 +7,8 @@ class EventForm(forms.Form):
     time = forms.TimeField()
     place = forms.CharField(max_length=100)
     address = forms.CharField(widget=forms.Textarea)
+
+class EditEventForm(forms.Form):
+    date = forms.DateField()
+    time = forms.TimeField()
+    address = forms.CharField(widget=forms.Textarea)

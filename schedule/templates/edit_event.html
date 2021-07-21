@@ -18,7 +18,7 @@
      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <title>Create Event</title>
+    <title>Edit Event</title>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script> -->
@@ -143,18 +143,19 @@
 <br><br>
     <div class="col-md-6 reg register-left" style="justify-content: center;">
         <div class="register-form" style="justify-content: center;">
-    <form action="create_event" method="POST" style="justify-content: center;">
+    <form action="edit_event" method="POST" style="justify-content: center;">
       {% csrf_token %}
       <label for="place">Event Name:</label>
-        <input class="form-control" type="text" id="event_name"  name="event_name" placeholder="Event Name" required><br><br>
+        <input type="hidden" name="hidden_unique_id" value="{{ edit_values.unique_id }}">
+        <input class="form-control" type="text" id="event_name" value={{edit_values.event_name}} name="event_name" placeholder="Event Name" disabled><br><br>
         <label for="date">Date:</label>
-        <input class="form-control" type="date" id="date" name="date" placeholder="yyyy-mm-dd" required><br><br>
+        <input class="form-control" type="date" id="date" value={{edit_values.date}} name="date" placeholder="yyyy-mm-dd" required><br><br>
         <label for="time">Time:</label>
-        <input class="form-control" type="time" id="time" name="time" placeholder="hh:mm AM/PM" required><br><br>
+        <input class="form-control" type="time" id="time" value={{edit_values.time}} name="time" placeholder="hh:mm AM/PM" required><br><br>
         <label for="place">Place:</label>
-        <input class="form-control" type="text" id="place" name="place" value="{{event_place}}" placeholder="Place" required><br><br>
+        <input class="form-control" type="text" id="place" value={{edit_values.place}} name="place" placeholder="Place" disabled><br><br>
         <label for="address">Information:</label>
-        <textarea class="form-control" name="address" id="address" ></textarea><br><br>
+        <textarea class="form-control" name="address" id="address" >{{edit_values.info}}</textarea><br><br>
         <label style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;" >I agree to all the <a href="terms">terms and conditons</a> of this website regarding hosting an event</label>
         <input type="checkbox" onclick="enableForm()" class="form-control" name="permission_required" id="id_permission" ><br>
         <input class="btn btn-dark" type="submit" id="submit" disabled>

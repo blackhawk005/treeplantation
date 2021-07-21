@@ -61,6 +61,37 @@ def mail_seder(receiver_email, user, event, date, place, flag):
             </body>
         </html>
         """
+
+    elif flag==6:
+        mydb = mysqldb()
+        mycursor = mydb.cursor()
+        query = 'select time from schedule_tt where event_name="'+event+'"'
+        mycursor.execute(query)
+        result = mycursor.fetchall()
+        message["Subject"] = "Event date has changed"
+        
+        text = """\
+        Hello """ + user + """
+        Details of the event """ + event + """
+        in which you have participated has been changed
+        Date: """ + date + """
+        Place: """ + place + """
+        Time: """ + result[0][0] +"""
+        If you are not avaiable on that date, you can go to profile and delete your participation.
+        """
+        html = """\
+        <html>
+            <body>
+            <p>Hello """ + user + """,<br>
+                Details of the event  """ + event + """ in which you have participated has been changed<br>
+                Date: """ + date + """<br>
+                Place: """ + place + """<br>
+                Time: """ + result[0][0] +"""<br>
+                If you are not avaiable on that date, you can go to profile and delete your participation
+            </p>
+            </body>
+        </html>
+        """
     elif flag == 3:
         message["Subject"] = "We are disappointed"
         text = """\
@@ -112,6 +143,7 @@ def mail_seder(receiver_email, user, event, date, place, flag):
             </body>
         </html>
         """
+    
     # Turn these into plain/html MIMEText objects
     part1 = MIMEText(text, "plain")
     part2 = MIMEText(html, "html")
@@ -133,13 +165,16 @@ def mail_seder(receiver_email, user, event, date, place, flag):
 def send_email(username, event, date, place, flag):
     mydb = mysqldb()
     mycursor = mydb.cursor()
-    # print(username)
+    print("++++++++++++++++++++++++++",flag)
     if flag == 0:
         query = 'select email, username from auth_user where username="'+username+'"'
+    elif flag == 6:
+        query = 'select email, name from schedule_participants where event_name="'+event+'"'
     else:
         query = 'select email, username from auth_user where not username="'+username+'"'
     mycursor.execute(query)
     result = mycursor.fetchall()
+    
     for i in result:
         print(i[0], i[1])
         mail_seder(i[0], i[1], event, date, place, flag)

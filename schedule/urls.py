@@ -10,7 +10,10 @@ urlpatterns = [
     # ex: /
      path('', views.display_info, name='display_info' ),
      path('form_fill', views.form_fill, name='form_fill'),
+     path('form_half_fill', views.form_half_fill, name='form_half_fill'),
      path('create_event', views.create_event, name='info_send' ),
+     path('edit_event', views.edit_event, name='event_edit' ),
+     path('edit_event_form', views.edit_event_form, name='event_edit_form' ),
      path('send_data', views.send_data, name='send_data' ),
      path('delete_data', views.delete_data, name='delete_data' ),
      path('terms',views.terms, name='terms'),
