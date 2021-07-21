@@ -7,7 +7,7 @@ class users(models.Model):
     user = models.CharField(max_length=300)
     report = models.CharField(max_length=300)
     reported_map = models.CharField(max_length=300)
-    report_event = models.CharField(max_length=300)
+    reported_event = models.CharField(max_length=300)
 
     def __str__(self):
         return self.user
