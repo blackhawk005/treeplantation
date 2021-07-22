@@ -193,12 +193,14 @@
       <table class="table">
         <thead>
             <tr>
+              <th scope="col">Sr No</th>
                 <th scope="col">Participants</th>
             </tr>
         </thead>
         {% for name in participant.2 %}
           <tbody>
             <tr>
+              <td>{{forloop.counter}}</td>
               <td>{{name}}</td>
             </tr>
           </tbody>
