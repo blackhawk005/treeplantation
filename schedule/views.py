@@ -54,26 +54,29 @@ def create_event(request):
         return render(request, "covid.html")
 
     if request.method == 'POST':
-        print(request.POST)
-        form = EventForm(request.POST)
-        if form.is_valid():
-            print('if executed')
-            y = str(uuid.uuid4())
-            event_name = form.cleaned_data['event_name']
-            date = form.cleaned_data['date']
-            time = form.cleaned_data['time']
-            place = form.cleaned_data['place']
-            address = form.cleaned_data['address']
-            print(date, time, place, address)
-            x = random.randint(1, 25)
-            y_new = "/media/"+str(x)+".svg"
-            trial = tt(date=str(date), time=time, host=request.user.username, place=place, info=address, unique_id=y, event_name=event_name,image=y_new, reported='0')
-            trial.save()
-            t1 = threading.Thread(target=send_email, args=(request.user.username, event_name, str(date), place, 1))
-            t1.start()
-            # send_email(username=request.user.username, event=event_name, date=str(date), place=place,flag=1)
-            return redirect("/schedule/")
-        return HttpResponse('not very thank you')
+        if request.user.id == None:
+            return redirect('/login/')
+        else:
+            print(request.POST)
+            form = EventForm(request.POST)
+            if form.is_valid():
+                print('if executed')
+                y = str(uuid.uuid4())
+                event_name = form.cleaned_data['event_name']
+                date = form.cleaned_data['date']
+                time = form.cleaned_data['time']
+                place = form.cleaned_data['place']
+                address = form.cleaned_data['address']
+                print(date, time, place, address)
+                x = random.randint(1, 25)
+                y_new = "/media/"+str(x)+".svg"
+                trial = tt(date=str(date), time=time, host=request.user.username, place=place, info=address, unique_id=y, event_name=event_name,image=y_new, reported='0')
+                trial.save()
+                t1 = threading.Thread(target=send_email, args=(request.user.username, event_name, str(date), place, 1))
+                t1.start()
+                # send_email(username=request.user.username, event=event_name, date=str(date), place=place,flag=1)
+                return redirect("/schedule/")
+            return HttpResponse('not very thank you')
     return HttpResponse('not thank you')
 
 def edit_event_form(request):
@@ -256,16 +259,6 @@ def report_event(request):
         unique_id = request.POST['hidden_unique_id']
         event_name = request.POST['hidden_event_name']
         print('unique_id:', unique_id)
-        # try:
-        #     mydb = MySQLdb.connect(
-        #         "localhost",
-        #         "root",
-        #         "",
-        #         "plantation"
-        #     )
-        # except:
-        #     print("Can't connect to database")
-        #     return
         mydb = mysqldb()
         flag = 3
         mycursor = mydb.cursor()

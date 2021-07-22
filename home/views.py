@@ -19,6 +19,11 @@ from django.views.decorators.csrf import csrf_exempt
 
 # home page
 def index(request):
+    print(request.user.id)
+    if request.user.id == None:
+        print(True)
+    else:
+        print(False)
     t1 = threading.Thread(target=past_or_present)
     t1.start()
     t2 = threading.Thread(target=user_check)
@@ -144,42 +149,51 @@ def delete_hosted_event(request):
     t1.start()
     t2 = threading.Thread(target=user_check)
     t2.start()
-    unique_id = request.POST['hidden_unique_id']
-    mydb = mysqldb()
-    mycursor = mydb.cursor()
-    query = "DELETE FROM schedule_tt WHERE unique_id='"+unique_id+"'"
-    mycursor.execute(query)
-    mydb.commit()
-    query_2 = "DELETE FROM schedule_participants WHERE unique_id='"+unique_id+"'"
-    mycursor.execute(query_2)
-    mydb.commit()
-    return redirect('/profile')
+    if request.user.id == None:
+        return redirect('/login/')
+    else:
+        unique_id = request.POST['hidden_unique_id']
+        mydb = mysqldb()
+        mycursor = mydb.cursor()
+        query = "DELETE FROM schedule_tt WHERE unique_id='"+unique_id+"'"
+        mycursor.execute(query)
+        mydb.commit()
+        query_2 = "DELETE FROM schedule_participants WHERE unique_id='"+unique_id+"'"
+        mycursor.execute(query_2)
+        mydb.commit()
+        return redirect('/profile')
 
 def delete_participated_events(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
     t2 = threading.Thread(target=user_check)
     t2.start()
-    unique_id = request.POST['hidden_unique_id']
-    mydb = mysqldb()
-    mycursor = mydb.cursor()
-    query = "DELETE FROM schedule_participants WHERE unique_id='"+unique_id+"'"
-    mycursor.execute(query)
-    mydb.commit()
-    return redirect('/profile')
+    if request.user.id == None:
+        return redirect('/login/')
+    else:
+        unique_id = request.POST['hidden_unique_id']
+        mydb = mysqldb()
+        mycursor = mydb.cursor()
+        query = "DELETE FROM schedule_participants WHERE unique_id='"+unique_id+"'"
+        mycursor.execute(query)
+        mydb.commit()
+        return redirect('/profile')
 
 def delete_map_blog(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
     t2 = threading.Thread(target=user_check)
     t2.start()
-    unique_id = request.POST['hidden_unique_id']
-    mydb = mysqldb()
-    mycursor = mydb.cursor()
-    query = "DELETE FROM maps_blog WHERE unique_id='"+unique_id+"'"
-    mycursor.execute(query)
-    mydb.commit()
-    return redirect('/profile')
+    if request.user.id == None:
+        return redirect('/login/')
+    else:
+        unique_id = request.POST['hidden_unique_id']
+        mydb = mysqldb()
+        mycursor = mydb.cursor()
+        query = "DELETE FROM maps_blog WHERE unique_id='"+unique_id+"'"
+        mycursor.execute(query)
+        mydb.commit()
+        return redirect('/profile')
 
 # logout page
 def logout_page(request):

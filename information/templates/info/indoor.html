@@ -47,15 +47,8 @@
                 >
                   <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
                 </button>
-                
                 <div class="collapse home-nav-collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
-                    <form class="form-inline" method="POST">
-                        {% csrf_token %}
-                        <li class="nav-item">
-                          <input class="form-control" id="search_bar" type="search" onkeyup="myFunction()" placeholder="SEARCH..." style="width: 100%;">
-                      </li>
-                      </form>
                     <li class="nav-item dropdown">
                         <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Plants  </a>
                          <ul class="dropdown-menu">
@@ -105,7 +98,7 @@
                       <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Locations  </a>
                        <ul class="dropdown-menu">
                         <li class="nav-item">
-                          <a class="dropdown-item" href="/login/">Available Locations</a>
+                          <a class="dropdown-item" href="/maps/bloginfo">Available Locations</a>
                         </li>
                         <li class="nav-item">
                           <a class="dropdown-item" href="/login/">Insert Location</a>
@@ -116,7 +109,7 @@
                       <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Events  </a>
                        <ul class="dropdown-menu">
                         <li class="nav-item">
-                          <a class="dropdown-item" href="/login/">All Events</a>
+                          <a class="dropdown-item" href="/schedule/">All Events</a>
                         </li>
                         <li class="nav-item">
                           <a class="dropdown-item" href="/login/">Create new event</a>
@@ -145,7 +138,7 @@
                     {% endif %}
                   </ul>
                 </div>
-              </nav>
+            </nav>
             
         </div>
         <br><br>
