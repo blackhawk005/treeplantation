@@ -220,7 +220,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th scope="col"></th>
+                <th scope="col">Sr No.</th>
                 <th scope="col">Event Name</th>
                 <th scope="col">Date</th>
                 <th scope="col">Time</th>
@@ -232,7 +232,7 @@
     {% if participant.name == user.username %}
     <tbody>
         <tr>
-            <th scope="row"></th>
+            <th scope="row">{{forloop.counter}}</th>
             <td>{{ participant.event_name }}</td>
             <td>{{ participant.date }}</td>
             <td>{{ participant.time }}</td>
@@ -258,7 +258,7 @@
     <table class="table">
     <thead>
         <tr>
-            <th scope="col"></th>
+            <th scope="col">Sr No.</th>
             <th scope="col">Address</th>
         </tr>
     </thead>
@@ -266,7 +266,7 @@
     {% if blog.user == user.username %}
     <tbody>
         <tr>
-            <th scope="row"></th>
+            <th scope="row">{{forloop.counter}}</th>
             <td>{{ blog.address }}</td>
             <td><input type="hidden" name="hidden_unique_id" value="{{ blog.unique_id }}">
                 <input class="btn-dark" style="padding: 2%;" type="submit" value="Delete"></td>
