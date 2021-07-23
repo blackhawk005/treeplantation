@@ -124,24 +124,19 @@ def profile(request):
     participants_1 = participants.objects.all()
     blogs = Blog.objects.all()
     event_names = list(tt.objects.filter(host=request.user.username).values_list('unique_id', 'event_name'))
-    print(event_names)
     x = []
     for i in range(len(event_names)):
         all_participants = list(participants.objects.filter(unique_id=event_names[i][0]).values_list('name'))
         y_1 = list(event_names[i])
         z = list(x[0] for x in all_participants)
-        print(z)
         names = []
         for i in z:
             name = User.objects.filter(username=i).values_list('first_name', 'last_name')
             full_name = name[0][0] + " " + name[0][1]
             names.append(full_name)
-        print(names)
         y_1.append(names)
         if len(all_participants) != 0:
             x.append(tuple(y_1))
-    print(x)
-    # print(all_participant)
     return render(request, 'home/profile.html', {'tt_1': tt_1, 'participants_1': participants_1, 'blogs': blogs, 'participants': x,})
 
 def delete_hosted_event(request):
