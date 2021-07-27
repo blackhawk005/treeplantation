@@ -21,15 +21,11 @@ from django.template import RequestContext
 
 # home page
 def index(request):
-    print(request.user.id)
-    if request.user.id == None:
-        print(True)
-    else:
-        print(False)
     t1 = threading.Thread(target=past_or_present)
     t1.start()
     t2 = threading.Thread(target=user_check)
     t2.start()
+    
     # past_or_present()
     past_presents = pastevents.objects.all()
     return render(request, 'home/index.html', {'past_presents':past_presents})
