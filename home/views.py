@@ -14,7 +14,9 @@ from .models import users
 from .send_mail import mail_seder
 from home.user_check import user_check
 from django.views.decorators.csrf import csrf_exempt
-
+from .forms import *
+from django.forms import modelformset_factory
+from django.template import RequestContext
 # Create your views here.
 
 # home page
@@ -115,6 +117,51 @@ def register(request):
     else:
         return render(request, 'home/register.html')
 
+def viewer(request):
+    unique_id = request.POST['hidden_unique_id']
+    past_event = pastevents.objects.filter(unique_id=unique_id)
+    all_participants = participants.objects.filter(unique_id=unique_id)
+    print(all_participants)
+    return redirect('/')
+
+def post(request):
+
+    ImageFormSet = modelformset_factory(Images,
+                                        form=ImageForm, extra=3)
+
+    if request.method == 'POST':
+        if 'hidden_unique_id' in request.POST:
+            postForm = PostForm()
+            formset = ImageFormSet(queryset=Images.objects.none())
+        else:
+
+            postForm = PostForm(request.POST)
+            formset = ImageFormSet(request.POST, request.FILES,
+                                queryset=Images.objects.none())
+
+
+            if postForm.is_valid() and formset.is_valid():
+                post_form = postForm.save(commit=False)
+                # post_form.unique_id = request.POST['hidden_unique_id']
+                # post_form.event_name = request.POST['hidden_event_name']
+                post_form.save()
+
+                for form in formset.cleaned_data:
+                    image = form['image']
+                    photo = Images(post=post_form, image=image)
+                    photo.save()
+                messages.success(request,
+                                "Posted!")
+                return HttpResponse("Thank You")
+            else:
+                pass
+                print (postForm.errors, formset.errors)
+    else:
+        postForm = PostForm()
+        formset = ImageFormSet(queryset=Images.objects.none())
+    return render(request, 'home/past_event_view.html',
+                  {'postForm': postForm, 'formset': formset})
+
 def profile(request):
     t1 = threading.Thread(target=past_or_present)
     t1.start()
@@ -124,6 +171,8 @@ def profile(request):
     participants_1 = participants.objects.all()
     blogs = Blog.objects.all()
     event_names = list(tt.objects.filter(host=request.user.username).values_list('unique_id', 'event_name'))
+    past_presents = pastevents.objects.filter(host=request.user.username)
+    # print(past_presents)
     x = []
     for i in range(len(event_names)):
         all_participants = list(participants.objects.filter(unique_id=event_names[i][0]).values_list('name'))
@@ -137,7 +186,7 @@ def profile(request):
         y_1.append(names)
         if len(all_participants) != 0:
             x.append(tuple(y_1))
-    return render(request, 'home/profile.html', {'tt_1': tt_1, 'participants_1': participants_1, 'blogs': blogs, 'participants': x,})
+    return render(request, 'home/profile.html', {'tt_1': tt_1, 'participants_1': participants_1, 'blogs': blogs, 'participants': x,'past_presents': past_presents,})
 
 def delete_hosted_event(request):
     t1 = threading.Thread(target=past_or_present)

@@ -159,7 +159,12 @@
                   <h1 class="title-text" >Events conducted in the past</h1><br>
                   {% if past_presents %}
                   {% for past_events in past_presents %}
-                    <h2 class="subtitle-text"> {{ past_events.event_name }}</h2>
+                    <form method="POST" action="/viewer/" >
+                      <input type="hidden" id="csrfmiddlewaretoken" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+                      <input type="hidden" name="hidden_unique_id" value="{{ past_events.unique_id }}" >
+                      <a href="#" onclick="this.parentNode.submit()" ><h2 class="subtitle-text"> {{ past_events.event_name }}</h2></a>
+                    </form>
+                    
                     <h2 class="smallsubtitle-text">Conducted on: {{ past_events.date }} By: {{ past_events.host }}</h2><br>
                   {% endfor %}
                   {% else %}

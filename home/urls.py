@@ -25,6 +25,10 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     # ex: /contact_us/
     path('contact_us/', views.contact_us, name='contact_us'),
+    # ex: /view events/
+    path('viewer/', views.viewer, name='viewer'),
+    # ex: /upload_event_images/
+    path('upload_images/', views.post, name='upload_images'),
     # ex: /reset_password/
     path('reset_password/', 
     auth_views.PasswordResetView.as_view(template_name='accounts/password_reset.html'), 
@@ -41,4 +45,5 @@ urlpatterns = [
     path('accounts/reset/done/', 
     auth_views.PasswordResetCompleteView.as_view(template_name='accounts/password_reset_done.html'), 
     name='password_reset_complete'),
+
 ]

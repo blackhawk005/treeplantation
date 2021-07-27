@@ -10,34 +10,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AlterField(
-            model_name='participants',
-            name='date',
-            field=models.DateField(),
-        ),
-        migrations.AlterField(
-            model_name='participants',
-            name='time',
-            field=models.TimeField(),
-        ),
-        migrations.AlterField(
-            model_name='pastevents',
-            name='date',
-            field=models.DateField(),
-        ),
-        migrations.AlterField(
-            model_name='pastevents',
-            name='time',
-            field=models.TimeField(),
-        ),
-        migrations.AlterField(
-            model_name='tt',
-            name='date',
-            field=models.DateField(),
-        ),
-        migrations.AlterField(
-            model_name='tt',
-            name='time',
-            field=models.TimeField(),
-        ),
+        
     ]

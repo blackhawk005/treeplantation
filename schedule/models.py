@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.deletion import CASCADE
 
 class tt(models.Model):
     date = models.CharField(max_length=300)

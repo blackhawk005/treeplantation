@@ -184,9 +184,10 @@
   </div>
 </div>
 <br><br><br>
-
+{% if participants %}
 <div class="container-fluid" style="position:relative;">
   <div class="col-md-6 register-c order-2 order-md-1  ">
+    
     <h2>Participants</h2>
     {% for participant in participants %}
       <h2 style="padding:2%; margin-bottom:30px; margin-top:0; color:black;"><b>{{participant.1}}</b></h2>
@@ -210,7 +211,48 @@
     
     
   </div>
+</div>   
+{% endif %}
+<br><br>
+
+<div class="container-fluid" style="position:relative; ">
+  <div class="col-md-6 register-c order-2 order-md-1  " >
+    <form class="login-f" action="/upload_images/" method="POST">
+    <h2 style="padding:2%; margin-bottom:80px; margin-top:0; color:black;"><b>Completed Events</b></h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Sr No.</th>
+                <th scope="col">Event Name</th>
+                <th scope="col">Date</th>
+                <th scope="col">Time</th>
+                <!-- <th scope="col">Place</th> -->
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+    
+    {% for past_present in past_presents %}
+    <tbody>
+        <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{ past_present.event_name }}</td>
+            <td>{{ past_present.date }}</td>
+            <td>{{ past_present.time|slice:":5" }}</td>
+            <!-- <td>{{ past_present.place|slice:":25" }}</td> -->
+            <td><input type="hidden" id="hidden_unique_id" name="hidden_unique_id" value="{{ past_present.unique_id }}">
+              <input type="hidden" id="hidden_event_name" name="hidden_event_name" value="{{ past_present.event_name }}">
+              <input type="hidden" id="csrfmiddlewaretoken" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+              <input class="btn-dark" style="padding: 2%;" type="submit" value="Add Photos"></td>
+            
+        </tr>
+    </tbody>
+    {% endfor %}
+    </table>
+    <br><br>
+    </form>
+    </div>
 </div>
+
 
 <br><br>
 <div class="container-fluid" style="position:relative; ">
@@ -228,6 +270,7 @@
                 <th scope="col">Action</th>
             </tr>
         </thead>
+    
     {% for participant in participants_1 %}
     {% if participant.name == user.username %}
     <tbody>
@@ -249,7 +292,7 @@
     <br><br>
     </form>
     </div>
-    </div>
+</div>
     <br><br>
     <div class="container-fluid" style="position:relative;">
       <div class="col-md-6 register-c order-2 order-md-1  " >
