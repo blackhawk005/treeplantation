@@ -3,6 +3,7 @@ from home.mysql import mysqldb
 import MySQLdb
 
 def past_or_present():
+    print('@@#$%^%$%^&^%^&^%$%^&')
     today = date.today()
     now = datetime.now()
     print("now =", now)
@@ -22,10 +23,12 @@ def past_or_present():
     query = 'SELECT date, time, unique_id from schedule_tt'
     mycursor.execute(query)
     result = mycursor.fetchall()
-    event_date = ''
+    print(result)
+    event_date_time = ''
     for i in result:
         event_date_time = '' + i[0] + ' ' + i[1]
         date_time_obj = datetime.strptime(event_date_time, '%Y-%m-%d %H:%M:%S')
+        print('date time object',date_time_obj)
         if now > date_time_obj:
             print('Event is done')
             print(i[2])
