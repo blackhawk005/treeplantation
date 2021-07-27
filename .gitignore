@@ -1,2 +1,5 @@
 .env
-heroku_run.sh
+# #ignoring migrations to remove problem faced created by individual developer
+*/migrations/*
+!**/migrations
+!**/migrations/_init_.py
