@@ -28,7 +28,7 @@ urlpatterns = [
     # ex: /view events/
     path('viewer/', views.viewer, name='viewer'),
     # ex: /upload_event_images/
-    path('upload_images/', views.post, name='upload_images'),
+    path('upload_images/', views.upload_images, name='upload_images'),
     # ex: /reset_password/
     path('reset_password/', 
     auth_views.PasswordResetView.as_view(template_name='accounts/password_reset.html'), 

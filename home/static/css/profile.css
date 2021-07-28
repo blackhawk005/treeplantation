@@ -41,7 +41,22 @@ nav{
   color:#F2A929;
 }
 
+.subtitle-text{
+  font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+  color: #fff;
+  font-size: 26px;
+  margin-left: 32px;
+  /* padding-top: 80px; */
+}
 
+.footer-subtitle-text{
+  font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+  color: #fff;
+  font-size: 20px;
+  /* margin-left: 36px; */
+  text-align: left;
+  /* padding-top: 80px; */
+}
   /* Title section */
 
   .title-text {
