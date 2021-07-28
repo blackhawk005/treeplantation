@@ -3,7 +3,6 @@ from home.mysql import mysqldb
 import MySQLdb
 
 def past_or_present():
-    print('@@#$%^%$%^&^%^&^%$%^&')
     today = date.today()
     now = datetime.now()
     print("now =", now)
