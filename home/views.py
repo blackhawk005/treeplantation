@@ -268,3 +268,6 @@ def contact_us(request):
     t2.start()
     return render(request, 'home/contact_us.html')
 
+def viewImg(request):
+    return render(request, 'home/imageView.html')
+
