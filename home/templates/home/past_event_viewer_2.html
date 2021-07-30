@@ -5,7 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us&#127793;</title>
+    {% for past_event in past_events %}
+    <title>{{past_event.event_name}}&#127793;</title> 
+    {% endfor %}
+    
 
     <link rel="stylesheet" href="{% static 'css/Aboutus.css' %}">
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
@@ -54,6 +57,24 @@
           }
     </style>
     {% endif %}
+    <style>
+        .ptext-1 {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+            font-size: 3vw;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+          }
+        .ptext-1 .border {
+            background-color: #111;
+            color: #fff;
+            padding: 20px;
+        }
+        
+    </style>
     
   </head>
   <body>
@@ -169,7 +190,7 @@
     <!--back to top button-->
     {% for past_event in past_events %}
     <div class="pimg1">
-      <div class="ptext">
+      <div class="ptext-1">
           <span class="border"> {{past_event.event_name}} </span>
       </div>
     </div>
@@ -188,33 +209,40 @@
     <div class="pigm2">
       <section class="section section-dark">
         <h1>Place Of Plantation</h1>
-        <p>
-          {{past_event.place}}
-        </p>
+        <center>
+            <p class="p-class">
+            {{past_event.place}}
+            </p>
+        </center>
       </section>
     </div>
 
     <section class="section section-dark">
-      <h1>Scheduled On</h1>
-
-      <p>
-        <b>Date: </b>{{past_event.date}}<br>
-        <b>Time: </b>{{past_event.time}}
-      </p>
+        <h1>Scheduled On</h1>
+        <center>
+            <p class="p-class">
+                <b>Date: </b>{{past_event.date}}<br>
+                <b>Time: </b>{{past_event.time}}
+            </p>
+        </center>
     </section>
-
+    {% if image %}
     <section class="section section-dark">
-      <h1>About This Plantation</h1>
-      <p>
-        <p style="white-space: pre-line; font-size: 15px;">{{ image.details }}</p>
-      </p>
+        <h1>About This Plantation</h1>
+        <center>
+            <p class="p-class">
+                <p style="white-space: pre-line; font-size: 15px;">{{ image.details }}</p>
+            </p>
+        </center>
     </section>
+    {% endif %}
+    
 
     <section class="section section-dark">
       <h1>Participants</h1>
-      <p>(Scroll down the table to see all Participants)</p>
+      <p class="p-class">(Scroll down the table to see all Participants)</p>
       <p>
-        <div style="overflow-y:auto; text-align:center; margin: 0 auto; height: 700px; width: 500px; border:solid 3px white">
+        <div class="new-div" >
             <table align="center" style="color: white;" class="table">
                 <thead>
                     <tr>

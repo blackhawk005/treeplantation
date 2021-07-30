@@ -94,6 +94,15 @@ html {
   color: #666;
 }
 
+.new-div{
+  overflow-y:auto; 
+  text-align:center; 
+  margin: 0 auto; 
+  height: 700px; 
+  width: 50%; 
+  border:solid 3px white
+}
+
 .section-dark {
   background-color: black;
 
@@ -127,6 +136,14 @@ p {
   p{
     font-size: 75%;
     text-align: left;
+  }
+  .p-class{
+    font-size: 95%;
+    text-align: center;
+  }
+
+  .new-div{
+    width: 100%;
   }
 
   .pimg1{

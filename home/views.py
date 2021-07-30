@@ -116,9 +116,7 @@ def register(request):
 
 def viewer(request):
     unique_id = str(str(request.get_full_path).split("/?")[1].split("'")[0])
-    print(unique_id)
     new_dict = {}
-    # unique_id = request.POST['hidden_unique_id']
     past_event = pastevents.objects.filter(unique_id=unique_id)
     all_participants = participants.objects.filter(unique_id=unique_id)
     try:
@@ -126,12 +124,9 @@ def viewer(request):
         new_dict['image'] = image
     except:
         pass
-    # print(all_participants)
     names = []
     for i in all_participants:
-        # print(type(i.name))
         name = User.objects.filter(username=i.name).values_list('first_name', 'last_name')
-        # print(name)
         full_name = name[0][0] + " " + name[0][1]
         names.append(full_name)
     new_dict['past_events'] = past_event
