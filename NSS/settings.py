@@ -93,17 +93,17 @@ WSGI_APPLICATION = 'NSS.wsgi.application'
 
 # mysql://bf07c1db527b49:3caf1e6d@us-cdbr-east-03.cleardb.com/heroku_7c0e58c726f0b71?reconnect=true
 
-# if DEBUG==True:
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.mysql',
-#             'NAME': 'plantation',
-#             'USER': 'root',
-#             'PASSWORD': '',
-#             'HOST': 'localhost',
-#         }
-#     }
 if DEBUG==True:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'plantation',
+            'USER': 'root',
+            'PASSWORD': '',
+            'HOST': 'localhost',
+        }
+    }
+elif DEBUG==False:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',

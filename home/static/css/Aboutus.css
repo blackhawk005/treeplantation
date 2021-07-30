@@ -132,6 +132,25 @@ p {
 
 }
 
+
+
+.ptext-1 {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 3vw;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.ptext-1 .border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+}
+
 @media screen and (min-width:240px) and (max-width:670px){
   p{
     font-size: 75%;
@@ -151,9 +170,20 @@ p {
     background-size: cover;
   }
 
+  /* .pimg1-1{
+    background-size: cover;
+    min-width: 100%;
+  } */
+
   .ptext-1{
-    font-size: 85%;
+    top: 35%;
+    font-size: 55%;
   }
+  .ptext-1 .border {
+    background-color: #111;
+    color: #fff;
+    padding: 0px;
+}
 }
 
 @media all and (min-width: 992px) {

@@ -46,6 +46,16 @@
         .pimg1-1 {
             background-image: url(/media/{{image.image}});
             min-height: 100%;
+            background-size: auto;
+            background-repeat: no-repeat;
+          }
+          @media screen and (min-width:240px) and (max-width:670px){
+            .pimg1-1 {
+                background-image: url(/media/{{image.image}});
+                background-size: contain;
+                background-repeat: no-repeat;
+                min-height: 40%;
+              }
           }
         
     </style>
@@ -53,28 +63,20 @@
     <style>
         .pimg1-1 {
             background-image: url(/static/images/images/about.jpg);
+            background-repeat: no-repeat;
             min-height: 100%;
+            background-size: 100% 100%;
+          }
+          @media screen and (min-width:240px) and (max-width:670px){
+            .pimg1-1 {
+                background-image: url(/static/images/images/about.jpg);
+                background-size: contain;
+                min-height: 40%;
+              }
           }
     </style>
     {% endif %}
-    <style>
-        .ptext-1 {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            text-align: center;
-            color: #000;
-            font-size: 3vw;
-            letter-spacing: 8px;
-            text-transform: uppercase;
-          }
-        .ptext-1 .border {
-            background-color: #111;
-            color: #fff;
-            padding: 20px;
-        }
-        
-    </style>
+    
     
   </head>
   <body>
