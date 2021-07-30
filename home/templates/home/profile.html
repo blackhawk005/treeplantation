@@ -343,7 +343,9 @@
         {% csrf_token %}
         <p class="footer-subtitle-text">Insert Image of Event:</p>
         <input type="hidden" name="event_id" id="event_id" value="" >
-        <input type="file" accept="image/*" name="event_images" id="event_images" required>
+        <input type="file" accept="image/*" name="event_images" id="event_images" required><br><br>
+        <p class="footer-subtitle-text">Tell us more about the event:</p>
+        <textarea rows="10" class="form-control" name="event_details" id="event_details" ></textarea><br><br>
         <button type="submit" class="btn btn-outline-success" style="float: right;" >Submit</button>
       </form>
     </div>
@@ -387,7 +389,7 @@
     position: relative;
     padding: 10px;
     width: 600px;
-    height: 300px;
+    height: 700px;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: rgba(112, 128, 175, 0.2) 0px 16px 24px 0px;

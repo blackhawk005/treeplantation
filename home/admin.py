@@ -27,3 +27,8 @@ class BlogAdmin(admin.ModelAdmin):
 
 admin.site.register(Blog, BlogAdmin)
 
+class ImageAdmin(admin.ModelAdmin):
+    list_display = ['unique_id', 'image']
+
+admin.site.register(Images, ImageAdmin)
+

@@ -18,3 +18,4 @@ class Images(models.Model):
     unique_id = models.CharField(max_length=300, default=None, null=True)
     image = models.ImageField(upload_to='static/images/event_images', null=True, default=None,
                               verbose_name='Image')
+    details = models.TextField()

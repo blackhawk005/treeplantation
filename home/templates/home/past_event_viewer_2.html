@@ -175,7 +175,7 @@
     </div>
     
 
-    <div class="pigm2">
+    <!-- <div class="pigm2">
         <section class="section section-dark">
           <p>
             Treeasure stands for tree which stands for plantation, asure sounds like
@@ -183,67 +183,55 @@
             a treasure with an E in the middle which stands for environment.
           </p>
         </section>
-    </div>
+    </div> -->
 
     <div class="pigm2">
       <section class="section section-dark">
-        <h1>Who are we?</h1>
+        <h1>Place Of Plantation</h1>
         <p>
-          We the NSS unit of SIES GST, Nerul have created a website, treeasure
-          to help people plant trees and spread greenery in the easiest way
-          possible. Our vision is to create a green planet where we breathe
-          freshness and keep our mother earth cool. We ensure that you are
-          provided with all the information about how to plant, necessities for
-          the particular plant that you've chosen, available locations for
-          plantation and also links to buy plants online. This way our website
-          makes the work super easy for all. They say 1 step makes a huge
-          difference. So why not we all take 1 step towards a better tomorrow?
+          {{past_event.place}}
         </p>
       </section>
     </div>
 
     <section class="section section-dark">
-      <h1>About TreeAsure</h1>
+      <h1>Scheduled On</h1>
 
       <p>
-        The website contains information (size, climate, soil, watering/care,
-        uses) of some popular indoor and outdoor plants along with the
-        information of some gardening tools which will be useful during
-        plantation. On this website user can create an event for tree plantation
-        and/or register for these events. User can also buy saplings from some
-        popular online nursing shops whose links are given in the site. Users
-        can also find some locations available for tree plantation uploaded by
-        other users along with the location link (from google maps) and contact
-        information of certain authorities if needed.
+        <b>Date: </b>{{past_event.date}}<br>
+        <b>Time: </b>{{past_event.time}}
       </p>
     </section>
 
     <section class="section section-dark">
-      <h1>Features</h1>
+      <h1>About This Plantation</h1>
       <p>
-        -anyone can create event or register for an event (plantation drive).<br />
-        -one can find available location for tree plantation.<br />
-        - can buy saplings from link provided of some popular online nursing
-        shops. <br />- detailed information like size, suitable climate, care
-        and watering of indoor/outdoor plants - information of some basic
-        gardening tools
+        <p style="white-space: pre-line; font-size: 15px;">{{ image.details }}</p>
       </p>
     </section>
 
     <section class="section section-dark">
-      <h1>Advantages</h1>
+      <h1>Participants</h1>
+      <p>(Scroll down the table to see all Participants)</p>
       <p>
-        -In the process of making our surroundings filled with greenery, many
-        people start the fun process of tree/seed plantation, but the process of
-        gathering information and knowledge about different plants makes them
-        lose interest in this beautiful hobby. We shorten this process for you
-        by providing only the required information in a very efficient way.<br />
-        -Our site continues to encourage the users to not only gain more
-        knowledge about all the different plants available, but also helps you
-        to be a part of a community by participating in different plantation
-        drives organized by different people at different locations. <br />-We
-        take you through the whole experience starting from gaining knowledge
-        about different plants to physically planting them with your own hands.
+        <div style="overflow-y:auto; text-align:center; margin: 0 auto; height: 700px; width: 500px; border:solid 3px white">
+            <table align="center" style="color: white;" class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">Sr No</th>
+                        <th scope="col">Participants</th>
+                    </tr>
+                </thead>
+                {% for name in names %}
+                <tbody>
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{name}}</td>
+                </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
       </p>
     </section>
     {% endfor %}
