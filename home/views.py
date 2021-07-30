@@ -115,10 +115,15 @@ def register(request):
         return render(request, 'home/register.html')
 
 def viewer(request):
+    new_dict = {}
     unique_id = request.POST['hidden_unique_id']
     past_event = pastevents.objects.filter(unique_id=unique_id)
     all_participants = participants.objects.filter(unique_id=unique_id)
-    image = Images.objects.get(unique_id=request.POST['hidden_unique_id'])
+    try:
+        image = Images.objects.get(unique_id=request.POST['hidden_unique_id'])
+        new_dict['image'] = image
+    except:
+        pass
     print(all_participants)
     names = []
     for i in all_participants:
@@ -127,9 +132,10 @@ def viewer(request):
         # print(name)
         full_name = name[0][0] + " " + name[0][1]
         names.append(full_name)
-    print(names)
+    new_dict['past_events'] = past_event
+    new_dict['names'] = names
 
-    return render(request, 'home/past_event_viewer_2.html', {'past_events': past_event, 'names': names, 'image': image})
+    return render(request, 'home/past_event_viewer_2.html', new_dict)
 
 def upload_images(request):
     if request.method == "POST":

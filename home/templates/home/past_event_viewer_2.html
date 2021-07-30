@@ -38,12 +38,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    {% if image %}
     <style>
         .pimg1 {
             background-image: url(/media/{{image.image}});
             min-height: 100%;
           }
+        
     </style>
+    {% else %}
+    <style>
+        .pimg1 {
+            background-image: url(/static/images/images/about.jpg);
+            min-height: 100%;
+          }
+    </style>
+    {% endif %}
+    
   </head>
   <body>
     <div>
@@ -156,18 +167,15 @@
         
     </div>
     <!--back to top button-->
-
+    {% for past_event in past_events %}
     <div class="pimg1">
       <div class="ptext">
-          {% for past_event in past_events %}
           <span class="border"> {{past_event.event_name}} </span>
-          {% endfor %}
-        
       </div>
     </div>
     
 
-    <!-- <div class="pigm2">
+    <div class="pigm2">
         <section class="section section-dark">
           <p>
             Treeasure stands for tree which stands for plantation, asure sounds like
@@ -175,11 +183,12 @@
             a treasure with an E in the middle which stands for environment.
           </p>
         </section>
-      </div> -->
+    </div>
+
     <div class="pigm2">
       <section class="section section-dark">
         <h1>Who are we?</h1>
-        <!-- <p>
+        <p>
           We the NSS unit of SIES GST, Nerul have created a website, treeasure
           to help people plant trees and spread greenery in the easiest way
           possible. Our vision is to create a green planet where we breathe
@@ -189,7 +198,7 @@
           plantation and also links to buy plants online. This way our website
           makes the work super easy for all. They say 1 step makes a huge
           difference. So why not we all take 1 step towards a better tomorrow?
-        </p> -->
+        </p>
       </section>
     </div>
 
@@ -237,7 +246,7 @@
         about different plants to physically planting them with your own hands.
       </p>
     </section>
-
+    {% endfor %}
     <!--back to top start-->
 
     <script>
