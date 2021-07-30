@@ -54,6 +54,15 @@ html {
   background-attachment: fixed;
 }
 
+.pimg1-1{
+  position: center;
+  opacity: 0.7;
+  background-position: 50% 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .pimg1 {
   background-image: url(/static/images/images/about.jpg);
   min-height: 100%;
