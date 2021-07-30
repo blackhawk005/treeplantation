@@ -43,7 +43,7 @@
     />
     {% if image %}
     <style>
-        .pimg1 {
+        .pimg1-1 {
             background-image: url(/media/{{image.image}});
             min-height: 100%;
           }
@@ -51,7 +51,7 @@
     </style>
     {% else %}
     <style>
-        .pimg1 {
+        .pimg1-1 {
             background-image: url(/static/images/images/about.jpg);
             min-height: 100%;
           }
@@ -189,7 +189,7 @@
     </div>
     <!--back to top button-->
     {% for past_event in past_events %}
-    <div class="pimg1">
+    <div class="pimg1-1">
       <div class="ptext-1">
           <span class="border"> {{past_event.event_name}} </span>
       </div>

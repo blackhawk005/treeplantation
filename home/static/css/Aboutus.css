@@ -150,6 +150,10 @@ p {
     background-image: url(/static/images/images/about1.jpg);
     background-size: cover;
   }
+
+  .ptext-1{
+    font-size: 85%;
+  }
 }
 
 @media all and (min-width: 992px) {
