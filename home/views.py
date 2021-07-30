@@ -129,7 +129,7 @@ def viewer(request):
         names.append(full_name)
     print(names)
 
-    return render(request, 'home/past_event_viewer.html', {'past_events': past_event, 'names': names, 'image': image})
+    return render(request, 'home/past_event_viewer_2.html', {'past_events': past_event, 'names': names, 'image': image})
 
 def upload_images(request):
     if request.method == "POST":
