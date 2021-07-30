@@ -130,196 +130,310 @@
           {% endif %}
         </ul>
       </div>
-    </nav>
-    
-</div>
-      <br><br>
-
-      <div class="container-fluid " style="position:relative; ">
-    <div class="col-md-6 register-c order-2 order-md-1 ">
-    <form class="" >
-        <h2 style="padding:2%; color:black;"><b>User Details</b></h2>
-                <h3 scope="col"></h3>
-                <h3 scope="col"><b>Username : </b>{{ user.username }}</h3>
-                <h3 scope="col"><b>First Name : </b>{{ user.first_name }}</h3>
-                <h3 scope="col"><b>Last Name : </b>{{ user.last_name }}</h3>
-    <form class="form-inline">
-    <h2 >Email</h2><h3>{{ user.email }}</h3>
-    </form>
-    <br><br>
-</form>
-</div>
-</div>
-<br><br>
-<div class="container-fluid" style="position:relative;">
-    <div class="col-md-6 register-c order-2 order-md-1  " >
-    <form class="login-f" action="delete_hosted_event/" method="POST" class="register-c col-6">
-    <h2 style="padding:2%; margin-bottom:80px; margin-top:0; color:black;"><b>Hosted Events</b></h2>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col"></th>
-                <th scope="col">Event Name</th>
-                <th scope="col">Date</th>
-                <th scope="col">Time</th>
-            </tr>
-        </thead>
-    {% for tt in tt_1 %}
-    {% if tt.host == user.username %}
-        <tbody>
-            <tr>
-                <th scope="row"></th>
-                <td>{{ tt.event_name }}</td>
-                <td>{{ tt.date }}</td>
-                <td>{{ tt.time }}</td>
-                <td><input type="hidden" id="hidden_unique_id" name="hidden_unique_id" value="{{ tt.unique_id }}">
-                    <input class="btn-dark" style="padding: 2%;" type="submit" value="Delete"></td>
-            </tr>
-        </tbody>
-    {% endif %}
-    {% endfor %}
-</table>
-<br><br>
-    </form>
+    </nav> 
   </div>
-</div>
-<br><br><br>
-{% if participants %}
-<div class="container-fluid" style="position:relative;">
-  <div class="col-md-6 register-c order-2 order-md-1  ">
-    
-    <h2>Participants</h2>
-    {% for participant in participants %}
-      <h2 style="padding:2%; margin-bottom:30px; margin-top:0; color:black;"><b>{{participant.1}}</b></h2>
-      <table class="table">
-        <thead>
-            <tr>
-              <th scope="col">Sr No</th>
-                <th scope="col">Participants</th>
-            </tr>
-        </thead>
-        {% for name in participant.2 %}
+  <br><br>
+  
+  <div class="sa4d25">
+
+    <!-- User Details -->
+    <div class="container-fluid " style="position:relative; ">
+      <div class="col-md-6 register-c order-2 order-md-1 ">
+        <form class="" >
+            <h2 style="padding:2%; color:black;"><b>User Details</b></h2>
+            <h3 scope="col"></h3>
+            <h3 scope="col"><b>Username : </b>{{ user.username }}</h3>
+            <h3 scope="col"><b>First Name : </b>{{ user.first_name }}</h3>
+            <h3 scope="col"><b>Last Name : </b>{{ user.last_name }}</h3>
+          <form class="form-inline">
+            <h2 >Email</h2><h3>{{ user.email }}</h3>
+          </form>
+          <br><br>
+        </form>
+      </div>
+    </div>
+
+    <br><br>
+
+    <!-- Hosted Events -->
+    <div class="container-fluid" style="position:relative;">
+      <div class="col-md-6 register-c order-2 order-md-1  " >
+        <form class="login-f" action="delete_hosted_event/" method="POST" class="register-c col-6">
+          <h2 style="padding:2%; margin-bottom:80px; margin-top:0; color:black;"><b>Hosted Events</b></h2>
+          <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Sr. No</th>
+                    <th scope="col">Event Name</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            {% for tt in tt_1 %}
+            {% if tt.host == user.username %}
+            <tbody>
+                <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td>{{ tt.event_name }}</td>
+                    <td>{{ tt.date }}</td>
+                    <td>{{ tt.time }}</td>
+                    <td><input type="hidden" id="hidden_unique_id" name="hidden_unique_id" value="{{ tt.unique_id }}">
+                        <input class="btn-dark" style="padding: 2%;" type="submit" value="Delete"></td>
+                </tr>
+            </tbody>
+            {% endif %}
+            {% endfor %}
+          </table>
+          <br><br>
+        </form>
+      </div>
+    </div>
+
+    <br><br><br>
+
+    <!-- Participants in Pastevents -->
+    {% if participants %}
+    <div class="container-fluid" style="position:relative;">
+      <div class="col-md-6 register-c order-2 order-md-1  ">
+        <h2>Participants</h2>
+        {% for participant in participants %}
+        <h2 style="padding:2%; margin-bottom:30px; margin-top:0; color:black;"><b>{{participant.1}}</b></h2>
+        <table class="table">
+          <thead>
+              <tr>
+                <th scope="col">Sr No</th>
+                  <th scope="col">Participants</th>
+              </tr>
+          </thead>
+          {% for name in participant.2 %}
           <tbody>
             <tr>
               <td>{{forloop.counter}}</td>
               <td>{{name}}</td>
             </tr>
           </tbody>
+          {% endfor %}
+        </table>
         {% endfor %}
-    </table>
-    {% endfor %}
-    
-    
-  </div>
-</div>   
-{% endif %}
-<br><br>
-
-<div class="container-fluid" style="position:relative; ">
-  <div class="col-md-6 register-c order-2 order-md-1  " >
-    <form class="login-f" action="/upload_images/" method="POST">
-    <h2 style="padding:2%; margin-bottom:80px; margin-top:0; color:black;"><b>Completed Events</b></h2>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Sr No.</th>
-                <th scope="col">Event Name</th>
-                <th scope="col">Date</th>
-                <th scope="col">Time</th>
-                <!-- <th scope="col">Place</th> -->
-                <th scope="col">Action</th>
-            </tr>
-        </thead>
-    
-    {% for past_present in past_presents %}
-    <tbody>
-        <tr>
-            <th scope="row">{{forloop.counter}}</th>
-            <td>{{ past_present.event_name }}</td>
-            <td>{{ past_present.date }}</td>
-            <td>{{ past_present.time|slice:":5" }}</td>
-            <!-- <td>{{ past_present.place|slice:":25" }}</td> -->
-            <td><input type="hidden" id="hidden_unique_id" name="hidden_unique_id" value="{{ past_present.unique_id }}">
-              <input type="hidden" id="hidden_event_name" name="hidden_event_name" value="{{ past_present.event_name }}">
-              <input type="hidden" id="csrfmiddlewaretoken" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
-              <input class="btn-dark" style="padding: 2%;" type="submit" value="Add Photos"></td>
-            
-        </tr>
-    </tbody>
-    {% endfor %}
-    </table>
-    <br><br>
-    </form>
-    </div>
-</div>
-
-
-<br><br>
-<div class="container-fluid" style="position:relative; ">
-  <div class="col-md-6 register-c order-2 order-md-1  " >
-    <form class="login-f" action="delete_participated_events/" method="POST">
-    <h2 style="padding:2%; margin-bottom:80px; margin-top:0; color:black;"><b>Participated Events</b></h2>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Sr No.</th>
-                <th scope="col">Event Name</th>
-                <th scope="col">Date</th>
-                <th scope="col">Time</th>
-                <th scope="col">Place</th>
-                <th scope="col">Action</th>
-            </tr>
-        </thead>
-    
-    {% for participant in participants_1 %}
-    {% if participant.name == user.username %}
-    <tbody>
-        <tr>
-            <th scope="row">{{forloop.counter}}</th>
-            <td>{{ participant.event_name }}</td>
-            <td>{{ participant.date }}</td>
-            <td>{{ participant.time }}</td>
-            <td>{{ participant.place }}</td>
-            <td><input type="hidden" id="hidden_unique_id" name="hidden_unique_id" value="{{ participant.unique_id }}">
-              <input type="hidden" id="csrfmiddlewaretoken" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
-              <input class="btn-dark" style="padding: 2%;" type="submit" value="Delete"></td>
-            
-        </tr>
-    </tbody>
+      </div>
+    </div>   
     {% endif %}
-    {% endfor %}
-    </table>
     <br><br>
-    </form>
+
+    <!-- Completed Events -->
+    <div class="container-fluid" style="position:relative; ">
+      <div class="col-md-6 register-c order-2 order-md-1  " >
+        <!-- <form class="login-f" action="/upload_images/" method="POST"> -->
+        <h2 style="padding:2%; margin-bottom:80px; margin-top:0; color:black;"><b>Completed Events</b></h2>
+        <table class="table">
+          <thead>
+              <tr>
+                  <th scope="col">Sr No.</th>
+                  <th scope="col">Event Name</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Time</th>
+                  <!-- <th scope="col">Place</th> -->
+                  <th scope="col">Action</th>
+              </tr>
+          </thead>
+          {% for past_present in past_presents %}
+          <tbody>
+            <tr>
+              <td scope="row">{{forloop.counter}}</td>
+              <td>{{ past_present.event_name }}</td>
+              <td>{{ past_present.date }}</td>
+              <td>{{ past_present.time|slice:":5" }}</td>
+              <!-- <td>{{ past_present.place|slice:":25" }}</td> -->
+              <td>
+                <button class="btn btn-outline-secondary" style="padding: 2%;" id="addPhotos_{{forloop.counter}}" name="addPhotos" onclick="edit_info(this.id);" type="submit" value="{{ past_present.event_name }};{{ past_present.unique_id }}">Add Images</button>
+              </td>
+            </tr>
+          </tbody>
+          {% endfor %}
+        </table>
+        <br><br>
+        <!-- </form> -->
+      </div>
     </div>
-</div>
     <br><br>
+
+    <!-- Participated events -->
+    <div class="container-fluid" style="position:relative; ">
+      <div class="col-md-6 register-c order-2 order-md-1  " >
+        <form class="login-f" action="delete_participated_events/" method="POST">
+          <h2 style="padding:2%; margin-bottom:80px; margin-top:0; color:black;"><b>Participated Events</b></h2>
+          <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Sr No.</th>
+                    <th scope="col">Event Name</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Place</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            {% for participant in participants_1 %}
+            {% if participant.name == user.username %}
+            <tbody>
+              <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{ participant.event_name }}</td>
+                <td>{{ participant.date }}</td>
+                <td>{{ participant.time }}</td>
+                <td>{{ participant.place }}</td>
+                <td><input type="hidden" id="hidden_unique_id" name="hidden_unique_id" value="{{ participant.unique_id }}">
+                  <input type="hidden" id="csrfmiddlewaretoken" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+                  <input class="btn-dark" style="padding: 2%;" type="submit" value="Delete">
+                </td>
+              </tr>
+            </tbody>
+            {% endif %}
+            {% endfor %}
+          </table>
+          <br><br>
+        </form>
+      </div>
+    </div>
+    <br><br>
+
+    <!-- Added Maps -->
     <div class="container-fluid" style="position:relative;">
       <div class="col-md-6 register-c order-2 order-md-1  " >
-    <form class="login-f" action="delete_map_blog/" method="POST" style="margin:3%;">
-    <h2 style="padding:2%; margin-bottom:80px; margin-top:0; color:black;"><b>Added Maps</b></h2>
-    <table class="table">
-    <thead>
-        <tr>
-            <th scope="col">Sr No.</th>
-            <th scope="col">Address</th>
-        </tr>
-    </thead>
-    {% for blog in blogs %}
-    {% if blog.user == user.username %}
-    <tbody>
-        <tr>
-            <th scope="row">{{forloop.counter}}</th>
-            <td>{{ blog.address }}</td>
-            <td><input type="hidden" name="hidden_unique_id" value="{{ blog.unique_id }}">
-                <input class="btn-dark" style="padding: 2%;" type="submit" value="Delete"></td>
-        </tr>
-    </tbody>
-    {% endif %}
-    {% endfor %}
-    </table>
-    <br><br>
-  </form>
-  
+        <form class="login-f" action="delete_map_blog/" method="POST" style="margin:3%;">
+          <h2 style="padding:2%; margin-bottom:80px; margin-top:0; color:black;"><b>Added Maps</b></h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Sr No.</th>
+                <th scope="col">Address</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            {% for blog in blogs %}
+            {% if blog.user == user.username %}
+            <tbody>
+              <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{ blog.address }}</td>
+                <td>
+                  <input type="hidden" name="hidden_unique_id" value="{{ blog.unique_id }}">
+                  <input class="btn-dark" style="padding: 2%;" type="submit" value="Delete">
+                </td>
+              </tr>
+            </tbody>
+            {% endif %}
+            {% endfor %}
+          </table>
+          <br><br>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+  <div class="modal">
+    <div class="content col-md-6">
+      <button class="btn btn-outline-danger" id="close" style="position: absolute; top: 15px; right: 15px;  border-radius: 50%;">&times;</button>
+      <br><br><br>
+      <h2 class="subtitle-text" id="event_title"></h2>
+      <form method="POST" action="/upload_images/" enctype='multipart/form-data' style="justify-content: left; margin: 20px" >
+        {% csrf_token %}
+        <p class="footer-subtitle-text">Insert Image of Event:</p>
+        <input type="hidden" name="event_id" id="event_id" value="" >
+        <input type="file" accept="image/*" name="event_images" id="event_images" required>
+        <button type="submit" class="btn btn-outline-success" style="float: right;" >Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <style>
+    *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+
+
+  .sa4d25.blur {
+    filter: blur(5px);
+  }
+
+  .modal {
+    width: 500px;
+    clear: both;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    color: white;
+    
+  }
+
+  .modal input {
+    width: 100%;
+    clear: both;
+  }
+
+  .modal .content {
+    position: relative;
+    padding: 10px;
+    width: 600px;
+    height: 300px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: rgba(112, 128, 175, 0.2) 0px 16px 24px 0px;
+    transform: scale(0);
+    transition: transform 300ms cubic-bezier(0.57, 0.21, 0.69, 1.25);
+    background-image: linear-gradient(to left,#01201d,#5e804d);
+  }
+  .modal .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 15px;
+    height: 15px;
+    /* cursor: pointer; */
+    border-radius: 8px;
+    background-color: #7080af;
+    /* clip-path: polygon(0 10%, 10% 0, 50% 40%, 89% 0, 100% 10%, 60% 50%, 100% 90%, 90% 100%, 50% 60%, 10% 100%, 0 89%, 40% 50%); */
+  }
+  .modal.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  .modal.open .content {
+    transform: scale(1);
+  }
+  </style>
+
+  <script>
+    function edit_info(id) {
+      $('.modal').addClass('open');
+      event_info = $('#'+id).val()
+      event_info_array = event_info.split(";")
+      $('#event_title').html(event_info_array[0])
+      $('#event_id').val(event_info_array[1])
+      if ($('.modal').hasClass('open')) {
+        $('.sa4d25').addClass('blur');
+      }
+    };
+
+    $(function () {
+    
+      $('#close').click(function () {
+        $('.modal').removeClass('open');
+        $('.sa4d25').removeClass('blur');
+      });
+    });
+  </script>
 </body>
 </html>

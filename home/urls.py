@@ -28,22 +28,22 @@ urlpatterns = [
     # ex: /view events/
     path('viewer/', views.viewer, name='viewer'),
     # ex: /upload_event_images/
-    path('upload_images/', views.post, name='upload_images'),
+    path('upload_images/', views.upload_images, name='upload_images'),
     # ex: /reset_password/
-    path('reset_password/', 
-    auth_views.PasswordResetView.as_view(template_name='accounts/password_reset.html'), 
+    path('reset_password/',
+    auth_views.PasswordResetView.as_view(template_name='accounts/password_reset.html'),
     name='password_reset'),
     # ex: /reset_password/
-    path('accounts/password_reset/done/', 
-    auth_views.PasswordResetDoneView.as_view(template_name='accounts/password_reset_sent.html'), 
+    path('accounts/password_reset/done/',
+    auth_views.PasswordResetDoneView.as_view(template_name='accounts/password_reset_sent.html'),
     name='password_reset_done'),
     # ex: /reset_password/
-    path('accounts/reset/<uidb64>/<token>/', 
-    auth_views.PasswordResetConfirmView.as_view(template_name='accounts/password_reset_form.html'), 
+    path('accounts/reset/<uidb64>/<token>/',
+    auth_views.PasswordResetConfirmView.as_view(template_name='accounts/password_reset_form.html'),
     name='password_reset_confirm'),
     # ex: /reset_password/
-    path('accounts/reset/done/', 
-    auth_views.PasswordResetCompleteView.as_view(template_name='accounts/password_reset_done.html'), 
+    path('accounts/reset/done/',
+    auth_views.PasswordResetCompleteView.as_view(template_name='accounts/password_reset_done.html'),
     name='password_reset_complete'),
-
+    path('view-Img/',views.viewImg,name='view-Img')
 ]

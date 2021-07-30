@@ -34,6 +34,7 @@ class pastevents(models.Model):
     unique_id = models.CharField(max_length=300)
     event_name = models.CharField(max_length=300)
     image = models.CharField(max_length=100)
+    reported = models.CharField(max_length=100,default='null')
     def __str__(self):
         return self.event_name
 
