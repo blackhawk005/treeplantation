@@ -56,7 +56,7 @@ html {
 
 .pimg1-1{
   position: center;
-  opacity: 0.7;
+  /* opacity: 0.7; */
   background-position: 50% 30%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -163,7 +163,7 @@ p {
 @media screen and (min-width:240px) and (max-width:670px){
   p{
     font-size: 75%;
-    text-align: left;
+    text-align: center;
   }
   .p-class{
     font-size: 95%;
@@ -193,6 +193,16 @@ p {
     color: #fff;
     padding: 0px;
 }
+.ptext{
+  top: 35%;
+  font-size: 75%;
+}
+.ptext .border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+}
+
 }
 
 @media all and (min-width: 992px) {
