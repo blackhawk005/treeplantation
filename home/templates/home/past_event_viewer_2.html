@@ -275,7 +275,10 @@
     {% if image %}
     <script>
       x = "/media/"+"{{image.image}}"
-      document.getElementById("myDiv1").style.backgroundImage = "url('"+x+"')";
+      alert(x)
+      
+      document.getElementById("myDiv1").style.backgroundImage = "url('/media/static/images/event_images/DSC_0912_5weGmgh.jpg')"
+      // document.getElementById("myDiv1").style.backgroundImage = "url('"+x+"')";
     </script>
     <!-- <style>
         .pimg1-1 {
