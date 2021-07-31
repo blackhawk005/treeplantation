@@ -146,6 +146,7 @@ def upload_images(request):
                 print('if Executed')
                 image_t = Images.objects.get(unique_id=request.POST['event_id'])
                 image_t.image=request.FILES['event_images']
+                image_t.details = request.POST['event_details']
                 image_t.save()
                 return redirect('/profile/')
         print(images)
