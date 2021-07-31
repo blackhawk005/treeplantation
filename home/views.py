@@ -119,9 +119,9 @@ def viewer(request):
     new_dict = {}
     past_event = pastevents.objects.filter(unique_id=unique_id)
     new_dict['past_events'] = past_event
-    all_participants = participants.objects.filter(unique_id=unique_id)
-    total_participants = len(all_participants)
-    new_dict['all_participants'] = all_participants
+    # all_participants = participants.objects.filter(unique_id=unique_id)
+    # total_participants = len(all_participants)
+    # new_dict['all_participants'] = all_participants
 
     try:
         image = Images.objects.get(unique_id=unique_id)
