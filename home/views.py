@@ -118,19 +118,23 @@ def viewer(request):
     unique_id = str(str(request.get_full_path).split("/?")[1].split("'")[0])
     new_dict = {}
     past_event = pastevents.objects.filter(unique_id=unique_id)
+    new_dict['past_events'] = past_event
     all_participants = participants.objects.filter(unique_id=unique_id)
+    total_participants = len(all_participants)
+    new_dict['total_participants'] = total_participants
+
     try:
         image = Images.objects.get(unique_id=unique_id)
         new_dict['image'] = image
     except:
         pass
-    names = []
-    for i in all_participants:
-        name = User.objects.filter(username=i.name).values_list('first_name', 'last_name')
-        full_name = name[0][0] + " " + name[0][1]
-        names.append(full_name)
-    new_dict['past_events'] = past_event
-    new_dict['names'] = names
+    # names = []
+    # for i in all_participants:
+    #     name = User.objects.filter(username=i.name).values_list('first_name', 'last_name')
+    #     full_name = name[0][0] + " " + name[0][1]
+    #     names.append(full_name)
+    
+    # new_dict['names'] = names
     # print(names)
 
     return render(request, 'home/past_event_viewer_2.html', new_dict)
