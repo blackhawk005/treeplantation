@@ -175,6 +175,7 @@ p {
 }
 
 .team-img{
+  justify-content: center;
   width: 60%;
 }
 
