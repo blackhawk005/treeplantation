@@ -181,7 +181,7 @@ p {
 @media screen and (min-width:240px) and (max-width:670px){
 
   .team-img{
-    width: 150%;
+    width: 100%;
   }
 
   .pimg1-1 {
