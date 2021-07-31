@@ -54,7 +54,7 @@ html {
   background-attachment: fixed;
 }
 
-.pimg1-1{
+.pimg1-1, .pimg1-2{
   position: center;
   /* opacity: 0.7; */
   background-position: 50% 30%;
