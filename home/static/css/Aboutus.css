@@ -174,7 +174,15 @@ p {
   background-size: 100% 100%;
 }
 
+.team-img{
+  width: 60%;
+}
+
 @media screen and (min-width:240px) and (max-width:670px){
+
+  .team-img{
+    width: 100%;
+  }
 
   .pimg1-1 {
     background-image: url(/static/images/images/sds5.jpg);
