@@ -160,7 +160,23 @@ p {
   padding: 20px;
 }
 
+.pimg1-2 {
+  background-image: url(/static/images/images/sds3.jpg);
+  background-repeat: no-repeat;
+  min-height: 100%;
+  background-size: 100% 100%;
+}
+
+
+
 @media screen and (min-width:240px) and (max-width:670px){
+
+  .pimg1-2 {
+    background-image: url(/static/images/images/sds11.jpg);
+    background-size: contain;
+    min-height: 40%;
+  }
+
   p{
     font-size: 75%;
     text-align: center;
