@@ -208,7 +208,7 @@
     <!-- <section class="section section-dark">
       <h1>Total Participants</h1>
       <p class="p-class">{{total_participants}}</p>
-      <!-- <p>
+      <p>
         <div class="new-div" >
             <table align="center" style="color: white;" class="table">
                 <thead>
@@ -217,19 +217,25 @@
                         <th scope="col">Participants</th>
                     </tr>
                 </thead>
-                {% for name in names %}
+                {% for participant in all_participants %}
                 <tbody>
                 <tr>
                     <td>{{forloop.counter}}</td>
-                    <td>{{name}}</td>
+                    <td>{{participant.}}</td>
                 </tr>
                 </tbody>
                 {% endfor %}
             </table>
         </div>
-      </p> -->
+      </p>
     </section> -->
     {% endfor %}
+    <section class="section section-dark">
+          <p class="p-class">
+              <p style="white-space: pre-line; font-size: 15px;"><a href="/register/">Register Here</a> for future updates.</p>
+          </p>
+      </center>
+  </section>
     <!--back to top start-->
 
     <script>
