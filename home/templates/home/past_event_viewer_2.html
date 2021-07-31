@@ -163,16 +163,14 @@
       </div>
     </div>
     
-
-    <!-- <div class="pigm2">
-        <section class="section section-dark">
-          <p>
-            Treeasure stands for tree which stands for plantation, asure sounds like
-            assure that is assuring the growth of plants, and when combined it becomes
-            a treasure with an E in the middle which stands for environment.
-          </p>
-        </section>
-    </div> -->
+    {% if image %}
+    <div class="pigm2">
+      <section class="section section-dark">
+        <img src="/media/{{image.image}}" style="width: 100%;">
+      </section>
+    </div>
+    {% endif %}
+    
 
     <div class="pigm2">
       <section class="section section-dark">
