@@ -168,7 +168,7 @@ p {
 }
 
 .pimg1-1 {
-  background-image: url(/media/static/images/event_images/DSC_0912_5weGmgh.jpg);
+  background-image: url(/static/images/images/sds5.jpg);
   background-repeat: no-repeat;
   min-height: 100%;
   background-size: 100% 100%;
@@ -177,7 +177,7 @@ p {
 @media screen and (min-width:240px) and (max-width:670px){
 
   .pimg1-1 {
-    background-image: url(/media/static/images/event_images/DSC_0912_5weGmgh.jpg);
+    background-image: url(/static/images/images/sds5.jpg);
     background-size: contain;
     min-height: 40%;
   }
