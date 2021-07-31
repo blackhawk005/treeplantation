@@ -161,14 +161,14 @@ p {
 }
 
 .pimg1-2 {
-  background-image: url(/static/images/images/sds3.jpg);
+  background-image: url(/static/images/images/sds12.jpg);
   background-repeat: no-repeat;
   min-height: 100%;
   background-size: 100% 100%;
 }
 
 .pimg1-1 {
-  background-image: url(/static/images/images/sds5.jpg);
+  background-image: url(/static/images/images/sds3.jpg);
   background-repeat: no-repeat;
   min-height: 100%;
   background-size: 100% 100%;
@@ -191,7 +191,7 @@ p {
   }
 
   .pimg1-1 {
-    background-image: url(/static/images/images/sds5.jpg);
+    background-image: url(/static/images/images/sds3.jpg);
     background-size: contain;
     min-height: 40%;
   }
