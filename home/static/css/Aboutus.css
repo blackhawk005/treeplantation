@@ -175,13 +175,18 @@ p {
 }
 
 .team-img{
-  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 60%;
 }
 
 @media screen and (min-width:240px) and (max-width:670px){
 
   .team-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
   }
 
