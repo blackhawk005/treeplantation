@@ -165,14 +165,16 @@
     
     {% if image %}
     <div class="container-fluid" style="justify-content: center;">
+      <button type="button" class="btn  btn-outline-light" style="position: relative; top: 25px; float: right;  border-radius: 5%; margin: 20px" onclick="copyToClipboard()" ><i class="fa fa-share-alt"></i></button><br><br>
       <img class="team-img" src="/media/{{image.image}}" >
     </div>
         
     {% endif %}
     
-
+    
     <div class="pigm2">
       <section class="section section-dark">
+        
         <h1>Place Of Plantation</h1>
         <center>
             <p class="p-class">
@@ -293,6 +295,17 @@
           }
         
     </style> -->
+    <script>
+      function copyToClipboard() {
+        var inputc = document.body.appendChild(document.createElement("input"));
+        inputc.value = window.location.href;
+        inputc.focus();
+        inputc.select();
+        document.execCommand('copy');
+        inputc.parentNode.removeChild(inputc);
+        alert("URL Copied.");
+        }
+    </script>
     
   </body>
 </html>
