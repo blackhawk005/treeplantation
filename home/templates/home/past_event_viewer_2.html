@@ -157,7 +157,7 @@
     </div>
     <!--back to top button-->
     {% for past_event in past_events %}
-    <div class="pimg1-1">
+    <div class="pimg1-1" id="myDiv1">
       <div class="ptext-1">
           <span class="border"> {{past_event.event_name}} </span>
       </div>
@@ -272,8 +272,12 @@
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
       crossorigin="anonymous"
     ></script>
-    <!-- {% if image %}
-    <style>
+    {% if image %}
+    <script>
+      x = "/media/"+"{{image.image}}"
+      document.getElementById("myDiv1").style.backgroundImage = "url('"+x+"')";
+    </script>
+    <!-- <style>
         .pimg1-1 {
             background-image: url(/media/{{image.image}});
             background-repeat: no-repeat;
@@ -289,8 +293,8 @@
               }
           }
         
-    </style>
+    </style> -->
     
-    {% endif %} -->
+    {% endif %}
   </body>
 </html>
