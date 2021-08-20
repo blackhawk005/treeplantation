@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '&a%k#g+bsqh$zvfy0jg7$e6s_1+^fizy0=z@t-m%z(s&=q8(@i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 host = ""
 
 ALLOWED_HOSTS = ['0.0.0.0:8000', '127.0.0.1', '192.168.29.132', 'treeasurenss.siesgst.ac.in', 'treeasurenss.herokuapp.com']
@@ -163,3 +163,14 @@ MEDIA_URL = '/media/'
 
 # MEDIA_URL = 'http://treeasurenss.heroku.com/media/'
 # MEDIA_ROOT = '/home/admin/webapps/static_media'
+
+if DEBUG == False:
+    AWS_ACCESS_KEY_ID = os.environ.get('TREEASURENSS_AWS_KEY')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('TREEASURE_AWS_PASS')
+    # print(os.environ.get('BANKOFNSS_AWS_BUCKET_NAME'))
+    AWS_STORAGE_BUCKET_NAME = os.environ.get('TREEASURE_AWS_BUCKET_NAME')
+
+    AWS_S3_FILE_OVERWRITE = False
+    AWS_DEFAULT_ACL=None
+
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
