@@ -175,6 +175,8 @@ if DEBUG == False:
     AWS_DEFAULT_ACL=None
 
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    AWS_S3_SIGNATURE_VERSION = 's3v4'
+
 elif DEBUG == True:
     AWS_ACCESS_KEY_ID = 'AKIA4OPCRIICKW6UDKJP'
     AWS_SECRET_ACCESS_KEY = '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'
@@ -185,3 +187,5 @@ elif DEBUG == True:
     AWS_DEFAULT_ACL=None
 
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    AWS_S3_SIGNATURE_VERSION = 's3v4'
+    AWS_S3_REGION_NAME = 'us-east-2'
