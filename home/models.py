@@ -14,6 +14,7 @@ class users(models.Model):
         return self.user
 
 
+
 class Images(models.Model):
     unique_id = models.CharField(max_length=300, default=None, null=True)
     image = models.ImageField(upload_to='event_images', null=True, default=None,

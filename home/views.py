@@ -140,6 +140,7 @@ def viewer(request):
     return render(request, 'home/past_event_viewer_2.html', new_dict)
     # return HttpResponse("hello world")
 
+
 def upload_images(request):
     if request.method == "POST":
         print(request.POST, request.FILES)

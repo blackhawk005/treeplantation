@@ -22,16 +22,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '&a%k#g+bsqh$zvfy0jg7$e6s_1+^fizy0=z@t-m%z(s&=q8(@i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 host = ""
 
-ALLOWED_HOSTS = ['0.0.0.0:8000', '127.0.0.1', '192.168.29.132', 'treeasurenss.siesgst.ac.in', 'treeasurenss.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # SENDGRID_API_KEY = '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'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+if DEBUG == True:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+else:
+    EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'treeasurenss@gmail.com'
@@ -94,26 +97,26 @@ WSGI_APPLICATION = 'NSS.wsgi.application'
 
 # mysql://bf07c1db527b49:3caf1e6d@us-cdbr-east-03.cleardb.com/heroku_7c0e58c726f0b71?reconnect=true
 
-if DEBUG==True:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'plantation',
-            'USER': 'root',
-            'PASSWORD': '',
-            'HOST': 'localhost',
-        }
+# if DEBUG==True:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.mysql',
+#             'NAME': 'plantation',
+#             'USER': 'root',
+#             'PASSWORD': '',
+#             'HOST': 'localhost',
+#         }
+#     }
+# elif DEBUG==False:
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'heroku_7c0e58c726f0b71',
+        'USER': 'bf07c1db527b49',
+        'PASSWORD': '3caf1e6d',
+        'HOST': 'us-cdbr-east-03.cleardb.com',
     }
-elif DEBUG==False:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'heroku_7c0e58c726f0b71',
-            'USER': 'bf07c1db527b49',
-            'PASSWORD': '3caf1e6d',
-            'HOST': 'us-cdbr-east-03.cleardb.com',
-        }
-    }
+}
 
 
 
