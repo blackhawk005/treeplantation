@@ -111,12 +111,22 @@ WSGI_APPLICATION = 'NSS.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'heroku_7c0e58c726f0b71',
-        'USER': 'bf07c1db527b49',
-        'PASSWORD': '3caf1e6d',
-        'HOST': 'us-cdbr-east-03.cleardb.com',
+        'NAME': os.getenv('SQLNAME'),
+        'USER': os.getenv('SQLUSER'),
+        'PASSWORD': os.getenv('SQLPASS'),
+        'HOST': os.getenv('SQLHOST'),
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'heroku_7c0e58c726f0b71',
+#         'USER': 'bf07c1db527b49',
+#         'PASSWORD': '3caf1e6d',
+#         'HOST': 'us-cdbr-east-03.cleardb.com',
+#     }
+# }
 
 
 
